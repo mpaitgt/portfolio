@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Matt Pignatore - Portfolio</title>
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Livvic|Baloo+Chettan|Fredoka+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
 <!-- 
     # Home page begins here, with navbar and main image
-    #
+    # Don't forget to include LinkedIn and GitHub icon/links in the navbar
     #
 -->
     <div class="navbar">
-        <h1 class="title">Matt Pignatore</h1>
         <ul class="navigation">
-            <li><a href="">About</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="">Skills</a></li>
             <li><a href="">Work</a></li>
             <li><a href="">Contact</a></li>
@@ -25,19 +25,22 @@
     </div>
 
     <div class="image-container">
-        <img class="title-image" src="" alt="">
+        <div class="image-content">
+            <img class="main-image" src="assets/images/placeholder.jpg" alt="" width="100%">
+            <h1 class="site-title">Matt Pignatore</h1>
+        </div>
     </div>
 <!-- 
     # Begin 'About' section
     #
     #  
 -->
-    <div class="content">
+    <div class="section" id="about">
         <div class="section-title">
-            <h2></h2>
+            <h2>About</h2>
         </div>
         <div class="section-content">
-            <p></p>
+            <p>I am an aspiring web developer by way of marketing. I love bringing passion to my work. Passion for creativity, problem solving, collaboration, and critical thinking. Somewhere along the way in my three years of marketing experience, I found myself unable to take those passions with work to me every day. That is when I found web development.</p>
         </div>
     </div>
 
@@ -46,12 +49,16 @@
     #
     #
 -->
-    <div class="content"> 
+    <div class="section" id="skills"> 
         <div class="section-title">
-            <h2></h2>
+            <h2>Skills</h2>
         </div>
         <div class="section-content">
-            <p></p>
+            <ul>
+                <li>HTML5 & CSS3</li>
+                <li>Javascript</li>
+                <li>Bootstrap</li>
+            </ul>
         </div>
     </div>
 <!-- 
@@ -59,7 +66,7 @@
     #
     #
  -->
-    <div class="content"> 
+    <div class="section" id="work"> 
         <div class="section-title">
             <h2></h2>
         </div>
@@ -72,21 +79,11 @@
     #
     #
  -->
-    <div class="content"> 
+    <div class="section" id="contact"> 
         <div class="section-title">
             <h2></h2>
         </div>
         <div class="section-content">
-            <form action="">
-                <label for=""></label>
-                <input type="text">
-
-                <label for=""></label>
-                <input type="text">
-
-                <label for=""></label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-            </form>
         </div>
 </div>
 </body>

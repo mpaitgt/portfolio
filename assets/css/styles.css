@@ -1,0 +1,52 @@
+body {
+    font-family: 'Livvic', sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    --color: #303030;
+}
+
+/* top bar navigation layout */
+.navigation {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* styles the navigation links */
+li a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color);
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    border-radius: 3rem;
+}
+
+li a:hover {
+    background-color: #633030;
+    color: #ffffff;
+}
+
+.image-container {
+    position: relative;
+}
+
+.site-title {
+    position: absolute;
+    bottom: 60%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 100px;
+    color: #ffffff;
+    background-color: #633030;
+    padding: 10px 0px 10px 0px;
+
+}
