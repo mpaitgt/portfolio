@@ -32,6 +32,7 @@ li a:hover {
     color: #ffffff;
 }
 
+/* begin image and site-title container stylings */
 .image-container {
     position: relative;
 }
@@ -48,5 +49,41 @@ li a:hover {
     color: #ffffff;
     background-color: #633030;
     padding: 10px 0px 10px 0px;
+}
+/* end image and site-title container stylings */
 
+/* begin site-content stylings */
+.site-content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.about-photo {
+    float: left;
+    margin-right: 40px;
+}
+
+.section-title {
+    font-size: 40px;
+    letter-spacing: 0.3em;
+    border-bottom: 1px solid #633030;
+    text-transform: uppercase;
+    padding-left: 40px;
+    padding-bottom: 10px;
+}
+
+/* about section content-specific stylings */
+.section-content p {
+    padding: 10px 0px 10px 0px;
+    font-size: 24px;
+    text-align: justify;
+    line-height: 2em;
+}
+
+/* clearfix for the break between the floated about-photo and the Skills section */
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
 }
