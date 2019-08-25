@@ -1,31 +1,181 @@
 * {
     padding: 0;
     margin: 0;
+    /* border: 1px solid green; */
 }
 
 body {
-    font-family: 'Livvic', sans-serif;
-    width: 100%;
-    margin: 0 auto;
-    --color: #303030;
+    font-family: 'Raleway', sans-serif;
 }
 
+.home-container {
+    margin: 50px 50px;
+    background-image: url(../images/about-canvas.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+}
+
+.navbar {
+    padding: 40px;
+}
+
+.site-title {
+    float: left;
+    color: #000000;
+    letter-spacing: 0.2em;
+}
+
+.site-title h1 {
+    font-size: 80px;
+    background-color: rgb(255, 255, 255, 0.5);
+    padding-left: 50px;
+    padding-right: 50px;
+    text-transform: uppercase;
+    font-family: 'Staatliches', cursive;
+}
+
+.site-title h3 {
+    font-size: 28px;
+    background-color: rgb(255, 255, 255, 0.5);
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-align: right;
+}
+
+.navigation li a {
+    font-size: 40px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+/* .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    float: right;
+    padding: 30px;
+} */
+
+
+/* font-family: 'Raleway', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Staatliches', cursive; */
+
+/* body {
+    font-family: 'Livvic', sans-serif;
+    color: #ececec;
+    background-color: #669c78;
+}
+
+.page-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.site-title h1 {
+    margin-bottom: 10px;
+    font-size: 40px;
+}
+
+.site-title h3 {
+    letter-spacing: 0.2em;
+    margin: 5px 0px;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    padding: 15px 0px;
+    background-color: gray;
+}
+
+ul {
+    list-style: none;
+    text-transform: uppercase;
+}
+
+ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 32px;
+    padding: 20px 0px;
+}
+
+.site-title {
+    text-align: center;
+} */
+
+/* front page background image */
+/* .image-container {
+    margin: 50px auto;
+    background-image: url(../images/image-2.JPG);
+    background-size: cover;
+    width: 100%;
+    height: 1000px;
+} */
+
+/* front page title and navigation */
+/* .nav-container {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 80px;
+    color: #ffffff;
+    padding: 10px 0px 10px 0px;
+} */
+
+/* .name-title {
+    background-color: #728c81;
+    padding: 20px 5px 30px 5px;
+    width: 100%;
+    margin: 200px auto 0px auto;
+}
+
+.nav-container h1 {
+    font-size: 60px;
+}
+
+.nav-container h3 {
+    font-size: 30px;
+    letter-spacing: 0.3em;
+} */
+
 /* top bar navigation layout */
+/* .navbar {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #c1a46f;
+}
 .navigation {
     display: flex;
     flex-direction: row;
     list-style: none;
-    justify-content: space-between;
+    margin-top: auto;
+    margin-bottom: auto;
     align-items: center;
-    background-color: white;
-    width: 50%;
-    margin: 50px auto;
-    border-radius: 2em;
-    background-color: #ffffff;
-}
+    width: 60%;
+    margin: 0 auto;
+    background-color: #c1a46f;
+} */
 
 /* styles the navigation links */
-li a {
+/* li a {
     display: inline-block;
     text-decoration: none;
     color: var(--color);
@@ -39,65 +189,24 @@ li a {
 li a:hover {
     background-color: #b59d7d;
     color: #ffffff;
-}
+} */
 
-.left {
-    border-top-left-radius: 2em;
-    border-bottom-left-radius: 2em;
-}
+/* end image and nav containers home page stylings */
 
-.right {
-    border-top-right-radius: 2em;
-    border-bottom-right-radius: 2em;
-}
+/* about container */
+/* .about-container {
+    margin-top: 50px;
+    background-image: url(../images/placeholder.jpg);
+} */
 
-/* begin image and site-title container home page stylings */
-.image-container {
-    position: relative;
-}
+/* .image-container {
+    margin-top: 50px;
+    background-image: url(../images/nature.jpg);
+    background-size: cover;
+    height: 800px;
+} */
 
-.nav-container {
-    position: absolute;
-    bottom: 50%;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 80px;
-    color: #ffffff;
-    padding: 10px 0px 10px 0px;
-}
-
-.name-title {
-    background-color: #b59d7d;
-    padding: 20px 15px 30px 15px;
-    width: 600px;
-    margin: 0 auto;
-}
-
-.nav-container h1 {
-    font-size: 60px;
-}
-
-.nav-container h3 {
-    font-size: 30px;
-    letter-spacing: 0.3em;
-}
-/* end image and site-title container home page stylings */
-
-/* entire site content styling */
-.site-content {
-    width: 100%;
-    margin: 0 auto;
-    background-color: #71ac93;
-}
-
-/* About section */
-.about-section {
-    /* background-image: url(../images/about-canvas.jpg);
-    background-size: contain; */
-    
+/* .about-section {
     position: relative;
     height: 800px;
 }
@@ -140,12 +249,12 @@ ul li {
     font-size: 24px;
     line-height: 2em;
     
-}
+} */
 
 /* clearfix for the break between the floated about-photo and the Skills section */
-
+/* 
 .clearfix::after {
     content: "";
     display: block;
     clear: both;
-}
+}  */
