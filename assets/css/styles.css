@@ -13,6 +13,7 @@ body {
     background-image: url(../images/about-canvas.jpg);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     height: 800px;
 }
 
@@ -28,7 +29,7 @@ body {
 
 .site-title h1 {
     font-size: 80px;
-    background-color: rgb(255, 255, 255, 0.5);
+    background-color: rgb(255, 255, 255, 0.7);
     padding-left: 50px;
     padding-right: 50px;
     text-transform: uppercase;
@@ -37,7 +38,7 @@ body {
 
 .site-title h3 {
     font-size: 28px;
-    background-color: rgb(255, 255, 255, 0.5);
+    background-color: rgb(255, 255, 255, 0.7);
     text-align: center;
     text-transform: uppercase;
     padding-bottom: 10px;
@@ -56,205 +57,95 @@ body {
     text-decoration: none;
 }
 
+/*  # Begin about section
+    #
+    #
+*/
 
-/* .navbar {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    float: right;
-    padding: 30px;
-} */
-
-
-/* font-family: 'Raleway', sans-serif;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Staatliches', cursive; */
-
-/* body {
-    font-family: 'Livvic', sans-serif;
-    color: #ececec;
-    background-color: #669c78;
-}
-
-.page-container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-.site-title h1 {
-    margin-bottom: 10px;
-    font-size: 40px;
-}
-
-.site-title h3 {
-    letter-spacing: 0.2em;
-    margin: 5px 0px;
-}
-
-.navigation {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 100%;
-    margin: 0 auto;
-    align-items: center;
-    padding: 15px 0px;
-    background-color: gray;
-}
-
-ul {
-    list-style: none;
-    text-transform: uppercase;
-}
-
-ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 32px;
-    padding: 20px 0px;
-}
-
-.site-title {
-    text-align: center;
-} */
-
-/* front page background image */
-/* .image-container {
-    margin: 50px auto;
-    background-image: url(../images/image-2.JPG);
-    background-size: cover;
-    width: 100%;
-    height: 1000px;
-} */
-
-/* front page title and navigation */
-/* .nav-container {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    font-size: 80px;
-    color: #ffffff;
-    padding: 10px 0px 10px 0px;
-} */
-
-/* .name-title {
-    background-color: #728c81;
-    padding: 20px 5px 30px 5px;
-    width: 100%;
-    margin: 200px auto 0px auto;
-}
-
-.nav-container h1 {
-    font-size: 60px;
-}
-
-.nav-container h3 {
-    font-size: 30px;
-    letter-spacing: 0.3em;
-} */
-
-/* top bar navigation layout */
-/* .navbar {
-    width: 100%;
-    margin: 0 auto;
-    background-color: #c1a46f;
-}
-.navigation {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    margin-top: auto;
-    margin-bottom: auto;
-    align-items: center;
+.about-container {
     width: 60%;
-    margin: 0 auto;
-    background-color: #c1a46f;
-} */
-
-/* styles the navigation links */
-/* li a {
-    display: inline-block;
-    text-decoration: none;
-    color: var(--color);
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 10px 50px;
+    margin: 50px auto;
 }
 
-li a:hover {
-    background-color: #b59d7d;
-    color: #ffffff;
-} */
-
-/* end image and nav containers home page stylings */
-
-/* about container */
-/* .about-container {
-    margin-top: 50px;
-    background-image: url(../images/placeholder.jpg);
-} */
-
-/* .image-container {
-    margin-top: 50px;
-    background-image: url(../images/nature.jpg);
-    background-size: cover;
-    height: 800px;
-} */
-
-/* .about-section {
-    position: relative;
-    height: 800px;
-}
-
-.container {
-    
-    width: 80%;
-    margin: 0 auto;
-    padding: 10px 30px 10px 30px;
-    border-radius: 2em;
-    background-color: white;
-}
-
-.about-photo {
+.about-container h2 {
     float: left;
-    margin-right: 40px;
-    border-radius: 1em;
+    font-size: 38px;
+    border-bottom: 1px solid #000000;
+    margin-right: 30px;
 }
 
-.section-title {
-    font-size: 40px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-.about-content .section-title {
-    float: left;
-}
-
-p {
-    padding: 10px 0px 10px 0px;
-    font-size: 20px;
-    text-align: justify;
-    line-height: 2em;
-}
-
-ul li {
+.about-container p {
+    word-spacing: 0.1em;
+    line-height: 1.5em;
     font-size: 24px;
-    line-height: 2em;
-    
-} */
+    text-align: justify;
+}
 
-/* clearfix for the break between the floated about-photo and the Skills section */
-/* 
-.clearfix::after {
-    content: "";
-    display: block;
-    clear: both;
-}  */
+/*  # Begin work section
+    #
+    #
+*/
+
+.work-container {
+    margin: 50px 50px;
+    background-image: url(../images/test1.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    background-attachment: fixed;
+}
+
+@media screen and (max-width: 1000px) {
+    .site-title {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        color: #000000;
+        letter-spacing: 0.2em;
+    }
+    
+    .clearfix::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        text-align: center;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .site-title h1 {
+        font-size: 60px;
+        padding: 0px;
+    }
+
+    .site-title h3 {
+        font-size: 20px;
+    }
+
+    .navigation li a {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .site-title h1 {
+        font-size: 30px;
+    }
+
+    .site-title h3 {
+        font-size: 14px;
+    }
+
+    .navigation li a {
+        font-size: 12px;
+    }
+}
