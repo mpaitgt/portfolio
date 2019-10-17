@@ -1,7 +1,15 @@
-var name ="Matt Pignatore";
+var skillBtn = document.getElementById('skill-btn');
+var skillsArray = ['JavaScript', 'jQuery', 'HTML/CSS', 'Bootstrap', 'Firebase', 'Adobe Suite'];
 
-console.log(name);
+skillBtn.addEventListener('click', function() {
+    randomSkill(skillsArray)
+});
 
-document.getElementsByClassName("navLink") function() {
-    
+function randomSkill(array) {
+    var randomSkill = document.getElementById('random-skill');
+    randomSkill.innerHTML = '';
+    var skill = array[Math.floor(Math.random() * array.length)];
+    var skillNode = document.createTextNode(skill);
+    randomSkill.appendChild(skillNode);
+    console.log(skill);
 }

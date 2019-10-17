@@ -7,7 +7,7 @@
     <title>Matt Pignatore - Portfolio</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Staatliches&display=swap" rel="stylesheet">
-    <script src="assets/js/script.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
 
 <body>
@@ -19,7 +19,7 @@
 
 <div class="home-container">
     <div class="navbar">
-        <div class="site-title">
+        <div class="site-title animated fadeIn">
             <h1>Matt Pignatore</h1>
             <h3>Creative Problem-Solver</h3>
             <h3>Aspiring Web Developer</h3>
@@ -27,20 +27,51 @@
 
         <div class="clearfix"></div>
 
-        <ul class="navigation">
-            <li class="navLink"><a href="">About</a></li>
-            <li class="navLink"><a href="">Work</a></li>
-            <li class="navLink"><a href="">Skills</a></li>
-            <li class="navLink"><a href="">Contact</a></li>
+        <ul class="navigation animated fadeIn">
+            <li class="navLink animated"><a href="">About</a></li>
+            <li class="navLink animated"><a href="">Work</a></li>
+            <li class="navLink animated"><a href="">Skills</a></li>
+            <li class="navLink animated"><a href="">Contact</a></li>
         </ul>
     </div>
 </div>
 <div class="about-container">
-    <h2>About</h2>
-    <p>I am an aspiring web developer by way of marketing. I love bringing my passions for creativity, problem solving, collaboration, and critical thinking to my work. Somewhere along the way in my three years of marketing experience, I found myself unable to take those passions with work to me every day. That's when I found web development. I've been able to pour the same passion into web development as I've had with all of my other creative works, including music, cooking, and baking.</p>
+    <img class="about-photo" src="assets/images/about-photo.jpg" alt="">
+    <div>
+        <h2 class="section-heading">About</h2>
+        <p>
+            Front-end web developer with experience in marketing. I began as a self-taught web developer with HTML and CSS, and eventually gained skills in JavaScript, Git version-control, and back-end programming to improve my perspective on and understanding of the user experience. Passionate about bringing creativity, collaboration, and logic together in order to effectively solve problems, build web applications, and make them look good in the process.
+        </p>
+    </div>
 </div>
 
-<div class="work-container"></div>
+<div class="skills-container">
+    <button id="skill-btn">Click for a skill</button>
+    <div id="skill-box">
+        <h2 id="random-skill"></h2>
+    </div>
+</div>
 
+<div class="project-container">
+    <img class="" src="" alt="">
+    <div>
+        <h2>Projects</h2>
+        <ul class="projects">
+            <li>Medo
+                <img src="assets/images/project-images/medo.JPG" class="project-image" alt="">
+            </li>
+            <li>Give a GIFt
+                <img src="assets/images/project-images/gift.JPG" class="project-image" alt="">
+            </li>
+            <li>Wedding Website
+                <img src="assets/images/project-images/wedding.JPG" class="project-image" alt="">
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="contact-container"></div>
+
+<script src="assets/js/script.js" type="text/javascript"></script>
 </body>
 </html>
