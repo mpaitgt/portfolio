@@ -22,7 +22,7 @@
         <div class="site-title animated fadeIn">
             <h1>Matt Pignatore</h1>
             <h3>Creative Problem-Solver</h3>
-            <h3>Aspiring Web Developer</h3>
+            <h3>Web Developer</h3>
         </div>
 
         <div class="clearfix"></div>
@@ -30,6 +30,7 @@
         <ul class="navigation animated fadeIn">
             <li class="navLink animated"><a href="">About</a></li>
             <li class="navLink animated"><a href="">Skills</a></li>
+            <li class="navLink animated"><a href="">Interests</a></li>
             <li class="navLink animated"><a href="">Work</a></li>
             <li class="navLink animated"><a href="">Contact</a></li>
         </ul>
@@ -46,9 +47,10 @@
 </div>
 
 <div class="skills-container">
-    <button id="skill-btn">Click for a skill</button>
+    <button class="button" id="skill-btn">Skill</button>
+    <button class="button" id="interest-btn">Interest</button>
     <div id="skill-box">
-        <h2 id="random-skill"></h2>
+        <h2 id="random-category"></h2>
     </div>
 </div>
 
@@ -82,17 +84,19 @@
 
 
 <div class="contact-container">
+    
     <div class="social-icons">
-        <a href="https://github.com/mpaitgt" target="_blank">
+        <a class="hover-function" href="https://github.com/mpaitgt" target="_blank">
             <img class="icon" src="assets/images/social-icons/github.png" alt="">
         </a>
-        <a href="mailto:mattpignatore@gmail.com">
-            <img class="icon" src="assets/images/social-icons/email-2.png" alt="">
+        <a class="hover-function" id="email-link" href="mailto:mattpignatore@gmail.com">
+            <img id="email-icon" class="icon" src="assets/images/social-icons/email-2.png" alt="">
         </a>
-        <a href="https://www.linkedin.com/in/matt-pignatore/" target="_blank">
+        <a class="hover-function" href="https://www.linkedin.com/in/matt-pignatore/" target="_blank">
             <img class="icon" src="assets/images/social-icons/linked-in.png" alt="">
         </a>
     </div>
+    <a href=""><div id="link-box"></div></a>
 </div>
 
 <script src="assets/js/script.js" type="text/javascript"></script>

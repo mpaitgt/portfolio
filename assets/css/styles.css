@@ -113,44 +113,65 @@ body {
     background-position: center;
     height: 800px;
     background-attachment: fixed;
+    position: relative;
 }
 
-#skill-btn {
+.button {
     font-family: 'Staatliches', cursive;
-    font-size: 80px;
-    padding: 20px 40px;
+    font-size: 100px;
+    padding: 40px 80px;
     background-color: rgb(255, 255, 255, 0.75);
     box-shadow: -8px 7px 28px -16px rgba(0,0,0,0.75);
     border: none;
     margin: 0 auto;
     transition: font-size 0.5s;
     margin: 20px;
-    transform-origin: top left;
     transform: scale(1);
     transition: transform 1s;
+    position: absolute;
+    bottom: 0;
+}
+
+#skill-btn {
+    transform-origin: bottom left;
+    left: 0;
+}
+
+#interest-btn {
+    transform-origin: bottom right;
+    right: 0;
 }
 
 #skill-btn:hover {
-    transform-origin: top left;
+    transform-origin: bottom left;
     transform: scale(1.1);
     transition: transform 1s;
     cursor: pointer;
 }
 
-#skill-btn:active {
+#interest-btn:hover {
+    transform-origin: bottom right;
+    transform: scale(1.1);
+    transition: transform 1s;
+    cursor: pointer;
+}
+
+#skill-btn:active,
+#interest-btn:active {
     outline: none;
     color: green;
 }
 
-#skill-btn:focus {
+#skill-btn:focus,
+#interest-btn:focus {
     outline: none;
 }
 
-#random-skill {
-    font-size: 200px;
+#random-category {
+    font-size: 120px;
     color: #ffffff;
     width: 100%;
-    margin: 100px auto;
+    margin: 0px auto;
     text-align: center;
     text-transform: uppercase;
     text-shadow: 2px 2px 9px #000000;
@@ -196,6 +217,7 @@ body {
     text-align: center;
     display: grid;
     grid-template-columns: auto auto;
+    grid-column-gap: 50px;
 }
 
 .projects li {
@@ -221,7 +243,7 @@ body {
 
 .contact-container {
     margin: 50px 50px;
-    background-image: url(../images/image-2.JPG);
+    background-image: url(../images/duomo.JPG);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -234,7 +256,7 @@ body {
     margin: 50 auto;
     padding: 20px;
     text-align: center;
-    background-color: rgb(255, 255, 255, 0.5);
+    background-color: rgb(255, 255, 255, 0.3);
     bottom: 0;
     grid-column-gap: 100px;
 }
@@ -249,6 +271,17 @@ body {
 .icon:hover {
     transform: scale(1.20);
     transition: transform 0.25s;
+}
+
+.hover-link {
+    font-size: 62px;
+    color: #ffffff;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    text-shadow: 2px 2px 9px #000000;
+    text-decoration: none;
+    margin-top: 100px;
 }
 
 
