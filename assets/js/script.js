@@ -3,13 +3,10 @@ var skillBtn = document.getElementById('skill-btn');
 var pickedCat = document.getElementById('random-category');
 var skillsArray = ['JavaScript', 'jQuery', 'HTML/CSS', 'Bootstrap', 'Firebase', 'Adobe Suite'];
 var interestsArray = ['Gluten-Free Baking', 'Songwriting / Producing', 'Film / Television', 'Home Cooking']
-
-
-// EVENT LISTENERS
+    
 document.querySelectorAll('.button').forEach(function(buttonSelect) {
     buttonSelect.addEventListener('mouseup', function() {
-        
-        if (this.innerText === 'Skill') {
+        if (this.innerText === 'Skills') {
             randomSkill(skillsArray);
         } else {
             randomInterest(interestsArray);
@@ -74,3 +71,23 @@ function randomInterest(array) {
         array.splice(pickedIndex, 1);
     }
 }
+
+var request = new XMLHttpRequest();
+request.open('GET', 'https://api.instagram.com/oembed/?url=http://instagr.am/p/B273pMvpvsc/', true);
+
+request.onload = function(data) {
+  if (this.status >= 200 && this.status < 400) {
+//     // Success!
+  var resp = this.data;
+  console.log(data);
+} else {
+  // We reached our target server, but it returned an error
+
+}
+};
+
+// request.onerror = function() {
+//   // There was a connection error of some sort
+// };
+
+// request.send();

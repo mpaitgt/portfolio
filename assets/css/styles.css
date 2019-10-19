@@ -55,16 +55,14 @@ body {
     text-align: right;
 }
 
-.navigation li a {
+.nav-link {
     font-size: 40px;
     color: #ffffff;
     text-decoration: none;
-}
-
-.navLink {
     padding: 0px;
     font-weight: normal;
     transition: padding 0.5s;
+    cursor: pointer;
 }
 
 .navLink:hover {
@@ -176,6 +174,8 @@ body {
     text-transform: uppercase;
     text-shadow: 2px 2px 9px #000000;
     opacity: 1;
+    position: absolute;
+    top: 150px;
 }
 
 .enter {
@@ -225,7 +225,13 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-top: 50px;
+    transform: scale(1);
+    transition: transform 0.25s;
+}
 
+.projects li:hover {
+    transform: scale(1.1);
+    transition: transform 0.25s;
 }
 
 .project-image {
@@ -248,17 +254,22 @@ body {
     background-position: center;
     background-attachment: fixed;
     height: 800px;
+    position: relative;
 }
 
 .social-icons {
     display: grid;
     grid-template-columns: auto auto auto;
+    width: 100%;
     margin: 50 auto;
     padding: 20px;
     text-align: center;
     background-color: rgb(255, 255, 255, 0.3);
     bottom: 0;
     grid-column-gap: 100px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .icon {
@@ -274,6 +285,8 @@ body {
 }
 
 .hover-link {
+    position: absolute;
+    top: 10px;
     font-size: 62px;
     color: #ffffff;
     width: 100%;
