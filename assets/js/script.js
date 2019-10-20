@@ -32,7 +32,7 @@ function showArray(array) {
 
 $("#about-link").click(function() {
     $([document.documentElement, document.body]).animate({
-        scrollTop: $("#about-landing").offset().top
+        scrollTop: $("#home-icons").offset().top
     }, 500);
 });
 
@@ -50,7 +50,6 @@ $("#project-link").click(function() {
 
 $("#contact-link").click(function() {
     $('#home-icons').animate({
-        display: 'grid',
         opacity: '1',
         bottom: '20px'
     }, 500);

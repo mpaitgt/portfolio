@@ -3,19 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Matt Pignatore - Portfolio</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Staatliches&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"> -->
 </head>
 
 <body>
-<!-- 
-    # Home page begins here, with navbar and main image
-    # Don't forget to include LinkedIn and GitHub icon/links in the navbar
-    #
--->
+
 
 <div class="home-container">
     <div class="navbar">
@@ -27,13 +22,14 @@
 
         <div class="clearfix"></div>
 
-        <ul class="navigation animated fadeIn">
-            <li id="about-link" class="navLink animated nav-link">About</li>
-            <li id="skills-link" class="navLink animated nav-link">Skills</li>
-            <li id="project-link" class="navLink animated nav-link">Projects</li>
-            <li id="contact-link" class="navLink animated nav-link">Contact</li>
+        <ul class="navigation">
+            <li id="about-link" class="nav-link">About</li>
+            <li id="skills-link" class="nav-link">Skills</li>
+            <li id="project-link" class="nav-link">Projects</li>
+            <li id="contact-link" class="nav-link">Contact</li>
         </ul>
     </div>
+
     <div id="home-icons" class="home-icons">
         <a class="hover-function" href="https://github.com/mpaitgt" target="_blank">
             <img class="icon-sm" src="assets/images/social-icons/github.png" alt="">
@@ -47,7 +43,7 @@
     </div>
 </div>
 
-<div id="about-landing" class="about-container">
+<div class="about-container">
     <img class="about-photo" src="assets/images/about-photo.jpg" alt="">
     <div>
         <h2 class="section-heading">About</h2>
@@ -66,74 +62,76 @@
 
 <div id="project-landing" class="project-container"> 
     <h2>Projects</h2>
-</div>
-    <div class="project-display">
-        <ul class="projects">
-            <li>Medo
-                <a id="medo" href="https://mpaitgt.github.io/Project_1/" target="_blank" class="project-item">
-                    <div class="image-box">
-                        <img src="assets/images/project-images/medo.JPG" class="project-image" alt="">
-                        <!-- <ul>
-                            <li class="detail">Built using Bootstrap, Hover, and Animation libraries.</li>
-                            <li class="detail">jQuery for DOM manipulation.</li>
-                            <li class="detail">Last.FM and TMDb APIs.</li>
-                            <li class="detail">Firebase for data persistence.</li>
-                        </ul> -->
-                    </div>
-                </a>
-            </li>
-            <li>Give a Gift
-                <a id="gift" href="https://mpaitgt.github.io/Giphy-API/" target="_blank" class="project-item">
-                    <div class="image-box">
-                        <img src="assets/images/project-images/gift.JPG" class="project-image" alt="">
-                        <!-- <ul>
-                            <li class="detail">Used Bootstrap's grid and vanilla CSS to layout the UI.</li>
-                            <li class="detail">AJAX calls to the Giphy API.</li>
-                            <li class="detail">Local storage for persistence of favorite GIFs.</li>
-                        </ul> -->
-                    </div>
-                </a>
-            </li>
-            <li>Wedding Website
-                <a id="wedding" href="http://mattandshannon.net/index.html" target="_blank" class="project-item">
-                    <div class="image-box">
-                        <img src="assets/images/project-images/wedding.JPG" class="project-image" alt="">
-                    </div>
-                </a>
-                <!-- <p>Initially built purely with HTML & CSS.</p>
-                <p>Used Javascript for mobile-friendly navbar.</p>
-                <p></p> -->
-            </li>
-            <li>Twin Peaks Trivia
-                <a id="trivia" href="https://mpaitgt.github.io/Twin-Peaks-Trivia/" target="_blank" class="project-item">
-                    <div class="image-box">
-                        <img src="assets/images/project-images/trivia.JPG" class="project-image" alt="">
-                    </div>
-                </a>
-            </li>
-        </ul>
-    </div>
 
+    <div class="clearfix"></div>
 
-<div class="end-container">
-    <div id="contact-landing" class="contact-container">
-        
-        <div class="social-icons">
-            <a class="hover-function" href="https://github.com/mpaitgt" target="_blank">
-                <img class="icon" src="assets/images/social-icons/github.png" alt="">
-            </a>
-            <a class="hover-function" id="email-link" href="mailto:mattpignatore@gmail.com">
-                <img id="email-icon" class="icon" src="assets/images/social-icons/email-2.png" alt="">
-            </a>
-            <a class="hover-function" href="https://www.linkedin.com/in/matt-pignatore/" target="_blank">
-                <img class="icon" src="assets/images/social-icons/linked-in.png" alt="">
+    <div class="projects">
+        <div class="new-project">Medo
+            <a id="medo" href="https://mpaitgt.github.io/Project_1/" target="_blank" class="project-item">
+                <div class="image-box">
+                    <img src="assets/images/project-images/medo.JPG" class="project-image" alt="">
+                    <div class="detail">
+                        <p class="headline">A media to-do list.</p>
+                        <p>Always there to remind you what you've been meaning to check out.</p>
+                    </div>
+                </div>
             </a>
         </div>
-
-        <p>I'd love to chat. <br>If you would too, please reach out above.</p>
-
+        <div class="new-project">Give a Gift
+            <a id="gift" href="https://mpaitgt.github.io/Giphy-API/" target="_blank" class="project-item">
+                <div class="image-box">
+                    <img src="assets/images/project-images/gift.JPG" class="project-image" alt="">
+                        <div class="detail">
+                            <p class="headline">'Tis the season.</p>
+                            <p>Search the Giphy library for GIFs and compile your favorites. Give a gift today.</p>
+                        </div>
+                </div>
+            </a>
+        </div>
+        <div class="new-project">Wedding Website
+            <a id="wedding" href="http://mattandshannon.net/index.html" target="_blank" class="project-item">
+                <div class="image-box">
+                    <img src="assets/images/project-images/wedding.JPG" class="project-image" alt="">
+                        <div class="detail">
+                            <p class="headline">Wedding bells.</p>
+                            <p>All the details you'll need if you're coming to my wedding.</p>
+                        </div>
+                </div>
+            </a>
+        </div>
+        <div class="new-project">Twin Peaks Trivia
+            <a id="trivia" href="https://mpaitgt.github.io/Twin-Peaks-Trivia/" target="_blank" class="project-item">
+                <div class="image-box">
+                    <img src="assets/images/project-images/trivia.JPG" class="project-image" alt="">
+                        <div class="detail">
+                            <p class="headline">Who killed Laura Palmer?</p>
+                            <p>Test your knowledge in the Red Room. Do you know Twin Peaks?</p>
+                        </div>
+                </div>
+            </a>
+        </div>
     </div>
 </div>
+
+<div id="contact-landing" class="contact-container">
+    
+    <div class="social-icons">
+        <a class="hover-function" href="https://github.com/mpaitgt" target="_blank">
+            <img class="icon" src="assets/images/social-icons/github.png" alt="">
+        </a>
+        <a class="hover-function" id="email-link" href="mailto:mattpignatore@gmail.com">
+            <img id="email-icon" class="icon" src="assets/images/social-icons/email-2.png" alt="">
+        </a>
+        <a class="hover-function" href="https://www.linkedin.com/in/matt-pignatore/" target="_blank">
+            <img class="icon" src="assets/images/social-icons/linked-in.png" alt="">
+        </a>
+    </div>
+</div>
+
+<footer>
+    <h1>I'd love to chat.</h1>
+    <h2>If you would too, you can find me above.</h2>
+</footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="assets/js/script.js" type="text/javascript"></script>
