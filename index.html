@@ -11,8 +11,7 @@
 
 <body>
 
-
-<div class="home-container">
+<div id="top-landing" class="home-container">
     <div class="navbar">
         <div class="site-title animated fadeIn">
             <h1>Matt Pignatore</h1>
@@ -54,10 +53,12 @@
 </div>
 
 <div id="skills-landing" class="skills-container">
-    <button class="button" id="skill-btn">Click for skills</button>
-    <div id="skill-box">
-        <div id="random-category"></div>
-    </div>
+        <div id="skill-box">
+            <p id="num1">Javascript / <span>jQuery</span></p>
+            <p id="2">HTML & CSS / <span>Bootstrap</span></p>
+            <p id="3">Adobe / <span>InDesign & Photoshop</span></p>
+            <p id="4">Database / <span>Firebase</span></p>
+        </div>
 </div>
 
 <div id="project-landing" class="project-container"> 
@@ -81,10 +82,10 @@
             <a id="gift" href="https://mpaitgt.github.io/Giphy-API/" target="_blank" class="project-item">
                 <div class="image-box">
                     <img src="assets/images/project-images/gift.JPG" class="project-image" alt="">
-                        <div class="detail">
-                            <p class="headline">'Tis the season.</p>
-                            <p>Search the Giphy library for GIFs and compile your favorites. Give a gift today.</p>
-                        </div>
+                    <div class="detail">
+                        <p class="headline">'Tis the season.</p>
+                        <p>Search the Giphy library for GIFs and compile your favorites. Give a gift today.</p>
+                    </div>
                 </div>
             </a>
         </div>
@@ -92,10 +93,10 @@
             <a id="wedding" href="http://mattandshannon.net/index.html" target="_blank" class="project-item">
                 <div class="image-box">
                     <img src="assets/images/project-images/wedding.JPG" class="project-image" alt="">
-                        <div class="detail">
-                            <p class="headline">Wedding bells.</p>
-                            <p>All the details you'll need if you're coming to my wedding.</p>
-                        </div>
+                    <div class="detail">
+                        <p class="headline">Wedding bells.</p>
+                        <p>All the details you'll need if you're coming to my wedding.</p>
+                    </div>
                 </div>
             </a>
         </div>
@@ -103,10 +104,32 @@
             <a id="trivia" href="https://mpaitgt.github.io/Twin-Peaks-Trivia/" target="_blank" class="project-item">
                 <div class="image-box">
                     <img src="assets/images/project-images/trivia.JPG" class="project-image" alt="">
-                        <div class="detail">
-                            <p class="headline">Who killed Laura Palmer?</p>
-                            <p>Test your knowledge in the Red Room. Do you know Twin Peaks?</p>
-                        </div>
+                    <div class="detail">
+                        <p class="headline">Who killed Laura Palmer?</p>
+                        <p>Test your knowledge in the Red Room. Do you know Twin Peaks?</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="new-project">Battle of the Bands
+            <a id="trivia" href="https://mpaitgt.github.io/Battle-Of-The-Bands/" target="_blank" class="project-item">
+                <div class="image-box">
+                    <img src="assets/images/project-images/botb.JPG" class="project-image" alt="">
+                    <div class="detail">
+                        <p class="headline">Who is the best band?</p>
+                        <p>Play and rock on.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="new-project">Dharma Hangman
+            <a id="trivia" href="https://mpaitgt.github.io/Word-Guess-Game/" target="_blank" class="project-item">
+                <div class="image-box">
+                    <img src="assets/images/project-images/hangman.JPG" class="project-image" alt="">
+                    <div class="detail">
+                        <p class="headline">The island demands you play.</p>
+                        <p></p>
+                    </div>
                 </div>
             </a>
         </div>
@@ -129,8 +152,8 @@
 </div>
 
 <footer>
-    <h1>I'd love to chat.</h1>
-    <h2>If you would too, you can find me above.</h2>
+    <p>Reach out above if you'd like to learn more.</p>
+    <p id="top-link">Take me back to the top</p>
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
