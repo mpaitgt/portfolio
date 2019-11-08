@@ -12,12 +12,13 @@ body {
 
 /* --------------------------------------------- home page */
 .home-container {
-    margin: 0px 50px 50px 50px;
+    margin: 50px 50px 50px 50px;
     background-image: url(../images/about-canvas.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    height: 100vh;
+    height: 90vh;
     position: relative;
 }
 
