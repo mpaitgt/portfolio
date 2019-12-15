@@ -5,175 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Matt Pignatore - Portfolio</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Staatliches&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div id="top-landing" class="home-container">
+    <!-- <div class="bg-filter"></div>
+    <div class="bg-image"></div> -->
+
+<div class="main-container">
     <div class="navbar">
-        <div class="site-title animated fadeIn">
-            <h1>Matt Pignatore</h1>
-            <h3>Creative Problem-Solver</h3>
-            <h3>Web Developer</h3>
+        <div class="navbar-content">
+            <h1 class="site-title">Matt Pignatore</h1>
+            <ul class="navigation">
+                <li id="about-link" class="nav-link">About</li>
+                <li id="work-link" class="nav-link">Work</li>
+                <li id="skills-link" class="nav-link">Skills</li>
+                <a href="assets/images/Matt Pignatore_Official Resume.pdf" target="_blank"><li id="resume-link" class="nav-link">Resume</li></a>
+                <li id="contact-link" class="nav-link">Contact</li>
+            </ul>
         </div>
-
-        <div class="clearfix"></div>
-
-        <ul class="navigation">
-            <li id="about-link" class="nav-link">About</li>
-            <li id="skills-link" class="nav-link">Skills</li>
-            <li id="project-link" class="nav-link">Projects</li>
-            <a href="assets/images/Resume_Matt_Pignatore.pdf" target="_blank"><li id="resume-link" class="nav-link">Resume</li></a>
-            <li id="contact-link" class="nav-link">Contact</li>
-        </ul>
     </div>
+    <div class="content-container">
 
-    <div id="home-icons" class="home-icons">
-        <a class="hover-function" href="https://github.com/mpaitgt" target="_blank">
-            <img class="icon-sm" src="assets/images/social-icons/github.png" alt="">
-        </a>
-        <a class="hover-function" id="email-link" href="mailto:mattpignatore@gmail.com">
-            <img id="email-icon" class="icon-sm" src="assets/images/social-icons/email-2.png" alt="">
-        </a>
-        <a class="hover-function" href="https://www.linkedin.com/in/matt-pignatore/" target="_blank">
-            <img class="icon-sm" src="assets/images/social-icons/linked-in.png" alt="">
-        </a>
-    </div>
-</div>
-
-<div class="about-container">
-    <img class="about-photo" src="assets/images/about-photo.jpg" alt="">
-    <div>
-        <h2>About</h2>
-        <p>
-            Front-end web developer with experience in marketing. I began as a self-taught web developer with HTML and CSS, and eventually gained skills in JavaScript, Git version-control, and back-end programming to improve my perspective on and understanding of the user experience. Passionate about bringing creativity, collaboration, and logic together in order to effectively solve problems, build web applications, and make them look good in the process.
-        </p>
-    </div>
-</div>
-
-<div id="skills-landing" class="skills-container">
-        <div id="skill-box">
-            <div class="section-content">
-                <h2 class="section-heading">Skills</h2>
-                <ul>
-                    <li>Javascript / MySQL</li>
-                    <li>jQuery / Node.JS</li>
-                    <li>HTML / CSS</li>
-                    <li>Bootstrap / Sass</li>
-                    <li>Photoshop / InDesign</li>
-                    <li>Wordpress / Sitecore</li>
-                </ul>
-            </div>
-            <div class="section-content">
-                <h2 class="section-heading">Content Creation & Branding</h2>
-                <ul>
-                    <li><a href="https://www.hearinglife.com/hearing-blog/2019/all-ears-on-the-woodstock-generation">All Ears on the Woodstock Generation</a></li>
-                    <li><a href="https://mattpignatore.bandcamp.com">Music on Bandcamp</a></li>
-                    <li><a href="">Alternative Dough</a></li>
-                </ul>
+        <div id="about" class="about box">
+            <img class="about-photo" src="assets/images/about-photo.jpg" alt="">
+            <div class="about-content">
+                <h2>About</h2>
+                <p>
+                    Front-end web developer with experience in marketing. I began as a self-taught web developer with HTML and CSS, and eventually gained skills in JavaScript, Git version-control, and back-end programming to improve my perspective on and understanding of the user experience. Passionate about bringing creativity, collaboration, and logic together in order to effectively solve problems, build web applications, and make them look good in the process.
+                </p>
             </div>
         </div>
-</div>
 
-<div id="project-landing" class="project-container"> 
-    <h2>Projects</h2>
+        <div id="skills" class="skills box">
+            <h2 class="section-heading">Skills</h2>
+            <ul>
+                <li>Javascript <span>/ jQuery, React</span></li>
+                <li>MySQL <span>/ Sequelize</span></li>
+                <li>Node.JS <span>/ Express, Handlebars</span></li>
+                <li>CSS <span>/ Sass, Bootstrap</span></li>
+                <li>Adobe <span>/ Photoshop, InDesign</span></li>
+                <li>Wordpress / Sitecore</li>
+            </ul>
+        </div>
 
-    <div class="clearfix"></div>
+        <div id="work" class="work box"></div>
 
-    <div class="projects">
-        <div class="new-project">Medo
-            <a id="medo" href="https://mpaitgt.github.io/Project_1/" target="_blank" class="project-item">
-                <div class="image-box">
-                    <img src="assets/images/project-images/medo.JPG" class="project-image" alt="">
-                    <div class="detail">
-                        <p class="headline">A media to-do list.</p>
-                        <p>Always there to remind you what you've been meaning to check out.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="new-project">Give a Gift
-            <a id="gift" href="https://mpaitgt.github.io/Giphy-API/" target="_blank" class="project-item">
-                <div class="image-box">
-                    <img src="assets/images/project-images/gift.JPG" class="project-image" alt="">
-                    <div class="detail">
-                        <p class="headline">'Tis the season.</p>
-                        <p>Search the Giphy library for GIFs and compile your favorites. Give a gift today.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="new-project">Wedding Website
-            <a id="wedding" href="http://mattandshannon.net/index.html" target="_blank" class="project-item">
-                <div class="image-box">
-                    <img src="assets/images/project-images/wedding.JPG" class="project-image" alt="">
-                    <div class="detail">
-                        <p class="headline">Wedding bells.</p>
-                        <p>All the details you'll need if you're coming to my wedding.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="new-project">Twin Peaks Trivia
-            <a id="trivia" href="https://mpaitgt.github.io/Twin-Peaks-Trivia/" target="_blank" class="project-item">
-                <div class="image-box">
-                    <img src="assets/images/project-images/trivia.JPG" class="project-image" alt="">
-                    <div class="detail">
-                        <p class="headline">Who killed Laura Palmer?</p>
-                        <p>Test your knowledge in the Red Room. Do you know Twin Peaks?</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="new-project">Battle of the Bands
-            <a id="trivia" href="https://mpaitgt.github.io/Battle-Of-The-Bands/" target="_blank" class="project-item">
-                <div class="image-box">
-                    <img src="assets/images/project-images/botb.JPG" class="project-image" alt="">
-                    <div class="detail">
-                        <p class="headline">Who is the best band?</p>
-                        <p>Play and rock on.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="new-project">Dharma Hangman
-            <a id="trivia" href="https://mpaitgt.github.io/Word-Guess-Game/" target="_blank" class="project-item">
-                <div class="image-box">
-                    <img src="assets/images/project-images/hangman.JPG" class="project-image" alt="">
-                    <div class="detail">
-                        <p class="headline">The island demands you play.</p>
-                        <p></p>
-                    </div>
-                </div>
-            </a>
+        <div id="contact" class="contact box">
+            <h2 class="section-heading">Contact</h2>
+            <label for="name">Name</label>
+            <input type="text" id="name-input" name="name">
+            <label for="message">Message</label>
+            <textarea name="message" id="-message-input" cols="30" rows="8"></textarea>
+            <button type="submit" id="submit-btn">Submit</button>
         </div>
     </div>
+
 </div>
 
-<div id="contact-landing" class="contact-container">
-    
-    <div class="social-icons">
-        <a class="hover-function" href="https://github.com/mpaitgt" target="_blank">
-            <img class="icon" src="assets/images/social-icons/github.png" alt="">
-        </a>
-        <a class="hover-function" id="email-link" href="mailto:mattpignatore@gmail.com">
-            <img id="email-icon" class="icon" src="assets/images/social-icons/email-2.png" alt="">
-        </a>
-        <a class="hover-function" href="https://www.linkedin.com/in/matt-pignatore/" target="_blank">
-            <img class="icon" src="assets/images/social-icons/linked-in.png" alt="">
-        </a>
-    </div>
-    <p>Reach out above if you'd like to learn more.</p>
+
+
+
+
+<div id="home-icons" class="home-icons">
+    <a class="hover-function" href="https://github.com/mpaitgt" target="_blank">
+        <img class="icon-sm" src="assets/images/social-icons/github.png" alt="">
+    </a>
+    <a class="hover-function" id="email-link" href="mailto:mattpignatore@gmail.com">
+        <img id="email-icon" class="icon-sm" src="assets/images/social-icons/email-2.png" alt="">
+    </a>
+    <a class="hover-function" href="https://www.linkedin.com/in/matt-pignatore/" target="_blank">
+        <img class="icon-sm" src="assets/images/social-icons/linked-in.png" alt="">
+    </a>
 </div>
 
-<footer>
-    
-    <p id="top-link">Take me back to the top</p>
-</footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="assets/js/script.js" type="text/javascript"></script>
+    <!-- <img src="assets/images/about-canvas.jpg" height="400" alt=""> -->
+
+
+<script src="./script.js" type="text/javascript"></script>
+<script src="./assets/js/script.js" type="text/javascript"></script>
 </body>
 </html>

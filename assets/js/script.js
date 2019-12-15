@@ -1,31 +1,35 @@
-// EVENT LISTENERS
-$("#about-link").click(function() {
-    $([document.documentElement, document.body]).animate({
-        scrollTop: $("#home-icons").offset().top
-    }, 500);
+var about = document.getElementById('about-link');
+var skills = document.getElementById('skills-link');
+var work = document.getElementById('work-link');
+var contact = document.getElementById('contact-link');
+var boxClass = document.getElementsByClassName('box');
+
+about.addEventListener('click', function() {
+    hideBox();
+    var aboutContent = document.getElementById('about');
+    aboutContent.style.display = 'block';
 });
 
-$("#skills-link").click(function() {
-    $([document.documentElement, document.body]).animate({
-        scrollTop: $("#skills-landing").offset().top
-    }, 500);
+skills.addEventListener('click', function() {
+    hideBox();
+    var skillsContent = document.getElementById('skills');
+    skillsContent.style.display = 'block';
 });
 
-$("#project-link").click(function() {
-    $([document.documentElement, document.body]).animate({
-        scrollTop: $("#project-landing").offset().top
-    }, 500);
+work.addEventListener('click', function() {
+    hideBox();
+    var workContent = document.getElementById('work');
+    workContent.style.display = 'block';
 });
 
-$("#contact-link").click(function() {
-    $('#home-icons').animate({
-        opacity: '1',
-        bottom: '20px'
-    }, 500);
+contact.addEventListener('click', function() {
+    hideBox();
+    var contactContent = document.getElementById('contact');
+    contactContent.style.display = 'block';
 });
 
-$("#top-link").click(function() {
-    $([document.documentElement, document.body]).animate({
-        scrollTop: $("#top-landing").offset().top
-    }, 500);
-});
+function hideBox() {
+    for (var i = 0; i < boxClass.length; i++) {
+        boxClass[i].style.display = 'none';
+    }
+}
