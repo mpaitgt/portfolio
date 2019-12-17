@@ -3,6 +3,7 @@ var skills = document.getElementById('skills-link');
 var work = document.getElementById('work-link');
 var contact = document.getElementById('contact-link');
 var boxClass = document.getElementsByClassName('box');
+var homeimage = document.getElementById('home-img');
 
 about.addEventListener('click', function() {
     hideBox();
@@ -29,6 +30,10 @@ contact.addEventListener('click', function() {
 });
 
 function hideBox() {
+    if(homeimage.style.display = 'block') {
+        homeimage.classList.add('animation-exit');
+        homeimage.style.display = 'none';
+    }
     for (var i = 0; i < boxClass.length; i++) {
         boxClass[i].style.display = 'none';
     }

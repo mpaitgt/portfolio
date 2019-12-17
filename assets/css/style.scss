@@ -173,10 +173,31 @@ body {
                 }
             }
         }
+        #home-img {
+            display: block;
+        }
+    }
+    .home-icons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .icon-sm {
+        width: 50px;
+    }
+    .animation-exit {
+        animation-name: exit;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
     }
 }
 
 @keyframes opacity {
     0% {opacity: 0; top: -50px}
     100% {opacity: 1; top: 0}
+}
+
+@keyframes exit {
+    0% {opacity: 1; top: 0px}
+    100% {opacity: 0; top: 50px}
 }
