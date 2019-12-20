@@ -12,13 +12,15 @@
 
 <body>
 
+
+
     <!-- <div class="bg-filter"></div>
     <div class="bg-image"></div> -->
 
 <div class="main-container">
     <div class="navbar">
         <div class="navbar-content">
-            <h1 class="site-title">Matt Pignatore</h1>
+                <h1 id="home" class="site-title">Matt Pignatore</h1>
             <ul class="navigation">
                 <li id="about-link" class="nav-link">About</li>
                 <li id="work-link" class="nav-link">Work</li>
@@ -31,7 +33,17 @@
     <div class="content-container">
 
         <div id="home-img">
-            <img src="./assets/images/about-canvas.jpg" style="width: 800px; margin: 0 auto;" alt="">
+            <div id="home-icons" class="home-icons">
+                <a class="hover-function" href="https://github.com/mpaitgt" target="_blank">
+                    <img class="icon-sm" src="assets/images/social-icons/github.png" alt="">
+                </a>
+                <a class="hover-function" id="email-link" href="mailto:mattpignatore@gmail.com">
+                    <img id="email-icon" class="icon-sm" src="assets/images/social-icons/email-2.png" alt="">
+                </a>
+                <a class="hover-function" href="https://www.linkedin.com/in/matt-pignatore/" target="_blank">
+                    <img class="icon-sm" src="assets/images/social-icons/linked-in.png" alt="">
+                </a>
+            </div>
         </div>
 
         <div id="about" class="about box">
@@ -56,7 +68,20 @@
             </ul>
         </div>
 
-        <div id="work" class="work box"></div>
+        <div id="work" class="work box">
+            <ul>
+                <li>
+                    <img class="project-img" src="./assets/images/project-images/medo.JPG" alt="medo">
+                </li>
+                <li>
+                    <img class="project-img" src="./assets/images/project-images/deetz.JPG" alt="deetz">
+                </li>
+                <li>
+                    <img class="project-img" src="./assets/images/project-images/gift.JPG" alt="gift">
+                </li>
+
+            </ul>
+        </div>
 
         <div id="contact" class="contact box">
             <h2 class="section-heading">Contact</h2>
@@ -66,29 +91,9 @@
             <textarea name="message" id="-message-input" cols="30" rows="8"></textarea>
             <button type="submit" id="submit-btn">Submit</button>
         </div>
-    </div>
-    <div id="home-icons" class="home-icons">
-        <a class="hover-function" href="https://github.com/mpaitgt" target="_blank">
-            <img class="icon-sm" src="assets/images/social-icons/github.png" alt="">
-        </a>
-        <a class="hover-function" id="email-link" href="mailto:mattpignatore@gmail.com">
-            <img id="email-icon" class="icon-sm" src="assets/images/social-icons/email-2.png" alt="">
-        </a>
-        <a class="hover-function" href="https://www.linkedin.com/in/matt-pignatore/" target="_blank">
-            <img class="icon-sm" src="assets/images/social-icons/linked-in.png" alt="">
-        </a>
+
     </div>
 </div>
-
-
-
-
-
-
-
-
-    <!-- <img src="assets/images/about-canvas.jpg" height="400" alt=""> -->
-
 
 <script src="./script.js" type="text/javascript"></script>
 <script src="./assets/js/script.js" type="text/javascript"></script>

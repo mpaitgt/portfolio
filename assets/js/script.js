@@ -4,6 +4,13 @@ var work = document.getElementById('work-link');
 var contact = document.getElementById('contact-link');
 var boxClass = document.getElementsByClassName('box');
 var homeimage = document.getElementById('home-img');
+var home = document.getElementById('home');
+
+home.addEventListener('click', function() {
+    hideBox();
+    var aboutContent = document.getElementById('home');
+    homeimage.style.display = 'block';
+});
 
 about.addEventListener('click', function() {
     hideBox();
@@ -31,8 +38,11 @@ contact.addEventListener('click', function() {
 
 function hideBox() {
     if(homeimage.style.display = 'block') {
-        homeimage.classList.add('animation-exit');
+        // homeimage.classList.add('animation-exit');
         homeimage.style.display = 'none';
+        // setTimeout(function() {
+            
+        // }, 1000);  
     }
     for (var i = 0; i < boxClass.length; i++) {
         boxClass[i].style.display = 'none';

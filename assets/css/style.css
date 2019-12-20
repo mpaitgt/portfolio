@@ -65,7 +65,6 @@ body .main-container .navbar .site-title {
   font-family: 'Staatliches', arial;
   color: #000000;
   letter-spacing: 0.1em;
-  float: left;
 }
 
 body .main-container .navbar .navigation {
@@ -105,6 +104,7 @@ body .main-container .content-container {
 }
 
 body .main-container .box {
+  display: none;
   max-width: 600px;
   margin: 0 auto;
   padding: 2em;
@@ -117,8 +117,56 @@ body .main-container .box {
   position: relative;
 }
 
-body .main-container .about, body .main-container .skills, body .main-container .contact {
-  display: none;
+body .main-container #home-img {
+  -webkit-box-shadow: 0px 0px 18px -9px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 18px -9px rgba(0, 0, 0, 0.75);
+  display: block;
+  background-image: url("../images/about-canvas.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 800px;
+  height: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+body .main-container #home-img #home-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: absolute;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+body .main-container #home-img #home-icons .icon-sm {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  width: 60px;
+  margin-left: 20px;
+  margin-right: 20px;
+  -webkit-transition: -webkit-transform 0.25s ease-in-out;
+  transition: -webkit-transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+}
+
+body .main-container #home-img #home-icons .icon-sm:hover {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+  -webkit-transition: -webkit-transform 0.25s ease-in-out;
+  transition: -webkit-transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
 }
 
 body .main-container .about .about-photo, body .main-container .skills .about-photo, body .main-container .contact .about-photo {
@@ -126,6 +174,8 @@ body .main-container .about .about-photo, body .main-container .skills .about-ph
   border-radius: 50%;
   margin: 0 auto;
   text-align: center;
+  -webkit-box-shadow: 0px 0px 18px -9px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 18px -9px rgba(0, 0, 0, 0.75);
 }
 
 body .main-container .about h2, body .main-container .skills h2, body .main-container .contact h2 {
@@ -188,6 +238,8 @@ body .main-container .contact input, body .main-container .contact textarea {
   background-color: #ffffff3b;
   -webkit-transition: background-color 0.25s ease-in;
   transition: background-color 0.25s ease-in;
+  -webkit-box-shadow: 0px 0px 18px -9px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 18px -9px rgba(0, 0, 0, 0.75);
 }
 
 body .main-container .contact input:hover, body .main-container .contact textarea:hover {
@@ -218,20 +270,26 @@ body .main-container .contact #submit-btn:hover {
   transition: background-color 0.25s ease-in;
 }
 
-body .home-icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+body .main-container .work li {
+  list-style: none;
 }
 
-body .icon-sm {
-  width: 50px;
+body .main-container .work li .project-img {
+  list-style: none;
+  height: 300px;
+  margin: 32px auto;
+  -webkit-box-shadow: 0px 0px 18px -9px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 18px -9px rgba(0, 0, 0, 0.75);
+}
+
+body .animation-exit {
+  -webkit-animation-name: exit;
+          animation-name: exit;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  position: relative;
 }
 
 @-webkit-keyframes opacity {
@@ -253,6 +311,28 @@ body .icon-sm {
   100% {
     opacity: 1;
     top: 0;
+  }
+}
+
+@-webkit-keyframes exit {
+  0% {
+    opacity: 1;
+    top: 0;
+  }
+  100% {
+    opacity: 0;
+    top: 50px;
+  }
+}
+
+@keyframes exit {
+  0% {
+    opacity: 1;
+    top: 0;
+  }
+  100% {
+    opacity: 0;
+    top: 50px;
   }
 }
 /*# sourceMappingURL=style.css.map */
