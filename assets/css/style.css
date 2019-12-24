@@ -60,6 +60,7 @@ body .main-container .navbar .navbar-content {
 }
 
 body .main-container .navbar .site-title {
+  cursor: pointer;
   font-size: 80px;
   text-transform: uppercase;
   font-family: 'Staatliches', arial;
@@ -280,6 +281,10 @@ body .main-container .work li .project-img {
   margin: 32px auto;
   -webkit-box-shadow: 0px 0px 18px -9px rgba(0, 0, 0, 0.75);
           box-shadow: 0px 0px 18px -9px rgba(0, 0, 0, 0.75);
+}
+
+body .main-container .work li .project-img:hover {
+  background-color: #00000088;
 }
 
 body .animation-exit {

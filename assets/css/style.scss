@@ -47,6 +47,7 @@ body {
                 margin: 0 auto;
             }
             .site-title {
+                cursor: pointer;
                 font-size: 80px;
                 text-transform: uppercase;
                 font-family: 'Staatliches', arial;
@@ -216,6 +217,9 @@ body {
                     height: 300px;
                     margin: 32px auto;
                     box-shadow: $bg-shadow;
+                    &:hover {
+                        background-color: #00000088;
+                    }
                 }
             }
         }

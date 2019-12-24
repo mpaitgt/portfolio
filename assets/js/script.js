@@ -48,3 +48,4 @@ function hideBox() {
         boxClass[i].style.display = 'none';
     }
 }
+
