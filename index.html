@@ -26,7 +26,7 @@
                 <li id="work-link" class="nav-link">Work</li>
                 <li id="skills-link" class="nav-link">Skills</li>
                 <a href="assets/images/Matt Pignatore_Official Resume.pdf" target="_blank"><li id="resume-link" class="nav-link">Resume</li></a>
-                <li id="contact-link" class="nav-link">Contact</li>
+                <li id="contact-link" class="nav-link" style="display: none">Contact</li>
             </ul>
         </div>
     </div>
@@ -96,11 +96,14 @@
 
         <div id="contact" class="contact box">
             <h2 class="section-heading">Contact</h2>
-            <label for="name">Name</label>
-            <input type="text" id="name-input" name="name">
-            <label for="message">Message</label>
-            <textarea name="message" id="-message-input" cols="30" rows="8"></textarea>
-            <button type="submit" id="submit-btn">Submit</button>
+            <form action="mailto:mattpignatore@gmail.com" method="get" enctype="text/plain">
+                <label for="name">Name</label>
+                <input type="text" id="name-input" name="name">
+                <label for="message">Message</label>
+                <textarea name="message" id="-message-input" cols="30" rows="8"></textarea>
+                <button type="submit" id="submit-btn">Submit</button>
+            </form>
+
         </div>
 
     </div>
