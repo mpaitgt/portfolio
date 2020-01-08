@@ -25,8 +25,8 @@
                 <li id="about-link" class="nav-link">About</li>
                 <li id="work-link" class="nav-link">Work</li>
                 <li id="skills-link" class="nav-link">Skills</li>
-                <a href="assets/images/Matt Pignatore_Official Resume.pdf" target="_blank"><li id="resume-link" class="nav-link">Resume</li></a>
-                <li id="contact-link" class="nav-link" style="display: none">Contact</li>
+                <a href="assets/images/Matt Pignatore_Resume.pdf" target="_blank"><li id="resume-link" class="nav-link">Resume</li></a>
+                <li id="contact-link" class="nav-link">Contact</li>
             </ul>
         </div>
     </div>
@@ -59,39 +59,66 @@
         <div id="skills" class="skills box">
             <h2 class="section-heading">Skills</h2>
             <ul>
-                <li>Javascript <span>/ jQuery, React</span></li>
-                <li>MySQL <span>/ Sequelize</span></li>
-                <li>Node.JS <span>/ Express, Handlebars</span></li>
-                <li>CSS <span>/ Sass, Bootstrap</span></li>
-                <li>Adobe <span>/ Photoshop, InDesign</span></li>
-                <li>Wordpress / Sitecore</li>
+                <li>
+                    Javascript <span>/ jQuery, React</span>
+                    <div class="meter">
+                        <span style="width: 25%"></span>
+                    </div>
+                </li>
+                <li>
+                    MySQL <span>/ Sequelize</span>
+                    <div class="meter">
+                        <span style="width: 25%"></span>
+                    </div>
+                </li>
+                <li>
+                    Node.JS <span>/ Express, Handlebars</span>
+                    <div class="meter">
+                        <span style="width: 25%"></span>
+                    </div>
+                </li>
+                <li>
+                    CSS <span>/ Sass, Bootstrap</span>
+                    <div class="meter">
+                        <span style="width: 25%"></span>
+                    </div>
+                </li>
+                <li>
+                    Adobe <span>/ Photoshop, InDesign</span>
+                    <div class="meter">
+                        <span style="width: 25%"></span>
+                    </div>
+                </li>
+                <li>
+                    Wordpress / Sitecore
+                    <div class="meter">
+                        <span style="width: 25%"></span>
+                    </div>
+                </li>
             </ul>
         </div>
 
         <div id="work" class="work box">
-            <ul>
-                <li>
                     <a href="https://mpaitgt.github.io/Project_1/" target="_blank">
                         <div class="hover-effect">
                             <img class="project-img" src="./assets/images/project-images/medo.JPG" alt="medo">
                         </div>
                     </a>
-                </li>
-                <li>
                     <a href="https://deetz-app.herokuapp.com/" target="_blank">
                         <div class="hover-effect">
                             <img class="project-img" src="./assets/images/project-images/deetz.JPG" alt="deetz">
                         </div>
                     </a>
-                </li>
-                <li>
                     <a href="https://mpaitgt.github.io/Giphy-API/" target="_blank">
                         <div class="hover-effect">
                             <img class="project-img" src="./assets/images/project-images/gift.JPG" alt="gift">
                         </div>
                     </a>
-                </li>
-            </ul>
+                    <a href="https://mpaitgt.github.io/wedding-website" target="_blank">
+                        <div class="hover-effect">
+                            <img class="project-img" src="./assets/images/project-images/wedding.JPG" alt="gift">
+                        </div>
+                    </a>
         </div>
 
         <div id="contact" class="contact box">
@@ -99,6 +126,8 @@
             <form action="mailto:mattpignatore@gmail.com" method="get" enctype="text/plain">
                 <label for="name">Name</label>
                 <input type="text" id="name-input" name="name">
+                <label for="email">Email</label>
+                <input type="text" id="email-input" name="email">
                 <label for="message">Message</label>
                 <textarea name="message" id="-message-input" cols="30" rows="8"></textarea>
                 <button type="submit" id="submit-btn">Submit</button>

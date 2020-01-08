@@ -3,7 +3,7 @@
     margin: 0;
 }
 
-$bg-shadow: 0px 0px 18px -9px rgba(0,0,0,0.75);
+$bg-shadow: 0px 0px 10px -8px rgba(0,0,0,0.3);
 
 .bg-image {
     background-image: url(../images/about-canvas.jpg);
@@ -168,6 +168,26 @@ body {
         .skills {
             width: 35%;
             margin: 0 auto;
+            .meter {
+                display: block;
+                height: 10px;
+                position: relative;
+                background: rgb(224, 224, 224);
+                -moz-border-radius: 25px;
+                -webkit-border-radius: 25px;
+                border-radius: 25px;
+                padding: 0px;
+                box-shadow: inset 0 -1px 1px rgba(255,255,255,0.1);
+                margin-bottom: 1em;
+                span {
+                    display: block;
+                    width: 60%;
+                    background-color: #a5d3bc;
+                    height: 100%;
+                    position: relative;
+                    border-radius: inherit;
+                }
+            }
         }
         .contact {
             label {
@@ -210,7 +230,7 @@ body {
             }
         }
         .work {
-            li {
+            a {
                 list-style: none;
                 .project-img {
                     list-style: none;
@@ -223,7 +243,6 @@ body {
                 }
             }
         }
-
     }
     .animation-exit {
         animation-name: exit;
