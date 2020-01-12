@@ -216,11 +216,6 @@ body .main-container .about ul li span, body .main-container .skills ul li span,
   font-size: 18px;
 }
 
-body .main-container .skills {
-  width: 35%;
-  margin: 0 auto;
-}
-
 body .main-container .skills .meter {
   display: block;
   height: 10px;
@@ -233,10 +228,45 @@ body .main-container .skills .meter {
   margin-bottom: 1em;
 }
 
+body .main-container .skills .meter .js {
+  width: 0%;
+  -webkit-animation: js 1s ease-in-out 1s 1 forwards;
+          animation: js 1s ease-in-out 1s 1 forwards;
+}
+
+body .main-container .skills .meter .sql {
+  width: 0%;
+  -webkit-animation: sql 1s ease-in-out 1s 1 forwards;
+          animation: sql 1s ease-in-out 1s 1 forwards;
+}
+
+body .main-container .skills .meter .css {
+  width: 0%;
+  -webkit-animation: css 1s ease-in-out 1s 1 forwards;
+          animation: css 1s ease-in-out 1s 1 forwards;
+}
+
+body .main-container .skills .meter .node {
+  width: 0%;
+  -webkit-animation: node 1s ease-in-out 1s 1 forwards;
+          animation: node 1s ease-in-out 1s 1 forwards;
+}
+
+body .main-container .skills .meter .adobe {
+  width: 0%;
+  -webkit-animation: adobe 1s ease-in-out 1s 1 forwards;
+          animation: adobe 1s ease-in-out 1s 1 forwards;
+}
+
+body .main-container .skills .meter .cms {
+  width: 0%;
+  -webkit-animation: cms 1s ease-in-out 1s 1 forwards;
+          animation: cms 1s ease-in-out 1s 1 forwards;
+}
+
 body .main-container .skills .meter span {
   display: block;
-  width: 60%;
-  background-color: #a5d3bc;
+  background-color: #96bda9;
   height: 100%;
   position: relative;
   border-radius: inherit;
@@ -359,6 +389,114 @@ body .animation-exit {
   100% {
     opacity: 0;
     top: 50px;
+  }
+}
+
+@-webkit-keyframes js {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes js {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@-webkit-keyframes sql {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes sql {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@-webkit-keyframes css {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 85%;
+  }
+}
+
+@keyframes css {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 85%;
+  }
+}
+
+@-webkit-keyframes node {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes node {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+@-webkit-keyframes adobe {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes adobe {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+@-webkit-keyframes cms {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+@keyframes cms {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 75%;
   }
 }
 /*# sourceMappingURL=style.css.map */

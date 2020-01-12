@@ -5,6 +5,10 @@
 
 $bg-shadow: 0px 0px 10px -8px rgba(0,0,0,0.3);
 
+@mixin expandBarAnimation($skill) {
+    animation: $skill 1s ease-in-out 1s 1 forwards;
+}
+
 .bg-image {
     background-image: url(../images/about-canvas.jpg);
     background-size: contain;
@@ -166,8 +170,6 @@ body {
             }
         }
         .skills {
-            width: 35%;
-            margin: 0 auto;
             .meter {
                 display: block;
                 height: 10px;
@@ -179,10 +181,33 @@ body {
                 padding: 0px;
                 box-shadow: inset 0 -1px 1px rgba(255,255,255,0.1);
                 margin-bottom: 1em;
+                .js {
+                    width: 0%;
+                    @include expandBarAnimation(js);
+                }
+                .sql {
+                    width: 0%;
+                    @include expandBarAnimation(sql);
+                }
+                .css {
+                    width: 0%;
+                    @include expandBarAnimation(css);
+                }
+                .node {
+                    width: 0%;
+                    @include expandBarAnimation(node);
+                }
+                .adobe {
+                    width: 0%;
+                    @include expandBarAnimation(adobe);
+                }
+                .cms {
+                    width: 0%;
+                    @include expandBarAnimation(cms);
+                }
                 span {
                     display: block;
-                    width: 60%;
-                    background-color: #a5d3bc;
+                    background-color: #96bda9;
                     height: 100%;
                     position: relative;
                     border-radius: inherit;
@@ -260,4 +285,34 @@ body {
 @keyframes exit {
     0% {opacity: 1; top: 0}
     100% {opacity: 0; top: 50px}
+}
+
+@keyframes js {
+    0% {width: 0}
+    100% {width: 80%}
+}
+
+@keyframes sql {
+    0% {width: 0}
+    100% {width: 70%}
+}
+
+@keyframes css {
+    0% {width: 0}
+    100% {width: 85%}
+}
+
+@keyframes node {
+    0% {width: 0}
+    100% {width: 80%}
+}
+
+@keyframes adobe {
+    0% {width: 0}
+    100% {width: 70%}
+}
+
+@keyframes cms {
+    0% {width: 0}
+    100% {width: 75%}
 }
