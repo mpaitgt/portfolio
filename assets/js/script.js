@@ -27,7 +27,8 @@ skills.addEventListener('click', function() {
 work.addEventListener('click', function() {
     hideBox();
     var workContent = document.getElementById('work');
-    workContent.style.display = 'block';
+    workContent.style.display = 'grid';
+    // workContent.classList.add('work-grid');
 });
 
 contact.addEventListener('click', function() {

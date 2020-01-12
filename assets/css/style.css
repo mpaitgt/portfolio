@@ -119,8 +119,8 @@ body .main-container .box {
 }
 
 body .main-container #home-img {
-  -webkit-box-shadow: 0px 0px 10px -8px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 0px 10px -8px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 20px -8px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 20px -8px rgba(0, 0, 0, 0.3);
   display: block;
   background-image: url("../images/about-canvas.jpg");
   background-position: center;
@@ -175,8 +175,8 @@ body .main-container .about .about-photo, body .main-container .skills .about-ph
   border-radius: 50%;
   margin: 0 auto;
   text-align: center;
-  -webkit-box-shadow: 0px 0px 10px -8px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 0px 10px -8px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 20px -8px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 20px -8px rgba(0, 0, 0, 0.3);
 }
 
 body .main-container .about h2, body .main-container .skills h2, body .main-container .contact h2 {
@@ -290,8 +290,8 @@ body .main-container .contact input, body .main-container .contact textarea {
   background-color: #ffffff3b;
   -webkit-transition: background-color 0.25s ease-in;
   transition: background-color 0.25s ease-in;
-  -webkit-box-shadow: 0px 0px 10px -8px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 0px 10px -8px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 20px -8px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 20px -8px rgba(0, 0, 0, 0.3);
 }
 
 body .main-container .contact input:hover, body .main-container .contact textarea:hover {
@@ -330,12 +330,25 @@ body .main-container .work a .project-img {
   list-style: none;
   height: 300px;
   margin: 32px auto;
-  -webkit-box-shadow: 0px 0px 10px -8px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 0px 10px -8px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0px 20px -8px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 20px -8px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 body .main-container .work a .project-img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 1s;
+  transition: all 1s;
   background-color: #00000088;
+}
+
+body .main-container .work .work-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2;
+      grid-template-columns: 2;
 }
 
 body .animation-exit {

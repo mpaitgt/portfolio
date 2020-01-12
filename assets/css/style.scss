@@ -3,7 +3,7 @@
     margin: 0;
 }
 
-$bg-shadow: 0px 0px 10px -8px rgba(0,0,0,0.3);
+$bg-shadow: 0px 0px 20px -8px rgba(0,0,0,0.3);
 
 @mixin expandBarAnimation($skill) {
     animation: $skill 1s ease-in-out 1s 1 forwards;
@@ -262,10 +262,17 @@ body {
                     height: 300px;
                     margin: 32px auto;
                     box-shadow: $bg-shadow;
+                    transition: all 1s;
                     &:hover {
+                        transform: scale(1.1);
+                        transition: all 1s;
                         background-color: #00000088;
                     }
                 }
+            }
+            .work-grid {
+                display: grid;
+                grid-template-columns: 2;
             }
         }
     }
