@@ -148,6 +148,10 @@ body {
                 text-align: justify;
                 letter-spacing: 1px;
             }
+            a {
+                color: #82a18d;
+                font-weight: bold;
+            }
             ul {
                 list-style: none;
                 padding: 0;
@@ -207,11 +211,11 @@ body {
             }
             input, textarea {
                 width: 100%;
-                border-radius: 5px;
+                border-radius: 5px 5px 0px 0px;
                 padding: 5px 10px;
                 font-size: 22px;
-                border: 1px solid #000000;
-                border-bottom: 2px solid #000000;
+                border: none;
+                border-bottom: 1px solid #000000;
                 background-color: #ffffff3b;
                 transition: background-color 0.25s ease-in;
                 box-shadow: $bg-shadow;
@@ -222,6 +226,10 @@ body {
                 &:focus {
                     background-color: #ffffffbb;
                     transition: background-color 0.25s ease-in;
+                    outline: none;
+                }
+                &:active {
+                    outline: none;
                 }
             }
             #submit-btn {

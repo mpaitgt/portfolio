@@ -195,6 +195,11 @@ body .main-container .about p, body .main-container .skills p, body .main-contai
   letter-spacing: 1px;
 }
 
+body .main-container .about a, body .main-container .skills a, body .main-container .contact a {
+  color: #82a18d;
+  font-weight: bold;
+}
+
 body .main-container .about ul, body .main-container .skills ul, body .main-container .contact ul {
   list-style: none;
   padding: 0;
@@ -271,11 +276,11 @@ body .main-container .contact label {
 
 body .main-container .contact input, body .main-container .contact textarea {
   width: 100%;
-  border-radius: 5px;
+  border-radius: 5px 5px 0px 0px;
   padding: 5px 10px;
   font-size: 22px;
-  border: 1px solid #000000;
-  border-bottom: 2px solid #000000;
+  border: none;
+  border-bottom: 1px solid #000000;
   background-color: #ffffff3b;
   -webkit-transition: background-color 0.25s ease-in;
   transition: background-color 0.25s ease-in;
@@ -293,6 +298,11 @@ body .main-container .contact input:focus, body .main-container .contact textare
   background-color: #ffffffbb;
   -webkit-transition: background-color 0.25s ease-in;
   transition: background-color 0.25s ease-in;
+  outline: none;
+}
+
+body .main-container .contact input:active, body .main-container .contact textarea:active {
+  outline: none;
 }
 
 body .main-container .contact #submit-btn {
