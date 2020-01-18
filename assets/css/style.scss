@@ -174,7 +174,7 @@ body {
                 text-align: center;
                 position: relative;
                 opacity: 0;
-                animation: skills 1s ease-in-out 0s 1 forwards;
+                animation: skills 1.5s ease-in-out 0s 1 forwards;
             }
             .line {
                 border-bottom: 1px solid black;
@@ -250,8 +250,8 @@ body {
                 list-style: none;
                 .project-img {
                     list-style: none;
-                    height: 300px;
-                    margin: 32px auto;
+                    height: 200px;
+                    // margin: 32px auto;
                     box-shadow: $bg-shadow;
                     transition: all 1s;
                     &:hover {
@@ -288,5 +288,6 @@ body {
 
 @keyframes skills {
     0% {left: -100px; opacity: 0}
+    50% {left: 40px; opacity: 0.6}
     100% {left: 0px; opacity: 1}
 }
