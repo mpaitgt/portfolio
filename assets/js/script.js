@@ -39,11 +39,7 @@ contact.addEventListener('click', function() {
 
 function hideBox() {
     if(homeimage.style.display = 'block') {
-        // homeimage.classList.add('animation-exit');
         homeimage.style.display = 'none';
-        // setTimeout(function() {
-            
-        // }, 1000);  
     }
     for (var i = 0; i < boxClass.length; i++) {
         boxClass[i].style.display = 'none';
