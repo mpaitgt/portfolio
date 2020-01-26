@@ -183,16 +183,16 @@ body {
                 animation-delay: 0.1s;                
             }
             .sql {
-                animation-delay: 0.2s;                
-            }
-            .mongo {
                 animation-delay: 0.3s;                
             }
-            .node {
+            .mongo {
                 animation-delay: 0.4s;                
             }
-            .css {
+            .node {
                 animation-delay: 0.5s;                
+            }
+            .css {
+                animation-delay: 0.2s;                
             }
             .adobe {
                 animation-delay: 0.6s;                
@@ -205,15 +205,15 @@ body {
             label {
                 display: block;
                 text-align: left;
-                font-size: 22px;
+                font-size: 20px;
                 margin: 10px 10px 10px 0px;
                 letter-spacing: 1px;
             }
             input, textarea {
                 width: 100%;
                 border-radius: 5px 5px 0px 0px;
-                padding: 5px 10px;
-                font-size: 22px;
+                padding: 10px 10px 5px 10px;
+                font-size: 18px;
                 border: none;
                 border-bottom: 1px solid #000000;
                 background-color: #ffffff3b;
@@ -258,13 +258,21 @@ body {
                     align-items: center;
                     margin: 32px auto;
                     transition: all 1s;
-                    &:hover {
-                        // transform: scale(1.1);
-                        transition: all 1s;
-                        padding-bottom: 20px;
-                        border-bottom: 1px solid #000000;
-                    }
+                    // &:hover {
+                    //     transform: scale(1.1);
+                    //     transition: all 1s;
+                    //     padding-bottom: 20px;
+                    //     border-bottom: 1px solid #000000;
+                    // }
                 }
+            }
+            .project-description {
+                opacity: 0;
+            }
+            .description {
+                animation-name: opacity;
+                animation-duration: 1s;
+                animation-iteration-count: 1;
             }
             .work-grid {
                 display: grid;
@@ -274,12 +282,12 @@ body {
     }
 }
 
-    .animation-exit {
-        animation-name: exit;
-        animation-duration: 1s;
-        animation-iteration-count: 1;
-        position: relative;
-    }
+.animation-exit {
+    animation-name: exit;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    position: relative;
+}
 
 @keyframes opacity {
     0% {opacity: 0; top: -50px}

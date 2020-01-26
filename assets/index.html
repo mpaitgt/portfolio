@@ -11,23 +11,23 @@
 </head>
 
 <body>
-
-    <!-- <div class="bg-filter"></div>
+<!-- 
+    <div class="bg-filter"></div>
     <div class="bg-image"></div> -->
 
 <div class="main-container">
 
     <div class="navbar">
         <div class="navbar-content">
-                <h1 id="home" class="site-title">Matt Pignatore</h1>
+                <h1 id="home" class="site-title link">Matt Pignatore</h1>
             <ul class="navigation">
-                <li id="about-link" class="nav-link">About</li>
-                <li id="work-link" class="nav-link">Projects</li>
-                <li id="skills-link" class="nav-link">Skills</li>
+                <li id="about-link" name="about" class="nav-link link">About</li>
+                <li id="work-link" name="projects" class="nav-link link">Projects</li>
+                <li id="skills-link" name="skills" class="nav-link link">Skills</li>
                 <a href="images/Matt Pignatore_Resume_.pdf" target="_blank">
-                    <li id="resume-link" class="nav-link">Resume</li>
+                    <li id="resume-link" name="resume" class="nav-link link">Resume</li>
                 </a>
-                <li id="contact-link" class="nav-link">Contact</li>
+                <li id="contact-link" name="contact" class="nav-link link">Contact</li>
             </ul>
         </div>
     </div>
@@ -54,71 +54,56 @@
             <ul>
                 <li class="skill js">
                     Javascript <span>/ jQuery, React</span>
-                    <!-- <div class="line js"></div> -->
+                </li>
+                <li class="skill css">
+                    HTML & CSS <span>/ Sass, Bootstrap</span>
                 </li>
                 <li class="skill sql">
-                    MySQL <span>/ Sequelize</span>
-                    <!-- <div class="line sql"></div> -->
+                    MySQL <span>/ Sequelize ORM</span>
                 </li>
                 <li class="skill mongo">
-                    MongoDB <span>/ Mongoose</span>
-                    <!-- <div class="line mongo"></div> -->
+                    MongoDB <span>/ Mongoose ORM</span>
                 </li>
                 <li class="skill node">
                     Node.JS <span>/ Express, Handlebars</span>
-                    <!-- <div class="line node"></div> -->
-                </li>
-                <li class="skill css">
-                    CSS <span>/ Sass, Bootstrap</span>
-                    <!-- <div class="line css"></div> -->
                 </li>
                 <li class="skill adobe">
                     Adobe <span>/ Photoshop, InDesign</span>
-                    <!-- <div class="line adobe"></div> -->
                 </li>
                 <li class="skill cms">
                     Wordpress & Sitecore
-                    <!-- <div class="line cms"></div> -->
                 </li>
             </ul>
         </div>
 
         <div id="work" class="work box">
-                    <a href="https://github.com/mpaitgt/project_1" target="_blank">
-                        <!-- <div class="hover-effect project-img"> -->
-                            <h3 class="project-img">Medo</h3>
-                            <!-- <img class="project-img" src="images/project-images/medo.JPG" alt="medo"> -->
-                        <!-- </div> -->
-                    </a>
-                    <a href="https://github.com/mpaitgt/deetz" target="_blank">
-                        <!-- <div class="hover-effect project-img"> -->
-                            <h3 class="project-img">Deetz</h3>
-                            <!-- <img class="project-img" src="images/project-images/deetz.JPG" alt="deetz"> -->
-                        <!-- </div> -->
-                    </a>
-                    <a href="https://github.com/mpaitgt/giphy-api" target="_blank">
-                        <!-- <div class="hover-effect"> -->
-                            <h3 class="project-img">Give a Gift</h3>
-                            <!-- <img class="project-img" src="images/project-images/gift.JPG" alt="gift"> -->
-                        <!-- </div> -->
-                    </a>
-                    <a href="https://mpaitgt.github.io/wedding-website" target="_blank">
-                        <h3 class="project-img">Wedding Website</h3>
-                        <!-- <div class="hover-effect"> -->
-                            <!-- <img class="project-img" src="images/project-images/wedding.JPG" alt="gift"> -->
-                        <!-- </div> -->
-                    </a>
+            <a href="https://github.com/mpaitgt/project_1" target="_blank">
+                    <h3 class="project-img">Medo</h3>
+                    <p class="project-description" data-ref="medo">A front-end media to-do list</p>
+            </a>
+            <a href="https://github.com/mpaitgt/deetz" target="_blank">
+                    <h3 class="project-img">Deetz</h3>
+            </a>
+            <a href="https://github.com/mpaitgt/giphy-api" target="_blank">
+                    <h3 class="project-img">Give a Gift</h3>
+            </a>
+            <a href="https://mpaitgt.github.io/wedding-website" target="_blank">
+                <h3 class="project-img">Wedding Website</h3>
+            </a>
         </div>
 
         <div id="contact" class="contact box">
             <h2 class="section-heading">Contact</h2>
-            <form action="mailto:mattpignatore@gmail.com" method="get" enctype="text/plain">
+            <form action="mailto:mattpignatore@gmail.com" method="post" enctype="text/plain">
                 <label for="name">Name</label>
                 <input type="text" id="name-input" name="name">
+
                 <label for="email">Email</label>
                 <input type="text" id="email-input" name="email">
+
                 <label for="message">Message</label>
                 <textarea name="message" id="-message-input" cols="30" rows="8"></textarea>
+
                 <button type="submit" id="submit-btn">Submit</button>
             </form>
 

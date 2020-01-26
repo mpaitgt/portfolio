@@ -237,23 +237,23 @@ body .main-container .skills .js {
 }
 
 body .main-container .skills .sql {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-}
-
-body .main-container .skills .mongo {
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
 
-body .main-container .skills .node {
+body .main-container .skills .mongo {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
 
-body .main-container .skills .css {
+body .main-container .skills .node {
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
+}
+
+body .main-container .skills .css {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 
 body .main-container .skills .adobe {
@@ -269,7 +269,7 @@ body .main-container .skills .cms {
 body .main-container .contact label {
   display: block;
   text-align: left;
-  font-size: 22px;
+  font-size: 20px;
   margin: 10px 10px 10px 0px;
   letter-spacing: 1px;
 }
@@ -277,8 +277,8 @@ body .main-container .contact label {
 body .main-container .contact input, body .main-container .contact textarea {
   width: 100%;
   border-radius: 5px 5px 0px 0px;
-  padding: 5px 10px;
-  font-size: 22px;
+  padding: 10px 10px 5px 10px;
+  font-size: 18px;
   border: none;
   border-bottom: 1px solid #000000;
   background-color: #ffffff3b;
@@ -347,11 +347,17 @@ body .main-container .work a .project-img {
   transition: all 1s;
 }
 
-body .main-container .work a .project-img:hover {
-  -webkit-transition: all 1s;
-  transition: all 1s;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #000000;
+body .main-container .work .project-description {
+  opacity: 0;
+}
+
+body .main-container .work .description {
+  -webkit-animation-name: opacity;
+          animation-name: opacity;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 
 body .main-container .work .work-grid {

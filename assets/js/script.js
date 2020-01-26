@@ -1,44 +1,63 @@
-var about = document.getElementById('about-link');
-var skills = document.getElementById('skills-link');
-var work = document.getElementById('work-link');
-var contact = document.getElementById('contact-link');
-var boxClass = document.getElementsByClassName('box');
-var homeimage = document.getElementById('home-img');
-var home = document.getElementById('home');
+const home = document.getElementById('home');
+let project = document.querySelectorAll('.project-img');
+let description = document.querySelectorAll('.project-description');
+let link = document.querySelectorAll('.link');
 
-home.addEventListener('click', function() {
-    hideBox();
-    var aboutContent = document.getElementById('home');
-    homeimage.style.display = 'block';
-});
+// home.addEventListener('click', function() {
+//     hideBox();
+//     var aboutContent = document.getElementById('home');
+//     homeimage.style.display = 'block';
+// });
 
-about.addEventListener('click', function() {
-    hideBox();
-    var aboutContent = document.getElementById('about');
-    aboutContent.style.display = 'block';
-});
+link.forEach(link => {
+    link.addEventListener('click', () => {
+        hideBox();
+        switch(link.textContent) {
+            case 'Matt Pignatore':
+                let homeimage = document.getElementById('home-img');
+                homeimage.style.display = 'block';
+                break;
+            case 'About':
+                let aboutContent = document.getElementById('about');
+                aboutContent.style.display = 'block';
+                break;
+            case 'Projects':
+                let workContent = document.getElementById('work');
+                workContent.style.display = 'block';
+                break;
+            case 'Skills':
+                let skillsContent = document.getElementById('skills');
+                skillsContent.style.display = 'block';
+                break;
+            case 'Contact':
+                let contactContent = document.getElementById('contact');
+                contactContent.style.display = 'block';
+                break;
+            default:
+                console.log('none of the above');
+        }
+    })
+})
 
-skills.addEventListener('click', function() {
-    hideBox();
-    var skillsContent = document.getElementById('skills');
-    skillsContent.style.display = 'block';
-});
+project.forEach(project => {
+    project.addEventListener('mouseover', () => {
+        let desc = document.querySelector('p[data-ref="medo"]');
+        desc.classList.add('description');
+        // setTimeout(function() { desc.style.display = 'block' }, 100);
+    })
+    project.addEventListener('mouseout', () => {
+        let desc = document.querySelector('p[data-ref="medo"]');
+        // desc.classList.add('description');
+        // setTimeout(function() { desc.style.display = 'none' }, 100);
+    })
+})
 
-work.addEventListener('click', function() {
-    hideBox();
-    var workContent = document.getElementById('work');
-    workContent.style.display = 'grid';
-    // workContent.classList.add('work-grid');
-});
-
-contact.addEventListener('click', function() {
-    hideBox();
-    var contactContent = document.getElementById('contact');
-    contactContent.style.display = 'block';
-});
 
 function hideBox() {
-    if(homeimage.style.display = 'block') {
+    let homeimage = document.getElementById('home-img');
+    let boxClass = document.getElementsByClassName('box');
+
+    if (homeimage.style.display = 'block') {
         homeimage.style.display = 'none';
     }
     for (var i = 0; i < boxClass.length; i++) {
