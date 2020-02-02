@@ -31,6 +31,7 @@ body {
   overflow-x: hidden;
   letter-spacing: -0.5px;
   margin-top: 1em;
+  background: #ececec;
 }
 
 body .main-container {
@@ -143,10 +144,12 @@ body .main-container #home-icons {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   position: relative;
+  right: 0;
+  left: 0;
   bottom: 0;
   padding: 10px;
   width: 50%;
-  margin: 4em auto;
+  margin: 6em auto;
 }
 
 body .main-container #home-icons .icon-sm {
@@ -168,7 +171,7 @@ body .main-container #home-icons .icon-sm:hover {
   transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
 }
 
-body .main-container .about .about-photo, body .main-container .skills .about-photo, body .main-container .contact .about-photo {
+body .main-container .about .about-photo, body .main-container .skills .about-photo, body .main-container .contact .about-photo, body .main-container .work .about-photo {
   width: 260px;
   border-radius: 50%;
   margin: 0 auto;
@@ -177,7 +180,7 @@ body .main-container .about .about-photo, body .main-container .skills .about-ph
           box-shadow: 0px 0px 20px -8px rgba(0, 0, 0, 0.3);
 }
 
-body .main-container .about h2, body .main-container .skills h2, body .main-container .contact h2 {
+body .main-container .about h2, body .main-container .skills h2, body .main-container .contact h2, body .main-container .work h2 {
   font-size: 32px;
   margin-right: 10px;
   margin-bottom: 20px;
@@ -186,7 +189,7 @@ body .main-container .about h2, body .main-container .skills h2, body .main-cont
   padding-bottom: 10px;
 }
 
-body .main-container .about p, body .main-container .skills p, body .main-container .contact p {
+body .main-container .about p, body .main-container .skills p, body .main-container .contact p, body .main-container .work p {
   word-spacing: 0.1em;
   line-height: 1.6em;
   letter-spacing: 0px;
@@ -195,18 +198,18 @@ body .main-container .about p, body .main-container .skills p, body .main-contai
   letter-spacing: 1px;
 }
 
-body .main-container .about a, body .main-container .skills a, body .main-container .contact a {
+body .main-container .about a, body .main-container .skills a, body .main-container .contact a, body .main-container .work a {
   color: #82a18d;
   font-weight: bold;
 }
 
-body .main-container .about ul, body .main-container .skills ul, body .main-container .contact ul {
+body .main-container .about ul, body .main-container .skills ul, body .main-container .contact ul, body .main-container .work ul {
   list-style: none;
   padding: 0;
   text-align: left;
 }
 
-body .main-container .about ul li, body .main-container .skills ul li, body .main-container .contact ul li {
+body .main-container .about ul li, body .main-container .skills ul li, body .main-container .contact ul li, body .main-container .work ul li {
   font-size: 32px;
   text-align: left;
   width: 100%;
@@ -215,7 +218,7 @@ body .main-container .about ul li, body .main-container .skills ul li, body .mai
   letter-spacing: 1px;
 }
 
-body .main-container .about ul li span, body .main-container .skills ul li span, body .main-container .contact ul li span {
+body .main-container .about ul li span, body .main-container .skills ul li span, body .main-container .contact ul li span, body .main-container .work ul li span {
   font-size: 18px;
 }
 
@@ -223,8 +226,8 @@ body .main-container .skills .skill {
   text-align: center;
   position: relative;
   opacity: 0;
-  -webkit-animation: skills 1.5s ease-in-out 0s 1 forwards;
-          animation: skills 1.5s ease-in-out 0s 1 forwards;
+  -webkit-animation: skills 1s ease-in-out 0s 1 forwards;
+          animation: skills 1s ease-in-out 0s 1 forwards;
 }
 
 body .main-container .skills .line {
@@ -280,7 +283,6 @@ body .main-container .contact input, body .main-container .contact textarea {
   padding: 10px 10px 5px 10px;
   font-size: 18px;
   border: none;
-  border-bottom: 1px solid #000000;
   background-color: #ffffff3b;
   -webkit-transition: background-color 0.25s ease-in;
   transition: background-color 0.25s ease-in;
@@ -325,13 +327,16 @@ body .main-container .work a {
   text-decoration: none;
   color: #000000;
   list-style: none;
-  font-size: 42px;
+  font-size: 16px;
 }
 
-body .main-container .work a .project-img {
+body .main-container .work a .project-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: #ffffff;
+  border: 1px solid black;
+  padding: 20px 10px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -342,39 +347,50 @@ body .main-container .work a .project-img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 32px auto;
+  margin: 32px auto 10px auto;
   -webkit-transition: all 1s;
   transition: all 1s;
 }
 
-body .main-container .work .project-description {
-  opacity: 0;
-}
-
-body .main-container .work .description {
-  -webkit-animation-name: opacity;
-          animation-name: opacity;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-}
-
-body .main-container .work .work-grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 2;
-      grid-template-columns: 2;
-}
-
-.animation-exit {
-  -webkit-animation-name: exit;
-          animation-name: exit;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
   position: relative;
+  display: block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: relative;
+  min-width: 160px;
+  z-index: 1;
+  top: 50px;
+}
+
+.add-animated-content {
+  -webkit-animation-name: in;
+          animation-name: in;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+}
+
+.remove-animated-content {
+  -webkit-animation-name: out;
+          animation-name: out;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
 }
 
 @-webkit-keyframes opacity {
@@ -396,28 +412,6 @@ body .main-container .work .work-grid {
   100% {
     opacity: 1;
     top: 0;
-  }
-}
-
-@-webkit-keyframes exit {
-  0% {
-    opacity: 1;
-    top: 0;
-  }
-  100% {
-    opacity: 0;
-    top: 50px;
-  }
-}
-
-@keyframes exit {
-  0% {
-    opacity: 1;
-    top: 0;
-  }
-  100% {
-    opacity: 0;
-    top: 50px;
   }
 }
 
@@ -448,6 +442,58 @@ body .main-container .work .work-grid {
   100% {
     left: 0px;
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes in {
+  0% {
+    top: 0px;
+    opacity: 0;
+    height: 0px;
+  }
+  100% {
+    top: 10px;
+    opacity: 1;
+    height: 50px;
+  }
+}
+
+@keyframes in {
+  0% {
+    top: 0px;
+    opacity: 0;
+    height: 0px;
+  }
+  100% {
+    top: 10px;
+    opacity: 1;
+    height: 50px;
+  }
+}
+
+@-webkit-keyframes out {
+  0% {
+    top: 10px;
+    opacity: 1;
+    height: 50px;
+  }
+  100% {
+    top: 0px;
+    opacity: 0;
+    height: 0px;
+  }
+}
+
+@keyframes out {
+  0% {
+    top: 10px;
+    opacity: 1;
+    height: 50px;
+  }
+  100% {
+    top: 0px;
+    opacity: 0;
+    height: 0px;
   }
 }
 /*# sourceMappingURL=style.css.map */
