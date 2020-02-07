@@ -1,0 +1,213 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Gothic A1', sans-serif;
+  box-sizing: border-box;
+}
+
+$navbg: #333333;
+$about: #d34f4f;
+$skills: #e67f7f;
+$work: #52c284;
+$workitem: #6ddb9e;
+$resume: #e0e250;
+$text: #f1f1f1;
+
+@mixin view($height, $direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  height: $height;
+}
+
+@mixin linkhover($color) {
+  color: $color;
+  transform: scale(1.1);
+  transition: all 0.25s;
+  transform-origin: left;
+}
+
+body {
+  letter-spacing: -0.5px;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .header {
+    padding-bottom: 10px;
+  }
+  .text {
+    font-size: 22px;
+    line-height: 1.5em;
+    margin-top: 20px;
+  }
+}
+
+.navbar {
+  @include view(100vh, column);
+  width: 100%;
+  padding: 10px 20px;
+  background-color: $navbg;
+  color: $text;
+  font-size: 48px;
+  position: relative;
+  .navbar-content {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    #home {
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    .navigation {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      .link {
+        font-size: 1em;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: all 0.25s;
+        transform-origin: left;
+      }
+      .about-link {
+        &:hover {
+          @include linkhover($about);
+        }
+      }
+      .work-link {
+        &:hover {
+          @include linkhover($work);
+        }
+      }
+      .resume-link {
+        &:hover {
+          @include linkhover($resume);
+        }
+      }
+    }
+  }
+  #home-icons {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    left: 0;
+    bottom: 20px;
+    width: 40%;
+    .icon-sm {
+      margin: 0px 10px;
+      width: 40px;
+      transition: transform 0.25s ease-in-out;
+      filter: invert(1);
+      &:hover {
+        transform: scale(1.25);
+        transition: transform 0.25s ease-in-out;
+    }
+    }
+  }
+}
+
+.about {
+  @include view(60vh, row);
+  font-size: 40px;
+  width: 100%;
+  color: $text;
+  .about-photo {
+    height: 240px;
+    width: 240px;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+  .summary {
+    @include view(60vh, column);
+    background: $about;
+    font-size: 40px;
+    width: 70%;
+    padding: 50px;
+    h2 {
+      border-bottom: 3px solid $skills;
+    }
+  }
+  .skills {
+    @include view(60vh, column);
+    font-size: 28px;
+    width: 30%;
+    background: $skills;
+    padding: 50px;
+    text-align: right;
+    border-bottom: none;
+    h2 {
+      border-bottom: 3px solid $about;
+    }
+    .list {
+      list-style-type: none;
+      .item {
+        font-size: 28px;
+        margin: 20px 0px;
+        span {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}
+
+.image {
+  @include view(100vh, row);
+  .about-photo {
+    // width: 100%;
+    margin: 0 auto;
+  }
+  
+}
+
+.work {
+  @include view(100vh, column);
+  font-size: 40px;
+  background: $work;
+  padding: 140px;
+  color: $navbg;
+  h2 {
+    border-bottom: 3px solid $workitem;
+  }
+  .project-item {
+    background: $workitem;
+    font-size: 28px;
+    margin-top: 30px;
+    padding: 20px;
+    .text {
+      max-width: 800px;
+    }
+    .view {
+      color: $text;
+      font-size: 22px;
+      float: right;
+      background: $work;
+      padding: 5px 8px;
+      border-radius: 5px;
+      margin-right: 10px;
+      transition: all 0.5s;
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 10px 10px -14px rgba(0,0,0,0.75);
+        transition: all 0.5s;
+      }
+      &:active {
+        transform: scale(1);
+        box-shadow: none;
+        transition: all 0.25s;
+      }
+    }
+  }
+}
+
+
+
+#skills, #work, #contact, #about {
+  display: none;
+}
+
