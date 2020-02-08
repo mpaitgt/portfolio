@@ -73,7 +73,7 @@
 
 const about = document.querySelector('.about');
 const work = document.querySelector('.work');
-const interests = document.querySelector('.interests');
+const bandcamp = document.querySelector('.bandcamp');
 let link = document.querySelectorAll('.link');
 
 link.forEach(target => {
@@ -86,8 +86,8 @@ link.forEach(target => {
             case 'Projects':
                 scroll(work);
                 break;
-            case 'Interests':
-                scroll(interests);
+            case 'Bandcamp':
+                scroll(bandcamp);
                 break;
             default:
                 break;

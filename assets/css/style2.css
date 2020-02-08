@@ -231,15 +231,20 @@ body .text {
 
 .about .skills h2 {
   border-bottom: 3px solid #d34f4f;
+  margin-bottom: 20px;
 }
 
 .about .skills .list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
   list-style-type: none;
 }
 
 .about .skills .list .item {
   font-size: 0.8em;
-  margin: 20px 0px;
+  margin: 10px 0px;
 }
 
 .about .skills .list .item span {
@@ -261,7 +266,7 @@ body .text {
   font-size: 40px;
   background: #52c284;
   color: #333333;
-  padding: 1em;
+  padding: 1em 2em;
 }
 
 .work h2 {
@@ -281,6 +286,7 @@ body .text {
   margin-top: 30px;
   padding: 10px;
   margin: 10px;
+  position: relative;
 }
 
 .work .project-item h3 {
@@ -322,7 +328,7 @@ body .text {
   transition: all 0.25s;
 }
 
-.interests {
+.bandcamp {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -333,43 +339,49 @@ body .text {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
+  height: 20vh;
   background: #3c62e0;
   color: #f1f1f1;
   font-size: 40px;
   padding: 2em;
 }
 
-.interests .header {
-  border-bottom: 3px solid #849df0;
+.bandcamp .cta {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform-origin: left;
+          transform-origin: left;
 }
 
-.interests .interest {
-  list-style-type: none;
-  margin: 1em;
-  margin: 0 auto;
-  padding: 1em;
+.bandcamp .cta:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform-origin: left;
+          transform-origin: left;
 }
 
-.interests .interest .cta {
-  font-size: 0.5em;
-  float: right;
+.arrow {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .about-image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 80vh;
+  height: 60vh;
   background-image: url("../../../about.jpg");
   background-size: cover;
+  background-position: center;
 }
 
 .hobby-image {
@@ -386,6 +398,7 @@ body .text {
   height: 80vh;
   background-image: url("../../../music.jpg");
   background-size: cover;
+  background-position: center;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -393,7 +406,7 @@ body .text {
     font-size: 4em;
   }
   .navbar .navbar-content .navigation .link {
-    font-size: 2em;
+    font-size: 1.5em;
   }
   .about {
     display: -webkit-box;
@@ -409,11 +422,103 @@ body .text {
     height: 100vh;
   }
   .about .summary {
+    width: 60%;
+  }
+  .about .summary .text {
+    font-size: 20px;
+  }
+  .about .skills {
+    width: 40%;
+  }
+  .work .project-list .project-item h3 {
+    font-size: 0.8em;
+  }
+  .work .project-list .project-item .text {
+    font-size: 18px;
+  }
+  .work .project-list .project-item .view {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 970px) {
+  .navbar .navbar-content #home {
+    font-size: 3em;
+  }
+  .navbar .navbar-content .navigation .link {
+    font-size: 1em;
+  }
+  .about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100vh;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .about .header {
+    font-size: 1em;
+  }
+  .about .summary {
+    height: 70%;
     width: 100%;
   }
   .about .skills {
+    height: 50%;
     width: 100%;
     text-align: left;
+  }
+  .about .skills .list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+  }
+  .about .skills .list .item span {
+    margin-left: 0em;
+  }
+  .about-image {
+    display: block;
+  }
+  .work .header {
+    font-size: 1em;
+  }
+  .work .project-list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+  .work .project-list .project-item {
+    margin: 5px;
+  }
+  .work .project-list .project-item h3 {
+    font-size: 0.7em;
+  }
+  .work .project-list .project-item .text {
+    font-size: 16px;
+  }
+  .bandcamp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 20vh;
+    font-size: 32px;
+    padding: 10px;
   }
 }
 

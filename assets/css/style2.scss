@@ -146,12 +146,15 @@ body {
     padding: 2em;
     h2 {
       border-bottom: 3px solid $about;
+      margin-bottom: 20px;
     }
     .list {
+      display: grid;
+      grid-template-columns: 100%;
       list-style-type: none;
       .item {
         font-size: 0.8em;
-        margin: 20px 0px;
+        margin: 10px 0px;
         span {
           font-size: 0.75em;
         }
@@ -165,7 +168,7 @@ body {
   font-size: 40px;
   background: $work;
   color: $navbg;
-  padding: 1em;
+  padding: 1em 2em;
   h2 {
     border-bottom: 3px solid $workitem;
     margin-bottom: 0.5em;
@@ -179,6 +182,7 @@ body {
     margin-top: 30px;
     padding: 10px;
     margin: 10px;
+    position: relative;
     h3 {
       font-size: 1em;
     }
@@ -209,37 +213,39 @@ body {
   }
 }
 
-.interests {
-  @include view(100vh, column);
+.bandcamp {
+  @include view(20vh, column);
   background: $interests;
   color: $text;
   font-size: 40px;
   padding: 2em;
-  .header {
-    border-bottom: 3px solid $interests2;
-  }
-  .interest {
-    list-style-type: none;
-    margin: 1em;
-    margin: 0 auto;
-    padding: 1em;
-    .cta {
-      font-size: 0.5em;
-      float: right;
+  .cta {
+    transition: all 1s;
+    transform-origin: left;
+    &:hover {
+      transform: scale(1.1);
+      transition: all 1s;
+      transform-origin: left;
     }
   }
 }
 
+.arrow {
+  transform: rotate(90deg);
+}
+
 .about-image {
-  @include view(80vh, row);
+  @include view(60vh, column);
   background-image: url('../../../about.jpg');
   background-size: cover;
+  background-position: center;
 }
 
 .hobby-image {
   @include view(80vh, row);
   background-image: url('../../../music.jpg');
   background-size: cover;
+  background-position: center;
 }
 
 // Extra large devices (large desktops, 1200px and below)
@@ -251,7 +257,7 @@ body {
       }
       .navigation {
         .link {
-          font-size: 2em;
+          font-size: 1.5em;
         }
       }
     }
@@ -259,22 +265,97 @@ body {
   .about {
     @include view(100vh, column);
     .summary {
-      width: 100%;
-      // margin-top: 2em;
+      width: 60%;
+      .text {
+        font-size: 20px;
+      }
     }
     .skills {
-      width: 100%;
-      text-align: left;
+      width: 40%;
     }
   }
   .work {
-    // margin-top: 2em;
+    .project-list {
+      .project-item {
+        h3 {
+          font-size: 0.8em;
+        }
+        .text {
+          font-size: 18px;
+        }
+        .view {
+          font-size: 18px;
+        }
+      }
+    }
   }
 }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 970px) { 
-
+@media (max-width: 970px) { 
+  .navbar {
+    .navbar-content {
+      #home {
+        font-size: 3em;
+      }
+      .navigation {
+        .link {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+  .about {
+    @include view(100vh, column);
+    flex-wrap: wrap;
+    .header {
+      font-size: 1em;
+    }
+    .summary {
+      height: 70%;
+      width: 100%;
+    }
+    .skills {
+      height: 50%;
+      width: 100%;
+      text-align: left;
+      .list {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        .item {
+          span {
+            margin-left: 0em;
+          }
+        }
+      } 
+    }
+  }
+  .about-image {
+    display: block;
+  }
+  .work {
+    .header {
+      font-size: 1em;
+    }
+    .project-list {
+      display: grid;
+      grid-template-columns: 100%;
+      .project-item {
+        margin: 5px;
+        h3 {
+          font-size: 0.7em;
+        }
+        .text {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .bandcamp {
+    @include view(20vh, column);
+    font-size: 32px;
+    padding: 10px;
+  }
 }
 
 @media (max-height: 790px) {
