@@ -11,6 +11,8 @@ $skills: #e67f7f;
 $work: #52c284;
 $workitem: #6ddb9e;
 $resume: #e0e250;
+$interests: #3c62e0;
+$interests2: #849df0;
 $text: #f1f1f1;
 
 @mixin view($height, $direction) {
@@ -49,15 +51,16 @@ body {
   padding: 10px 20px;
   background-color: $navbg;
   color: $text;
-  font-size: 48px;
+  font-size: 20px;
   position: relative;
   .navbar-content {
     width: 80%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     #home {
+      font-size: 5em;
       padding: 20px;
       margin-bottom: 20px;
     }
@@ -67,7 +70,7 @@ body {
       flex-direction: column;
       justify-content: flex-end;
       .link {
-        font-size: 1em;
+        font-size: 2em;
         padding: 5px 10px;
         cursor: pointer;
         transition: all 0.25s;
@@ -81,6 +84,11 @@ body {
       .work-link {
         &:hover {
           @include linkhover($work);
+        }
+      }
+      .interests-link {
+        &:hover {
+          @include linkhover($interests);
         }
       }
       .resume-link {
@@ -102,10 +110,12 @@ body {
       margin: 0px 10px;
       width: 40px;
       transition: transform 0.25s ease-in-out;
+      transform-origin: bottom;
       filter: invert(1);
       &:hover {
         transform: scale(1.25);
         transition: transform 0.25s ease-in-out;
+        transform-origin: bottom;
     }
     }
   }
@@ -116,70 +126,64 @@ body {
   font-size: 40px;
   width: 100%;
   color: $text;
-  .about-photo {
-    height: 240px;
-    width: 240px;
-    margin: 0 auto;
-    border-radius: 50%;
-  }
   .summary {
-    @include view(60vh, column);
+    @include view(100%, column);
     background: $about;
     font-size: 40px;
-    width: 70%;
-    padding: 50px;
+    width: 65%;
+    padding: 1em;
     h2 {
       border-bottom: 3px solid $skills;
     }
   }
   .skills {
-    @include view(60vh, column);
+    @include view(100%, column);
     font-size: 28px;
-    width: 30%;
+    width: 35%;
     background: $skills;
-    padding: 50px;
     text-align: right;
     border-bottom: none;
+    padding: 2em;
     h2 {
       border-bottom: 3px solid $about;
     }
     .list {
       list-style-type: none;
       .item {
-        font-size: 28px;
+        font-size: 0.8em;
         margin: 20px 0px;
         span {
-          font-size: 22px;
+          font-size: 0.75em;
         }
       }
     }
   }
 }
 
-.image {
-  @include view(100vh, row);
-  .about-photo {
-    // width: 100%;
-    margin: 0 auto;
-  }
-  
-}
-
 .work {
   @include view(100vh, column);
   font-size: 40px;
   background: $work;
-  padding: 140px;
   color: $navbg;
+  padding: 1em;
   h2 {
     border-bottom: 3px solid $workitem;
+    margin-bottom: 0.5em;
+  }
+  .project-list {
+    display: grid;
+    grid-template-columns: 50% 50%;
   }
   .project-item {
     background: $workitem;
-    font-size: 28px;
     margin-top: 30px;
-    padding: 20px;
+    padding: 10px;
+    margin: 10px;
+    h3 {
+      font-size: 1em;
+    }
     .text {
+      font-size: 0.5em;
       max-width: 800px;
     }
     .view {
@@ -205,9 +209,76 @@ body {
   }
 }
 
-
-
-#skills, #work, #contact, #about {
-  display: none;
+.interests {
+  @include view(100vh, column);
+  background: $interests;
+  color: $text;
+  font-size: 40px;
+  padding: 2em;
+  .header {
+    border-bottom: 3px solid $interests2;
+  }
+  .interest {
+    list-style-type: none;
+    margin: 1em;
+    margin: 0 auto;
+    padding: 1em;
+    .cta {
+      font-size: 0.5em;
+      float: right;
+    }
+  }
 }
 
+.about-image {
+  @include view(80vh, row);
+  background-image: url('../../../about.jpg');
+  background-size: cover;
+}
+
+.hobby-image {
+  @include view(80vh, row);
+  background-image: url('../../../music.jpg');
+  background-size: cover;
+}
+
+// Extra large devices (large desktops, 1200px and below)
+@media only screen and (max-width: 1200px) { 
+  .navbar {
+    .navbar-content {
+      #home {
+        font-size: 4em;
+      }
+      .navigation {
+        .link {
+          font-size: 2em;
+        }
+      }
+    }
+  }
+  .about {
+    @include view(100vh, column);
+    .summary {
+      width: 100%;
+      // margin-top: 2em;
+    }
+    .skills {
+      width: 100%;
+      text-align: left;
+    }
+  }
+  .work {
+    // margin-top: 2em;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 970px) { 
+
+}
+
+@media (max-height: 790px) {
+  .about {
+    @include view (80vh, row);
+  }
+}

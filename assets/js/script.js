@@ -73,6 +73,7 @@
 
 const about = document.querySelector('.about');
 const work = document.querySelector('.work');
+const interests = document.querySelector('.interests');
 let link = document.querySelectorAll('.link');
 
 link.forEach(target => {
@@ -84,6 +85,9 @@ link.forEach(target => {
                 break;
             case 'Projects':
                 scroll(work);
+                break;
+            case 'Interests':
+                scroll(interests);
                 break;
             default:
                 break;
