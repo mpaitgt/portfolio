@@ -236,14 +236,14 @@ body {
 
 .about-image {
   @include view(60vh, column);
-  background-image: url('../../../about.jpg');
+  background-image: url('../images/about.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .hobby-image {
   @include view(80vh, row);
-  background-image: url('../../../music.jpg');
+  background-image: url('../images/music.jpg');
   background-size: cover;
   background-position: center;
 }
