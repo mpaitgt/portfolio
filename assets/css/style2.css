@@ -417,7 +417,7 @@ body .arrow3 {
   background-position: center;
 }
 
-@media only screen and (max-width: 1200px) {
+@media (max-width: 1200px) {
   .navbar .navbar-content #home {
     font-size: 4em;
   }
@@ -512,6 +512,7 @@ body .arrow3 {
     height: 40vh;
     width: 100%;
     text-align: left;
+    padding: 40px;
   }
   .about .skills .header {
     font-size: 1em;
@@ -537,8 +538,8 @@ body .arrow3 {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
   }
-  .work .project-list .project-item h3 {
-    font-size: 0.7em;
+  .work .project-list .project-item .title {
+    font-size: 0.8em;
   }
   .work .project-list .project-item .text {
     font-size: 16px;
@@ -608,16 +609,6 @@ body .arrow3 {
     font-size: 0.8em;
   }
   .about .summary {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     height: 50vh;
   }
   .about .summary .text {
@@ -647,6 +638,9 @@ body .arrow3 {
   .work .header {
     font-size: 0.8em;
   }
+  .work .project-list .project-item .title {
+    font-size: 0.6em;
+  }
   .bandcamp {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -675,19 +669,12 @@ body .arrow3 {
   }
 }
 
-@media (max-height: 518px) {
+@media (max-width: 518px) {
   .about {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     height: 100vh;
+  }
+  .about .summary {
+    height: 70vh;
   }
   .about .summary .text {
     font-size: 16px;
@@ -695,21 +682,68 @@ body .arrow3 {
   .about .skills {
     font-size: 0.6em;
   }
+  .about-image {
+    margin-top: 40vh;
+  }
+  .work {
+    height: 120vh;
+  }
 }
 
 @media (max-height: 790px) {
   .about {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    height: 100%;
+  }
+  .about .summary {
+    height: 100%;
+  }
+  .about .skills {
+    height: 100%;
+  }
+  .work {
+    height: 100%;
+  }
+}
+
+@media (max-height: 640px) {
+  .about .summary {
+    height: 100%;
+  }
+  .about .skills {
+    height: 100%;
+  }
+  .about-image {
+    height: 100vh;
+  }
+  .hobby-image {
+    height: 100vh;
+  }
+  .work {
+    height: 100%;
+  }
+}
+
+@media (max-height: 562px) {
+  .navbar .navbar-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar .navbar-content .navigation {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 80vh;
+  }
+  .about .summary {
+    height: auto;
+  }
+  .about .skills {
+    height: auto;
+  }
+  .work {
+    height: 100%;
   }
 }
 

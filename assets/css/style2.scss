@@ -264,8 +264,7 @@ body {
   background-position: center;
 }
 
-// Extra large devices (large desktops, 1200px and below)
-@media only screen and (max-width: 1200px) { 
+@media (max-width: 1200px) { 
   .navbar {
     .navbar-content {
       #home {
@@ -307,7 +306,6 @@ body {
   }
 }
 
-// Large devices (desktops, 992px and up)
 @media (max-width: 970px) { 
   .navbar {
     .navbar-content {
@@ -330,15 +328,14 @@ body {
       font-size: 1em;
     }
     .summary {
-      // height: 70%;
       @include view(60vh, column);
       width: 100%;
     }
     .skills {
-      // height: 50%;
       @include view(40vh, column);
       width: 100%;
       text-align: left;
+      padding: 40px;
       .header {
         font-size: 1em;
       }
@@ -354,7 +351,6 @@ body {
     }
   }
   .about-image {
-    // @include view(60vh, column);
     margin-top: 20vh;
   }
   .work {
@@ -365,9 +361,9 @@ body {
       display: grid;
       grid-template-columns: 100%;
       .project-item {
-        // margin: 5px;
-        h3 {
-          font-size: 0.7em;
+
+        .title {
+          font-size: 0.8em;
         }
         .text {
           font-size: 16px;
@@ -411,7 +407,7 @@ body {
       font-size: 0.8em;
     }
     .summary {
-      @include view(50vh, column);
+      height: 50vh;
       .text {
         font-size: 14px;
       }
@@ -434,14 +430,8 @@ body {
     }
     .project-list {
       .project-item {
-        h3 {
-          
-        }
-        .text {
-          
-        }
-        .view {
-          
+        .title {
+          font-size: 0.6em;
         }
       }
     }
@@ -454,11 +444,11 @@ body {
   }
 }
 
-@media (max-height: 518px) {
+@media (max-width: 518px) {
   .about {
-    @include view(100vh, column);
+    height: 100vh;
     .summary {
-      
+      height: 70vh;
       .text {
         font-size: 16px;
       }
@@ -467,12 +457,70 @@ body {
       font-size: 0.6em;
     }
   }
+  .about-image {
+    margin-top: 40vh;
+  }
+  .work {
+    height: 120vh;
+  }
 }
 
 // screen height adjustment
 @media (max-height: 790px) {
   .about {
-    @include view (80vh, row);
+    height: 100%;
+    .summary {
+      height: 100%;
+    }
+    .skills {
+      height: 100%;
+    }
+  }
+  .work {
+    height: 100%;
+  }
+}
+
+// screen height adjustment
+@media (max-height: 640px) {
+  .about {
+    .summary {
+      height: 100%;
+    }
+    .skills {
+      height: 100%;
+    }
+  }
+  .about-image {
+    height: 100vh;
+  }
+  .hobby-image {
+    height: 100vh;
+  }
+  .work {
+    height: 100%;
+  }
+}
+
+@media (max-height: 562px) {
+  .navbar {
+    .navbar-content {
+      flex-direction: column;
+      .navigation {
+        flex-direction: row;
+      }
+    }
+  }
+  .about {
+    .summary {
+      height: auto;
+    }
+    .skills {
+      height: auto;
+    }
+  }
+  .work {
+    height: 100%;
   }
 }
 
