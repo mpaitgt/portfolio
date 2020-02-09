@@ -33,236 +33,239 @@ $text: #f1f1f1;
   animation: arrow 1s ease-in-out $timedelay infinite forwards;
 }
 
-body {
-  letter-spacing: -0.5px;
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  .header {
-    padding-bottom: 10px;
-  }
-  .text {
-    font-size: 22px;
-    line-height: 1.5em;
-    margin-top: 20px;
-  }
-  .arrow {
-    font-size: 1em;
-    position: relative;
-  }
-  .arrow1 {
-    @include arrow-animation(0.1s);
-  }
-  .arrow2 {
-    @include arrow-animation(0.2s);
-  }
-  .arrow3 {
-    @include arrow-animation(0.3s);
-  }
-}
-
-.navbar {
-  @include view(100vh, column);
-  width: 100%;
-  padding: 10px 20px;
-  background-color: $navbg;
-  color: $text;
-  font-size: 20px;
-  position: relative;
-  .navbar-content {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    #home {
-      font-size: 5em;
-      padding: 20px;
-      margin-bottom: 20px;
+  body {
+    letter-spacing: -0.5px;
+    a {
+      text-decoration: none;
+      color: inherit;
     }
-    .navigation {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      .link {
-        font-size: 2em;
-        padding: 5px 10px;
-        cursor: pointer;
-        transition: all 0.25s;
-        transform-origin: left;
-      }
-      .about-link {
-        &:hover {
-          @include linkhover($about);
-        }
-      }
-      .work-link {
-        &:hover {
-          @include linkhover($work);
-        }
-      }
-      .interests-link {
-        &:hover {
-          @include linkhover($interests);
-        }
-      }
-      .resume-link {
-        &:hover {
-          @include linkhover($resume);
-        }
-      }
-    }
-  }
-  #home-icons {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    left: 0;
-    bottom: 20px;
-    width: 100%;
-    .icon-sm {
-      margin: 0px 10px;
-      width: 40px;
-      transition: transform 0.25s ease-in-out;
-      transform-origin: bottom;
-      filter: invert(1);
-      &:hover {
-        transform: scale(1.25);
-        transition: transform 0.25s ease-in-out;
-        transform-origin: bottom;
-    }
-    }
-  }
-}
-
-.about {
-  @include view(60vh, row);
-  font-size: 40px;
-  width: 100%;
-  color: $text;
-  .summary {
-    @include view(100%, column);
-    background: $about;
-    font-size: 40px;
-    width: 65%;
-    padding: 1em;
-    h2 {
-      border-bottom: 3px solid $skills;
-    }
-  }
-  .skills {
-    @include view(100%, column);
-    font-size: 28px;
-    width: 35%;
-    background: $skills;
-    text-align: right;
-    border-bottom: none;
-    padding: 2em;
-    h2 {
-      border-bottom: 3px solid $about;
-      margin-bottom: 20px;
-    }
-    .list {
-      display: grid;
-      grid-template-columns: 100%;
-      list-style-type: none;
-      .item {
-        font-size: 0.8em;
-        margin: 10px 0px;
-        span {
-          font-size: 0.75em;
-        }
-      }
-    }
-  }
-}
-
-.work {
-  @include view(100vh, column);
-  font-size: 40px;
-  background: $work;
-  color: $navbg;
-  padding: 1em 2em;
-  h2 {
-    border-bottom: 3px solid $workitem;
-    margin-bottom: 0.5em;
-  }
-  .project-list {
-    display: grid;
-    grid-template-columns: 50% 50%;
-  }
-  .project-item {
-    background: $workitem;
-    margin-top: 30px;
-    padding: 10px;
-    margin: 10px;
-    position: relative;
-    h3 {
-      font-size: 1em;
+    .header {
+      padding-bottom: 10px;
     }
     .text {
-      font-size: 0.5em;
-      max-width: 800px;
-      margin-top: 5px;
+      font-size: 20px;
+      line-height: 1.5em;
+      margin-top: 20px;
     }
     .arrow {
-      color: $work;
+      font-size: 1em;
+      position: relative;
     }
-    .view {
-      color: $text;
-      font-size: 22px;
-      float: right;
-      background: $work;
-      padding: 5px 8px;
-      border-radius: 5px;
-      margin-right: 10px;
-      transition: all 0.5s;
-      &:hover {
-        transform: scale(1.1);
-        box-shadow: 0px 10px 10px -14px rgba(0,0,0,0.75);
-        transition: all 0.5s;
+    .arrow1 {
+      @include arrow-animation(0.1s);
+    }
+    .arrow2 {
+      @include arrow-animation(0.2s);
+    }
+    .arrow3 {
+      @include arrow-animation(0.3s);
+    }
+  }
+
+  .navbar {
+    @include view(100vh, column);
+    width: 100%;
+    padding: 10px 20px;
+    background-color: $navbg;
+    color: $text;
+    font-size: 18px;
+    position: relative;
+    .navbar-content {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      #home {
+        font-size: 5em;
+        padding: 20px;
+        margin-bottom: 20px;
       }
-      &:active {
-        transform: scale(1);
-        box-shadow: none;
-        transition: all 0.25s;
+      .navigation {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        .link {
+          font-size: 2em;
+          padding: 5px 10px;
+          cursor: pointer;
+          transition: all 0.25s;
+          transform-origin: left;
+        }
+        .about-link {
+          &:hover {
+            @include linkhover($about);
+          }
+        }
+        .work-link {
+          &:hover {
+            @include linkhover($work);
+          }
+        }
+        .interests-link {
+          &:hover {
+            @include linkhover($interests);
+          }
+        }
+        .resume-link {
+          &:hover {
+            @include linkhover($resume);
+          }
+        }
+      }
+    }
+    #home-icons {
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      left: 0;
+      bottom: 20px;
+      width: 100%;
+      .icon-sm {
+        margin: 0px 10px;
+        width: 40px;
+        transition: transform 0.25s ease-in-out;
+        transform-origin: bottom;
+        filter: invert(1);
+        &:hover {
+          transform: scale(1.25);
+          transition: transform 0.25s ease-in-out;
+          transform-origin: bottom;
+      }
       }
     }
   }
-}
 
-.bandcamp {
-  @include view(20vh, column);
-  background: $interests;
-  color: $text;
-  font-size: 40px;
-  padding: 2em;
-  .cta {
-    transition: all 1s;
-    transform-origin: left;
-    cursor: pointer;
-    .arrow {
-      color: $interests2;
+  .about {
+    @include view(100%, row);
+    font-size: 36px;
+    width: 100%;
+    color: $text;
+    .summary {
+      height: auto;
+      background: $about;
+      font-size: 1em;
+      width: 65%;
+      padding: 2em;
+      h2 {
+        border-bottom: 3px solid $skills;
+      }
+    }
+    .skills {
+      font-size: 0.7em;
+      width: 35%;
+      background: $skills;
+      text-align: right;
+      border-bottom: none;
+      padding: 2em;
+      h2 {
+        border-bottom: 3px solid $about;
+        margin-bottom: 20px;
+      }
+      .list {
+        display: grid;
+        grid-template-columns: 100%;
+        list-style-type: none;
+        .item {
+          font-size: 0.9em;
+          margin: 10px 0px;
+          span {
+            font-size: 0.8em;
+          }
+        }
+      }
     }
   }
-}
 
-.about-image {
-  @include view(60vh, column);
-  background-image: url('../images/about.jpg');
-  background-size: cover;
-  background-position: center;
-}
+  .work {
+    height: 100%;
+    font-size: 36px;
+    background: $work;
+    color: $navbg;
+    padding: 2em;
+    h2 {
+      border-bottom: 3px solid $workitem;
+      margin-bottom: 0.5em;
+    }
+    .project-list {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      .project-item {
+        background: $workitem;
+        padding: 0.5em;
+        margin: 0.5em;
+        position: relative;
+        h3 {
+          font-size: 1em;
+        }
+        .text {
+          font-size: 0.5em;
+        }
+        .arrow {
+          color: $work;
+        }
+        .view {
+          position: absolute;
+          top: 10px;
+          right: 0;
+          color: $text;
+          font-size: 22px;
+          background: $work;
+          padding: 5px 8px;
+          border-radius: 5px;
+          margin-right: 10px;
+          transition: all 0.5s;
+          &:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 10px 10px -14px rgba(0,0,0,0.75);
+            transition: all 0.5s;
+          }
+          &:active {
+            transform: scale(1);
+            box-shadow: none;
+            transition: all 0.25s;
+          }
+        }
+      }
+    }
+  }
 
-.hobby-image {
-  @include view(80vh, row);
-  background-image: url('../images/music.jpg');
-  background-size: cover;
-  background-position: center;
-}
+  .bandcamp {
+    background: $interests;
+    color: $text;
+    font-size: 40px;
+    padding: 1em;
+    .cta {
+      transition: all 1s;
+      transform-origin: left;
+      cursor: pointer;
+      .arrow {
+        color: $interests2;
+      }
+    }
+  }
+
+  .about-image {
+    // @include view(50vh, column);
+    height: 800px;
+    width: 100%;
+    background-image: url('../images/about2.jpg');
+    background-size: cover;
+    // background-position: bottom;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .hobby-image {
+    // @include view(80vh, row);
+    height: 800px;
+    width: 100%;
+    background-image: url('../images/music.jpg');
+    background-size: cover;
+    background-position: center;
+  }
 
 @media (max-width: 1200px) { 
   .navbar {
@@ -278,7 +281,6 @@ body {
     }
   }
   .about {
-    @include view(100vh, column);
     .summary {
       width: 60%;
       .text {
@@ -310,34 +312,31 @@ body {
   .navbar {
     .navbar-content {
       #home {
-        font-size: 3em;
+        font-size: 4em;
       }
       .navigation {
         .link {
-          font-size: 1em;
-          margin-top: 0.5em;
-          margin-bottom: 0.5em;
+          font-size: 1.5em;
+          margin-top: 0.25em;
+          margin-bottom: 0.25em;
         }
       }
     }
   }
   .about {
-    @include view(100vh, column);
     flex-wrap: wrap;
     .header {
       font-size: 1em;
     }
     .summary {
-      @include view(60vh, column);
       width: 100%;
     }
     .skills {
-      @include view(40vh, column);
       width: 100%;
       text-align: left;
-      padding: 40px;
+      padding: 3em;
       .header {
-        font-size: 1em;
+        font-size: 1.5em;
       }
       .list {
         display: grid;
@@ -351,7 +350,7 @@ body {
     }
   }
   .about-image {
-    margin-top: 20vh;
+    height: 500px;
   }
   .work {
     .header {
@@ -361,35 +360,39 @@ body {
       display: grid;
       grid-template-columns: 100%;
       .project-item {
-
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
         .title {
           font-size: 0.8em;
         }
         .text {
-          font-size: 16px;
+          font-size: 0.5em;
         }
       }
     }
   }
+  .hobby-image {
+    height: 500px;
+  }
   .bandcamp {
-    @include view(20vh, column);
     font-size: 32px;
-    padding: 10px;
+    padding: 1.5em;
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 580px) {
   .navbar {
     .navbar-content {
       @include view(80%, column);
       #home {
-        font-size: 2em;
+        font-size: 3em;
         text-align: center;
       }
       .navigation {
         text-align: center;
         .link {
-          font-size: 1em;
+          font-size: 1.5em;
         }
       }
     }
@@ -402,7 +405,6 @@ body {
     }
   }
   .about {
-    @include view(100vh, column);
     .header {
       font-size: 0.8em;
     }
@@ -413,7 +415,6 @@ body {
       }
     }
     .skills {
-      @include view(50vh, column);
       font-size: 0.6em;
       .list {
         .item > span {
@@ -423,108 +424,40 @@ body {
     }
   }
   .work {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 1em;
     .header {
       font-size: 0.8em;
     }
     .project-list {
       .project-item {
+        width: 100%;
         .title {
+          font-weight: bold;
           font-size: 0.6em;
+          
+        }
+        .text {
+          font-size: 0.4em;
+        }
+        .view {
+          font-size: 0.4em;
         }
       }
     }
   }
   .bandcamp {
-    @include view(15vh, column);
+    // @include view(15vh, column);
   }
   .hobby-image {
-    @include view(85vh, column);
+    // @include view(85vh, column);
   }
 }
 
-@media (max-width: 518px) {
-  .about {
-    height: 100vh;
-    .summary {
-      height: 70vh;
-      .text {
-        font-size: 16px;
-      }
-    }
-    .skills {
-      font-size: 0.6em;
-    }
-  }
-  .about-image {
-    margin-top: 40vh;
-  }
-  .work {
-    height: 120vh;
-  }
-}
 
-// screen height adjustment
-@media (max-height: 790px) {
-  .about {
-    height: 100%;
-    .summary {
-      height: 100%;
-    }
-    .skills {
-      height: 100%;
-    }
-  }
-  .work {
-    height: 100%;
-  }
-}
-
-// screen height adjustment
-@media (max-height: 640px) {
-  .about {
-    .summary {
-      height: 100%;
-    }
-    .skills {
-      height: 100%;
-    }
-  }
-  .about-image {
-    height: 100vh;
-  }
-  .hobby-image {
-    height: 100vh;
-  }
-  .work {
-    height: 100%;
-  }
-}
-
-@media (max-height: 562px) {
-  .navbar {
-    .navbar-content {
-      flex-direction: column;
-      .navigation {
-        flex-direction: row;
-      }
-    }
-  }
-  .about {
-    .summary {
-      height: auto;
-    }
-    .skills {
-      height: auto;
-    }
-  }
-  .work {
-    height: 100%;
-  }
-}
 
 @keyframes arrow {
   0% { opacity: 0; left: 0 }
   100% { opacity: 1; left: 10px }
 }
+
+// I usually do 600px, 850px and 1200px

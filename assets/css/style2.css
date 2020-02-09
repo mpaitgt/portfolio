@@ -20,7 +20,7 @@ body .header {
 }
 
 body .text {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.5em;
   margin-top: 20px;
 }
@@ -61,7 +61,7 @@ body .arrow3 {
   padding: 10px 20px;
   background-color: #333333;
   color: #f1f1f1;
-  font-size: 20px;
+  font-size: 18px;
   position: relative;
 }
 
@@ -201,28 +201,18 @@ body .arrow3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 60vh;
-  font-size: 40px;
+  height: 100%;
+  font-size: 36px;
   width: 100%;
   color: #f1f1f1;
 }
 
 .about .summary {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 100%;
+  height: auto;
   background: #d34f4f;
-  font-size: 40px;
+  font-size: 1em;
   width: 65%;
-  padding: 1em;
+  padding: 2em;
 }
 
 .about .summary h2 {
@@ -230,18 +220,7 @@ body .arrow3 {
 }
 
 .about .skills {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 100%;
-  font-size: 28px;
+  font-size: 0.7em;
   width: 35%;
   background: #e67f7f;
   text-align: right;
@@ -263,30 +242,20 @@ body .arrow3 {
 }
 
 .about .skills .list .item {
-  font-size: 0.8em;
+  font-size: 0.9em;
   margin: 10px 0px;
 }
 
 .about .skills .list .item span {
-  font-size: 0.75em;
+  font-size: 0.8em;
 }
 
 .work {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 100vh;
-  font-size: 40px;
+  height: 100%;
+  font-size: 36px;
   background: #52c284;
   color: #333333;
-  padding: 1em 2em;
+  padding: 2em;
 }
 
 .work h2 {
@@ -301,32 +270,31 @@ body .arrow3 {
       grid-template-columns: 50% 50%;
 }
 
-.work .project-item {
+.work .project-list .project-item {
   background: #6ddb9e;
-  margin-top: 30px;
-  padding: 10px;
-  margin: 10px;
+  padding: 0.5em;
+  margin: 0.5em;
   position: relative;
 }
 
-.work .project-item h3 {
+.work .project-list .project-item h3 {
   font-size: 1em;
 }
 
-.work .project-item .text {
+.work .project-list .project-item .text {
   font-size: 0.5em;
-  max-width: 800px;
-  margin-top: 5px;
 }
 
-.work .project-item .arrow {
+.work .project-list .project-item .arrow {
   color: #52c284;
 }
 
-.work .project-item .view {
+.work .project-list .project-item .view {
+  position: absolute;
+  top: 10px;
+  right: 0;
   color: #f1f1f1;
   font-size: 22px;
-  float: right;
   background: #52c284;
   padding: 5px 8px;
   border-radius: 5px;
@@ -335,7 +303,7 @@ body .arrow3 {
   transition: all 0.5s;
 }
 
-.work .project-item .view:hover {
+.work .project-list .project-item .view:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-box-shadow: 0px 10px 10px -14px rgba(0, 0, 0, 0.75);
@@ -344,7 +312,7 @@ body .arrow3 {
   transition: all 0.5s;
 }
 
-.work .project-item .view:active {
+.work .project-list .project-item .view:active {
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-box-shadow: none;
@@ -354,21 +322,10 @@ body .arrow3 {
 }
 
 .bandcamp {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 20vh;
   background: #3c62e0;
   color: #f1f1f1;
   font-size: 40px;
-  padding: 2em;
+  padding: 1em;
 }
 
 .bandcamp .cta {
@@ -384,34 +341,17 @@ body .arrow3 {
 }
 
 .about-image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 60vh;
-  background-image: url("../images/about.jpg");
+  height: 800px;
+  width: 100%;
+  background-image: url("../images/about2.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
 }
 
 .hobby-image {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 80vh;
+  height: 800px;
+  width: 100%;
   background-image: url("../images/music.jpg");
   background-size: cover;
   background-position: center;
@@ -423,19 +363,6 @@ body .arrow3 {
   }
   .navbar .navbar-content .navigation .link {
     font-size: 1.5em;
-  }
-  .about {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 100vh;
   }
   .about .summary {
     width: 60%;
@@ -459,25 +386,14 @@ body .arrow3 {
 
 @media (max-width: 970px) {
   .navbar .navbar-content #home {
-    font-size: 3em;
+    font-size: 4em;
   }
   .navbar .navbar-content .navigation .link {
-    font-size: 1em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    font-size: 1.5em;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
   }
   .about {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 100vh;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -485,37 +401,15 @@ body .arrow3 {
     font-size: 1em;
   }
   .about .summary {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 60vh;
     width: 100%;
   }
   .about .skills {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 40vh;
     width: 100%;
     text-align: left;
-    padding: 40px;
+    padding: 3em;
   }
   .about .skills .header {
-    font-size: 1em;
+    font-size: 1.5em;
   }
   .about .skills .list {
     display: -ms-grid;
@@ -527,7 +421,7 @@ body .arrow3 {
     margin-left: 0em;
   }
   .about-image {
-    margin-top: 20vh;
+    height: 500px;
   }
   .work .header {
     font-size: 1em;
@@ -538,30 +432,27 @@ body .arrow3 {
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
   }
+  .work .project-list .project-item {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .work .project-list .project-item .title {
     font-size: 0.8em;
   }
   .work .project-list .project-item .text {
-    font-size: 16px;
+    font-size: 0.5em;
+  }
+  .hobby-image {
+    height: 500px;
   }
   .bandcamp {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 20vh;
     font-size: 32px;
-    padding: 10px;
+    padding: 1.5em;
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 580px) {
   .navbar .navbar-content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -576,14 +467,14 @@ body .arrow3 {
     height: 80%;
   }
   .navbar .navbar-content #home {
-    font-size: 2em;
+    font-size: 3em;
     text-align: center;
   }
   .navbar .navbar-content .navigation {
     text-align: center;
   }
   .navbar .navbar-content .navigation .link {
-    font-size: 1em;
+    font-size: 1.5em;
   }
   .navbar #home-icons {
     position: absolute;
@@ -591,19 +482,6 @@ body .arrow3 {
     right: 0;
     bottom: auto;
     width: 100%;
-  }
-  .about {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 100vh;
   }
   .about .header {
     font-size: 0.8em;
@@ -615,135 +493,29 @@ body .arrow3 {
     font-size: 14px;
   }
   .about .skills {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 50vh;
     font-size: 0.6em;
   }
   .about .skills .list .item > span {
     display: block;
   }
   .work {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 1em;
   }
   .work .header {
     font-size: 0.8em;
   }
+  .work .project-list .project-item {
+    width: 100%;
+  }
   .work .project-list .project-item .title {
+    font-weight: bold;
     font-size: 0.6em;
   }
-  .bandcamp {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 15vh;
+  .work .project-list .project-item .text {
+    font-size: 0.4em;
   }
-  .hobby-image {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 85vh;
-  }
-}
-
-@media (max-width: 518px) {
-  .about {
-    height: 100vh;
-  }
-  .about .summary {
-    height: 70vh;
-  }
-  .about .summary .text {
-    font-size: 16px;
-  }
-  .about .skills {
-    font-size: 0.6em;
-  }
-  .about-image {
-    margin-top: 40vh;
-  }
-  .work {
-    height: 120vh;
-  }
-}
-
-@media (max-height: 790px) {
-  .about {
-    height: 100%;
-  }
-  .about .summary {
-    height: 100%;
-  }
-  .about .skills {
-    height: 100%;
-  }
-  .work {
-    height: 100%;
-  }
-}
-
-@media (max-height: 640px) {
-  .about .summary {
-    height: 100%;
-  }
-  .about .skills {
-    height: 100%;
-  }
-  .about-image {
-    height: 100vh;
-  }
-  .hobby-image {
-    height: 100vh;
-  }
-  .work {
-    height: 100%;
-  }
-}
-
-@media (max-height: 562px) {
-  .navbar .navbar-content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .navbar .navbar-content .navigation {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .about .summary {
-    height: auto;
-  }
-  .about .skills {
-    height: auto;
-  }
-  .work {
-    height: 100%;
+  .work .project-list .project-item .view {
+    font-size: 0.4em;
   }
 }
 
