@@ -122,7 +122,7 @@ body {
     justify-content: space-around;
     left: 0;
     bottom: 20px;
-    width: 40%;
+    width: 100%;
     .icon-sm {
       margin: 0px 10px;
       width: 40px;
@@ -317,6 +317,8 @@ body {
       .navigation {
         .link {
           font-size: 1em;
+          margin-top: 0.5em;
+          margin-bottom: 0.5em;
         }
       }
     }
@@ -380,14 +382,24 @@ body {
 @media (max-width: 680px) {
   .navbar {
     .navbar-content {
+      @include view(80%, column);
       #home {
         font-size: 2em;
+        text-align: center;
       }
       .navigation {
+        text-align: center;
         .link {
           font-size: 1em;
         }
       }
+    }
+    #home-icons {
+      position: absolute;
+      top: 20px;
+      right: 0;
+      bottom: auto;
+      width: 100%;
     }
   }
   .about {
@@ -427,6 +439,7 @@ body {
   }
 }
 
+// screen height adjustment
 @media (max-height: 790px) {
   .about {
     @include view (80vh, row);
