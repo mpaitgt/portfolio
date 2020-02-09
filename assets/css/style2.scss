@@ -409,12 +409,13 @@ $text: #f1f1f1;
       font-size: 0.8em;
     }
     .summary {
-      height: 50vh;
+      padding: 1em;
       .text {
         font-size: 14px;
       }
     }
     .skills {
+      padding: 1em;
       font-size: 0.6em;
       .list {
         .item > span {

@@ -487,12 +487,13 @@ body .arrow3 {
     font-size: 0.8em;
   }
   .about .summary {
-    height: 50vh;
+    padding: 1em;
   }
   .about .summary .text {
     font-size: 14px;
   }
   .about .skills {
+    padding: 1em;
     font-size: 0.6em;
   }
   .about .skills .list .item > span {
