@@ -29,6 +29,10 @@ $text: #f1f1f1;
   transform-origin: left;
 }
 
+@mixin arrow-animation($timedelay) {
+  animation: arrow 1s ease-in-out $timedelay infinite forwards;
+}
+
 body {
   letter-spacing: -0.5px;
   a {
@@ -42,6 +46,19 @@ body {
     font-size: 22px;
     line-height: 1.5em;
     margin-top: 20px;
+  }
+  .arrow {
+    font-size: 1em;
+    position: relative;
+  }
+  .arrow1 {
+    @include arrow-animation(0.1s);
+  }
+  .arrow2 {
+    @include arrow-animation(0.2s);
+  }
+  .arrow3 {
+    @include arrow-animation(0.3s);
   }
 }
 
@@ -189,6 +206,10 @@ body {
     .text {
       font-size: 0.5em;
       max-width: 800px;
+      margin-top: 5px;
+    }
+    .arrow {
+      color: $work;
     }
     .view {
       color: $text;
@@ -222,16 +243,11 @@ body {
   .cta {
     transition: all 1s;
     transform-origin: left;
-    &:hover {
-      transform: scale(1.1);
-      transition: all 1s;
-      transform-origin: left;
+    cursor: pointer;
+    .arrow {
+      color: $interests2;
     }
   }
-}
-
-.arrow {
-  transform: rotate(90deg);
 }
 
 .about-image {
@@ -312,11 +328,13 @@ body {
       font-size: 1em;
     }
     .summary {
-      height: 70%;
+      // height: 70%;
+      @include view(60vh, column);
       width: 100%;
     }
     .skills {
-      height: 50%;
+      // height: 50%;
+      @include view(40vh, column);
       width: 100%;
       text-align: left;
       .list {
@@ -331,7 +349,8 @@ body {
     }
   }
   .about-image {
-    display: block;
+    // @include view(60vh, column);
+    margin-top: 20vh;
   }
   .work {
     .header {
@@ -358,8 +377,63 @@ body {
   }
 }
 
+@media (max-width: 680px) {
+  .navbar {
+    .navbar-content {
+      #home {
+        font-size: 2em;
+      }
+      .navigation {
+        .link {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+  .about {
+    @include view(100vh, column);
+    .summary {
+      
+      .text {
+        font-size: 16px;
+      }
+    }
+    .skills {
+      font-size: 0.6em;
+    }
+  }
+  .work {
+    padding-left: 20px;
+    padding-right: 20px;
+    .project-list {
+      .project-item {
+        h3 {
+          
+        }
+        .text {
+          
+        }
+        .view {
+          
+        }
+      }
+    }
+  }
+  .bandcamp {
+    @include view(10vh, column);
+  }
+  .hobby-image {
+    @include view(90vh, column);
+  }
+}
+
 @media (max-height: 790px) {
   .about {
     @include view (80vh, row);
   }
+}
+
+@keyframes arrow {
+  0% { opacity: 0; left: 0 }
+  100% { opacity: 1; left: 10px }
 }

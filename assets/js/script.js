@@ -86,7 +86,7 @@ link.forEach(target => {
             case 'Projects':
                 scroll(work);
                 break;
-            case 'Bandcamp':
+            case 'Interests':
                 scroll(bandcamp);
                 break;
             default:
