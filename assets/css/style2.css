@@ -513,6 +513,9 @@ body .arrow3 {
     width: 100%;
     text-align: left;
   }
+  .about .skills .header {
+    font-size: 1em;
+  }
   .about .skills .list {
     display: -ms-grid;
     display: grid;
@@ -533,9 +536,6 @@ body .arrow3 {
     display: grid;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-  }
-  .work .project-list .project-item {
-    margin: 5px;
   }
   .work .project-list .project-item h3 {
     font-size: 0.7em;
@@ -604,15 +604,48 @@ body .arrow3 {
             justify-content: center;
     height: 100vh;
   }
+  .about .header {
+    font-size: 0.8em;
+  }
+  .about .summary {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 50vh;
+  }
   .about .summary .text {
-    font-size: 16px;
+    font-size: 14px;
   }
   .about .skills {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 50vh;
     font-size: 0.6em;
+  }
+  .about .skills .list .item > span {
+    display: block;
   }
   .work {
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .work .header {
+    font-size: 0.8em;
   }
   .bandcamp {
     display: -webkit-box;
@@ -625,7 +658,7 @@ body .arrow3 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 10vh;
+    height: 15vh;
   }
   .hobby-image {
     display: -webkit-box;
@@ -638,7 +671,29 @@ body .arrow3 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 90vh;
+    height: 85vh;
+  }
+}
+
+@media (max-height: 518px) {
+  .about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100vh;
+  }
+  .about .summary .text {
+    font-size: 16px;
+  }
+  .about .skills {
+    font-size: 0.6em;
   }
 }
 

@@ -339,6 +339,9 @@ body {
       @include view(40vh, column);
       width: 100%;
       text-align: left;
+      .header {
+        font-size: 1em;
+      }
       .list {
         display: grid;
         grid-template-columns: 50% 50%;
@@ -362,7 +365,7 @@ body {
       display: grid;
       grid-template-columns: 100%;
       .project-item {
-        margin: 5px;
+        // margin: 5px;
         h3 {
           font-size: 0.7em;
         }
@@ -404,19 +407,31 @@ body {
   }
   .about {
     @include view(100vh, column);
+    .header {
+      font-size: 0.8em;
+    }
     .summary {
-      
+      @include view(50vh, column);
       .text {
-        font-size: 16px;
+        font-size: 14px;
       }
     }
     .skills {
+      @include view(50vh, column);
       font-size: 0.6em;
+      .list {
+        .item > span {
+          display: block;
+        }
+      }
     }
   }
   .work {
     padding-left: 20px;
     padding-right: 20px;
+    .header {
+      font-size: 0.8em;
+    }
     .project-list {
       .project-item {
         h3 {
@@ -432,10 +447,25 @@ body {
     }
   }
   .bandcamp {
-    @include view(10vh, column);
+    @include view(15vh, column);
   }
   .hobby-image {
-    @include view(90vh, column);
+    @include view(85vh, column);
+  }
+}
+
+@media (max-height: 518px) {
+  .about {
+    @include view(100vh, column);
+    .summary {
+      
+      .text {
+        font-size: 16px;
+      }
+    }
+    .skills {
+      font-size: 0.6em;
+    }
   }
 }
 
