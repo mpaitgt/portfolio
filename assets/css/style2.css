@@ -277,7 +277,7 @@ body .arrow3 {
   position: relative;
 }
 
-.work .project-list .project-item h3 {
+.work .project-list .project-item .title {
   font-size: 1em;
 }
 
@@ -476,6 +476,22 @@ body .arrow3 {
   .navbar .navbar-content .navigation .link {
     font-size: 1.5em;
   }
+  .navbar .navbar-content .navigation .about-link:hover {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  .navbar .navbar-content .navigation .work-link:hover {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  .navbar .navbar-content .navigation .interests-link:hover {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
+  .navbar .navbar-content .navigation .resume-link:hover {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
   .navbar #home-icons {
     position: absolute;
     top: 20px;
@@ -493,8 +509,11 @@ body .arrow3 {
     font-size: 14px;
   }
   .about .skills {
-    padding: 1em;
+    padding: 2em;
     font-size: 0.6em;
+  }
+  .about .skills .header {
+    font-size: 1em;
   }
   .about .skills .list .item > span {
     display: block;
@@ -518,6 +537,10 @@ body .arrow3 {
   .work .project-list .project-item .view {
     font-size: 0.4em;
   }
+  .bandcamp {
+    font-size: 1.5em;
+    padding: 0.8em;
+  }
 }
 
 @-webkit-keyframes arrow {
@@ -538,6 +561,24 @@ body .arrow3 {
   }
   100% {
     opacity: 1;
+    left: 10px;
+  }
+}
+
+@-webkit-keyframes hoverproject {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 10px;
+  }
+}
+
+@keyframes hoverproject {
+  0% {
+    left: 0;
+  }
+  100% {
     left: 10px;
   }
 }

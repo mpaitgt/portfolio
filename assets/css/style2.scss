@@ -197,7 +197,7 @@ $text: #f1f1f1;
         padding: 0.5em;
         margin: 0.5em;
         position: relative;
-        h3 {
+        .title {
           font-size: 1em;
         }
         .text {
@@ -394,6 +394,26 @@ $text: #f1f1f1;
         .link {
           font-size: 1.5em;
         }
+        .about-link {
+          &:hover {
+            transform-origin: center;
+          }
+        }
+        .work-link {
+          &:hover {
+            transform-origin: center;
+          }
+        }
+        .interests-link {
+          &:hover {
+            transform-origin: center;
+          }
+        }
+        .resume-link {
+          &:hover {
+            transform-origin: center;
+          }
+        }
       }
     }
     #home-icons {
@@ -415,8 +435,11 @@ $text: #f1f1f1;
       }
     }
     .skills {
-      padding: 1em;
+      padding: 2em;
       font-size: 0.6em;
+      .header {
+        font-size: 1em;
+      }
       .list {
         .item > span {
           display: block;
@@ -447,18 +470,17 @@ $text: #f1f1f1;
     }
   }
   .bandcamp {
-    // @include view(15vh, column);
-  }
-  .hobby-image {
-    // @include view(85vh, column);
+    font-size: 1.5em;
+    padding: 0.8em;
   }
 }
-
-
 
 @keyframes arrow {
   0% { opacity: 0; left: 0 }
   100% { opacity: 1; left: 10px }
 }
 
-// I usually do 600px, 850px and 1200px
+@keyframes hoverproject {
+  0% { left: 0 }
+  100% { left: 10px }
+}
