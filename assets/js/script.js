@@ -5,7 +5,6 @@ let link = document.querySelectorAll('.link');
 
 link.forEach(target => {
     target.addEventListener('click', () => {
-        console.log(target.textContent);
         switch(target.textContent) {
             case 'About':
                 scroll(about);
@@ -13,7 +12,7 @@ link.forEach(target => {
             case 'Projects':
                 scroll(work);
                 break;
-            case 'Interests':
+            case 'Bandcamp':
                 scroll(bandcamp);
                 break;
             default:
