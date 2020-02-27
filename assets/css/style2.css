@@ -219,6 +219,11 @@ body .arrow3 {
   border-bottom: 3px solid #e67f7f;
 }
 
+.about .summary .headline {
+  font-size: 30px;
+  font-weight: bold;
+}
+
 .about .skills {
   font-size: 0.7em;
   width: 35%;
