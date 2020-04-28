@@ -83,7 +83,7 @@ body .arrow3 {
 .navbar .navbar-content #home {
   font-size: 5em;
   padding: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 32px;
 }
 
 .navbar .navbar-content .navigation {
@@ -151,7 +151,6 @@ body .arrow3 {
 }
 
 .navbar #home-icons {
-  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -159,10 +158,9 @@ body .arrow3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  left: 0;
-  bottom: 20px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   width: 100%;
 }
 
@@ -392,6 +390,8 @@ body .arrow3 {
 @media (max-width: 970px) {
   .navbar .navbar-content #home {
     font-size: 4em;
+    text-align: center;
+    line-height: normal;
   }
   .navbar .navbar-content .navigation .link {
     font-size: 1.5em;
@@ -474,6 +474,7 @@ body .arrow3 {
   .navbar .navbar-content #home {
     font-size: 2.4em;
     text-align: center;
+    margin-bottom: 0;
   }
   .navbar .navbar-content .navigation {
     text-align: center;
@@ -498,11 +499,8 @@ body .arrow3 {
             transform-origin: center;
   }
   .navbar #home-icons {
-    position: absolute;
-    top: 20px;
-    right: 0;
-    bottom: auto;
     width: 100%;
+    margin-bottom: 32px;
   }
   .about .header {
     font-size: 0.8em;

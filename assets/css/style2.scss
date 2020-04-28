@@ -79,7 +79,7 @@ $text: #f1f1f1;
       #home {
         font-size: 5em;
         padding: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 32px;
       }
       .navigation {
         list-style: none;
@@ -116,12 +116,9 @@ $text: #f1f1f1;
       }
     }
     #home-icons {
-      position: absolute;
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
-      left: 0;
-      bottom: 20px;
+      justify-content: space-evenly;
       width: 100%;
       .icon-sm {
         margin: 0px 10px;
@@ -317,6 +314,8 @@ $text: #f1f1f1;
     .navbar-content {
       #home {
         font-size: 4em;
+        text-align: center;
+        line-height: normal;
       }
       .navigation {
         .link {
@@ -392,6 +391,7 @@ $text: #f1f1f1;
       #home {
         font-size: 2.4em;
         text-align: center;
+        margin-bottom: 0;
       }
       .navigation {
         text-align: center;
@@ -421,11 +421,12 @@ $text: #f1f1f1;
       }
     }
     #home-icons {
-      position: absolute;
-      top: 20px;
-      right: 0;
-      bottom: auto;
+      // position: absolute;
+      // top: 20px;
+      // right: 0;
+      // bottom: auto;
       width: 100%;
+      margin-bottom: 32px;
     }
   }
   .about {
