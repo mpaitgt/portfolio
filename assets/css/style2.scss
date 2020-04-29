@@ -238,6 +238,10 @@ $text: #f1f1f1;
     color: $text;
     font-size: 40px;
     padding: 1em;
+    p {
+      font-size: 18px;
+      margin: 10px 0px;
+    }
     .cta {
       transition: all 1s;
       transform-origin: left;

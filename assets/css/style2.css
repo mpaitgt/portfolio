@@ -331,6 +331,11 @@ body .arrow3 {
   padding: 1em;
 }
 
+.bandcamp p {
+  font-size: 18px;
+  margin: 10px 0px;
+}
+
 .bandcamp .cta {
   -webkit-transition: all 1s;
   transition: all 1s;
