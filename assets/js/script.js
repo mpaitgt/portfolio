@@ -1,9 +1,11 @@
-const about = document.querySelector('.about');
-const work = document.querySelector('.work');
-const bandcamp = document.querySelector('.bandcamp');
-let link = document.querySelectorAll('.link');
+const 
+    about = document.querySelector('.about'),
+    work = document.querySelector('.work'),
+    bandcamp = document.querySelector('.bandcamp'),
+    link = document.querySelectorAll('.link');
 
 link.forEach(target => {
+
     target.addEventListener('click', () => {
         switch(target.textContent) {
             case 'About':
@@ -24,5 +26,13 @@ link.forEach(target => {
 scroll = target => {
     target.scrollIntoView({ 
         behavior: 'smooth' 
-      }, 500);
+      }, 1000);
+}
+
+window.onload = function() {
+    window.addEventListener('scroll', function() {
+        console.log(window.pageYOffset);
+
+        
+    })
 }
