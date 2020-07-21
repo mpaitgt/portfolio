@@ -59,8 +59,8 @@ body .arrow3 {
   height: 100vh;
   width: 100%;
   padding: 10px 20px;
-  background-color: #333333;
-  color: #f1f1f1;
+  background-color: #ffffff;
+  color: #1b1b1b;
   font-size: 18px;
   position: relative;
 }
@@ -111,7 +111,7 @@ body .arrow3 {
 }
 
 .navbar .navbar-content .navigation .about-link:hover {
-  color: #d34f4f;
+  color: #ececec;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: all 0.25s;
@@ -121,7 +121,7 @@ body .arrow3 {
 }
 
 .navbar .navbar-content .navigation .work-link:hover {
-  color: #52c284;
+  color: #fff;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: all 0.25s;
@@ -131,7 +131,7 @@ body .arrow3 {
 }
 
 .navbar .navbar-content .navigation .interests-link:hover {
-  color: #3c62e0;
+  color: #ececec;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: all 0.25s;
@@ -202,19 +202,19 @@ body .arrow3 {
   height: 100%;
   font-size: 36px;
   width: 100%;
-  color: #f1f1f1;
+  color: #1b1b1b;
 }
 
 .about .summary {
   height: auto;
-  background: #d34f4f;
+  background: #ececec;
   font-size: 1em;
   width: 65%;
   padding: 2em;
 }
 
 .about .summary h2 {
-  border-bottom: 3px solid #e67f7f;
+  border-bottom: 3px solid #f1f1f1;
 }
 
 .about .summary .headline {
@@ -225,14 +225,14 @@ body .arrow3 {
 .about .skills {
   font-size: 0.7em;
   width: 35%;
-  background: #e67f7f;
-  text-align: right;
+  background: #f1f1f1;
+  text-align: left;
   border-bottom: none;
   padding: 2em;
 }
 
 .about .skills h2 {
-  border-bottom: 3px solid #d34f4f;
+  border-bottom: 3px solid #ececec;
   margin-bottom: 20px;
 }
 
@@ -256,13 +256,13 @@ body .arrow3 {
 .work {
   height: 100%;
   font-size: 36px;
-  background: #52c284;
-  color: #333333;
+  background: #fff;
+  color: #1b1b1b;
   padding: 2em;
 }
 
 .work h2 {
-  border-bottom: 3px solid #6ddb9e;
+  border-bottom: 3px solid #f1f1f1;
   margin-bottom: 0.5em;
 }
 
@@ -274,10 +274,11 @@ body .arrow3 {
 }
 
 .work .project-list .project-item {
-  background: #6ddb9e;
-  padding: 0.5em;
+  background: #f1f1f1;
+  padding: 1em;
   margin: 0.5em;
   position: relative;
+  border-radius: 5px;
 }
 
 .work .project-list .project-item .title {
@@ -289,19 +290,20 @@ body .arrow3 {
 }
 
 .work .project-list .project-item .arrow {
-  color: #52c284;
+  color: #fff;
 }
 
 .work .project-list .project-item .view {
   position: absolute;
   top: 10px;
   right: 0;
-  color: #f1f1f1;
+  color: #1b1b1b;
   font-size: 22px;
-  background: #52c284;
+  background: #fff;
   padding: 5px 8px;
   border-radius: 5px;
-  margin-right: 10px;
+  margin-right: 1em;
+  margin-top: 1em;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -325,8 +327,8 @@ body .arrow3 {
 }
 
 .bandcamp {
-  background: #3c62e0;
-  color: #f1f1f1;
+  background: #ececec;
+  color: #1b1b1b;
   font-size: 40px;
   padding: 1em;
 }
@@ -345,7 +347,7 @@ body .arrow3 {
 }
 
 .bandcamp .cta .arrow {
-  color: #849df0;
+  color: #919191;
 }
 
 .about-image {

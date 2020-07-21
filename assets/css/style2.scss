@@ -5,15 +5,15 @@
   box-sizing: border-box;
 }
 
-$navbg: #333333;
-$about: #d34f4f;
-$skills: #e67f7f;
-$work: #52c284;
-$workitem: #6ddb9e;
+$navbg: #ffffff;
+$about: #ececec;
+$skills: #f1f1f1;
+$work: #fff;
+$workitem: #f1f1f1;
 $resume: #e0e250;
-$interests: #3c62e0;
-$interests2: #849df0;
-$text: #f1f1f1;
+$interests: #ececec;
+$interests2: #919191;
+$text: #1b1b1b;
 
 @mixin view($height, $direction) {
   display: flex;
@@ -158,7 +158,7 @@ $text: #f1f1f1;
       font-size: 0.7em;
       width: 35%;
       background: $skills;
-      text-align: right;
+      text-align: left;
       border-bottom: none;
       padding: 2em;
       h2 {
@@ -184,7 +184,7 @@ $text: #f1f1f1;
     height: 100%;
     font-size: 36px;
     background: $work;
-    color: $navbg;
+    color: $text;
     padding: 2em;
     h2 {
       border-bottom: 3px solid $workitem;
@@ -195,9 +195,10 @@ $text: #f1f1f1;
       grid-template-columns: 50% 50%;
       .project-item {
         background: $workitem;
-        padding: 0.5em;
+        padding: 1em;
         margin: 0.5em;
         position: relative;
+        border-radius: 5px;
         .title {
           font-size: 1em;
         }
@@ -216,7 +217,8 @@ $text: #f1f1f1;
           background: $work;
           padding: 5px 8px;
           border-radius: 5px;
-          margin-right: 10px;
+          margin-right: 1em;
+          margin-top: 1em;
           transition: all 0.5s;
           &:hover {
             transform: scale(1.1);
