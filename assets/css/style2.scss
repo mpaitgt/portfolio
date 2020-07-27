@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-$navbg: #ffffff;
+$navbg: #1b1b20;
 $about: #ececec;
 $skills: #f1f1f1;
 $work: #fff;
@@ -13,12 +13,18 @@ $workitem: #f1f1f1;
 $resume: #e0e250;
 $interests: #ececec;
 $interests2: #919191;
-$text: #1b1b1b;
+$text: #f3f3f3;
+$red: #fef9a7;
+// real $green: #52c284;
+$green: #fef9a7;
+// real $blue: #3c62e0;
+$blue: #fef9a7;
 
 @mixin view($height, $direction) {
   display: flex;
   flex-direction: $direction;
   justify-content: center;
+  align-items: center;
   height: $height;
 }
 
@@ -34,6 +40,7 @@ $text: #1b1b1b;
 }
 
   body {
+    background: $navbg;
     letter-spacing: -0.5px;
     a {
       text-decoration: none;
@@ -78,6 +85,7 @@ $text: #1b1b1b;
       justify-content: center;
       #home {
         font-size: 5em;
+        font-weight: 900;
         padding: 20px;
         margin-bottom: 32px;
       }
@@ -95,22 +103,22 @@ $text: #1b1b1b;
         }
         .about-link {
           &:hover {
-            @include linkhover($about);
+            @include linkhover($red);
           }
         }
         .work-link {
           &:hover {
-            @include linkhover($work);
+            @include linkhover($green);
           }
         }
         .interests-link {
           &:hover {
-            @include linkhover($interests);
+            @include linkhover($blue);
           }
         }
         .resume-link {
           &:hover {
-            @include linkhover($resume);
+            @include linkhover($text);
           }
         }
       }
@@ -130,75 +138,87 @@ $text: #1b1b1b;
           transform: scale(1.25);
           transition: transform 0.25s ease-in-out;
           transform-origin: bottom;
-      }
+        }
       }
     }
   }
 
   .about {
-    @include view(100%, row);
+    @include view(auto, row);
     font-size: 36px;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     color: $text;
     .summary {
       height: auto;
-      background: $about;
+      background: $navbg;
       font-size: 1em;
       width: 65%;
-      padding: 2em;
+      padding-left: 2em;
       h2 {
-        border-bottom: 3px solid $skills;
+        border-bottom: 2px solid $red;
       }
       .headline {
         font-size: 30px;
         font-weight: bold;
       }
-    }
-    .skills {
-      font-size: 0.7em;
-      width: 35%;
-      background: $skills;
-      text-align: left;
-      border-bottom: none;
-      padding: 2em;
-      h2 {
-        border-bottom: 3px solid $about;
-        margin-bottom: 20px;
+      a {
+        // color: $red;
       }
-      .list {
-        display: grid;
-        grid-template-columns: 100%;
-        list-style-type: none;
-        .item {
-          font-size: 0.9em;
-          margin: 10px 0px;
-          span {
-            font-size: 0.8em;
-          }
+    }
+  }
+
+  .skills {
+    font-size: 36px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2em;
+    background: $navbg;
+    color: $text;
+    text-align: left;
+    border-bottom: none;
+    h2 {
+      border-bottom: 2px solid $red;
+      margin-bottom: 20px;
+    }
+    .list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      width: 100%;
+      list-style-type: none;
+      .item {
+        margin: 10px 0px;
+        font-size: 0.7em;
+        span {
+          font-size: 0.8em;
         }
       }
     }
   }
 
   .work {
-    height: 100%;
+    width: 90%;
+    margin: 0 auto;
     font-size: 36px;
-    background: $work;
+    background: $navbg;
     color: $text;
     padding: 2em;
     h2 {
-      border-bottom: 3px solid $workitem;
+      border-bottom: 3px solid $green;
       margin-bottom: 0.5em;
     }
     .project-list {
       display: grid;
       grid-template-columns: 50% 50%;
       .project-item {
-        background: $workitem;
+        // background: $workitem;
         padding: 1em;
         margin: 0.5em;
         position: relative;
         border-radius: 5px;
+        border-right: 1px solid $red;
+        border-bottom: 1px solid $red;
         .title {
           font-size: 1em;
         }
@@ -206,7 +226,7 @@ $text: #1b1b1b;
           font-size: 0.5em;
         }
         .arrow {
-          color: $work;
+          color: $green;
         }
         .view {
           position: absolute;
@@ -214,11 +234,12 @@ $text: #1b1b1b;
           right: 0;
           color: $text;
           font-size: 22px;
-          background: $work;
           padding: 5px 8px;
           border-radius: 5px;
           margin-right: 1em;
           margin-top: 1em;
+          border-right: 1px solid $red;
+          border-bottom: 1px solid $red;
           transition: all 0.5s;
           &:hover {
             transform: scale(1.1);
@@ -236,10 +257,11 @@ $text: #1b1b1b;
   }
 
   .bandcamp {
-    background: $interests;
     color: $text;
     font-size: 40px;
     padding: 1em;
+    width: 90%;
+    margin: 0 auto;
     p {
       font-size: 18px;
       margin: 10px 0px;
@@ -249,18 +271,15 @@ $text: #1b1b1b;
       transform-origin: left;
       cursor: pointer;
       .arrow {
-        color: $interests2;
+        color: $blue;
       }
     }
   }
 
   .about-image {
-    // @include view(50vh, column);
     height: 800px;
-    width: 100%;
     background-image: url('../images/about2.jpg');
     background-size: cover;
-    // background-position: bottom;
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -294,9 +313,9 @@ $text: #1b1b1b;
         font-size: 20px;
       }
     }
-    .skills {
-      width: 40%;
-    }
+  }
+  .skills {
+    // width: 40%;
   }
   .work {
     .project-list {

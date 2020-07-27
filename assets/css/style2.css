@@ -7,6 +7,7 @@
 }
 
 body {
+  background: #1b1b20;
   letter-spacing: -0.5px;
 }
 
@@ -56,11 +57,14 @@ body .arrow3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100vh;
   width: 100%;
   padding: 10px 20px;
-  background-color: #ffffff;
-  color: #1b1b1b;
+  background-color: #1b1b20;
+  color: #f3f3f3;
   font-size: 18px;
   position: relative;
 }
@@ -82,6 +86,7 @@ body .arrow3 {
 
 .navbar .navbar-content #home {
   font-size: 5em;
+  font-weight: 900;
   padding: 20px;
   margin-bottom: 32px;
 }
@@ -111,7 +116,7 @@ body .arrow3 {
 }
 
 .navbar .navbar-content .navigation .about-link:hover {
-  color: #ececec;
+  color: #fef9a7;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: all 0.25s;
@@ -121,7 +126,7 @@ body .arrow3 {
 }
 
 .navbar .navbar-content .navigation .work-link:hover {
-  color: #fff;
+  color: #fef9a7;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: all 0.25s;
@@ -131,7 +136,7 @@ body .arrow3 {
 }
 
 .navbar .navbar-content .navigation .interests-link:hover {
-  color: #ececec;
+  color: #fef9a7;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: all 0.25s;
@@ -141,7 +146,7 @@ body .arrow3 {
 }
 
 .navbar .navbar-content .navigation .resume-link:hover {
-  color: #e0e250;
+  color: #f3f3f3;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: all 0.25s;
@@ -199,22 +204,26 @@ body .arrow3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
   font-size: 36px;
-  width: 100%;
-  color: #1b1b1b;
+  width: 90%;
+  margin: 0 auto;
+  color: #f3f3f3;
 }
 
 .about .summary {
   height: auto;
-  background: #ececec;
+  background: #1b1b20;
   font-size: 1em;
   width: 65%;
-  padding: 2em;
+  padding-left: 2em;
 }
 
 .about .summary h2 {
-  border-bottom: 3px solid #f1f1f1;
+  border-bottom: 2px solid #fef9a7;
 }
 
 .about .summary .headline {
@@ -222,47 +231,53 @@ body .arrow3 {
   font-weight: bold;
 }
 
-.about .skills {
-  font-size: 0.7em;
-  width: 35%;
-  background: #f1f1f1;
+.skills {
+  font-size: 36px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 2em;
+  background: #1b1b20;
+  color: #f3f3f3;
   text-align: left;
   border-bottom: none;
-  padding: 2em;
 }
 
-.about .skills h2 {
-  border-bottom: 3px solid #ececec;
+.skills h2 {
+  border-bottom: 2px solid #fef9a7;
   margin-bottom: 20px;
 }
 
-.about .skills .list {
+.skills .list {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+  width: 100%;
   list-style-type: none;
 }
 
-.about .skills .list .item {
-  font-size: 0.9em;
+.skills .list .item {
   margin: 10px 0px;
+  font-size: 0.7em;
 }
 
-.about .skills .list .item span {
+.skills .list .item span {
   font-size: 0.8em;
 }
 
 .work {
-  height: 100%;
+  width: 90%;
+  margin: 0 auto;
   font-size: 36px;
-  background: #fff;
-  color: #1b1b1b;
+  background: #1b1b20;
+  color: #f3f3f3;
   padding: 2em;
 }
 
 .work h2 {
-  border-bottom: 3px solid #f1f1f1;
+  border-bottom: 3px solid #fef9a7;
   margin-bottom: 0.5em;
 }
 
@@ -274,11 +289,12 @@ body .arrow3 {
 }
 
 .work .project-list .project-item {
-  background: #f1f1f1;
   padding: 1em;
   margin: 0.5em;
   position: relative;
   border-radius: 5px;
+  border-right: 1px solid #fef9a7;
+  border-bottom: 1px solid #fef9a7;
 }
 
 .work .project-list .project-item .title {
@@ -290,20 +306,21 @@ body .arrow3 {
 }
 
 .work .project-list .project-item .arrow {
-  color: #fff;
+  color: #fef9a7;
 }
 
 .work .project-list .project-item .view {
   position: absolute;
   top: 10px;
   right: 0;
-  color: #1b1b1b;
+  color: #f3f3f3;
   font-size: 22px;
-  background: #fff;
   padding: 5px 8px;
   border-radius: 5px;
   margin-right: 1em;
   margin-top: 1em;
+  border-right: 1px solid #fef9a7;
+  border-bottom: 1px solid #fef9a7;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -327,10 +344,11 @@ body .arrow3 {
 }
 
 .bandcamp {
-  background: #ececec;
-  color: #1b1b1b;
+  color: #f3f3f3;
   font-size: 40px;
   padding: 1em;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .bandcamp p {
@@ -347,12 +365,11 @@ body .arrow3 {
 }
 
 .bandcamp .cta .arrow {
-  color: #919191;
+  color: #fef9a7;
 }
 
 .about-image {
   height: 800px;
-  width: 100%;
   background-image: url("../images/about2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -476,6 +493,9 @@ body .arrow3 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 80%;
   }
   .navbar .navbar-content #home {
