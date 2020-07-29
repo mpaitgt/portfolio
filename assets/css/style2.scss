@@ -88,6 +88,9 @@ $blue: #fef9a7;
         font-weight: 900;
         padding: 20px;
         margin-bottom: 32px;
+        // border-right: 1px solid $red;
+        // border-bottom: 1px solid $red;
+        // box-shadow: 20px 10px 24px -20px rgba(0,0,0,0.75);
       }
       .navigation {
         list-style: none;
@@ -118,7 +121,7 @@ $blue: #fef9a7;
         }
         .resume-link {
           &:hover {
-            @include linkhover($text);
+            @include linkhover($blue);
           }
         }
       }
@@ -132,12 +135,13 @@ $blue: #fef9a7;
         margin: 0px 10px;
         width: 40px;
         transition: transform 0.25s ease-in-out;
-        transform-origin: bottom;
-        filter: invert(1);
+        transform-origin: center;
+        filter: invert(0.25);
         &:hover {
           transform: scale(1.25);
-          transition: transform 0.25s ease-in-out;
-          transform-origin: bottom;
+          filter: invert(0.5);
+          transition: all 0.25s;
+          transform-origin: center;
         }
       }
     }
@@ -147,14 +151,27 @@ $blue: #fef9a7;
     @include view(auto, row);
     font-size: 36px;
     width: 90%;
-    margin: 0 auto;
+    margin: 0em auto;
+    padding: 2em;
     color: $text;
+    border-top: 1px solid $red;
+    border-right: 1px solid $red;
+    border-bottom: 1px solid $red;
+    box-shadow: 20px 10px 24px -12px rgba(0,0,0,0.75);
+    img {
+      width: 50%;
+      border-radius: 2px;
+      border: 1px solid $red;
+      box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.75);
+    }
     .summary {
       height: auto;
       background: $navbg;
       font-size: 1em;
       width: 65%;
+      padding-right: 1.5em;
       padding-left: 2em;
+      padding-bottom: 1.5em;
       h2 {
         border-bottom: 2px solid $red;
       }
@@ -162,34 +179,35 @@ $blue: #fef9a7;
         font-size: 30px;
         font-weight: bold;
       }
-      a {
-        // color: $red;
-      }
     }
   }
 
   .skills {
     font-size: 36px;
     width: 90%;
-    margin: 0 auto;
-    padding: 2em;
+    margin: 0em auto 2em auto;
+    padding: 2em 2em 2em 2em;
     background: $navbg;
     color: $text;
     text-align: left;
     border-bottom: none;
+    border-left: 1px solid $red;
+    border-bottom: 1px solid $red;
+    box-shadow: -20px 12px 24px -12px rgba(0,0,0,0.75);
     h2 {
       border-bottom: 2px solid $red;
       margin-bottom: 20px;
     }
     .list {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
       width: 100%;
       list-style-type: none;
       .item {
-        margin: 10px 0px;
+        margin: 20px;
         font-size: 0.7em;
+        text-align: center;
         span {
           font-size: 0.8em;
         }
@@ -199,7 +217,7 @@ $blue: #fef9a7;
 
   .work {
     width: 90%;
-    margin: 0 auto;
+    margin: 2em auto;
     font-size: 36px;
     background: $navbg;
     color: $text;
@@ -212,11 +230,10 @@ $blue: #fef9a7;
       display: grid;
       grid-template-columns: 50% 50%;
       .project-item {
-        // background: $workitem;
         padding: 1em;
         margin: 0.5em;
         position: relative;
-        border-radius: 5px;
+        box-shadow: 6px 6px 12px -4px rgba(0,0,0,0.75);
         border-right: 1px solid $red;
         border-bottom: 1px solid $red;
         .title {
@@ -235,16 +252,15 @@ $blue: #fef9a7;
           color: $text;
           font-size: 22px;
           padding: 5px 8px;
-          border-radius: 5px;
+          // border-radius: 5px;
           margin-right: 1em;
           margin-top: 1em;
           border-right: 1px solid $red;
           border-bottom: 1px solid $red;
           transition: all 0.5s;
           &:hover {
-            transform: scale(1.1);
-            box-shadow: 0px 10px 10px -14px rgba(0,0,0,0.75);
-            transition: all 0.5s;
+            transform: scale(1.05);
+            transition: all 0.25s;
           }
           &:active {
             transform: scale(1);
@@ -267,6 +283,7 @@ $blue: #fef9a7;
       margin: 10px 0px;
     }
     .cta {
+      display: inline-block;
       transition: all 1s;
       transform-origin: left;
       cursor: pointer;
@@ -285,12 +302,14 @@ $blue: #fef9a7;
   }
 
   .hobby-image {
-    // @include view(80vh, row);
     height: 800px;
     width: 100%;
     background-image: url('../images/music.jpg');
     background-size: cover;
     background-position: center;
+    border-top: 1px solid $blue;
+    border-bottom: 1px solid $blue;
+    box-shadow: 0px 0px 24px -4px rgba(0,0,0,0.75);
   }
 
 @media (max-width: 1200px) { 
@@ -353,29 +372,32 @@ $blue: #fef9a7;
   }
   .about {
     flex-wrap: wrap;
+    padding: 0em;
+    img {
+      margin: 1em auto; 
+    }
     .header {
       font-size: 1em;
     }
     .summary {
       width: 100%;
     }
-    .skills {
-      width: 100%;
-      text-align: left;
-      padding: 3em;
-      .header {
-        font-size: 1.5em;
-      }
-      .list {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        .item {
-          span {
-            margin-left: 0em;
-          }
-        }
-      } 
+  }
+  .skills {
+    padding: 1.5em;
+    .header {
+      font-size: 1em;
     }
+    .list {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      .item {
+        font-size: 0.6em;
+        span {
+          margin-left: 0em;
+        }
+      }
+    } 
   }
   .about-image {
     height: 500px;
@@ -397,6 +419,9 @@ $blue: #fef9a7;
         .text {
           font-size: 0.5em;
         }
+        .view {
+
+        }
       }
     }
   }
@@ -414,42 +439,46 @@ $blue: #fef9a7;
     .navbar-content {
       @include view(80%, column);
       #home {
-        font-size: 2.4em;
-        text-align: center;
+        font-size: 3.8em;
+        text-align: left;
         margin-bottom: 0;
       }
       .navigation {
-        text-align: center;
+        width: 90%;
         .link {
           font-size: 1.5em;
         }
         .about-link {
+          transform: none;
           &:hover {
-            transform-origin: center;
+            // transform-origin: center;
           }
         }
         .work-link {
+          transform: none;
           &:hover {
-            transform-origin: center;
+            // transform-origin: center;
           }
         }
         .interests-link {
+          transform: none;
           &:hover {
-            transform-origin: center;
+            // transform-origin: center;
           }
         }
         .resume-link {
+          transform: none;
           &:hover {
-            transform-origin: center;
+            // transform-origin: center;
           }
         }
       }
     }
     #home-icons {
-      // position: absolute;
-      // top: 20px;
-      // right: 0;
-      // bottom: auto;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
       width: 100%;
       margin-bottom: 32px;
     }
@@ -461,19 +490,20 @@ $blue: #fef9a7;
     .summary {
       padding: 1em;
       .text {
-        font-size: 14px;
+        font-size: 0.5em;
       }
     }
-    .skills {
-      padding: 2em;
-      font-size: 0.6em;
-      .header {
-        font-size: 1em;
-      }
-      .list {
-        .item > span {
-          display: block;
-        }
+  }
+  .skills {
+    padding: 2em;
+    font-size: 1.5em;
+    .header {
+      font-size: 1em;
+    }
+    .list {
+      margin: 0px;
+      .item > span {
+        display: block;
       }
     }
   }
