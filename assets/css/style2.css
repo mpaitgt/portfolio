@@ -7,6 +7,7 @@
 }
 
 body {
+  background: #1b1b20;
   letter-spacing: -0.5px;
 }
 
@@ -56,11 +57,14 @@ body .arrow3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100vh;
   width: 100%;
   padding: 10px 20px;
-  background-color: #333333;
-  color: #f1f1f1;
+  background-color: #1b1b20;
+  color: #f3f3f3;
   font-size: 18px;
   position: relative;
 }
@@ -82,6 +86,7 @@ body .arrow3 {
 
 .navbar .navbar-content #home {
   font-size: 5em;
+  font-weight: 900;
   padding: 20px;
   margin-bottom: 32px;
 }
@@ -111,7 +116,7 @@ body .arrow3 {
 }
 
 .navbar .navbar-content .navigation .about-link:hover {
-  color: #d34f4f;
+  color: #fef9a7;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: all 0.25s;
@@ -121,7 +126,7 @@ body .arrow3 {
 }
 
 .navbar .navbar-content .navigation .work-link:hover {
-  color: #52c284;
+  color: #fef9a7;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: all 0.25s;
@@ -131,7 +136,7 @@ body .arrow3 {
 }
 
 .navbar .navbar-content .navigation .interests-link:hover {
-  color: #3c62e0;
+  color: #fef9a7;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: all 0.25s;
@@ -141,7 +146,7 @@ body .arrow3 {
 }
 
 .navbar .navbar-content .navigation .resume-link:hover {
-  color: #e0e250;
+  color: #fef9a7;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
   -webkit-transition: all 0.25s;
@@ -171,21 +176,21 @@ body .arrow3 {
   transition: -webkit-transform 0.25s ease-in-out;
   transition: transform 0.25s ease-in-out;
   transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
-  -webkit-transform-origin: bottom;
-          transform-origin: bottom;
-  -webkit-filter: invert(1);
-          filter: invert(1);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-filter: invert(0.25);
+          filter: invert(0.25);
 }
 
 .navbar #home-icons .icon-sm:hover {
   -webkit-transform: scale(1.25);
           transform: scale(1.25);
-  -webkit-transition: -webkit-transform 0.25s ease-in-out;
-  transition: -webkit-transform 0.25s ease-in-out;
-  transition: transform 0.25s ease-in-out;
-  transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
-  -webkit-transform-origin: bottom;
-          transform-origin: bottom;
+  -webkit-filter: invert(0.5);
+          filter: invert(0.5);
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
 
 .about {
@@ -199,22 +204,42 @@ body .arrow3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
   font-size: 36px;
-  width: 100%;
-  color: #f1f1f1;
+  width: 90%;
+  margin: 0em auto;
+  padding: 2em;
+  color: #f3f3f3;
+  border-top: 1px solid #fef9a7;
+  border-right: 1px solid #fef9a7;
+  border-bottom: 1px solid #fef9a7;
+  -webkit-box-shadow: 20px 10px 24px -12px rgba(0, 0, 0, 0.75);
+          box-shadow: 20px 10px 24px -12px rgba(0, 0, 0, 0.75);
+}
+
+.about img {
+  width: 50%;
+  border-radius: 2px;
+  border: 1px solid #fef9a7;
+  -webkit-box-shadow: 0px 0px 12px -4px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 12px -4px rgba(0, 0, 0, 0.75);
 }
 
 .about .summary {
   height: auto;
-  background: #d34f4f;
+  background: #1b1b20;
   font-size: 1em;
   width: 65%;
-  padding: 2em;
+  padding-right: 1.5em;
+  padding-left: 2em;
+  padding-bottom: 1.5em;
 }
 
 .about .summary h2 {
-  border-bottom: 3px solid #e67f7f;
+  border-bottom: 2px solid #fef9a7;
 }
 
 .about .summary .headline {
@@ -222,47 +247,58 @@ body .arrow3 {
   font-weight: bold;
 }
 
-.about .skills {
-  font-size: 0.7em;
-  width: 35%;
-  background: #e67f7f;
-  text-align: right;
+.skills {
+  font-size: 36px;
+  width: 90%;
+  margin: 0em auto 2em auto;
+  padding: 2em 2em 2em 2em;
+  background: #1b1b20;
+  color: #f3f3f3;
+  text-align: left;
   border-bottom: none;
-  padding: 2em;
+  border-left: 1px solid #fef9a7;
+  border-bottom: 1px solid #fef9a7;
+  -webkit-box-shadow: -20px 12px 24px -12px rgba(0, 0, 0, 0.75);
+          box-shadow: -20px 12px 24px -12px rgba(0, 0, 0, 0.75);
 }
 
-.about .skills h2 {
-  border-bottom: 3px solid #d34f4f;
+.skills h2 {
+  border-bottom: 2px solid #fef9a7;
   margin-bottom: 20px;
 }
 
-.about .skills .list {
+.skills .list {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  width: 100%;
   list-style-type: none;
 }
 
-.about .skills .list .item {
-  font-size: 0.9em;
-  margin: 10px 0px;
+.skills .list .item {
+  margin: 20px;
+  font-size: 0.7em;
+  text-align: center;
 }
 
-.about .skills .list .item span {
+.skills .list .item span {
   font-size: 0.8em;
 }
 
 .work {
-  height: 100%;
+  width: 90%;
+  margin: 2em auto;
   font-size: 36px;
-  background: #52c284;
-  color: #333333;
+  background: #1b1b20;
+  color: #f3f3f3;
   padding: 2em;
 }
 
 .work h2 {
-  border-bottom: 3px solid #6ddb9e;
+  border-bottom: 3px solid #fef9a7;
   margin-bottom: 0.5em;
 }
 
@@ -274,10 +310,13 @@ body .arrow3 {
 }
 
 .work .project-list .project-item {
-  background: #6ddb9e;
-  padding: 0.5em;
+  padding: 1em;
   margin: 0.5em;
   position: relative;
+  -webkit-box-shadow: 6px 6px 12px -4px rgba(0, 0, 0, 0.75);
+          box-shadow: 6px 6px 12px -4px rgba(0, 0, 0, 0.75);
+  border-right: 1px solid #fef9a7;
+  border-bottom: 1px solid #fef9a7;
 }
 
 .work .project-list .project-item .title {
@@ -289,30 +328,29 @@ body .arrow3 {
 }
 
 .work .project-list .project-item .arrow {
-  color: #52c284;
+  color: #fef9a7;
 }
 
 .work .project-list .project-item .view {
   position: absolute;
   top: 10px;
   right: 0;
-  color: #f1f1f1;
+  color: #f3f3f3;
   font-size: 22px;
-  background: #52c284;
   padding: 5px 8px;
-  border-radius: 5px;
-  margin-right: 10px;
+  margin-right: 1em;
+  margin-top: 1em;
+  border-right: 1px solid #fef9a7;
+  border-bottom: 1px solid #fef9a7;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
 .work .project-list .project-item .view:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-box-shadow: 0px 10px 10px -14px rgba(0, 0, 0, 0.75);
-          box-shadow: 0px 10px 10px -14px rgba(0, 0, 0, 0.75);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
 }
 
 .work .project-list .project-item .view:active {
@@ -325,10 +363,11 @@ body .arrow3 {
 }
 
 .bandcamp {
-  background: #3c62e0;
-  color: #f1f1f1;
+  color: #f3f3f3;
   font-size: 40px;
   padding: 1em;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .bandcamp p {
@@ -337,6 +376,7 @@ body .arrow3 {
 }
 
 .bandcamp .cta {
+  display: inline-block;
   -webkit-transition: all 1s;
   transition: all 1s;
   -webkit-transform-origin: left;
@@ -345,12 +385,11 @@ body .arrow3 {
 }
 
 .bandcamp .cta .arrow {
-  color: #849df0;
+  color: #fef9a7;
 }
 
 .about-image {
   height: 800px;
-  width: 100%;
   background-image: url("../images/about2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -363,6 +402,10 @@ body .arrow3 {
   background-image: url("../images/music.jpg");
   background-size: cover;
   background-position: center;
+  border-top: 1px solid #fef9a7;
+  border-bottom: 1px solid #fef9a7;
+  -webkit-box-shadow: 0px 0px 24px -4px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 24px -4px rgba(0, 0, 0, 0.75);
 }
 
 @media (max-width: 1200px) {
@@ -377,9 +420,6 @@ body .arrow3 {
   }
   .about .summary .text {
     font-size: 20px;
-  }
-  .about .skills {
-    width: 40%;
   }
   .work .project-list .project-item h3 {
     font-size: 0.8em;
@@ -406,6 +446,10 @@ body .arrow3 {
   .about {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    padding: 0em;
+  }
+  .about img {
+    margin: 1em auto;
   }
   .about .header {
     font-size: 1em;
@@ -413,21 +457,22 @@ body .arrow3 {
   .about .summary {
     width: 100%;
   }
-  .about .skills {
-    width: 100%;
-    text-align: left;
-    padding: 3em;
+  .skills {
+    padding: 1.5em;
   }
-  .about .skills .header {
-    font-size: 1.5em;
+  .skills .header {
+    font-size: 1em;
   }
-  .about .skills .list {
+  .skills .list {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 50% 50%;
         grid-template-columns: 50% 50%;
   }
-  .about .skills .list .item span {
+  .skills .list .item {
+    font-size: 0.6em;
+  }
+  .skills .list .item span {
     margin-left: 0em;
   }
   .about-image {
@@ -474,36 +519,43 @@ body .arrow3 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 80%;
   }
   .navbar .navbar-content #home {
-    font-size: 2.4em;
-    text-align: center;
+    font-size: 3.8em;
+    text-align: left;
     margin-bottom: 0;
   }
   .navbar .navbar-content .navigation {
-    text-align: center;
+    width: 90%;
   }
   .navbar .navbar-content .navigation .link {
     font-size: 1.5em;
   }
-  .navbar .navbar-content .navigation .about-link:hover {
-    -webkit-transform-origin: center;
-            transform-origin: center;
+  .navbar .navbar-content .navigation .about-link {
+    -webkit-transform: none;
+            transform: none;
   }
-  .navbar .navbar-content .navigation .work-link:hover {
-    -webkit-transform-origin: center;
-            transform-origin: center;
+  .navbar .navbar-content .navigation .work-link {
+    -webkit-transform: none;
+            transform: none;
   }
-  .navbar .navbar-content .navigation .interests-link:hover {
-    -webkit-transform-origin: center;
-            transform-origin: center;
+  .navbar .navbar-content .navigation .interests-link {
+    -webkit-transform: none;
+            transform: none;
   }
-  .navbar .navbar-content .navigation .resume-link:hover {
-    -webkit-transform-origin: center;
-            transform-origin: center;
+  .navbar .navbar-content .navigation .resume-link {
+    -webkit-transform: none;
+            transform: none;
   }
   .navbar #home-icons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     width: 100%;
     margin-bottom: 32px;
   }
@@ -514,16 +566,19 @@ body .arrow3 {
     padding: 1em;
   }
   .about .summary .text {
-    font-size: 14px;
+    font-size: 0.5em;
   }
-  .about .skills {
+  .skills {
     padding: 2em;
-    font-size: 0.6em;
+    font-size: 1.5em;
   }
-  .about .skills .header {
+  .skills .header {
     font-size: 1em;
   }
-  .about .skills .list .item > span {
+  .skills .list {
+    margin: 0px;
+  }
+  .skills .list .item > span {
     display: block;
   }
   .work {

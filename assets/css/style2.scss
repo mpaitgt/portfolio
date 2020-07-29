@@ -5,20 +5,26 @@
   box-sizing: border-box;
 }
 
-$navbg: #333333;
-$about: #d34f4f;
-$skills: #e67f7f;
-$work: #52c284;
-$workitem: #6ddb9e;
+$navbg: #1b1b20;
+$about: #ececec;
+$skills: #f1f1f1;
+$work: #fff;
+$workitem: #f1f1f1;
 $resume: #e0e250;
-$interests: #3c62e0;
-$interests2: #849df0;
-$text: #f1f1f1;
+$interests: #ececec;
+$interests2: #919191;
+$text: #f3f3f3;
+$red: #fef9a7;
+// real $green: #52c284;
+$green: #fef9a7;
+// real $blue: #3c62e0;
+$blue: #fef9a7;
 
 @mixin view($height, $direction) {
   display: flex;
   flex-direction: $direction;
   justify-content: center;
+  align-items: center;
   height: $height;
 }
 
@@ -34,6 +40,7 @@ $text: #f1f1f1;
 }
 
   body {
+    background: $navbg;
     letter-spacing: -0.5px;
     a {
       text-decoration: none;
@@ -78,8 +85,12 @@ $text: #f1f1f1;
       justify-content: center;
       #home {
         font-size: 5em;
+        font-weight: 900;
         padding: 20px;
         margin-bottom: 32px;
+        // border-right: 1px solid $red;
+        // border-bottom: 1px solid $red;
+        // box-shadow: 20px 10px 24px -20px rgba(0,0,0,0.75);
       }
       .navigation {
         list-style: none;
@@ -95,22 +106,22 @@ $text: #f1f1f1;
         }
         .about-link {
           &:hover {
-            @include linkhover($about);
+            @include linkhover($red);
           }
         }
         .work-link {
           &:hover {
-            @include linkhover($work);
+            @include linkhover($green);
           }
         }
         .interests-link {
           &:hover {
-            @include linkhover($interests);
+            @include linkhover($blue);
           }
         }
         .resume-link {
           &:hover {
-            @include linkhover($resume);
+            @include linkhover($blue);
           }
         }
       }
@@ -124,80 +135,107 @@ $text: #f1f1f1;
         margin: 0px 10px;
         width: 40px;
         transition: transform 0.25s ease-in-out;
-        transform-origin: bottom;
-        filter: invert(1);
+        transform-origin: center;
+        filter: invert(0.25);
         &:hover {
           transform: scale(1.25);
-          transition: transform 0.25s ease-in-out;
-          transform-origin: bottom;
-      }
+          filter: invert(0.5);
+          transition: all 0.25s;
+          transform-origin: center;
+        }
       }
     }
   }
 
   .about {
-    @include view(100%, row);
+    @include view(auto, row);
     font-size: 36px;
-    width: 100%;
+    width: 90%;
+    margin: 0em auto;
+    padding: 2em;
     color: $text;
+    border-top: 1px solid $red;
+    border-right: 1px solid $red;
+    border-bottom: 1px solid $red;
+    box-shadow: 20px 10px 24px -12px rgba(0,0,0,0.75);
+    img {
+      width: 50%;
+      border-radius: 2px;
+      border: 1px solid $red;
+      box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.75);
+    }
     .summary {
       height: auto;
-      background: $about;
+      background: $navbg;
       font-size: 1em;
       width: 65%;
-      padding: 2em;
+      padding-right: 1.5em;
+      padding-left: 2em;
+      padding-bottom: 1.5em;
       h2 {
-        border-bottom: 3px solid $skills;
+        border-bottom: 2px solid $red;
       }
       .headline {
         font-size: 30px;
         font-weight: bold;
       }
     }
-    .skills {
-      font-size: 0.7em;
-      width: 35%;
-      background: $skills;
-      text-align: right;
-      border-bottom: none;
-      padding: 2em;
-      h2 {
-        border-bottom: 3px solid $about;
-        margin-bottom: 20px;
-      }
-      .list {
-        display: grid;
-        grid-template-columns: 100%;
-        list-style-type: none;
-        .item {
-          font-size: 0.9em;
-          margin: 10px 0px;
-          span {
-            font-size: 0.8em;
-          }
+  }
+
+  .skills {
+    font-size: 36px;
+    width: 90%;
+    margin: 0em auto 2em auto;
+    padding: 2em 2em 2em 2em;
+    background: $navbg;
+    color: $text;
+    text-align: left;
+    border-bottom: none;
+    border-left: 1px solid $red;
+    border-bottom: 1px solid $red;
+    box-shadow: -20px 12px 24px -12px rgba(0,0,0,0.75);
+    h2 {
+      border-bottom: 2px solid $red;
+      margin-bottom: 20px;
+    }
+    .list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      width: 100%;
+      list-style-type: none;
+      .item {
+        margin: 20px;
+        font-size: 0.7em;
+        text-align: center;
+        span {
+          font-size: 0.8em;
         }
       }
     }
   }
 
   .work {
-    height: 100%;
+    width: 90%;
+    margin: 2em auto;
     font-size: 36px;
-    background: $work;
-    color: $navbg;
+    background: $navbg;
+    color: $text;
     padding: 2em;
     h2 {
-      border-bottom: 3px solid $workitem;
+      border-bottom: 3px solid $green;
       margin-bottom: 0.5em;
     }
     .project-list {
       display: grid;
       grid-template-columns: 50% 50%;
       .project-item {
-        background: $workitem;
-        padding: 0.5em;
+        padding: 1em;
         margin: 0.5em;
         position: relative;
+        box-shadow: 6px 6px 12px -4px rgba(0,0,0,0.75);
+        border-right: 1px solid $red;
+        border-bottom: 1px solid $red;
         .title {
           font-size: 1em;
         }
@@ -205,7 +243,7 @@ $text: #f1f1f1;
           font-size: 0.5em;
         }
         .arrow {
-          color: $work;
+          color: $green;
         }
         .view {
           position: absolute;
@@ -213,15 +251,16 @@ $text: #f1f1f1;
           right: 0;
           color: $text;
           font-size: 22px;
-          background: $work;
           padding: 5px 8px;
-          border-radius: 5px;
-          margin-right: 10px;
+          // border-radius: 5px;
+          margin-right: 1em;
+          margin-top: 1em;
+          border-right: 1px solid $red;
+          border-bottom: 1px solid $red;
           transition: all 0.5s;
           &:hover {
-            transform: scale(1.1);
-            box-shadow: 0px 10px 10px -14px rgba(0,0,0,0.75);
-            transition: all 0.5s;
+            transform: scale(1.05);
+            transition: all 0.25s;
           }
           &:active {
             transform: scale(1);
@@ -234,42 +273,43 @@ $text: #f1f1f1;
   }
 
   .bandcamp {
-    background: $interests;
     color: $text;
     font-size: 40px;
     padding: 1em;
+    width: 90%;
+    margin: 0 auto;
     p {
       font-size: 18px;
       margin: 10px 0px;
     }
     .cta {
+      display: inline-block;
       transition: all 1s;
       transform-origin: left;
       cursor: pointer;
       .arrow {
-        color: $interests2;
+        color: $blue;
       }
     }
   }
 
   .about-image {
-    // @include view(50vh, column);
     height: 800px;
-    width: 100%;
     background-image: url('../images/about2.jpg');
     background-size: cover;
-    // background-position: bottom;
     background-repeat: no-repeat;
     background-position: center;
   }
 
   .hobby-image {
-    // @include view(80vh, row);
     height: 800px;
     width: 100%;
     background-image: url('../images/music.jpg');
     background-size: cover;
     background-position: center;
+    border-top: 1px solid $blue;
+    border-bottom: 1px solid $blue;
+    box-shadow: 0px 0px 24px -4px rgba(0,0,0,0.75);
   }
 
 @media (max-width: 1200px) { 
@@ -292,9 +332,9 @@ $text: #f1f1f1;
         font-size: 20px;
       }
     }
-    .skills {
-      width: 40%;
-    }
+  }
+  .skills {
+    // width: 40%;
   }
   .work {
     .project-list {
@@ -332,29 +372,32 @@ $text: #f1f1f1;
   }
   .about {
     flex-wrap: wrap;
+    padding: 0em;
+    img {
+      margin: 1em auto; 
+    }
     .header {
       font-size: 1em;
     }
     .summary {
       width: 100%;
     }
-    .skills {
-      width: 100%;
-      text-align: left;
-      padding: 3em;
-      .header {
-        font-size: 1.5em;
-      }
-      .list {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        .item {
-          span {
-            margin-left: 0em;
-          }
-        }
-      } 
+  }
+  .skills {
+    padding: 1.5em;
+    .header {
+      font-size: 1em;
     }
+    .list {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      .item {
+        font-size: 0.6em;
+        span {
+          margin-left: 0em;
+        }
+      }
+    } 
   }
   .about-image {
     height: 500px;
@@ -376,6 +419,9 @@ $text: #f1f1f1;
         .text {
           font-size: 0.5em;
         }
+        .view {
+
+        }
       }
     }
   }
@@ -393,42 +439,46 @@ $text: #f1f1f1;
     .navbar-content {
       @include view(80%, column);
       #home {
-        font-size: 2.4em;
-        text-align: center;
+        font-size: 3.8em;
+        text-align: left;
         margin-bottom: 0;
       }
       .navigation {
-        text-align: center;
+        width: 90%;
         .link {
           font-size: 1.5em;
         }
         .about-link {
+          transform: none;
           &:hover {
-            transform-origin: center;
+            // transform-origin: center;
           }
         }
         .work-link {
+          transform: none;
           &:hover {
-            transform-origin: center;
+            // transform-origin: center;
           }
         }
         .interests-link {
+          transform: none;
           &:hover {
-            transform-origin: center;
+            // transform-origin: center;
           }
         }
         .resume-link {
+          transform: none;
           &:hover {
-            transform-origin: center;
+            // transform-origin: center;
           }
         }
       }
     }
     #home-icons {
-      // position: absolute;
-      // top: 20px;
-      // right: 0;
-      // bottom: auto;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
       width: 100%;
       margin-bottom: 32px;
     }
@@ -440,19 +490,20 @@ $text: #f1f1f1;
     .summary {
       padding: 1em;
       .text {
-        font-size: 14px;
+        font-size: 0.5em;
       }
     }
-    .skills {
-      padding: 2em;
-      font-size: 0.6em;
-      .header {
-        font-size: 1em;
-      }
-      .list {
-        .item > span {
-          display: block;
-        }
+  }
+  .skills {
+    padding: 2em;
+    font-size: 1.5em;
+    .header {
+      font-size: 1em;
+    }
+    .list {
+      margin: 0px;
+      .item > span {
+        display: block;
       }
     }
   }
