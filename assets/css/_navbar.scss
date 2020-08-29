@@ -1,0 +1,80 @@
+@import '_mixins';
+
+nav.navbar {
+  @include flex(row, space-around, center);
+  background: $blue__dark;
+  color: $white;
+  padding: 12px;
+  box-shadow: 2px 2px 12px 2px rgba(0,0,0,0.1);
+  position: fixed:
+  .nav__header {
+    font-size: 2rem;
+  }
+  .nav__ul {
+    @include flex(row, center, center);
+    list-style: none;
+    .nav__link {
+      padding: 8px 12px;
+      cursor: pointer;
+      transition: all 0.25s;
+      &:hover {
+        transform: translate(-2px, 2px);
+        transition: transform 0.25s;
+        background: $white;
+        color: $blue__dark;
+      }
+    }
+    .nav__icon {
+      margin: 0px 10px;
+      margin-left: 24px;
+      margin-right: 0px;
+      width: 24px;
+      transition: transform 0.25s ease-in-out;
+      transform-origin: center;
+      filter: invert(0.25);
+      &:hover {
+        transform: scale(1.25);
+        filter: invert(1);
+        transition: all 0.25s;
+        transform-origin: center;
+      }
+    }
+  }
+    .navigation {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      .nav__link {
+ 
+      }
+      .about-link {
+        &:hover {
+          @include linkhover($red);
+        }
+      }
+      .work-link {
+        &:hover {
+          @include linkhover($green);
+        }
+      }
+      .interests-link {
+        &:hover {
+          @include linkhover($blue);
+        }
+      }
+      .resume-link {
+        &:hover {
+          @include linkhover($blue);
+        }
+      }
+    }
+  }
+  #home-icons {
+    display: flex;
+    display: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+
+  }

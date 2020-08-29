@@ -1,150 +1,34 @@
+@import '_mixins';
+@import '_variables';
+@import '_navbar';
+
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Gothic A1', sans-serif;
+  font-family: arial;
   box-sizing: border-box;
 }
 
-$navbg: #1b1b20;
-$about: #ececec;
-$skills: #f1f1f1;
-$work: #fff;
-$workitem: #f1f1f1;
-$resume: #e0e250;
-$interests: #ececec;
-$interests2: #919191;
-$text: #f3f3f3;
-$red: #fef9a7;
-// real $green: #52c284;
-$green: #fef9a7;
-// real $blue: #3c62e0;
-$blue: #fef9a7;
-
-@mixin view($height, $direction) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: center;
-  align-items: center;
-  height: $height;
-}
-
-@mixin linkhover($color) {
-  color: $color;
-  transform: scale(1.1);
-  transition: all 0.25s;
-  transform-origin: left;
-}
-
-@mixin arrow-animation($timedelay) {
-  animation: arrow 1s ease-in-out $timedelay infinite forwards;
-}
-
   body {
-    background: $navbg;
-    letter-spacing: -0.5px;
+    width: 950px;
+    margin: 0 auto;
     a {
       text-decoration: none;
       color: inherit;
     }
-    .header {
-      padding-bottom: 10px;
-    }
-    .text {
-      font-size: 20px;
-      line-height: 1.5em;
-      margin-top: 20px;
-    }
-    .arrow {
-      font-size: 1em;
-      position: relative;
-    }
-    .arrow1 {
-      @include arrow-animation(0.1s);
-    }
-    .arrow2 {
-      @include arrow-animation(0.2s);
-    }
-    .arrow3 {
-      @include arrow-animation(0.3s);
-    }
-  }
-
-  .navbar {
-    @include view(100vh, column);
-    width: 100%;
-    padding: 10px 20px;
-    background-color: $navbg;
-    color: $text;
-    font-size: 18px;
-    position: relative;
-    .navbar-content {
-      width: 80%;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      #home {
-        font-size: 5em;
-        font-weight: 900;
-        padding: 20px;
-        margin-bottom: 32px;
-        // border-right: 1px solid $red;
-        // border-bottom: 1px solid $red;
-        // box-shadow: 20px 10px 24px -20px rgba(0,0,0,0.75);
-      }
-      .navigation {
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        .link {
-          font-size: 2em;
-          padding: 5px 10px;
-          cursor: pointer;
-          transition: all 0.25s;
-          transform-origin: left;
-        }
-        .about-link {
-          &:hover {
-            @include linkhover($red);
-          }
-        }
-        .work-link {
-          &:hover {
-            @include linkhover($green);
-          }
-        }
-        .interests-link {
-          &:hover {
-            @include linkhover($blue);
-          }
-        }
-        .resume-link {
-          &:hover {
-            @include linkhover($blue);
-          }
-        }
-      }
-    }
-    #home-icons {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      width: 100%;
-      .icon-sm {
-        margin: 0px 10px;
-        width: 40px;
-        transition: transform 0.25s ease-in-out;
-        transform-origin: center;
-        filter: invert(0.25);
-        &:hover {
-          transform: scale(1.25);
-          filter: invert(0.5);
-          transition: all 0.25s;
-          transform-origin: center;
-        }
-      }
-    }
+    // .arrow {
+    //   font-size: 1em;
+    //   position: relative;
+    // }
+    // .arrow1 {
+    //   @include arrow-animation(0.1s);
+    // }
+    // .arrow2 {
+    //   @include arrow-animation(0.2s);
+    // }
+    // .arrow3 {
+    //   @include arrow-animation(0.3s);
+    // }
   }
 
   .about {
