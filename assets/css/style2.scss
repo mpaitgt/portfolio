@@ -1,430 +1,127 @@
 @import '_mixins';
 @import '_variables';
 @import '_navbar';
+@import '_projects';
+@import '_albums';
 
 * {
   padding: 0;
   margin: 0;
-  font-family: arial;
-  box-sizing: border-box;
+  font-family: 'Tajawal';
+  src: url('../fonts/Tajawal');
 }
 
   body {
     width: 950px;
     margin: 0 auto;
+    // box-shadow: 0px 0px 32px 32px rgba(0,0,0,0.05);
     a {
       text-decoration: none;
       color: inherit;
     }
-    // .arrow {
-    //   font-size: 1em;
-    //   position: relative;
-    // }
-    // .arrow1 {
-    //   @include arrow-animation(0.1s);
-    // }
-    // .arrow2 {
-    //   @include arrow-animation(0.2s);
-    // }
-    // .arrow3 {
-    //   @include arrow-animation(0.3s);
-    // }
   }
 
-  .about {
-    @include view(auto, row);
-    font-size: 36px;
-    width: 90%;
-    margin: 0em auto;
-    padding: 2em;
+  section.section__body {
     color: $text;
-    border-top: 1px solid $red;
-    border-right: 1px solid $red;
-    border-bottom: 1px solid $red;
-    box-shadow: 20px 10px 24px -12px rgba(0,0,0,0.75);
-    img {
-      width: 50%;
-      border-radius: 2px;
-      border: 1px solid $red;
-      box-shadow: 0px 0px 12px -4px rgba(0,0,0,0.75);
-    }
-    .summary {
-      height: auto;
-      background: $navbg;
-      font-size: 1em;
-      width: 65%;
-      padding-right: 1.5em;
-      padding-left: 2em;
-      padding-bottom: 1.5em;
-      h2 {
-        border-bottom: 2px solid $red;
-      }
-      .headline {
-        font-size: 30px;
-        font-weight: bold;
-      }
-    }
-  }
-
-  .skills {
-    font-size: 36px;
-    width: 90%;
-    margin: 0em auto 2em auto;
-    padding: 2em 2em 2em 2em;
-    background: $navbg;
-    color: $text;
-    text-align: left;
-    border-bottom: none;
-    border-left: 1px solid $red;
-    border-bottom: 1px solid $red;
-    box-shadow: -20px 12px 24px -12px rgba(0,0,0,0.75);
-    h2 {
-      border-bottom: 2px solid $red;
-      margin-bottom: 20px;
-    }
-    .list {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-      width: 100%;
-      list-style-type: none;
-      .item {
-        margin: 20px;
-        font-size: 0.7em;
-        text-align: center;
-        span {
-          font-size: 0.8em;
-        }
-      }
-    }
-  }
-
-  .work {
-    width: 90%;
-    margin: 2em auto;
-    font-size: 36px;
-    background: $navbg;
-    color: $text;
-    padding: 2em;
-    h2 {
-      border-bottom: 3px solid $green;
-      margin-bottom: 0.5em;
-    }
-    .project-list {
-      display: grid;
-      grid-template-columns: 50% 50%;
-      .project-item {
-        padding: 1em;
-        margin: 0.5em;
-        position: relative;
-        box-shadow: 6px 6px 12px -4px rgba(0,0,0,0.75);
-        border-right: 1px solid $red;
-        border-bottom: 1px solid $red;
-        .title {
-          font-size: 1em;
-        }
-        .text {
-          font-size: 0.5em;
-        }
-        .arrow {
-          color: $green;
-        }
-        .view {
-          position: absolute;
-          top: 10px;
-          right: 0;
-          color: $text;
-          font-size: 22px;
-          padding: 5px 8px;
-          // border-radius: 5px;
-          margin-right: 1em;
-          margin-top: 1em;
-          border-right: 1px solid $red;
-          border-bottom: 1px solid $red;
-          transition: all 0.5s;
-          &:hover {
-            transform: scale(1.05);
-            transition: all 0.25s;
-          }
-          &:active {
-            transform: scale(1);
-            box-shadow: none;
-            transition: all 0.25s;
-          }
-        }
-      }
-    }
-  }
-
-  .bandcamp {
-    color: $text;
-    font-size: 40px;
-    padding: 1em;
-    width: 90%;
-    margin: 0 auto;
-    p {
-      font-size: 18px;
-      margin: 10px 0px;
-    }
-    .cta {
+    padding: 5%;
+    padding-bottom: 0;
+    margin: 4rem 0;
+    .section__header {
       display: inline-block;
-      transition: all 1s;
-      transform-origin: left;
-      cursor: pointer;
-      .arrow {
-        color: $blue;
-      }
+      font-size: 2rem;
+      margin-bottom: 10px;
+      letter-spacing: -1px;
+      font-weight: 900;
     }
+    .section__headline {
+      display: inline-block;
+      padding: 4px 14px;
+      font-size: 1.2rem;
+      font-weight: 500;
+      border-radius: 18px 30px;
+      color: $blue__med;
+      background: $blue__light-x;
+      margin-bottom: 10px;
+    }
+    .section__content {
+      @include flex(row, center, flex-start);
+    }
+  }
+  .section__copy {
+    font-size: 1.05rem;
+    padding-bottom: 12px;
+    padding-left: 1rem;
+  }
+  .list__skills {
+
   }
 
-  .about-image {
-    height: 800px;
-    background-image: url('../images/about2.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+  .img {
+    margin: 2rem;
+    box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.1);
+  }
+  .img__bio {
+    width: 800px; 
+    border-radius: 80% 50%;
+  }
+  .img__project {
+    width: 340px;
+    border-radius: 6px;
+    // transition: border-radius 0.5s ease-out;
+    // &:hover {
+    //   border-radius: 10px;
+    //   transition: border-radius 0.5s ease-in;
+    // }
   }
 
-  .hobby-image {
-    height: 800px;
-    width: 100%;
-    background-image: url('../images/music.jpg');
-    background-size: cover;
-    background-position: center;
-    border-top: 1px solid $blue;
-    border-bottom: 1px solid $blue;
-    box-shadow: 0px 0px 24px -4px rgba(0,0,0,0.75);
+  .skill-selector {
+    list-style: none;
+    display: inline-block; 
+    padding: 12px 20px;
+    margin: 6px;
+    font-size: 1.1em;
+    border-radius: 2px;
+    cursor: pointer;
+
   }
 
-@media (max-width: 1200px) { 
-  .navbar {
-    .navbar-content {
-      #home {
-        font-size: 4em;
-      }
-      .navigation {
-        .link {
-          font-size: 1.5em;
-        }
-      }
-    }
+  .skill__active {
+    background: $blue__light;
+    color: $blue__med;
   }
-  .about {
-    .summary {
-      width: 60%;
-      .text {
-        font-size: 20px;
-      }
-    }
+
+  .skill__inactive {
+    background: #f5f5f5;
   }
-  .skills {
-    // width: 40%;
+
+  .push-left {
+    transform: translateX(-6px);
+    transition: transform 0.25s ease-in-out;
   }
-  .work {
-    .project-list {
-      .project-item {
-        h3 {
-          font-size: 0.8em;
-        }
-        .text {
-          font-size: 18px;
-        }
-        .view {
-          font-size: 18px;
-        }
-      }
-    }
+
+  .push-right {
+    transform: translateX(6px);
+    transition: transform 0.25s ease-in-out;
   }
+
+.album-out {
+  animation-name: album-out;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1; 
+  animation-fill-mode: forwards;
+}
+.album-in {
+  animation-name: album-in;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1; 
+  animation-fill-mode: forwards;
 }
 
-@media (max-width: 970px) { 
-  .navbar {
-    .navbar-content {
-      #home {
-        font-size: 4em;
-        text-align: center;
-        line-height: normal;
-      }
-      .navigation {
-        .link {
-          font-size: 1.5em;
-          margin-top: 0.25em;
-          margin-bottom: 0.25em;
-        }
-      }
-    }
-  }
-  .about {
-    flex-wrap: wrap;
-    padding: 0em;
-    img {
-      margin: 1em auto; 
-    }
-    .header {
-      font-size: 1em;
-    }
-    .summary {
-      width: 100%;
-    }
-  }
-  .skills {
-    padding: 1.5em;
-    .header {
-      font-size: 1em;
-    }
-    .list {
-      display: grid;
-      grid-template-columns: 50% 50%;
-      .item {
-        font-size: 0.6em;
-        span {
-          margin-left: 0em;
-        }
-      }
-    } 
-  }
-  .about-image {
-    height: 500px;
-  }
-  .work {
-    .header {
-      font-size: 1em;
-    }
-    .project-list {
-      display: grid;
-      grid-template-columns: 100%;
-      .project-item {
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-        .title {
-          font-size: 0.8em;
-        }
-        .text {
-          font-size: 0.5em;
-        }
-        .view {
-
-        }
-      }
-    }
-  }
-  .hobby-image {
-    height: 500px;
-  }
-  .bandcamp {
-    font-size: 32px;
-    padding: 1.5em;
-  }
+@keyframes album-out {
+  0% { opacity: 1; transform: scale(1); };
+  100% { opacity: 0; transform: scale(0) };
 }
-
-@media (max-width: 580px) {
-  .navbar {
-    .navbar-content {
-      @include view(80%, column);
-      #home {
-        font-size: 3.8em;
-        text-align: left;
-        margin-bottom: 0;
-      }
-      .navigation {
-        width: 90%;
-        .link {
-          font-size: 1.5em;
-        }
-        .about-link {
-          transform: none;
-          &:hover {
-            // transform-origin: center;
-          }
-        }
-        .work-link {
-          transform: none;
-          &:hover {
-            // transform-origin: center;
-          }
-        }
-        .interests-link {
-          transform: none;
-          &:hover {
-            // transform-origin: center;
-          }
-        }
-        .resume-link {
-          transform: none;
-          &:hover {
-            // transform-origin: center;
-          }
-        }
-      }
-    }
-    #home-icons {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      margin-bottom: 32px;
-    }
-  }
-  .about {
-    .header {
-      font-size: 0.8em;
-    }
-    .summary {
-      padding: 1em;
-      .text {
-        font-size: 0.5em;
-      }
-    }
-  }
-  .skills {
-    padding: 2em;
-    font-size: 1.5em;
-    .header {
-      font-size: 1em;
-    }
-    .list {
-      margin: 0px;
-      .item > span {
-        display: block;
-      }
-    }
-  }
-  .work {
-    padding: 1em;
-    .header {
-      font-size: 0.8em;
-    }
-    .project-list {
-      .project-item {
-        width: 100%;
-        .title {
-          font-weight: bold;
-          font-size: 0.6em;
-          
-        }
-        .text {
-          font-size: 0.4em;
-        }
-        .view {
-          font-size: 0.4em;
-        }
-      }
-    }
-  }
-  .bandcamp {
-    font-size: 1.5em;
-    padding: 0.8em;
-  }
-}
-
-@keyframes arrow {
-  0% { opacity: 0; left: 0 }
-  100% { opacity: 1; left: 10px }
-}
-
-@keyframes hoverproject {
-  0% { left: 0 }
-  100% { left: 10px }
+@keyframes album-in {
+  0% { opacity: 0; transform: scale(0); };
+  100% { opacity: 1; transform: scale(1) };
 }

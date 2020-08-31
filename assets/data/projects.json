@@ -1,0 +1,37 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Recordshare",
+      "image": "../images/project-images/recordshare.jpg",
+      "technologies": [
+        "React.js", "MongoDB Atlas", "Emotion CSS", "Cloudinary", "Passport", "NodeJS/Express"
+      ],
+      "description": "Personal MERN-stack project developed to allow people to share the music they love with others, and agregrate audience ratings.",
+      "github_link": "https://www.github.com/mpaitgt",
+      "production_link": "https://www.recordshare.herokuapp.com"
+    },
+    {
+      "id": 2,
+      "title": "Ecohabit",
+      "image": "../images/project-images/ecohabit.jpg",
+      "technologies": [
+        "ReactJS", "Material UI", "Passport", "Cloudinary", "NodeJS/Express"
+      ],
+      "description": "A React app that helps its users develop more eco-friendly daily habits and encourage more green living. ",
+      "github_link": "https://www.github.com/jayjscotto/ecohabit",
+      "production_link": "https://www.ecohabit.herokuapp.com"
+    },
+    {
+      "id": 3,
+      "title": "Eton Controls",
+      "image": "../images/project-images/eton-controls-image.jpg",
+      "technologies": [
+        "HTML", "SCSS/SASS", "JavaScript", "EmailJS"
+      ],
+      "description": "Freelance front-end website developed for a local machine parts cleaning company. Developed using HTML, CSS, and Javascript.",
+      "github_link": "https://www.github.com/mpaitgt/eton-ctrls",
+      "production_link": "https://www.etoncontrols.com"
+    }
+  ]
+}
