@@ -1,5 +1,9 @@
 @import '_mixins';
 
+.projects {
+  border-top: 2px solid $blue__light;
+  border-bottom: 2px solid $blue__light;
+}
 .project {
   @include flex(row, center, center);
   margin: 1rem 0;

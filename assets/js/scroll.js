@@ -14,7 +14,7 @@ link.forEach(target => {
             case 'Work & Projects':
                 scroll(projects);
                 break;
-            case 'Bandcamp':
+            case 'The Jukebox':
                 scroll(bandcamp);
                 break;
             default:

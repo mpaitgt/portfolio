@@ -12,6 +12,13 @@
 
 <body>
 
+  <div id="album-modal" class="modal">
+    <div class="modal-content">
+      <iframe id="album-iframe" style="border: 0; width: 350px; height: 600px;" src="" seamless><a href=""></a></iframe>
+    </div>
+  </div>
+
+  <!-- Navigation -->
   <nav style="margin-top: 10px;" class="navbar nav__top">
     <div>
       <h1 class="nav__header">Matt Pignatore</h1>
@@ -20,7 +27,7 @@
       <li class="nav__link" name="about">About</li>
       <li class="nav__link" name="projects">Work & Projects</li>
       <li class="nav__link" name="recommendations">Recommendations</li>
-      <li class="nav__link" name="bandcamp">Bandcamp</li>
+      <li class="nav__link" name="bandcamp">The Jukebox</li>
     </ul>
     <ul class="nav__ul">
       <li>
@@ -41,6 +48,7 @@
     </ul>
   </nav>
 
+  <!-- Content container -->
   <div class="container">
 
     <!-- About -->
@@ -67,7 +75,8 @@
             watching movies, or experimenting in the kitchen.
           </p>
           <p class="section__copy">
-            You can reach me at <a href="mailto:mattpignatore@gmail.com"><strong>mattpignatore@gmail.com &#187;</strong></a>
+            You can reach me at <a href="mailto:mattpignatore@gmail.com"><strong>mattpignatore@gmail.com
+                &#187;</strong></a>
           </p>
         </div>
       </div>
@@ -85,25 +94,29 @@
       <ul class="list__projects"></ul>
     </section>
 
+    <!-- Bandcamp records -->
     <section class="section__bandcamp">
       <!-- <h3 class="section__header">Bandcamp</h3> -->
-      <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; margin: 0 auto; width: 100%;">
+      <div
+        style="display: flex; flex-direction: row; align-items: center; justify-content: center; margin: 0 auto; width: 100%;">
         <!-- <div id="left-arrow" class="album-arrow">&#8592;</div> -->
         <div class="album-carousel">
           <div class="album-slide">
-            <img class="album-cover" src="./assets/images/album-covers/at-any-moment.jpg" alt="">
-            <img class="album-cover" src="./assets/images/album-covers/go-get-hurt.jpg" alt="">
-            <img class="album-cover" src="./assets/images/album-covers/suck-up.jpg" alt="">
-            <img class="album-cover" src="./assets/images/album-covers/demos-2016.jpg" alt="">
+            <img class="album-cover" data-name="at-any-moment" src="./assets/images/album-covers/at-any-moment.jpg"
+              alt="">
+            <img class="album-cover" data-name="go-get-hurt" src="./assets/images/album-covers/go-get-hurt.jpg" alt="">
+            <img class="album-cover" data-name="suck-up" src="./assets/images/album-covers/suck-up.jpg" alt="">
+            <img class="album-cover" data-name="demos-2016" src="./assets/images/album-covers/demos-2016.jpg" alt="">
           </div>
         </div>
         <!-- <div id="right-arrow" class="album-arrow">&#8594;</div> -->
       </div>
     </section>
 
+    <!-- Footer / The Jukebox -->
     <footer style="margin-bottom: 10px;">
       <nav class="navbar">
-        <p class="foot__header">Copyright &copy; <span id="year">2020</span> Matt Pignatore</p>
+        <h2>The Jukebox</h2>
         <ul class="nav__ul">
           <li>
             <a href="https://github.com/mpaitgt" target="_blank">
@@ -121,17 +134,18 @@
             </a>
           </li>
         </ul>
+        <p class="foot__header">Copyright &copy; <span id="year">2020</span> Matt Pignatore</p>
       </nav>
     </footer>
 
   </div>
 
   <script src="./assets/js/scroll.js"></script>
+  <script src="./assets/js/toggle-modal.js"></script>
   <script src="./assets/js/hover-nav.js"></script>
-  <!-- <script src="./assets/js/album-carousel.js"></script> -->
   <script src="./assets/js/render-projects.js"></script>
   <script src="./assets/js/element-view.js"></script>
-  
+
 </body>
 
 </html>

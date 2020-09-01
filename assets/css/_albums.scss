@@ -25,11 +25,10 @@
       transform: translateY(200px);
       width: 200px;
       transition: filter 1s ease-out;
-      filter: grayscale(50%);
+      filter: grayscale(20%);
       transition: filter 0.25s;
       cursor: pointer;
       &:hover {
-        filter: grayscale(10%);
         transition: all 0.25s;
       }
     }

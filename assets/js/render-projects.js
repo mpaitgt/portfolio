@@ -21,7 +21,7 @@ let myProjects = [
     "title": "Ecohabit",
     "image": "./assets/images/project-images/ecohabit.jpg",
     "technologies": [
-      "React.js", "Material UI", "Passport", "Cloudinary", "Node.js & Express"
+      "React.js", "Material UI", "Passport", "Cloudinary", "Node.js & Express", "MongoDB"
     ],
     "description": "A React app that helps its users develop more eco-friendly daily habits and encourage more green living. ",
     "github_link": "https://www.github.com/jayjscotto/ecohabit",
@@ -85,6 +85,7 @@ let skills = [
   'MySQL',
   'PHP',
   'MongoDB',
+  'MongoDB Atlas',
   'Node.js & Express',
   'Wordpress',
   'Sitecore',
