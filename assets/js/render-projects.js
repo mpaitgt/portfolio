@@ -137,7 +137,7 @@ let renderProjects = function(arr) {
             </a>
             <a href="${project.github_link}" target="_blank">
               <img src="./assets/images/social-icons/github.png" width="32"
-                class="project__github-link" alt="">
+                class="project__github-link" alt="${project.title} Github Repo">
             </a>
           </div>
           <p class="project__description section__copy">
@@ -150,12 +150,12 @@ let renderProjects = function(arr) {
           </ul>
         </div>
         <div>
-          <img src="${project.image}" alt="Recordshare UI"
-            data-project-name="recordshare" class="img img__project">
+          <img src="${project.image}" alt="${project.title} UI"
+            data-project-name="${project.title.toLowerCase()}" class="img img__project">
         </div>
       </li>
     `
-  })
+  }).join('');
 }
 
 let filterProjects = function(query) {
