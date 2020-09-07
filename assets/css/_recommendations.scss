@@ -2,18 +2,19 @@
   padding: 0rem;
   margin-bottom: 0rem;
   padding: 2rem;
-  margin-bottom: 2rem;
+  margin: 0 auto;
+  margin-bottom: 1rem;
   position: relative;
   .quote {
     text-align: center;
-    font-size: 1.5rem;
-    padding: 2rem 6rem;
-    background: #f3f3f3;
+    font-size: 1.25rem;
+    padding: 1rem 6rem;
+    // background: #f3f3f3;
     position: relative;
     &:before {
       content: open-quote;
       display: inline-block;
-      font-size: 8rem;
+      font-size: 6rem;
       position: absolute;
       top: 0;
       left: 0;
@@ -22,7 +23,7 @@
     &:after {
       content: close-quote;
       display: inline-block;
-      font-size: 8rem;
+      font-size: 6rem;
       position: absolute;
       top: 0;
       right: 0;
@@ -38,12 +39,12 @@
     
   }
   .quote-author {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 900;
     font-family: 'Fira Sans';
     color: $blue__med;
     span {
-      font-size: 1.25rem;
+      font-size: 1rem;
       font-weight: 100;
       color: $gray;
     }

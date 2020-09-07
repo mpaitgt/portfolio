@@ -69,11 +69,13 @@ nav.navbar {
     }
     .nav__icon {
       @include icon_hover(24px, invert(0.5), invert(1));
+      align-self: center;
+      justify-self: center;
     }
   }
   #burger {
     display: none;
-    width: 44px;
+    width: 32px;
     height: 40px;
     cursor: pointer;
     @include nav-collapse {
