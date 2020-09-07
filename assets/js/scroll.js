@@ -1,21 +1,24 @@
 const 
-    about = document.querySelector('.about'),
-    projects = document.querySelector('.projects'),
-    bandcamp = document.querySelector('.section__bandcamp'),
-    link = document.querySelectorAll('.nav__link');
+    aboutDestination = document.querySelector('.about'),
+    projectsDestination = document.querySelector('.projects'),
+    recommendationsDestination = document.querySelector('.recommendations'),
+    bandcampDestination = document.querySelector('.section__bandcamp'),
+    navLink = document.querySelectorAll('.nav__link');
 
-link.forEach(target => {
-
+navLink.forEach(target => {
     target.addEventListener('click', () => {
         switch(target.textContent) {
             case 'About':
-                scroll(about);
+                scroll(aboutDestination);
                 break;
             case 'Work & Projects':
-                scroll(projects);
+                scroll(projectsDestination);
                 break;
-            case 'The Jukebox':
-                scroll(bandcamp);
+            case 'Recommendations':
+                scroll(recommendationsDestination);
+                break;
+            case 'Bandcamp':
+                scroll(bandcampDestination);
                 break;
             default:
                 break;
@@ -23,16 +26,8 @@ link.forEach(target => {
     })
 })
 
-scroll = target => {
+function scroll(target) {
     target.scrollIntoView({ 
         behavior: 'smooth' 
       }, 2000);
 }
-
-// window.onload = function() {
-//     window.addEventListener('scroll', function() {
-//         console.log(window.pageYOffset);
-
-        
-//     })
-// }

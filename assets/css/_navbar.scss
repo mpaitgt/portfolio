@@ -1,4 +1,5 @@
 @import '_mixins';
+@import '_media-queries';
 
 nav.navbar {
   @include flex(row, space-around, center);
@@ -7,13 +8,21 @@ nav.navbar {
   color: $white;
   padding: 12px;
   box-shadow: 2px 2px 12px 2px rgba(0,0,0,0.1);
+  margin-top: 10px;
+  position: relative;
+  @include nav-collapse {
+    margin-top: 0px;
+    @include flex(row, space-between, center);
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
   .nav__header {
-    font-size: 2.25rem;
-    letter-spacing: -1px;
+    font-family: 'Fira Sans', arial, sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
     cursor: pointer;
   }
-  .foot__header {
-    // color: $gray;
+  .foot__copyright {
     font-size: 0.9em;
     letter-spacing: -0.5px;
     font-weight: 700;
@@ -21,6 +30,18 @@ nav.navbar {
   .nav__ul {
     @include flex(row, center, center);
     list-style: none;
+    @include nav-collapse {
+      @include flex(column, space-evenly, flex-end);
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: $blue__dark;
+      height: 100vh;
+      padding: 0px 3rem;
+      transform: translateX(200%);
+      transition: all 0.25s;
+      z-index: -1;
+    }
     .nav__link {
       padding: 8px 12px;
       cursor: pointer;
@@ -32,8 +53,43 @@ nav.navbar {
         color: $blue__dark;
       }
     }
+    .push-left {
+      transform: translateX(-6px);
+      transition: transform 0.25s ease-in-out;
+      @include nav-collapse {
+        transform: translateX(0px);
+      }
+    }
+    .push-right {
+      transform: translateX(6px);
+      transition: transform 0.25s ease-in-out;
+      @include nav-collapse {
+        transform: translateX(0px);
+      }
+    }
     .nav__icon {
       @include icon_hover(24px, invert(0.5), invert(1));
     }
+  }
+  #burger {
+    display: none;
+    width: 44px;
+    height: 40px;
+    cursor: pointer;
+    @include nav-collapse {
+      display: inline-block;
+    }
+    .line {
+      width: 100%;
+      height: 2px;
+      background: white;
+      margin-top: 9px;
+      margin-bottom: 9px;
+      border-radius: 5px;
+    }
+  }
+  .toggle-nav {
+    transform: translateX(0%);
+    transition: all 0.25s;
   }
 }

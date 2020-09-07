@@ -1,0 +1,22 @@
+#loader {
+  display: block;
+  position: absolute;
+  border: 12px solid $blue__light-x;
+  border-top: 12px solid $blue__med;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  animation: spin 0.58s linear infinite;
+  z-index: 2;
+  position: absolute;
+  top: 40%;
+  bottom: 40%;
+  left: 40%;
+  right: 40%;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); };
+  100% { transform: rotate(360deg); };
+}

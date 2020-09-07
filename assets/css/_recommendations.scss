@@ -1,0 +1,112 @@
+.quote__layout {
+  padding: 0rem;
+  margin-bottom: 0rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  .quote {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 2rem 6rem;
+    background: #f3f3f3;
+    position: relative;
+    &:before {
+      content: open-quote;
+      display: inline-block;
+      font-size: 8rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: $blue__med;
+    }
+    &:after {
+      content: close-quote;
+      display: inline-block;
+      font-size: 8rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: $blue__med;
+    }
+  }
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 10px;
+    
+  }
+  .quote-author {
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: 'Fira Sans';
+    color: $blue__med;
+    span {
+      font-size: 1.25rem;
+      font-weight: 100;
+      color: $gray;
+    }
+  }
+  .quote-author-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    margin-left: 1rem;
+  }
+}
+
+.arrow-container {
+  width: 60px;
+  height: 100px;
+  font-size: 6rem;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  cursor: pointer;
+  .push-arrow {
+    width: 100%;
+    height: 100%;
+    font-family: arial;
+    margin: 0 auto;
+    // transform: rotate(90deg);
+    padding: 0;
+  }
+}
+
+// sequential animation
+@for $i from 1 through 3 {
+  .arrow-#{$i} {
+    animation-name: push-animation;
+    animation-duration: 1s;
+    // animation-fill-mode: forwards;
+    animation-delay: #{$i /12}s;
+    animation-iteration-count: infinite;
+  }
+}
+
+  .arrow-1 {
+    color: $blue__light-x;
+  }
+  .arrow-2 {
+    color: $blue__light;
+  }
+  .arrow-3 {
+    color: $blue__med;
+  }
+
+
+// .push-animation {
+//   animation-name: push-animation;
+//   animation-iteration-count: infinite;
+//   animation-duration: 2s;
+//   animation-delay: 0.5s;
+// };
+
+@keyframes push-animation {
+  0% { transform: translateX(-50%); opacity: 0; };
+  20% { opacity: 1; };
+  80% { opacity: 1; };
+  100% { transform: translateX(50%); opacity: 0; };
+};

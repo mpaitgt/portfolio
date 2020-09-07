@@ -12,14 +12,18 @@
 
 <body>
 
+  <!-- Album Modal -->
   <div id="album-modal" class="modal">
+    <div id="loader">
+      <div id="inside"></div>
+    </div>
     <div class="modal-content">
-      <iframe id="album-iframe" style="border: 0; width: 350px; height: 600px;" src="" seamless><a href=""></a></iframe>
+      <iframe id="album-iframe" style="border: 0; width: 350px; height: 600px;" data-name="" src="" seamless><a href="" sandbox="" referrerpolicy=""></a></iframe>
     </div>
   </div>
 
   <!-- Navigation -->
-  <nav style="margin-top: 10px;" class="navbar nav__top">
+  <nav class="navbar nav__top">
     <div>
       <h1 class="nav__header">Matt Pignatore</h1>
     </div>
@@ -27,9 +31,7 @@
       <li class="nav__link" name="about">About</li>
       <li class="nav__link" name="projects">Work & Projects</li>
       <li class="nav__link" name="recommendations">Recommendations</li>
-      <li class="nav__link" name="bandcamp">The Jukebox</li>
-    </ul>
-    <ul class="nav__ul">
+      <li class="nav__link" name="bandcamp">Bandcamp</li>
       <li>
         <a href="https://github.com/mpaitgt" target="_blank">
           <img class="nav__icon" src="./assets/images/social-icons/github.png" alt="">
@@ -46,6 +48,11 @@
         </a>
       </li>
     </ul>
+    <div id="burger">
+      <div class="line line-1"></div>
+      <div class="line line-2"></div>
+      <div class="line line-3"></div>
+    </div>
   </nav>
 
   <!-- Content container -->
@@ -53,7 +60,7 @@
 
     <!-- About -->
     <section class="section__body about">
-      <div class="section__content">
+      <div class="about__content">
         <img class="img img__bio" src="./assets/images/about-matt-p.jpg" alt="" width="">
         <div>
           <h2 class="section__header">About</h2>
@@ -86,7 +93,10 @@
     <section class="section__body projects">
       <h2 class="section__header">Work & Projects</h2>
       <p class="section__copy">
-        <strong>This feature is a work in progress. Be patient with me and check back soon!</strong>
+        I've pinned some of my recent projects below. If you'd like to see
+        some of my other projects &#8212; everything from passion and freelance to
+        the work I do at my full-time job &#8212; you can sort through my 
+        applied skills below.
       </p>
       <!-- This is where skills will render -->
       <ul class="list__skills"></ul>
@@ -94,9 +104,47 @@
       <ul class="list__projects"></ul>
     </section>
 
+    <!-- Recommendations -->
+    <section class="section__body recommendations">
+      <h2 class="section__header">Recommendations</h2>
+      <div class="quote__layout">
+        <p class="section__copy quote">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Laudantium, minima veritatis ea enim iure eum nobis deserunt 
+          molestiae alias ad sequi fugiat quis. Eius eligendi iure 
+          soluta repellendus. Vero, quam!
+        </p>
+        <div>
+          <p class="quote-author">Patrick Morin
+            <br><span>Jawr, LLC</span>
+          </p>
+          <img class="quote-author-photo" src="./assets/images/album-covers/suck-up.jpg" alt="">
+        </div>
+      </div>
+      <div class="quote__layout">
+        <p class="section__copy quote">
+          Matt is great to work with! He delivered exactly what he promised and 
+          was very responsive when I needed him!
+        </p>
+        <div class="outer-quote-container">
+          <div class="inner-quote-container">
+            <p class="quote-author">
+              Rebekah Leo
+              <br><span>The Floor is Yours</span>
+            </p>
+            <img class="quote-author-photo" src="./assets/images/album-covers/suck-up.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <!-- <div class="arrow-container">
+      <div class="push-arrow push-animation">
+        &#8250;
+      </div>
+    </div> -->
+
     <!-- Bandcamp records -->
-    <section class="section__bandcamp">
-      <!-- <h3 class="section__header">Bandcamp</h3> -->
+    <section class="section__bandcamp bandcamp">
       <div
         style="display: flex; flex-direction: row; align-items: center; justify-content: center; margin: 0 auto; width: 100%;">
         <!-- <div id="left-arrow" class="album-arrow">&#8592;</div> -->
@@ -116,7 +164,7 @@
     <!-- Footer / The Jukebox -->
     <footer style="margin-bottom: 10px;">
       <nav class="navbar">
-        <h2>The Jukebox</h2>
+        <h2 class="nav__header">Matt Pignatore</h2>
         <ul class="nav__ul">
           <li>
             <a href="https://github.com/mpaitgt" target="_blank">
@@ -134,17 +182,23 @@
             </a>
           </li>
         </ul>
-        <p class="foot__header">Copyright &copy; <span id="year">2020</span> Matt Pignatore</p>
+        <p class="foot__copyright">&copy; <span id="year"></span> Matt Pignatore</p>
       </nav>
     </footer>
 
   </div>
 
+  <script>
+    let year = new Date().getFullYear();
+    document.querySelector('#year').innerText = year;
+  </script>
   <script src="./assets/js/scroll.js"></script>
+  <script src="./assets/js/toggle-nav.js"></script>
+  <script src="./assets/js/render-projects.js"></script>
   <script src="./assets/js/toggle-modal.js"></script>
   <script src="./assets/js/hover-nav.js"></script>
-  <script src="./assets/js/render-projects.js"></script>
   <script src="./assets/js/element-view.js"></script>
+  <script src="./assets/js/clone-node.js"></script>
 
 </body>
 

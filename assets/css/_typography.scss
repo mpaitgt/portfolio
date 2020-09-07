@@ -1,0 +1,41 @@
+@import '_variables';
+
+@font-face {
+  font-family: 'Tajawal';
+  src: url('../fonts/Tajawal/Tajawal-Black.ttf'); /* IE9 Compat Modes */
+  src: url('../fonts/Tajawal/Tajawal-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Tajawal/Tajawal-Black.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Tajawal/Tajawal-Black.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Tajawal/Tajawal-Black.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Tajawal/Tajawal-Black') format('svg') /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('../fonts/Fira_Sans/FiraSans-Black.ttf'); /* IE9 Compat Modes */
+  src: url('../fonts/Fira_Sans/FiraSans-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Fira_Sans/FiraSans-Black.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Fira_Sans/FiraSans-Black.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/Fira_Sans/FiraSans-Black.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Fira_Sans/FiraSans-Black') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Overpass';
+  src: url('../fonts/Overpass/'); /* IE9 Compat Modes */
+  src: url('Overpass.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Overpass.woff2') format('woff2'), /* Super Modern Browsers */
+       url('Overpass.woff') format('woff'), /* Pretty Modern Browsers */
+       url('Overpass.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Overpass.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+.section__header {
+  display: inline-block;
+  font-family: 'Fira Sans', arial, sans-serif;
+  font-size: 2rem;
+  color: $gray__light;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  font-weight: 900;
+}
