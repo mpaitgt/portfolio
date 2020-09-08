@@ -1,0 +1,114 @@
+@import '_mixins';
+@import '_variables';
+@import '_media-queries';
+
+.list__projects {
+  height: 100%;
+  // max-height: 1200px;
+  transition: height 2s;
+}
+
+.projects {
+  border-top: 2px solid $blue__light;
+  border-bottom: 2px solid $blue__light;
+  // box-shadow: 0px 8px 40px -24px rgba(0,0,0,0.25);
+  .skill-selector {
+    list-style: none;
+    display: inline-block; 
+    // padding: 12px 20px;
+    padding: 0.5rem 1rem;
+    margin: 6px;
+    font-size: 1.1em;
+    border-radius: 2px;
+    cursor: pointer;
+    @include nav-collapse {
+      font-size: 0.9rem;
+    }
+  }
+  .skill__active {
+    background: $blue__light;
+    color: $blue__med;
+  }
+  .skill__inactive {
+    background: #f5f5f5;
+  }
+  .project {
+    @include flex(row, center, center);
+    transform: translateX(-200%);
+    margin: 1rem 0;
+    box-shadow: 0px 8px 40px -24px rgba(0,0,0,0.25);
+    padding: 20px;
+    @include nav-collapse {
+      @include flex(column, center, center);
+      // max-width: 80%;
+    }
+    .project__name {
+      &:after {
+        content: '\00BB';
+        padding-left: 0px;
+        transition: all 0.5s;
+        transform: translateX(-50px) ;
+        opacity: 0;
+      }
+      &:hover {
+        &:after {
+          padding-left: 6px;
+          content: ' \00BB';
+          transition: all 0.5s;
+          transform: translateX(0px) ;
+          opacity: 1;
+        }
+      }
+    }
+    .project__description {
+      color: $gray;
+      font-size: 1.25rem;
+    }
+    .project__tech {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 33.33% 33.33% 33.33%;
+      li {
+        justify-self: start;
+        background: #f5f5f5;
+        font-size: 0.9em;
+        padding: 2px 8px;
+        margin: 6px;
+        border-radius: 5px;
+      }
+    }
+    .project__github-link {
+      @include icon_hover(32px, invert(0.75), invert(0));
+    }
+  }
+}
+
+@for $i from 1 through 4 {
+  .project-enter-#{$i} {
+    animation-name: slide-in-from-left;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+    animation-delay: #{$i / 12}s;
+    animation-iteration-count: 1;
+  }
+}
+
+@for $i from 1 through 4 {
+  .project-exit-#{$i} {
+    animation-name: slide-out-to-right;
+    animation-duration: 0.25s;
+    animation-fill-mode: forwards;
+    animation-delay: #{$i / 12}s;
+    animation-iteration-count: 1;
+  }
+}
+
+@keyframes slide-in-from-left {
+  0% { transform: translateX(-200%); opacity: 0;  };
+  100% { transform: translateX(0%); opacity: 1; };
+}
+
+@keyframes slide-out-to-right {
+  0% { transform: translateX(0%); opacity: 1;  };
+  100% { transform: translateX(200%); opacity: 0; };
+}

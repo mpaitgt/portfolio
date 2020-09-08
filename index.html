@@ -1,217 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Matt Pignatore - Portfolio</title>
-    <link rel="stylesheet" href="./assets/css/style2.css" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Gothic+A1|Tajawal&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Matt Pignatore - Portfolio</title>
+  <link rel="stylesheet" href="./assets/css/style2.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Gothic+A1|Tajawal&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <div class="navbar">
-        <div class="navbar-content">
-            <div>
-                <h1 id="home" class="site-title link">Matt Pignatore</h1>
-                <div id="home-icons" class="home-icons">
-                    <a class="hover-function" href="https://github.com/mpaitgt" target="_blank">
-                        <img class="icon-sm" src="./assets/images/social-icons/github.png" alt="">
-                    </a>
-                    <a class="hover-function" id="email-link" href="mailto:mattpignatore@gmail.com">
-                        <img id="email-icon" class="icon-sm" src="./assets/images/social-icons/email-2.png" alt="">
-                    </a>
-                    <a class="hover-function" href="https://www.linkedin.com/in/matt-pignatore/" target="_blank">
-                        <img class="icon-sm" src="./assets/images/social-icons/linked-in.png" alt="">
-                    </a>
-                </div>
-            </div>
-            <ul class="navigation">
-                <li id="about-link" name="about" class="link about-link">About</li>
-                <li id="work-link" name="projects" class="link work-link">Projects</li>
-                <li id="interests-link" name="interests" class="link interests-link">Bandcamp</li>
-                <li id="resume-link" name="resume" class="link resume-link">
-                    <a href="./assets/images/Matt Pignatore_Resume.pdf" target="_blank">
-                    Resume
-                    </a>
-                </li>
-            </ul>
-        </div>
+  <!-- Album Modal -->
+  <div id="album-modal" class="modal">
+    <div id="loader">
+      <div id="inside"></div>
     </div>
-
-    <div class="about">
-        <img src="./assets/images/about-photo-bw2.jpg" width="" alt="">
-        <div class="summary">
-            <h2 class="header">About</h2>
-            <div>
-            <p class="text headline">
-                Full-stack web developer with a background&nbsp;in&nbsp;marketing.
-            </p>
-            <p class="text">
-                Particularly interested in the UI, front-end functionality, 
-                and design. I'm most passionate when I'm making creative decisions, 
-                collaborating with good people, and thinking through complex&nbsp;logic.
-            </p>
-            <p class="text">
-                Currently working in email development, freelancing some front-end 
-                projects, and working on a  MERN-stack personal project. My long-term 
-                goal is to transition into full-time web development.
-            </p>
-            <p class="text">
-                When I'm not coding you can find me writing and producing songs, 
-                watching movies, or experimenting in the kitchen.
-            </p>
-            <p class="text">
-                You can reach me at <a href="mailto:mattpignatore@gmail.com"><strong>mattpignatore@gmail.com</strong></a>
-            </p>
-            </div>
-        </div>
+    <div class="modal-content">
+      <iframe id="album-iframe" style="border: 0; width: 350px; height: 600px;" data-name="" src="" seamless><a href="" sandbox="" referrerpolicy=""></a></iframe>
     </div>
+  </div>
 
-    <div class="skills">
+  <!-- Navigation -->
+  <nav class="navbar nav__top">
+    <div>
+      <h1 class="nav__header">Matt Pignatore</h1>
+    </div>
+    <ul class="nav__ul">
+      <li class="nav__link" name="about">About</li>
+      <li class="nav__link" name="projects">Work & Projects</li>
+      <li class="nav__link" name="recommendations">Recommendations</li>
+      <li class="nav__link" name="bandcamp">Bandcamp</li>
+      <li>
+        <a href="https://github.com/mpaitgt" target="_blank">
+          <img class="nav__icon" src="./assets/images/social-icons/github.png" alt="">
+        </a>
+      </li>
+      <li>
+        <a id="email-link" href="mailto:mattpignatore@gmail.com">
+          <img id="email-icon" class="nav__icon" src="./assets/images/social-icons/email-2.png" alt="">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/matt-pignatore/" target="_blank">
+          <img class="nav__icon" src="./assets/images/social-icons/linked-in.png" alt="">
+        </a>
+      </li>
+    </ul>
+    <div id="burger">
+      <div class="line line-1"></div>
+      <div class="line line-2"></div>
+      <div class="line line-3"></div>
+    </div>
+  </nav>
+
+  <!-- Content container -->
+  <div class="container">
+
+    <!-- About -->
+    <section class="section__body about">
+      <div class="about__content">
+        <img class="img img__bio" src="./assets/images/about-matt-p.jpg" alt="" width="">
         <div>
-        <h2 class="header">Skills</h2>
-            <ul class="list">
-                <li class="item">
-                    Javascript
-                </li>
-                <li class="item">
-                    React
-                </li>
-                <li class="item">
-                    Material UI
-                </li>
-                <li class="item">
-                    CSS/SCSS
-                </li>
-                <li class="item">
-                    jQuery
-                </li>
-                <li class="item">
-                    HTML5
-                </li>
-                <li class="item">
-                    Git
-                </li>
-                <li class="item">
-                    MySQL
-                </li>
-                <li class="item">
-                    MongoDB
-                </li>
-                <li class="item">
-                    Node.js & Express
-                </li>
-                <li class="item">
-                    PHP
-                </li>
-                <li class="item">
-                    Wordpress
-                </li>
-                <li class="item">
-                    Sitecore
-                </li>
-                <li class="item">
-                    Adobe Photoshop
-                </li>
-                <li class="item">
-                    Adobe XD
-                </li>
-            </ul>
+          <h2 class="section__header">About</h2>
+          <p class="section__headline">
+            Full-stack web developer with a background&nbsp;in&nbsp;marketing.
+          </p>
+          <p class="section__copy">
+            Particularly interested in the UI, front-end functionality,
+            and design. I'm most passionate when I'm making creative decisions,
+            collaborating with good people, and thinking through complex&nbsp;logic.
+          </p>
+          <p class="section__copy">
+            Currently working in email development, freelancing some front-end
+            projects, and working on a MERN-stack personal project. My long-term
+            goal is to transition into full-time web development.
+          </p>
+          <p class="section__copy">
+            When I'm not coding you can find me writing and producing songs,
+            watching movies, or experimenting in the kitchen.
+          </p>
+          <p class="section__copy">
+            You can reach me at <a href="mailto:mattpignatore@gmail.com"><strong>mattpignatore@gmail.com
+                &#187;</strong></a>
+          </p>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <div class="work">
-        <h2 class="header">Projects</h2>
-        <div class="project-list">
-            <div class="project-item">
-                <a href="https://recordshare.herokuapp.com" id="view" target="_blank">
-                <span class="title">Recordshare</span>
-                <span class="arrow arrow1">&#8250;</span>
-                <span class="arrow arrow2">&#8250;</span>
-                <span class="arrow arrow3">&#8250;</span>
-                </a>
-                <a href="https://github.com/mpaitgt/recordshare" class="view" target="_blank">Github</a>
-                <p data-ref="Recordshare" class="text">
-                    Recordshare is a MERN stack application that allows 
-                    users to share the music they love with others. It's 
-                    a music database for music lovers.
-                </p>
-                <p class="text"><strong>Technologies</strong>: React, Emotion, Node.js, MongoDB Atlas, Cloudinary</p>
-            </div>
-            <!-- <div class="project-item">
-                <a href="https://mpaitgt.github.io/medo-frontend" class="" target="_blank">
-                <span class="title">Salvage Boy</span>
-                <span class="arrow arrow1">&#8250;</span>
-                <span class="arrow arrow2">&#8250;</span>
-                <span class="arrow arrow3">&#8250;</span>
-                </a>
-                <a href="https://www.salvageboy.com" class="view" target="_blank">Github</a>
-                <p data-ref="Salvage Boy" class="text">Freelance</p>
-                <p class="text"><strong>Technologies</strong>: jQuery, Firebase, Moment.js, Animate.css</p>
-            </div> -->
-            <div class="project-item">
-                <a href="https://ecohabit.herokuapp.com" id="view" target="_blank">
-                <span class="title">EcoHabit</span>
-                <span class="arrow arrow1">&#8250;</span>
-                <span class="arrow arrow2">&#8250;</span>
-                <span class="arrow arrow3">&#8250;</span>
-                </a>
-                <a href="https://github.com/jayjscotto/ecohabit" class="view" target="_blank">Github</a>
-                <p data-ref="Give a Gift" class="text">EcoHabit is a React app dedicated to developing environmentally friendly habits. Includes data visualization and location-based services.</p>
-                <p class="text"><strong>Technologies</strong>: React, Material UI, Node.js, Passport, MongoDB, Cron</p>
-            </div>
-            <div class="project-item">
-                <a href="https://www.etoncontrols.com/" id="view" target="_blank">
-                <span class="title">Eton Controls</span>
-                <span class="arrow arrow1">&#8250;</span>
-                <span class="arrow arrow2">&#8250;</span>
-                <span class="arrow arrow3">&#8250;</span>
-                </a>
-                <a href="https://github.com/mpaitgt/eton-ctrls" class="view" target="_blank">Github</a>
-                <p data-ref="Eton Controls" class="text">Freelance front-end website developed for a local machine parts cleaning company. Developed using HTML, CSS, and Javascript.</p>
-                <p class="text"><strong>Technologies</strong>: HTML, CSS, Javascript</p>
-            </div>
-            <div class="project-item">
-                <a href="https://www.thefloorisyoursdancecenter.com/" id="view" target="_blank">
-                <span class="title">The Floor is Yours</span>
-                <span class="arrow arrow1">&#8250;</span>
-                <span class="arrow arrow2">&#8250;</span>
-                <span class="arrow arrow3">&#8250;</span>
-                </a>
-                <a href="https://github.com/mpaitgt/tfiy" class="view" target="_blank">Github</a>
-                <p data-ref="The Floor is Yours" class="text">Freelance front-end website developed for a local dance studio. Developed using React and Material UI.</p>
-                <p class="text"><strong>Technologies</strong>: React, Material UI, CSS</p>
-            </div>
-            <div class="project-item">
-                <a href="https://mpaitgt.github.io/medo-frontend" target="_blank">
-                <span class="title">Medo</span>
-                <span class="arrow arrow1">&#8250;</span>
-                <span class="arrow arrow2">&#8250;</span>
-                <span class="arrow arrow3">&#8250;</span>
-                </a>
-                <a href="https://github.com/mpaitgt/medo-frontend" class="view" target="_blank">Github</a>
-                <p data-ref="Medo" class="text">The media to-do list. Medo is a front-end app developed as a centralized place to store content recommendations, using APIs to provide the user content details.</p>
-                <p class="text"><strong>Technologies</strong>: jQuery, Firebase, Moment.js, Animate.css</p>
-            </div>
+    <!-- Work & Projects -->
+    <section class="section__body projects">
+      <h2 class="section__header">Work & Projects</h2>
+      <p class="section__copy">
+        I've pinned some of my recent projects below. If you'd like to see
+        some of my other projects &#8212; everything from passion and freelance to
+        the work I do at my full-time job &#8212; you can sort through my 
+        applied skills below.
+      </p>
+      <!-- This is where skills will render -->
+      <ul class="list__skills"></ul>
+      <!-- This is where projects will render -->
+      <ul class="list__projects"></ul>
+    </section>
+
+    <!-- Recommendations -->
+    <section class="section__body recommendations">
+      <h2 class="section__header">Recommendations</h2>
+      <div class="quote__layout">
+        <p class="section__copy quote">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          Laudantium, minima veritatis ea enim iure eum nobis deserunt 
+          molestiae alias ad sequi fugiat quis. Eius eligendi iure 
+          soluta repellendus. Vero, quam!
+        </p>
+        <div>
+          <p class="quote-author">Patrick Morin
+            <br><span>Jawr, LLC</span>
+          </p>
+          <img class="quote-author-photo" src="./assets/images/album-covers/suck-up.jpg" alt="">
         </div>
-    </div>
+      </div>
+      <div class="quote__layout">
+        <p class="section__copy quote">
+          Matt is great to work with! He delivered exactly what he promised and 
+          was very responsive when I needed him!
+        </p>
+        <div class="outer-quote-container">
+          <div class="inner-quote-container">
+            <p class="quote-author">
+              Rebekah Leo
+              <br><span>The Floor is Yours</span>
+            </p>
+            <img class="quote-author-photo" src="./assets/images/album-covers/suck-up.jpg" alt="">
+        </div>
+      </div>
+    </section>
 
-    <div class="hobby-image"></div>
+    <!-- <div class="arrow-container">
+      <div class="push-arrow push-animation">
+        &#8250;
+      </div>
+    </div> -->
 
-    <div class="bandcamp">
-        <p>When I'm not coding, I like writing and producing music.</p>
-        <div class="cta">
-            <a href="https://mattpignatore.bandcamp.com/" class="view" target="_blank">
-            Check out my Bandcamp
+    <!-- Bandcamp records -->
+    <section class="section__bandcamp bandcamp">
+      <div
+        style="display: flex; flex-direction: row; align-items: center; justify-content: center; margin: 0 auto; width: 100%;">
+        <!-- <div id="left-arrow" class="album-arrow">&#8592;</div> -->
+        <div class="album-carousel">
+          <div class="album-slide">
+            <img class="album-cover" data-name="at-any-moment" src="./assets/images/album-covers/at-any-moment.jpg"
+              alt="">
+            <img class="album-cover" data-name="go-get-hurt" src="./assets/images/album-covers/go-get-hurt.jpg" alt="">
+            <img class="album-cover" data-name="suck-up" src="./assets/images/album-covers/suck-up.jpg" alt="">
+            <img class="album-cover" data-name="demos-2016" src="./assets/images/album-covers/demos-2016.jpg" alt="">
+          </div>
+        </div>
+        <!-- <div id="right-arrow" class="album-arrow">&#8594;</div> -->
+      </div>
+    </section>
+
+    <!-- Footer / The Jukebox -->
+    <footer>
+      <nav class="navbar">
+        <h2 class="nav__header">Matt Pignatore</h2>
+        <ul class="nav__ul">
+          <li>
+            <a href="https://github.com/mpaitgt" target="_blank">
+              <img class="nav__icon" src="./assets/images/social-icons/github.png" alt="">
             </a>
-            <span class="arrow arrow1">&#8250;</span>
-            <span class="arrow arrow2">&#8250;</span>
-            <span class="arrow arrow3">&#8250;</span>
-        </div>
-    </div>
+          </li>
+          <li>
+            <a id="email-link" href="mailto:mattpignatore@gmail.com">
+              <img id="email-icon" class="nav__icon" src="./assets/images/social-icons/email-2.png" alt="">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/matt-pignatore/" target="_blank">
+              <img class="nav__icon" src="./assets/images/social-icons/linked-in.png" alt="">
+            </a>
+          </li>
+        </ul>
+        <p class="foot__copyright">&copy; <span id="year"></span> Matt Pignatore</p>
+      </nav>
+    </footer>
 
-<script src="./assets/js/script.js" type="text/javascript"></script>
+  </div>
+
+  <script>
+    let year = new Date().getFullYear();
+    document.querySelector('#year').innerText = year;
+  </script>
+  <script src="./assets/js/scroll.js"></script>
+  <script src="./assets/js/toggle-nav.js"></script>
+  <script src="./assets/js/render-projects.js"></script>
+  <script src="./assets/js/toggle-modal.js"></script>
+  <script src="./assets/js/hover-nav.js"></script>
+  <script src="./assets/js/element-view.js"></script>
+  <script src="./assets/js/clone-node.js"></script>
+
 </body>
+
 </html>

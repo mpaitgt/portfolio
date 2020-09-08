@@ -1,0 +1,87 @@
+@import '_variables';
+@import '_media-queries';
+
+.section__bandcamp {
+  width: 800px;
+  height: 210px;
+  margin: 0 auto;
+  z-index: -1;
+  @include nav-collapse {
+    width: 100%;
+    height: auto;
+  }
+  .section__header {
+    font-size: 2rem;
+    color: $blue__light;
+  }
+}
+
+.album-carousel {
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  align-items: center; 
+  align-items: center;
+  .album-slide {
+    display: flex;
+    align-items: flex-end;
+    .album-cover {
+      transform: translateY(200px);
+      width: 200px;
+      transition: filter 1s ease-out;
+      filter: grayscale(20%);
+      transition: filter 0.25s;
+      cursor: pointer;
+    }
+  }
+}
+
+.album-arrow {
+  font-size: 3rem;
+  color: $blue__light;
+  z-index: 0;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+// sequential animation
+@for $i from 1 through 4 {
+  .album-#{$i} {
+    animation-name: slide-up;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.05, 0.1, 0.25, 1);
+    animation-delay: #{$i / 12}s;
+    animation-iteration-count: 1;
+  }
+}
+
+@keyframes slide-up {
+0% { transform: scale(0.8) translateY(200px) };
+30% { transform: scale(0.8) translateY(-20px) };
+48% { transform: translateY(0px) };
+70% { transform: scale(0.9) translateY(-12x) };
+100% { transform: scale(1) translateY(0px) };
+}
+
+.album-out {
+  animation-name: album-out;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1; 
+  animation-fill-mode: forwards;
+}
+.album-in {
+  animation-name: album-in;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1; 
+  animation-fill-mode: forwards;
+}
+
+@keyframes album-out {
+  0% { opacity: 1; transform: scale(1); };
+  100% { opacity: 0; transform: scale(0) };
+}
+@keyframes album-in {
+  0% { opacity: 0; transform: scale(0); };
+  100% { opacity: 1; transform: scale(1) };
+}
