@@ -6,7 +6,7 @@ nav.navbar {
   z-index: 1;
   background: $blue__dark;
   color: $white;
-  padding: 12px;
+  padding: 1rem;
   box-shadow: 2px 2px 12px 2px rgba(0,0,0,0.1);
   margin-top: 10px;
   position: relative;
@@ -21,6 +21,9 @@ nav.navbar {
     font-size: 1.8rem;
     letter-spacing: 1px;
     cursor: pointer;
+    @include mobile {
+      font-size: 1.5rem;
+    }
   }
   .foot__copyright {
     font-size: 0.9em;
@@ -32,12 +35,12 @@ nav.navbar {
     list-style: none;
     @include nav-collapse {
       @include flex(column, space-evenly, flex-end);
-      position: absolute;
+      position: fixed;
       right: 0;
       top: 0;
       background: $blue__dark;
       height: 100vh;
-      padding: 0px 3rem;
+      padding: 3rem;
       transform: translateX(200%);
       transition: all 0.25s;
       z-index: -1;
@@ -46,11 +49,17 @@ nav.navbar {
       padding: 8px 12px;
       cursor: pointer;
       transition: all 0.25s;
+      @include nav-collapse {
+        font-size: 1.25rem;
+      }
       &:hover {
         transform: scale(1.1);
         transition: transform 0.25s;
         background: $white;
         color: $blue__dark;
+        @include mobile {
+          transform: scale(1);
+        }
       }
     }
     .push-left {
@@ -76,7 +85,7 @@ nav.navbar {
   #burger {
     display: none;
     width: 32px;
-    height: 40px;
+    height: 32px;
     cursor: pointer;
     @include nav-collapse {
       display: inline-block;
@@ -85,13 +94,46 @@ nav.navbar {
       width: 100%;
       height: 2px;
       background: white;
-      margin-top: 9px;
-      margin-bottom: 9px;
+      margin-top: 7px;
+      margin-bottom: 7px;
       border-radius: 5px;
     }
   }
   .toggle-nav {
     transform: translateX(0%);
     transition: all 0.25s;
+  }
+}
+
+footer.navbar {
+  @include flex(row, space-around, center);
+  background: $blue__dark;
+  color: $white;
+  padding: 1rem;
+  box-shadow: 2px 2px 12px 2px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
+  position: relative;
+  @include mobile {
+    @include flex(column, center, center);
+    padding: 2rem;
+  }
+  .nav__header {
+    font-family: 'Fira Sans', arial, sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
+  .nav__ul {
+    @include flex(row, center, center);
+    list-style: none;
+    @include mobile {
+      padding-top: 20px;
+      padding-bottom: 10px;
+    }
+  }
+  .nav__icon {
+    @include icon_hover(24px, invert(0.5), invert(1));
+    align-self: center;
+    justify-self: center;
   }
 }
