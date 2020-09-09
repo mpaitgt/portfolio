@@ -46,6 +46,9 @@ nav.navbar {
       padding: 8px 12px;
       cursor: pointer;
       transition: all 0.25s;
+      @include nav-collapse {
+        font-size: 1.25rem;
+      }
       &:hover {
         transform: scale(1.1);
         transition: transform 0.25s;
@@ -93,5 +96,30 @@ nav.navbar {
   .toggle-nav {
     transform: translateX(0%);
     transition: all 0.25s;
+  }
+}
+
+footer {
+  margin-bottom: 10px;
+  .nav__ul {
+    @include flex(row, space-around, center);
+    list-style: none;
+    background: $blue__dark;
+    color: $white;
+    padding: 12px;
+    box-shadow: 2px 2px 12px 2px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+    position: relative;
+    .nav__header {
+      font-family: 'Fira Sans', arial, sans-serif;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+  }
+  .nav__icon {
+    @include icon_hover(24px, invert(0.5), invert(1));
+    align-self: center;
+    justify-self: center;
   }
 }
