@@ -115,7 +115,6 @@ footer.navbar {
   position: relative;
   @include mobile {
     @include flex(column, center, center);
-    padding: 2rem;
   }
   .nav__header {
     font-family: 'Fira Sans', arial, sans-serif;
@@ -125,14 +124,17 @@ footer.navbar {
   }
   .nav__ul {
     @include flex(row, center, center);
-    list-style: none;
+    list-style-type: none;
     @include mobile {
       padding-top: 20px;
       padding-bottom: 10px;
     }
+    li {
+      padding: 0;
+    }
   }
   .nav__icon {
-    @include icon_hover(24px, invert(0.5), invert(1));
+    @include icon_hover(32px, invert(0.5), invert(1));
     align-self: center;
     justify-self: center;
   }

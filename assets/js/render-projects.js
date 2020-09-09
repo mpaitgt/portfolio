@@ -163,7 +163,7 @@ let renderProjects = function(arr) {
       return `
         <li class="project project-enter-${index + 1}">
           <div>
-            <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-left: 0px; padding-right: 50px;">
               <a href="${project.production_link}" target="_blank">
                 <p class="section__headline project__name">${project.title}</p>
               </a>
