@@ -29,10 +29,7 @@
   section.section__body {
     color: $text;
     padding: 5%;
-
-    // margin: 4em 0;
     @include nav-collapse {
-      // max-width: 600px;
       margin: 0 auto;
     }
     @include tablet {
@@ -97,6 +94,7 @@
     @include tablet {
       @include flex(column, center, center);
     }
+    position: relative;
     > div {
       display: flex;
       flex-direction: column;
@@ -106,9 +104,33 @@
       }
     }
     .img__bio {
-      max-width: 360px;
+      max-width: 260px;
+      min-width: 260px;
+      z-index: 1;
       align-self: center;
       border-radius: 80% 50%;
+      margin: 1rem;
+    }
+    .mobile-shape {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      border-radius: 80% 50%;
+      // display: none;
+      // @include tablet {
+      //   display: block;
+      // }
+    }
+    .ms-left {
+      background: $blue__light;
+      left: 0;
+      transform: translateY(20px);
+    }
+    .ms-right {
+      
+      background: $blue__light-x;
+      right: 0;
+      transform: translateY(80px);
     }
   }
 
