@@ -19,7 +19,7 @@ let myProjects = [
   {
     "id": 98,
     "title": "Salvage Boy",
-    "image": "./assets/images/project-images/salvage-boy.jpg",
+    "image": "./assets/images/project-images/salvage-boy.JPG",
     "technologies": [
       "HTML & CSS", "CSS Grid", "SCSS/SASS"
     ],
@@ -30,7 +30,7 @@ let myProjects = [
   {
     "id": 1,
     "title": "Recordshare",
-    "image": "./assets/images/project-images/recordshare.jpg",
+    "image": "./assets/images/project-images/recordshare.JPG",
     "technologies": [
       "React.js", "MongoDB Atlas", "Emotion.css", "Cloudinary", "Passport", "Node.js & Express"
     ],
@@ -41,7 +41,7 @@ let myProjects = [
   {
     "id": 2,
     "title": "Ecohabit",
-    "image": "./assets/images/project-images/ecohabit.jpg",
+    "image": "./assets/images/project-images/ecohabit.JPG",
     "technologies": [
       "React.js", "Material UI", "Passport", "Cloudinary", "Node.js & Express", "MongoDB"
     ],
@@ -52,7 +52,7 @@ let myProjects = [
   {
     "id": 3,
     "title": "Eton Controls",
-    "image": "./assets/images/project-images/eton-controls-image.jpg",
+    "image": "./assets/images/project-images/eton-controls-image.JPG",
     "technologies": [
       "HTML & CSS", "SCSS/SASS", "JavaScript", "Email.js"
     ],
@@ -63,7 +63,7 @@ let myProjects = [
   {
     "id": 4,
     "title": "The Floor Is Yours",
-    "image": "./assets/images/project-images/tfiy.jpg",
+    "image": "./assets/images/project-images/tfiy.JPG",
     "technologies": [
       "React.js", "Material UI", "Email.js"
     ],
@@ -74,7 +74,7 @@ let myProjects = [
   {
     "id": 5,
     "title": "Deetz",
-    "image": "./assets/images/project-images/deetz.jpg",
+    "image": "./assets/images/project-images/deetz.JPG",
     "technologies": [
       "HTML & CSS", "jQuery", "JavaScript", "SCSS/SASS", "Handlebars", "MySQL", "Sequelize", "Node.js & Express"
     ],
@@ -85,7 +85,7 @@ let myProjects = [
   {
     "id": 6,
     "title": "Give a Gift",
-    "image": "./assets/images/project-images/gift.jpg",
+    "image": "./assets/images/project-images/gift.JPG",
     "technologies": [
       "HTML & CSS", "JavaScript", "jQuery", "AJAX"
     ],
@@ -96,7 +96,7 @@ let myProjects = [
   {
     "id": 8,
     "title": "Medo",
-    "image": "./assets/images/project-images/medo.jpg",
+    "image": "./assets/images/project-images/medo.JPG",
     "technologies": [
       "HTML & CSS", "JavaScript", "jQuery", "Animate.css", "Firebase", "Moment.js"
     ],
@@ -107,7 +107,7 @@ let myProjects = [
   {
     "id": 7,
     "title": "The Skinny Pancake",
-    "image": "./assets/images/project-images/skinny-pancake.jpg",
+    "image": "./assets/images/project-images/skinny-pancake.JPG",
     "technologies": [
       "Wordpress", "HTML & CSS"
     ],
@@ -129,7 +129,7 @@ let myProjects = [
   {
     "id": 9,
     "title": "Web Development at HearingLife",
-    "image": "./assets/images/project-images/hl-website.jpg",
+    "image": "./assets/images/project-images/hl-website.JPG",
     "technologies": [
       "HTML & CSS", "JavaScript", "Podium API", "Sitecore"
     ],
