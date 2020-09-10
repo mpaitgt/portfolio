@@ -27,6 +27,8 @@
     font-family: 'Fira Sans';
     letter-spacing: 1px;
     color: $gray__light;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
   }
   .skill__active {
     background: $blue__light;
@@ -44,6 +46,15 @@
       @include flex(column, center, center);
       flex-direction: column-reverse;
     }
+    .project__header-row {
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      padding-right: 2rem;
+      @include tablet {
+        padding-right: 0;
+      }
+    }
     .project__description {
       color: $gray;
       font-size: 1.2rem;
@@ -60,8 +71,9 @@
       width: 340px;
       border-radius: 2px;
       @include tablet {
-        margin-top: 1.5rem;
+        margin-top: 1rem;
         margin-bottom: 1.5rem;
+        width: 100%;
       }
     }
     .project__tech {

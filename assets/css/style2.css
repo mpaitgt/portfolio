@@ -72,6 +72,10 @@ nav.navbar {
             align-items: center;
     padding-left: 2rem;
     padding-right: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 }
 
@@ -204,9 +208,7 @@ nav.navbar .nav__ul .push-right {
 }
 
 nav.navbar .nav__ul .nav__icon {
-  margin: 0px 10px;
-  margin-left: 24px;
-  margin-right: 0px;
+  margin: 0px 20px;
   width: 24px;
   -webkit-transition: -webkit-transform 0.25s ease-in-out;
   transition: -webkit-transform 0.25s ease-in-out;
@@ -232,6 +234,31 @@ nav.navbar .nav__ul .nav__icon:hover {
   transition: all 0.25s;
   -webkit-transform-origin: center;
           transform-origin: center;
+}
+
+@media screen and (max-width: 952px) {
+  nav.navbar .nav__ul .nav__icon {
+    margin: 0px 20px;
+    width: 38px;
+    -webkit-transition: -webkit-transform 0.25s ease-in-out;
+    transition: -webkit-transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-filter: invert(0.5);
+            filter: invert(0.5);
+  }
+  nav.navbar .nav__ul .nav__icon:hover {
+    -webkit-transform: scale(1.25);
+            transform: scale(1.25);
+    -webkit-filter: invert(1);
+            filter: invert(1);
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+    -webkit-transform-origin: center;
+            transform-origin: center;
+  }
 }
 
 nav.navbar #burger {
@@ -329,19 +356,26 @@ footer.navbar .nav__ul {
 
 @media screen and (max-width: 576px) {
   footer.navbar .nav__ul {
-    padding-top: 20px;
-    padding-bottom: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 }
 
-footer.navbar .nav__ul li {
-  padding: 0;
-}
-
 footer.navbar .nav__icon {
-  margin: 0px 10px;
-  margin-left: 24px;
-  margin-right: 0px;
+  margin: 0px 20px;
   width: 32px;
   -webkit-transition: -webkit-transform 0.25s ease-in-out;
   transition: -webkit-transform 0.25s ease-in-out;
@@ -351,11 +385,6 @@ footer.navbar .nav__icon {
           transform-origin: center;
   -webkit-filter: invert(0.5);
           filter: invert(0.5);
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
 }
 
 footer.navbar .nav__icon:hover {
@@ -485,6 +514,8 @@ footer.navbar .nav__icon:hover {
   font-family: 'Fira Sans';
   letter-spacing: 1px;
   color: #d1d1d1;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .projects .skill__active {
@@ -536,6 +567,25 @@ footer.navbar .nav__icon:hover {
   }
 }
 
+.projects .project .project__header-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .projects .project .project__header-row {
+    padding-right: 0;
+  }
+}
+
 .projects .project .project__description {
   color: #929292;
   font-size: 1.2rem;
@@ -562,8 +612,9 @@ footer.navbar .nav__icon:hover {
 
 @media screen and (max-width: 768px) {
   .projects .project .project__img {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     margin-bottom: 1.5rem;
+    width: 100%;
   }
 }
 
@@ -617,9 +668,7 @@ footer.navbar .nav__icon:hover {
 }
 
 .projects .project .project__github-link {
-  margin: 0px 10px;
-  margin-left: 24px;
-  margin-right: 0px;
+  margin: 0px 20px;
   width: 32px;
   -webkit-transition: -webkit-transform 0.25s ease-in-out;
   transition: -webkit-transform 0.25s ease-in-out;
@@ -1340,6 +1389,16 @@ footer.navbar .nav__icon:hover {
 * body a {
   text-decoration: none;
   color: inherit;
+}
+
+* body .container {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 952px) {
+  * body .container {
+    margin-top: 4rem;
+  }
 }
 
 * body section.section__body {

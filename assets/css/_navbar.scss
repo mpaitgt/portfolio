@@ -15,6 +15,10 @@ nav.navbar {
     @include flex(row, space-between, center);
     padding-left: 2rem;
     padding-right: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
   }
   .nav__header {
     font-family: 'Fira Sans', arial, sans-serif;
@@ -80,6 +84,9 @@ nav.navbar {
       @include icon_hover(24px, invert(0.5), invert(1));
       align-self: center;
       justify-self: center;
+      @include nav-collapse {
+        @include icon_hover(38px, invert(0.5), invert(1));
+      }
     }
   }
   #burger {
@@ -126,16 +133,13 @@ footer.navbar {
     @include flex(row, center, center);
     list-style-type: none;
     @include mobile {
-      padding-top: 20px;
-      padding-bottom: 10px;
-    }
-    li {
-      padding: 0;
+      @include flex(row, space-around, center);
+      width: 100%;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
     }
   }
   .nav__icon {
     @include icon_hover(32px, invert(0.5), invert(1));
-    align-self: center;
-    justify-self: center;
   }
 }

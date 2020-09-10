@@ -14,9 +14,7 @@
 }
 
 @mixin icon_hover($width, $color--no_hover, $color--hover) {
-  margin: 0px 10px;
-  margin-left: 24px;
-  margin-right: 0px;
+  margin: 0px 20px;
   width: $width;
   transition: transform 0.25s ease-in-out;
   transform-origin: center;

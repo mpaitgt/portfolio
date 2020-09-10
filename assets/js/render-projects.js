@@ -213,7 +213,7 @@ let renderProjects = function(arr) {
       return `
         <li class="project project-enter-${index + 1}">
           <div>
-            <div style="display: flex; justify-content: space-between; align-items: center; padding-left: 0px; padding-right: 50px;">
+            <div class="project__header-row">
               <p class="section__headline project__name">${project.title}</p>
               <div>
 

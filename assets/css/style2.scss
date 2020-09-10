@@ -25,6 +25,12 @@
       text-decoration: none;
       color: inherit;
     }
+    .container {
+      margin-top: 0;
+      @include nav-collapse {
+        margin-top: 4rem;
+      }
+    }
     section.section__body {
       color: $text;
       padding: 5%;
