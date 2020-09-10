@@ -20,11 +20,7 @@
   position: relative;
   overflow: hidden;
   margin: auto;
-  // align-items: center; 
-  // align-items: center;
   .album-slide {
-    // display: flex;
-    // align-items: flex-end;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     @include mobile {
@@ -32,7 +28,6 @@
     }
     .album-cover {
       transform: translateY(200px);
-      // width: 200px;
       width: 100%;
       transition: filter 1s ease-out;
       filter: grayscale(20%);

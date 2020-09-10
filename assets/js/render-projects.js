@@ -1,10 +1,32 @@
 window.onload = async function() {
   await renderSkills(0);
   attachSkillEvent();
-  await renderProjects(myProjects.filter((item, index) => index < 2)); 
+  await renderProjects(myProjects.filter((item, index) => index < 3)); 
 }
 
 let myProjects = [
+  {
+    "id": 99,
+    "title": "Bearclaw",
+    "image": "./assets/images/project-images/bearclaw.jpg",
+    "technologies": [
+      "HTML & CSS", "CSS Grid", "Sass", "PHP", "MySQL"
+    ],
+    "description": "Currently designing the front-end UI and design system for recruiting software.",
+    "github_link": "",
+    "production_link": ""
+  },
+  {
+    "id": 98,
+    "title": "Salvage Boy",
+    "image": "./assets/images/project-images/salvage-boy.jpg",
+    "technologies": [
+      "HTML & CSS", "CSS Grid", "Sass"
+    ],
+    "description": "Currently designing the front-end UI and design system for mechanic's used parts software.",
+    "github_link": "",
+    "production_link": "https://www.salvageboy.com"
+  },
   {
     "id": 1,
     "title": "Recordshare",
@@ -74,9 +96,9 @@ let myProjects = [
   {
     "id": 7,
     "title": "The Skinny Pancake",
-    "image": "./assets/images/project-images/skinny-pancake-logo.png",
+    "image": "./assets/images/project-images/skinny-pancake.jpg",
     "technologies": [
-      "Wordpress"
+      "Wordpress", "HTML & CSS"
     ],
     "description": "Worked from January 2015 through June 2016 as Marketing Coordinator developing content and performing web maintinence for four domains.",
     "github_link": "",
@@ -126,7 +148,7 @@ function renderSkills(num) {
   // attach the above generated HTML to the page
   // then, add the event listener to each button
   ul.innerHTML = newArr.join('');
-  // document.querySelectorAll('project').forEach(project => {console.log(project)
+  // document.querySelectorAll('project').forEach(project => {
   //   project.classList.add('slide-out-to-right');
   // })
   attachSkillEvent();
@@ -202,7 +224,7 @@ let filterProjects = function(query) {
   // if the user wants to display Recent Projects, serve them
   // the first two items in the myProjects array
   if (selectedSkill === 'Recent Projects') {
-    return myProjects.filter((item, index) => index < 2);
+    return myProjects.filter((item, index) => index < 3);
   }
   // loop over each project
   for (let i = 0; i < myProjects.length; i++) {

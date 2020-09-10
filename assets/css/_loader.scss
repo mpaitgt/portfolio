@@ -1,11 +1,13 @@
+@import '_media-queries';
+
 #loader {
   display: block;
   position: absolute;
-  border: 12px solid $blue__light-x;
-  border-top: 12px solid $blue__med;
+  border: 6px solid $blue__light-x;
+  border-top: 6px solid $blue__med;
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
   margin: 0 auto;
   animation: spin 0.58s linear infinite;
   z-index: 2;
@@ -14,6 +16,10 @@
   bottom: 40%;
   left: 40%;
   right: 40%;
+  @include tablet {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 @keyframes spin {

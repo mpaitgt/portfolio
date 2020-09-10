@@ -2,8 +2,10 @@
 @import '_mixins';
 @import '_variables';
 @import '_navbar';
+@import '_about';
 @import '_projects';
 @import '_albums';
+@import '_recommendations';
 @import '_modal';
 @import '_loader';
 @import '_media-queries';
@@ -29,6 +31,8 @@
   section.section__body {
     color: $text;
     padding: 5%;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
     @include nav-collapse {
       margin: 0 auto;
     }
@@ -88,50 +92,3 @@
     }
   }
 
-
-  .about__content {
-    @include flex(row, center, flex-start);
-    @include tablet {
-      @include flex(column, center, center);
-    }
-    position: relative;
-    > div {
-      display: flex;
-      flex-direction: column;
-      .section__headline {
-        display: inline;
-        align-self: flex-start;
-      }
-    }
-    .img__bio {
-      max-width: 260px;
-      min-width: 260px;
-      z-index: 1;
-      align-self: center;
-      border-radius: 80% 50%;
-      margin: 1rem;
-    }
-    .mobile-shape {
-      position: absolute;
-      width: 200px;
-      height: 200px;
-      border-radius: 80% 50%;
-      // display: none;
-      // @include tablet {
-      //   display: block;
-      // }
-    }
-    .ms-left {
-      background: $blue__light;
-      left: 0;
-      transform: translateY(20px);
-    }
-    .ms-right {
-      
-      background: $blue__light-x;
-      right: 0;
-      transform: translateY(80px);
-    }
-  }
-
-  @import '_recommendations';
