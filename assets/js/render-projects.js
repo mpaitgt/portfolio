@@ -255,7 +255,15 @@ let renderProjects = function(arr) {
         </li>
       `
     }).join('');
-    // collapseSection(projectList);
+    document.querySelector('.projects-listed').innerHTML = `
+      ${
+        arr.length === 1
+        ?
+        `${arr.length} project listed`
+        :
+        `${arr.length} projects listed`
+      }
+    `;
   },250);
 }
 

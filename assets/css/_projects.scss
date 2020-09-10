@@ -22,6 +22,12 @@
       font-size: 0.9rem;
     }
   }
+  .projects-listed {
+    text-align: right;
+    font-family: 'Fira Sans';
+    letter-spacing: 1px;
+    color: $gray__light;
+  }
   .skill__active {
     background: $blue__light;
     color: $blue__med;
@@ -37,24 +43,6 @@
     @include tablet {
       @include flex(column, center, center);
       flex-direction: column-reverse;
-    }
-    .project__name {
-      // &:after {
-      //   content: '\00BB';
-      //   padding-left: 0px;
-      //   transition: all 0.5s;
-      //   transform: translateX(-50px) ;
-      //   opacity: 0;
-      // }
-      // &:hover {
-      //   &:after {
-      //     padding-left: 6px;
-      //     content: ' \00BB';
-      //     transition: all 0.5s;
-      //     transform: translateX(0px) ;
-      //     opacity: 1;
-      //   }
-      // }
     }
     .project__description {
       color: $gray;

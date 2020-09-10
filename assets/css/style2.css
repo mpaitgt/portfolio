@@ -480,6 +480,13 @@ footer.navbar .nav__icon:hover {
   }
 }
 
+.projects .projects-listed {
+  text-align: right;
+  font-family: 'Fira Sans';
+  letter-spacing: 1px;
+  color: #d1d1d1;
+}
+
 .projects .skill__active {
   background: #d8d8ee;
   color: #3d3d5a;
