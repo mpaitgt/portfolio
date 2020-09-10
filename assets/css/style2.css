@@ -207,7 +207,25 @@ nav.navbar .nav__ul .push-right {
   }
 }
 
-nav.navbar .nav__ul .nav__icon {
+nav.navbar .nav__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  list-style: none;
+}
+
+nav.navbar .nav__icons .nav__icon {
   margin: 0px 20px;
   width: 24px;
   -webkit-transition: -webkit-transform 0.25s ease-in-out;
@@ -225,7 +243,7 @@ nav.navbar .nav__ul .nav__icon {
       justify-self: center;
 }
 
-nav.navbar .nav__ul .nav__icon:hover {
+nav.navbar .nav__icons .nav__icon:hover {
   -webkit-transform: scale(1.25);
           transform: scale(1.25);
   -webkit-filter: invert(1);
@@ -237,7 +255,7 @@ nav.navbar .nav__ul .nav__icon:hover {
 }
 
 @media screen and (max-width: 952px) {
-  nav.navbar .nav__ul .nav__icon {
+  nav.navbar .nav__icons .nav__icon {
     margin: 0px 20px;
     width: 38px;
     -webkit-transition: -webkit-transform 0.25s ease-in-out;
@@ -249,7 +267,7 @@ nav.navbar .nav__ul .nav__icon:hover {
     -webkit-filter: invert(0.5);
             filter: invert(0.5);
   }
-  nav.navbar .nav__ul .nav__icon:hover {
+  nav.navbar .nav__icons .nav__icon:hover {
     -webkit-transform: scale(1.25);
             transform: scale(1.25);
     -webkit-filter: invert(1);

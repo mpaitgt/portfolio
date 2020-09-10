@@ -80,6 +80,11 @@ nav.navbar {
         transform: translateX(0px);
       }
     }
+  }
+  .nav__icons {
+    @include flex(row, center, center);
+    padding: 0;
+    list-style: none;
     .nav__icon {
       @include icon_hover(24px, invert(0.5), invert(1));
       align-self: center;
