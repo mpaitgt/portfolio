@@ -529,26 +529,6 @@ footer.navbar .nav__icon:hover {
   }
 }
 
-.projects .project .project__name:after {
-  content: '\00BB';
-  padding-left: 0px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  -webkit-transform: translateX(-50px);
-          transform: translateX(-50px);
-  opacity: 0;
-}
-
-.projects .project .project__name:hover:after {
-  padding-left: 6px;
-  content: ' \00BB';
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
-  opacity: 1;
-}
-
 .projects .project .project__description {
   color: #929292;
   font-size: 1.2rem;
@@ -799,8 +779,8 @@ footer.navbar .nav__icon:hover {
 }
 
 .album-carousel .album-slide .album-cover {
-  -webkit-transform: translateY(200px);
-          transform: translateY(200px);
+  -webkit-transform: translateY(200%);
+          transform: translateY(200%);
   width: 100%;
   -webkit-transition: -webkit-filter 1s ease-out;
   transition: -webkit-filter 1s ease-out;
@@ -897,10 +877,6 @@ footer.navbar .nav__icon:hover {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
   }
-  70% {
-    -webkit-transform: scale(0.9) translateY(-12x);
-            transform: scale(0.9) translateY(-12x);
-  }
   100% {
     -webkit-transform: scale(1) translateY(0px);
             transform: scale(1) translateY(0px);
@@ -919,10 +895,6 @@ footer.navbar .nav__icon:hover {
   48% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
-  }
-  70% {
-    -webkit-transform: scale(0.9) translateY(-12x);
-            transform: scale(0.9) translateY(-12x);
   }
   100% {
     -webkit-transform: scale(1) translateY(0px);
