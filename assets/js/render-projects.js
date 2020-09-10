@@ -210,7 +210,7 @@ let renderProjects = function(arr) {
           </div>
           <div>
             <img src="${project.image}" alt="${project.title} UI"
-              data-project-name="${project.title.toLowerCase()}" class="img img__project">
+              data-project-name="${project.title.toLowerCase()}" class="img project__img">
           </div>
         </li>
       `
