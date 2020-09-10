@@ -38,7 +38,7 @@ nav.navbar {
     @include flex(row, center, center);
     list-style: none;
     @include nav-collapse {
-      @include flex(column, space-evenly, flex-end);
+      @include flex(column, flex-start, flex-end);
       position: fixed;
       right: 0;
       top: 0;
@@ -48,6 +48,10 @@ nav.navbar {
       transform: translateX(200%);
       transition: all 0.25s;
       z-index: -1;
+      li {
+        margin-top: 4rem;
+        margin-bottom: 0rem;
+      }
     }
     .nav__link {
       padding: 8px 12px;

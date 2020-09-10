@@ -124,9 +124,9 @@ nav.navbar .nav__ul {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
@@ -141,6 +141,10 @@ nav.navbar .nav__ul {
     -webkit-transition: all 0.25s;
     transition: all 0.25s;
     z-index: -1;
+  }
+  nav.navbar .nav__ul li {
+    margin-top: 4rem;
+    margin-bottom: 0rem;
   }
 }
 
