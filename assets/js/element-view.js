@@ -8,11 +8,11 @@ function isInViewport(element) {
   )
 }
 
-window.addEventListener('scroll', function(e) {
+document.addEventListener('scroll', function(e) {
   let footer = document.querySelector('footer');
   let albumDisplay = document.querySelectorAll('.album-cover');
-
-  if (isInViewport(footer)) {
+  console.log(window.innerWidth);
+  if (isInViewport(footer) && window.innerWidth > 578) {
     albumDisplay.forEach((album, index) => {
       album.classList.add(`album-${index + 1}`);
     })

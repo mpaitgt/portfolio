@@ -795,6 +795,13 @@ footer.navbar .nav__icon:hover {
   cursor: pointer;
 }
 
+@media screen and (max-width: 576px) {
+  .album-carousel .album-slide .album-cover {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
 .album-arrow {
   font-size: 3rem;
   color: #d8d8ee;

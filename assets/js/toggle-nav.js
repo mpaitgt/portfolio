@@ -4,5 +4,4 @@ const
 
 burger.addEventListener('click', function(e) {
   navContents.classList.toggle('toggle-nav');
-  console.log(burger, e.target);
 })
