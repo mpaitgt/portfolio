@@ -200,12 +200,16 @@ function attachSkillEvent() {
 let renderProjects = function(arr) {
   const 
     projectList = document.querySelector('.list__projects'),
-    allProjects = document.querySelectorAll('.project');
+    allProjects = document.querySelectorAll('.project'),
+    loader = document.querySelector('.projects #loader');
   // adding the exit animation
   allProjects.forEach((project, index) => {
     project.classList.remove(`project-enter-${index + 1}`);
     project.classList.add(`project-exit-${index + 1}`);
   })
+  // setTimeout(function() {
+  //   loader.style.display = 'block';
+  // }, 2000)
   // render the HTML necessary for each 
   // project in the given array
   setTimeout(function() {

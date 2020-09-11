@@ -642,6 +642,12 @@ footer.navbar .nav__icon:hover {
   }
 }
 
+@media screen and (max-width: 576px) {
+  .projects .project .project__img {
+    width: 75%;
+  }
+}
+
 .projects .project .project__tech {
   list-style: none;
   display: -ms-grid;
@@ -661,7 +667,6 @@ footer.navbar .nav__icon:hover {
   .projects .project .project__tech {
     -ms-grid-columns: 33.33% 33.33% 33.33%;
         grid-template-columns: 33.33% 33.33% 33.33%;
-    padding-bottom: 20px;
   }
 }
 
@@ -713,6 +718,10 @@ footer.navbar .nav__icon:hover {
   transition: all 0.25s;
   -webkit-transform-origin: center;
           transform-origin: center;
+}
+
+.projects #loader {
+  display: none;
 }
 
 .project-enter-1 {
@@ -821,8 +830,7 @@ footer.navbar .nav__icon:hover {
 
 .section__bandcamp {
   width: 800px;
-  height: 210px;
-  margin: 0 auto;
+  margin: 4rem auto 0 auto;
   z-index: -1;
 }
 
@@ -834,8 +842,7 @@ footer.navbar .nav__icon:hover {
 }
 
 .section__bandcamp .section__header {
-  font-size: 2rem;
-  color: #d8d8ee;
+  color: #1b1b20;
 }
 
 .album-carousel {
@@ -1071,13 +1078,18 @@ footer.navbar .nav__icon:hover {
   margin: 0 auto;
   margin-bottom: 1rem;
   position: relative;
+  border-bottom: 2px solid #d8d8ee;
 }
 
 .quote__layout .quote {
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 2.5rem;
   padding: 1rem 6rem;
+  max-width: 600px;
+  margin: 0 auto;
   position: relative;
+  color: #d1d1d1;
+  font-family: 'Fira Sans';
 }
 
 .quote__layout .quote:before {

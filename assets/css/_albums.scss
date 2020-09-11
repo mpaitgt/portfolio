@@ -3,16 +3,14 @@
 
 .section__bandcamp {
   width: 800px;
-  height: 210px;
-  margin: 0 auto;
+  margin: 4rem auto 0 auto;
   z-index: -1;
   @include nav-collapse {
     width: 100%;
     height: auto;
   }
   .section__header {
-    font-size: 2rem;
-    color: $blue__light;
+    color: $blue__dark;
   }
 }
 

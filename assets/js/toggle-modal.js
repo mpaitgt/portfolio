@@ -5,7 +5,7 @@ let selectedAlbum;
 modalButtons.forEach(btn => {
   let 
     iFrame = document.getElementById('album-iframe'),
-    loader = document.getElementById('loader');
+    loader = document.querySelector('#album-modal #loader');
 
   btn.addEventListener('mouseup', function(e) {
     // if the element was opened before and still 

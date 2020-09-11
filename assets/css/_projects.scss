@@ -75,6 +75,9 @@
         margin-bottom: 1.5rem;
         width: 100%;
       }
+      @include mobile {
+        width: 75%;
+      }
     }
     .project__tech {
       list-style: none;
@@ -85,8 +88,7 @@
       }
       @include tablet {
         grid-template-columns: 33.33% 33.33% 33.33%;
-        padding-bottom: 20px;
-      }
+      } 
       @include mobile {
         grid-template-columns: 50% 50%;
         justify-self: center;
@@ -106,6 +108,9 @@
     .project__github-link {
       @include icon_hover(32px, invert(0.75), invert(0));
     }
+  }
+  #loader {
+    display: none;
   }
 }
 
