@@ -11,7 +11,7 @@ function isInViewport(element) {
 document.addEventListener('scroll', function(e) {
   let footer = document.querySelector('footer');
   let albumDisplay = document.querySelectorAll('.album-cover');
-  console.log(window.innerWidth);
+  // console.log(window.innerWidth);
   if (isInViewport(footer) && window.innerWidth > 578) {
     albumDisplay.forEach((album, index) => {
       album.classList.add(`album-${index + 1}`);

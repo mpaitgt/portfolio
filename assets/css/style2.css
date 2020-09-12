@@ -642,12 +642,6 @@ footer.navbar .nav__icon:hover {
   }
 }
 
-@media screen and (max-width: 576px) {
-  .projects .project .project__img {
-    width: 75%;
-  }
-}
-
 .projects .project .project__tech {
   list-style: none;
   display: -ms-grid;
@@ -1070,46 +1064,102 @@ footer.navbar .nav__icon:hover {
   }
 }
 
+.recommendations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-bottom: 2px solid #d8d8ee;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: arial;
+}
+
+.recommendations #left-arrow {
+  font-size: 4rem;
+  color: red;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.recommendations #right-arrow {
+  font-size: 4rem;
+  color: red;
+}
+
 .quote__layout {
   padding: 0rem;
   margin-bottom: 0rem;
   padding: 2rem;
   width: auto;
+  min-height: 350px;
   margin: 0 auto;
   margin-bottom: 1rem;
   position: relative;
-  border-bottom: 2px solid #d8d8ee;
 }
 
 .quote__layout .quote {
   text-align: center;
   font-size: 2.5rem;
-  padding: 1rem 6rem;
+  padding: 1rem 1rem;
   max-width: 600px;
   margin: 0 auto;
   position: relative;
   color: #d1d1d1;
   font-family: 'Fira Sans';
+  cursor: pointer;
+  -webkit-transition: all 2s;
+  transition: all 2s;
 }
 
-.quote__layout .quote:before {
-  content: open-quote;
+@media screen and (max-width: 768px) {
+  .quote__layout .quote {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .quote__layout .quote {
+    font-size: 1.75rem;
+    padding: 1rem 0rem;
+  }
+}
+
+.quote__layout .left-mark {
   display: inline-block;
   font-size: 6rem;
-  position: absolute;
-  top: 0;
-  left: 0;
   color: #3d3d5a;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
-.quote__layout .quote:after {
+@media screen and (max-width: 576px) {
+  .quote__layout .left-mark {
+    font-size: 4rem;
+  }
+}
+
+.quote__layout .right-mark {
   content: close-quote;
   display: inline-block;
   font-size: 6rem;
-  position: absolute;
-  top: 0;
-  right: 0;
   color: #3d3d5a;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+@media screen and (max-width: 576px) {
+  .quote__layout .right-mark {
+    font-size: 4rem;
+  }
 }
 
 .quote__layout div {
@@ -1129,11 +1179,27 @@ footer.navbar .nav__icon:hover {
   padding-top: 10px;
 }
 
+@media screen and (max-width: 576px) {
+  .quote__layout div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .quote__layout .quote-author {
   font-size: 1.5rem;
   font-weight: 900;
   font-family: 'Fira Sans';
   color: #3d3d5a;
+  text-align: right;
+}
+
+@media screen and (max-width: 576px) {
+  .quote__layout .quote-author {
+    text-align: center;
+  }
 }
 
 .quote__layout .quote-author span {
@@ -1143,9 +1209,7 @@ footer.navbar .nav__icon:hover {
 }
 
 .quote__layout .quote-author-photo {
-  width: 60px;
-  height: 60px;
-  border-radius: 50px;
+  width: 240px;
   margin-left: 1rem;
 }
 

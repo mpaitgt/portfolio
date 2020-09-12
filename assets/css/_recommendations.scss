@@ -1,40 +1,68 @@
+.recommendations {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid $blue__light;
+  justify-content: center;
+  align-items: center;
+  font-family: arial;
+  #left-arrow {
+    font-size: 4rem;
+    color: red;
+    transform: rotate(180deg);
+  }
+  #right-arrow {
+    font-size: 4rem;
+    color: red;
+  }
+}
+
 .quote__layout {
   padding: 0rem;
   margin-bottom: 0rem;
   padding: 2rem;
   width: auto;
+  min-height: 350px;
   margin: 0 auto;
   margin-bottom: 1rem;
   position: relative;
-  border-bottom: 2px solid $blue__light;
   .quote {
     text-align: center;
     font-size: 2.5rem;
-    padding: 1rem 6rem;
+    padding: 1rem 1rem;
     max-width: 600px;
     margin: 0 auto;
     position: relative;
     color: $gray__light;
-    // font-weight: 900;
     font-family: 'Fira Sans';
-    &:before {
-      content: open-quote;
+    cursor: pointer;
+    transition: all 2s;
+    @include tablet {
+      font-size: 2rem;
+      padding: 1rem;
+    }
+    @include mobile {
+      font-size: 1.75rem;
+      padding: 1rem 0rem;
+    }
+  }
+  .left-mark {
       display: inline-block;
       font-size: 6rem;
-      position: absolute;
-      top: 0;
-      left: 0;
       color: $blue__med;
-    }
-    &:after {
+      transition: all 1s;
+      @include mobile {
+        font-size: 4rem;
+      }
+  }
+  .right-mark {
       content: close-quote;
       display: inline-block;
       font-size: 6rem;
-      position: absolute;
-      top: 0;
-      right: 0;
       color: $blue__med;
-    }
+      transition: all 1s;
+      @include mobile {
+        font-size: 4rem;
+      }
   }
   div {
     display: flex;
@@ -42,6 +70,9 @@
     align-items: center;
     justify-content: flex-end;
     padding-top: 10px;
+    @include mobile {
+      flex-direction: column;
+    }
     
   }
   .quote-author {
@@ -49,6 +80,10 @@
     font-weight: 900;
     font-family: 'Fira Sans';
     color: $blue__med;
+    text-align: right;
+    @include mobile {
+      text-align: center;
+    }
     span {
       font-size: 1rem;
       font-weight: 100;
@@ -56,9 +91,9 @@
     }
   }
   .quote-author-photo {
-    width: 60px;
-    height: 60px;
-    border-radius: 50px;
+    width: 240px;
+    // height: 60px;
+    // border-radius: 50px;
     margin-left: 1rem;
   }
 }
