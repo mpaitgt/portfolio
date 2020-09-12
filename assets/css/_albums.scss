@@ -11,6 +11,9 @@
   }
   .section__header {
     color: $blue__dark;
+    @include nav-collapse {
+      padding-left: 1rem;
+    }
   }
 }
 
