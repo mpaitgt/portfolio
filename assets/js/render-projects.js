@@ -203,13 +203,10 @@ let renderProjects = function(arr) {
     allProjects = document.querySelectorAll('.project'),
     loader = document.querySelector('.projects #loader');
   // adding the exit animation
-  allProjects.forEach((project, index) => {
-    project.classList.remove(`project-enter-${index + 1}`);
-    project.classList.add(`project-exit-${index + 1}`);
-  })
-  // setTimeout(function() {
-  //   loader.style.display = 'block';
-  // }, 2000)
+  // allProjects.forEach((project, index) => {
+  //   project.classList.remove(`project-enter-${index + 1}`);
+  //   project.classList.add(`project-exit-${index + 1}`);
+  // })
   // render the HTML necessary for each 
   // project in the given array
   setTimeout(function() {
@@ -220,7 +217,6 @@ let renderProjects = function(arr) {
             <div class="project__header-row">
               <p class="section__headline project__name">${project.title}</p>
               <div>
-
                 ${
                   project.production_link !== '' 
                   ? `            

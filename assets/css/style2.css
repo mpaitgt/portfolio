@@ -839,6 +839,12 @@ footer.navbar .nav__icon:hover {
   color: #1b1b20;
 }
 
+@media screen and (max-width: 952px) {
+  .section__bandcamp .section__header {
+    padding-left: 1rem;
+  }
+}
+
 .album-carousel {
   position: relative;
   overflow: hidden;
