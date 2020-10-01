@@ -26,6 +26,28 @@
   }
 }
 
+#modal-btn {
+  position: fixed;
+  bottom: 0;
+  right: 8%;
+  padding: 16px 20px 32px 20px;
+  background: $blue__med;
+  letter-spacing: 1px;
+  width: 80px;
+  font-size: 1.5rem;
+  border-radius: 32px 32px 0px 0px;
+  text-align: center;
+  font-weight: 800;
+  color: $white;
+  cursor: pointer;
+  transform: translateY(16px);
+  transition: transform 0.1s;
+  &:hover {
+    transform: translateY(0px);
+    transition: transform 0.1s;
+  }
+}
+
 .modal-open {
   animation-name: modal-open;
   animation-iteration-count: 1;

@@ -192,7 +192,9 @@ function attachSkillEvent() {
       renderProjects(filterProjects(selectedSkill))
       // using the scroll.js function to jump
       // down the page and view the projects
-      scroll(projectsDestination);
+      if (window.scrollY <= 5) {
+        scroll(projectsDestination);
+      }
     })
   })
 }
@@ -203,68 +205,68 @@ let renderProjects = function(arr) {
     allProjects = document.querySelectorAll('.project'),
     loader = document.querySelector('.projects #loader');
   // adding the exit animation
-  // allProjects.forEach((project, index) => {
-  //   project.classList.remove(`project-enter-${index + 1}`);
-  //   project.classList.add(`project-exit-${index + 1}`);
-  // })
+  allProjects.forEach((project, index) => {
+    // project.classList.remove(`project-enter-${index + 1}`);
+    project.classList.add(`project-exit-${index + 1}`);
+  })
   // render the HTML necessary for each 
   // project in the given array
-  setTimeout(function() {
-    projectList.innerHTML = arr.map((project, index) => {
-      return `
-        <li class="project project-enter-${index + 1}">
-          <div>
-            <div class="project__header-row">
-              <p class="section__headline project__name">${project.title}</p>
-              <div>
-                ${
-                  project.production_link !== '' 
-                  ? `            
-                  <a href="${project.production_link}" target="_blank">
-                    <img src="./assets/images/social-icons/production_icon.png" width="32"
-                    class="project__github-link">
-                  </a>` 
-                  : 
-                  ''
-                }
-                ${
-                  project.github_link !== '' 
-                  ? `            
-                  <a href="${project.github_link}" target="_blank">
-                    <img src="./assets/images/social-icons/github.png" width="32"
-                    class="project__github-link" alt="${project.title} Github Repo">
-                  </a>` 
-                  : 
-                  ''
-                }
-              </div>
+setTimeout(function() {
+  projectList.innerHTML = arr.map((project, index) => {
+    return `
+      <li class="project project-enter-${index + 1}">
+        <div>
+          <div class="project__header-row">
+            <p class="section__headline project__name">${project.title}</p>
+            <div>
+              ${
+                project.production_link !== '' 
+                ? `            
+                <a href="${project.production_link}" target="_blank">
+                  <img src="./assets/images/social-icons/production_icon.png" width="32"
+                  class="project__github-link">
+                </a>` 
+                : 
+                ''
+              }
+              ${
+                project.github_link !== '' 
+                ? `            
+                <a href="${project.github_link}" target="_blank">
+                  <img src="./assets/images/social-icons/github.png" width="32"
+                  class="project__github-link" alt="${project.title} Github Repo">
+                </a>` 
+                : 
+                ''
+              }
             </div>
-            <p class="project__description section__copy">
-              ${project.description}
-            </p>
-            <ul class="project__tech" data-project-name="recordshare">
-              ${project.technologies.map(tech => {
-                return `<li>${tech}</li>`;
-              }).join('')}
-            </ul>
           </div>
-          <div>
-            <img src="${project.image}" alt="${project.title} UI"
-              data-project-name="${project.title.toLowerCase()}" class="img project__img">
-          </div>
-        </li>
-      `
-    }).join('');
-    document.querySelector('.projects-listed').innerHTML = `
-      ${
-        arr.length === 1
-        ?
-        `${arr.length} project listed`
-        :
-        `${arr.length} projects listed`
-      }
-    `;
-  },250);
+          <p class="project__description section__copy">
+            ${project.description}
+          </p>
+          <ul class="project__tech" data-project-name="recordshare">
+            ${project.technologies.map(tech => {
+              return `<li>${tech}</li>`;
+            }).join('')}
+          </ul>
+        </div>
+        <div>
+          <img src="${project.image}" alt="${project.title} UI"
+            data-project-name="${project.title.toLowerCase()}" class="img project__img">
+        </div>
+      </li>
+    `
+  }).join('');
+}, 1000)
+  document.querySelector('.projects-listed').innerHTML = `
+    ${
+      arr.length === 1
+      ?
+      `${arr.length} project listed`
+      :
+      `${arr.length} projects listed`
+    }
+  `;
 }
 
 let filterProjects = function(query) {

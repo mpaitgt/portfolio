@@ -569,6 +569,8 @@ footer.navbar .nav__icon:hover {
   -webkit-box-shadow: 0px 4px 40px -14px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 40px -14px rgba(0, 0, 0, 0.25);
   padding: 20px;
+  -webkit-transform: translateX(-300%);
+          transform: translateX(-300%);
 }
 
 @media screen and (max-width: 768px) {
@@ -721,8 +723,8 @@ footer.navbar .nav__icon:hover {
 .project-enter-1 {
   -webkit-animation-name: slide-in-from-left;
           animation-name: slide-in-from-left;
-  -webkit-animation-duration: 0.25s;
-          animation-duration: 0.25s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-delay: 0.08333s;
@@ -734,8 +736,8 @@ footer.navbar .nav__icon:hover {
 .project-enter-2 {
   -webkit-animation-name: slide-in-from-left;
           animation-name: slide-in-from-left;
-  -webkit-animation-duration: 0.25s;
-          animation-duration: 0.25s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-delay: 0.16667s;
@@ -747,8 +749,8 @@ footer.navbar .nav__icon:hover {
 .project-enter-3 {
   -webkit-animation-name: slide-in-from-left;
           animation-name: slide-in-from-left;
-  -webkit-animation-duration: 0.25s;
-          animation-duration: 0.25s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-delay: 0.25s;
@@ -760,12 +762,64 @@ footer.navbar .nav__icon:hover {
 .project-enter-4 {
   -webkit-animation-name: slide-in-from-left;
           animation-name: slide-in-from-left;
-  -webkit-animation-duration: 0.25s;
-          animation-duration: 0.25s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-delay: 0.33333s;
           animation-delay: 0.33333s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.project-enter-5 {
+  -webkit-animation-name: slide-in-from-left;
+          animation-name: slide-in-from-left;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.41667s;
+          animation-delay: 0.41667s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.project-enter-6 {
+  -webkit-animation-name: slide-in-from-left;
+          animation-name: slide-in-from-left;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.project-enter-7 {
+  -webkit-animation-name: slide-in-from-left;
+          animation-name: slide-in-from-left;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.58333s;
+          animation-delay: 0.58333s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.project-enter-8 {
+  -webkit-animation-name: slide-in-from-left;
+          animation-name: slide-in-from-left;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.66667s;
+          animation-delay: 0.66667s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
 }
@@ -773,12 +827,12 @@ footer.navbar .nav__icon:hover {
 .project-exit-1 {
   -webkit-animation-name: slide-out-to-right;
           animation-name: slide-out-to-right;
-  -webkit-animation-duration: 0.25s;
-          animation-duration: 0.25s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.08333s;
-          animation-delay: 0.08333s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-delay: 0.125s;
+          animation-delay: 0.125s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
 }
@@ -786,12 +840,12 @@ footer.navbar .nav__icon:hover {
 .project-exit-2 {
   -webkit-animation-name: slide-out-to-right;
           animation-name: slide-out-to-right;
-  -webkit-animation-duration: 0.25s;
-          animation-duration: 0.25s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.16667s;
-          animation-delay: 0.16667s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
 }
@@ -799,12 +853,12 @@ footer.navbar .nav__icon:hover {
 .project-exit-3 {
   -webkit-animation-name: slide-out-to-right;
           animation-name: slide-out-to-right;
-  -webkit-animation-duration: 0.25s;
-          animation-duration: 0.25s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.25s;
-          animation-delay: 0.25s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-delay: 0.375s;
+          animation-delay: 0.375s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
 }
@@ -812,14 +866,122 @@ footer.navbar .nav__icon:hover {
 .project-exit-4 {
   -webkit-animation-name: slide-out-to-right;
           animation-name: slide-out-to-right;
-  -webkit-animation-duration: 0.25s;
-          animation-duration: 0.25s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.33333s;
-          animation-delay: 0.33333s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+}
+
+.project-exit-5 {
+  -webkit-animation-name: slide-out-to-right;
+          animation-name: slide-out-to-right;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-delay: 0.625s;
+          animation-delay: 0.625s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.project-exit-6 {
+  -webkit-animation-name: slide-out-to-right;
+          animation-name: slide-out-to-right;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.project-exit-7 {
+  -webkit-animation-name: slide-out-to-right;
+          animation-name: slide-out-to-right;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-delay: 0.875s;
+          animation-delay: 0.875s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.project-exit-8 {
+  -webkit-animation-name: slide-out-to-right;
+          animation-name: slide-out-to-right;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes slide-in-from-left {
+  0% {
+    -webkit-transform: translateX(-300%);
+            transform: translateX(-300%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes slide-in-from-left {
+  0% {
+    -webkit-transform: translateX(-300%);
+            transform: translateX(-300%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes slide-out-to-right {
+  0% {
+    -webkit-transform: translateX(0%) translateY(0%) rotate(0deg);
+            transform: translateX(0%) translateY(0%) rotate(0deg);
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(0%) translateY(10%) rotate(-45deg);
+            transform: translateX(0%) translateY(10%) rotate(-45deg);
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    opacity: 0;
+  }
+}
+
+@keyframes slide-out-to-right {
+  0% {
+    -webkit-transform: translateX(0%) translateY(0%) rotate(0deg);
+            transform: translateX(0%) translateY(0%) rotate(0deg);
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(0%) translateY(10%) rotate(-45deg);
+            transform: translateX(0%) translateY(10%) rotate(-45deg);
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    opacity: 0;
+  }
 }
 
 .section__bandcamp {
@@ -1358,6 +1520,37 @@ footer.navbar .nav__icon:hover {
           box-shadow: 0px 0px 50px 24px rgba(0, 0, 0, 0.25);
   -webkit-transform: translateY(-200%);
           transform: translateY(-200%);
+}
+
+#modal-btn {
+  position: fixed;
+  bottom: 0;
+  right: 8%;
+  padding: 16px 20px 32px 20px;
+  background: #3d3d5a;
+  letter-spacing: 1px;
+  width: 80px;
+  font-size: 1.5rem;
+  border-radius: 32px 32px 0px 0px;
+  text-align: center;
+  font-weight: 800;
+  color: #f3f3f3;
+  cursor: pointer;
+  -webkit-transform: translateY(16px);
+          transform: translateY(16px);
+  -webkit-transition: -webkit-transform 0.1s;
+  transition: -webkit-transform 0.1s;
+  transition: transform 0.1s;
+  transition: transform 0.1s, -webkit-transform 0.1s;
+}
+
+#modal-btn:hover {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition: -webkit-transform 0.1s;
+  transition: -webkit-transform 0.1s;
+  transition: transform 0.1s;
+  transition: transform 0.1s, -webkit-transform 0.1s;
 }
 
 .modal-open {
