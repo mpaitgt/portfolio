@@ -28,13 +28,12 @@
     .container {
       margin-top: 0;
       @include nav-collapse {
-        // margin-top: 4rem;
+        margin-top: 4rem;
       }
     }
     section.section__body {
       color: $text;
-      // padding: 5%;
-      padding: 4.2rem;
+      padding: 5%;
       // margin-bottom: 2rem;
       // margin-top: 2rem;
       @include nav-collapse {

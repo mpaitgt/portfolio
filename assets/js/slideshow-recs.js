@@ -17,7 +17,7 @@ const myTestimonials = [
 let selectedTestimonial = myTestimonials[0];
 
 async function renderQuote(testimonial) {
-  const testimonialContainer = document.querySelector('.recommendations .container');  
+  const testimonialContainer = document.querySelector('.recommendations-container');  
 
   testimonialContainer.innerHTML = await `
     <div class="quote__layout quote__mouse-up">

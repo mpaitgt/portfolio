@@ -1656,9 +1656,15 @@ footer.navbar .nav__icon:hover {
   margin-top: 0;
 }
 
+@media screen and (max-width: 952px) {
+  * body .container {
+    margin-top: 4rem;
+  }
+}
+
 * body section.section__body {
   color: #1b1b20;
-  padding: 4.2rem;
+  padding: 5%;
 }
 
 @media screen and (max-width: 952px) {
