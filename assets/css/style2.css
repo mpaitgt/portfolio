@@ -995,6 +995,12 @@ footer.navbar .nav__icon:hover {
   }
 }
 
+@media screen and (max-width: 952px) {
+  .section__bandcamp .section__header {
+    padding-left: 5%;
+  }
+}
+
 .album-carousel {
   position: relative;
   overflow: hidden;
@@ -1238,7 +1244,7 @@ footer.navbar .nav__icon:hover {
   font-family: arial;
   -webkit-transition: height 0.5s;
   transition: height 0.5s;
-  padding: 40px 0;
+  padding: 60px 0;
 }
 
 @media screen and (max-width: 768px) {
