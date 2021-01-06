@@ -3,8 +3,7 @@
 @import '_media-queries';
 
 .list__projects {
-  height: 100%;
-  transition: height 2s;
+  height: auto;
 }
 
 .projects {
@@ -115,7 +114,7 @@
 @for $i from 1 through 8 {
   .project-enter-#{$i} {
     animation-name: slide-in-from-left;
-    animation-duration: 2s;
+    animation-duration: 0.5s;
     animation-fill-mode: forwards;
     animation-delay: #{$i / 12}s;
     animation-iteration-count: 1;
@@ -125,7 +124,7 @@
 @for $i from 1 through 8 {
   .project-exit-#{$i} {
     animation-name: slide-out-to-right;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-fill-mode: backwards;
     animation-delay: #{$i / 8}s;
     animation-iteration-count: 1;

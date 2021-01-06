@@ -1,5 +1,5 @@
 .about__content {
-  @include flex(row, center, flex-start);
+  @include flex(row, center, center);
   @include tablet {
     @include flex(column, center, center);
   }

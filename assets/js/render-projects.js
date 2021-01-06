@@ -7,10 +7,10 @@ window.onload = async function() {
 let myProjects = [
   {
     "id": 99,
-    "title": "Recruiting Software",
+    "title": "Bearclaw",
     "image": "./assets/images/project-images/sass-logo.jpg",
     "technologies": [
-      "HTML & CSS", "CSS Grid", "SCSS/SASS", "PHP", "MySQL"
+      "HTML & CSS", "jQuery", "jQuery UI", "SCSS/SASS", "PHP", "MySQL"
     ],
     "description": "Implementing front-end UI in code, bringing an organized design system to recruiting software currently in development.",
     "github_link": "",
@@ -35,6 +35,17 @@ let myProjects = [
       "React.js", "MongoDB Atlas", "Emotion.css", "Cloudinary", "Passport", "Node.js & Express"
     ],
     "description": "Personal MERN-stack project developed to allow people to share the music they love with others, and agregrate audience ratings.",
+    "github_link": "https://www.github.com/mpaitgt/recordshare",
+    "production_link": "https://www.recordshare.herokuapp.com"
+  },
+  {
+    "id": 101,
+    "title": "Alternative Doguh",
+    "image": "./assets/images/project-images/recordshare.JPG",
+    "technologies": [
+      "React.js", "Emotion.css"
+    ],
+    "description": "",
     "github_link": "https://www.github.com/mpaitgt",
     "production_link": "https://www.recordshare.herokuapp.com"
   },
@@ -83,17 +94,6 @@ let myProjects = [
     "production_link": "https://www.deetz.herokuapp.com"
   },
   {
-    "id": 6,
-    "title": "Give a Gift",
-    "image": "./assets/images/project-images/gift.JPG",
-    "technologies": [
-      "HTML & CSS", "JavaScript", "jQuery", "AJAX"
-    ],
-    "description": "A web app which uses the Giphy API to generate GIFs on request. The user can even store their favorite GIFs locally in the 'Favorites' section.",
-    "github_link": "https://www.github.com/mpaitgt/give-a-gift",
-    "production_link": "https://mpaitgt.github.io/Give-a-Gift/"
-  },
-  {
     "id": 8,
     "title": "Medo",
     "image": "./assets/images/project-images/medo.JPG",
@@ -103,39 +103,6 @@ let myProjects = [
     "description": "It's the age of content, and we've all got too many recommendations from friends. Allow Medo to be the central place where you can organize all of those things you've been meaning to check out!",
     "github_link": "https://www.github.com/mpaitgt/medo-frontend",
     "production_link": "https://mpaitgt.github.io/medo-frontend"
-  },
-  {
-    "id": 7,
-    "title": "The Skinny Pancake",
-    "image": "./assets/images/project-images/skinny-pancake.JPG",
-    "technologies": [
-      "Wordpress", "HTML & CSS"
-    ],
-    "description": "Worked from January 2015 through June 2016 as Marketing Coordinator developing content and performing web maintinence for four domains.",
-    "github_link": "",
-    "production_link": "https://skinnypancake.com"
-  },
-  {
-    "id": 9,
-    "title": "Email Development at HearingLife",
-    "image": "./assets/images/project-images/email.jpg",
-    "technologies": [
-      "Email Development", "HTML & CSS", "Adobe XD"
-    ],
-    "description": "Currently I develop segmented email campaigns for HearingLife using custom HTML and CSS. Our emails are developed mobile-first, and are targeted at audiences from 200 to 20,000.",
-    "github_link": "",
-    "production_link": ""
-  },
-  {
-    "id": 9,
-    "title": "Web Development at HearingLife",
-    "image": "./assets/images/project-images/hl-website.JPG",
-    "technologies": [
-      "HTML & CSS", "JavaScript", "Podium API", "Sitecore"
-    ],
-    "description": "In addition to email, I manage content regularly using Sitecore at HearingLife. I've also been working on some new features to the site, including displaying location reviews.",
-    "github_link": "",
-    "production_link": "https://www.hearinglife.com/hearing-aids-centers/Alabama/Albertville"
   }
 ];
 
@@ -152,10 +119,7 @@ let skills = [
   'MongoDB',
   'MongoDB Atlas',
   'Firebase',
-  'Node.js & Express',
-  'Wordpress',
-  'Sitecore',
-  'Email Development'
+  'Node.js & Express'
 ];
 
 let selectedSkill = null;

@@ -2,7 +2,7 @@ const
     aboutDestination = document.querySelector('.about'),
     projectsDestination = document.querySelector('.projects'),
     recommendationsDestination = document.querySelector('.recommendations'),
-    bandcampDestination = document.querySelector('.section__bandcamp'),
+    bandcampDestination = document.querySelector('.bandcamp'),
     navLink = document.querySelectorAll('.nav__link');
 
 navLink.forEach(target => {
@@ -29,5 +29,5 @@ navLink.forEach(target => {
 function scroll(target) {
     target.scrollIntoView({ 
         behavior: 'smooth' 
-      }, 2000);
+      }, 3000);
 }

@@ -1,34 +1,26 @@
 .recommendations {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   border-bottom: 2px solid $blue__light;
   justify-content: center;
   align-items: center;
   font-family: arial;
-  #left-arrow {
-    font-size: 4rem;
-    color: red;
-    transform: rotate(180deg);
-  }
-  #right-arrow {
-    font-size: 4rem;
-    color: red;
+  transition: height 0.5s;
+  padding: 40px 0;
+  @include tablet {
+    padding: 40px 5%;
   }
 }
 
 .quote__layout {
   padding: 0rem;
   margin-bottom: 0rem;
-  padding: 2rem;
   width: auto;
-  min-height: 350px;
   margin: 0 auto;
-  margin-bottom: 1rem;
   position: relative;
   .quote {
     text-align: center;
     font-size: 2.5rem;
-    padding: 1rem 1rem;
     max-width: 600px;
     margin: 0 auto;
     position: relative;
@@ -41,7 +33,7 @@
       padding: 1rem;
     }
     @include mobile {
-      font-size: 1.75rem;
+      font-size: 1.4rem;
       padding: 1rem 0rem;
     }
   }
@@ -69,11 +61,9 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    padding-top: 10px;
     @include mobile {
       flex-direction: column;
     }
-    
   }
   .quote-author {
     font-size: 1.5rem;
@@ -92,63 +82,36 @@
   }
   .quote-author-photo {
     width: 240px;
-    // height: 60px;
-    // border-radius: 50px;
     margin-left: 1rem;
+    @include mobile {
+      width: 180px;
+    }
   }
 }
 
-.arrow-container {
-  width: 60px;
-  height: 100px;
-  font-size: 6rem;
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 4rem;
-  cursor: pointer;
-  .push-arrow {
-    width: 100%;
-    height: 100%;
-    font-family: arial;
-    margin: 0 auto;
-    // transform: rotate(90deg);
-    padding: 0;
-  }
+.quote__mouse-down {
+  animation-name: quote__mouse-down;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  transition: all 0.1s ease-in-out;
 }
 
-// sequential animation
-@for $i from 1 through 3 {
-  .arrow-#{$i} {
-    animation-name: push-animation;
-    animation-duration: 1s;
-    // animation-fill-mode: forwards;
-    animation-delay: #{$i /12}s;
-    animation-iteration-count: infinite;
-  }
+.quote__mouse-up {
+  animation-name: quote__mouse-up;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  transition: all 0.1s ease-in-out;
 }
 
-  .arrow-1 {
-    color: $blue__light-x;
-  }
-  .arrow-2 {
-    color: $blue__light;
-  }
-  .arrow-3 {
-    color: $blue__med;
-  }
+@keyframes quote__mouse-up {
+  0% { transform: scale(0.8); };
+  80% { transform: scale(1.1); };
+  100% { transform: scale(1); };
+}
 
-
-// .push-animation {
-//   animation-name: push-animation;
-//   animation-iteration-count: infinite;
-//   animation-duration: 2s;
-//   animation-delay: 0.5s;
-// };
-
-@keyframes push-animation {
-  0% { transform: translateX(-50%); opacity: 0; };
-  20% { opacity: 1; };
-  80% { opacity: 1; };
-  100% { transform: translateX(50%); opacity: 0; };
-};
+@keyframes quote__mouse-down {
+  0% { transform: scale(1); };
+  100% { transform: scale(0.8); };
+}

@@ -433,9 +433,9 @@ footer.navbar .nav__icon:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 
@@ -507,9 +507,7 @@ footer.navbar .nav__icon:hover {
 }
 
 .list__projects {
-  height: 100%;
-  -webkit-transition: height 2s;
-  transition: height 2s;
+  height: auto;
 }
 
 .projects {
@@ -723,8 +721,8 @@ footer.navbar .nav__icon:hover {
 .project-enter-1 {
   -webkit-animation-name: slide-in-from-left;
           animation-name: slide-in-from-left;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-delay: 0.08333s;
@@ -736,8 +734,8 @@ footer.navbar .nav__icon:hover {
 .project-enter-2 {
   -webkit-animation-name: slide-in-from-left;
           animation-name: slide-in-from-left;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-delay: 0.16667s;
@@ -749,8 +747,8 @@ footer.navbar .nav__icon:hover {
 .project-enter-3 {
   -webkit-animation-name: slide-in-from-left;
           animation-name: slide-in-from-left;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-delay: 0.25s;
@@ -762,8 +760,8 @@ footer.navbar .nav__icon:hover {
 .project-enter-4 {
   -webkit-animation-name: slide-in-from-left;
           animation-name: slide-in-from-left;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-delay: 0.33333s;
@@ -775,8 +773,8 @@ footer.navbar .nav__icon:hover {
 .project-enter-5 {
   -webkit-animation-name: slide-in-from-left;
           animation-name: slide-in-from-left;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-delay: 0.41667s;
@@ -788,8 +786,8 @@ footer.navbar .nav__icon:hover {
 .project-enter-6 {
   -webkit-animation-name: slide-in-from-left;
           animation-name: slide-in-from-left;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-delay: 0.5s;
@@ -801,8 +799,8 @@ footer.navbar .nav__icon:hover {
 .project-enter-7 {
   -webkit-animation-name: slide-in-from-left;
           animation-name: slide-in-from-left;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-delay: 0.58333s;
@@ -814,8 +812,8 @@ footer.navbar .nav__icon:hover {
 .project-enter-8 {
   -webkit-animation-name: slide-in-from-left;
           animation-name: slide-in-from-left;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-delay: 0.66667s;
@@ -827,8 +825,8 @@ footer.navbar .nav__icon:hover {
 .project-exit-1 {
   -webkit-animation-name: slide-out-to-right;
           animation-name: slide-out-to-right;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
   -webkit-animation-delay: 0.125s;
@@ -840,8 +838,8 @@ footer.navbar .nav__icon:hover {
 .project-exit-2 {
   -webkit-animation-name: slide-out-to-right;
           animation-name: slide-out-to-right;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
   -webkit-animation-delay: 0.25s;
@@ -853,8 +851,8 @@ footer.navbar .nav__icon:hover {
 .project-exit-3 {
   -webkit-animation-name: slide-out-to-right;
           animation-name: slide-out-to-right;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
   -webkit-animation-delay: 0.375s;
@@ -866,8 +864,8 @@ footer.navbar .nav__icon:hover {
 .project-exit-4 {
   -webkit-animation-name: slide-out-to-right;
           animation-name: slide-out-to-right;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
   -webkit-animation-delay: 0.5s;
@@ -879,8 +877,8 @@ footer.navbar .nav__icon:hover {
 .project-exit-5 {
   -webkit-animation-name: slide-out-to-right;
           animation-name: slide-out-to-right;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
   -webkit-animation-delay: 0.625s;
@@ -892,8 +890,8 @@ footer.navbar .nav__icon:hover {
 .project-exit-6 {
   -webkit-animation-name: slide-out-to-right;
           animation-name: slide-out-to-right;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
   -webkit-animation-delay: 0.75s;
@@ -905,8 +903,8 @@ footer.navbar .nav__icon:hover {
 .project-exit-7 {
   -webkit-animation-name: slide-out-to-right;
           animation-name: slide-out-to-right;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
   -webkit-animation-delay: 0.875s;
@@ -918,8 +916,8 @@ footer.navbar .nav__icon:hover {
 .project-exit-8 {
   -webkit-animation-name: slide-out-to-right;
           animation-name: slide-out-to-right;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
   -webkit-animation-delay: 1s;
@@ -994,16 +992,6 @@ footer.navbar .nav__icon:hover {
   .section__bandcamp {
     width: 100%;
     height: auto;
-  }
-}
-
-.section__bandcamp .section__header {
-  color: #1b1b20;
-}
-
-@media screen and (max-width: 952px) {
-  .section__bandcamp .section__header {
-    padding-left: 1rem;
   }
 }
 
@@ -1236,10 +1224,10 @@ footer.navbar .nav__icon:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border-bottom: 2px solid #d8d8ee;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1248,35 +1236,28 @@ footer.navbar .nav__icon:hover {
       -ms-flex-align: center;
           align-items: center;
   font-family: arial;
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
+  padding: 40px 0;
 }
 
-.recommendations #left-arrow {
-  font-size: 4rem;
-  color: red;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.recommendations #right-arrow {
-  font-size: 4rem;
-  color: red;
+@media screen and (max-width: 768px) {
+  .recommendations {
+    padding: 40px 5%;
+  }
 }
 
 .quote__layout {
   padding: 0rem;
   margin-bottom: 0rem;
-  padding: 2rem;
   width: auto;
-  min-height: 350px;
   margin: 0 auto;
-  margin-bottom: 1rem;
   position: relative;
 }
 
 .quote__layout .quote {
   text-align: center;
   font-size: 2.5rem;
-  padding: 1rem 1rem;
   max-width: 600px;
   margin: 0 auto;
   position: relative;
@@ -1296,7 +1277,7 @@ footer.navbar .nav__icon:hover {
 
 @media screen and (max-width: 576px) {
   .quote__layout .quote {
-    font-size: 1.75rem;
+    font-size: 1.4rem;
     padding: 1rem 0rem;
   }
 }
@@ -1344,7 +1325,6 @@ footer.navbar .nav__icon:hover {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding-top: 10px;
 }
 
 @media screen and (max-width: 576px) {
@@ -1381,105 +1361,87 @@ footer.navbar .nav__icon:hover {
   margin-left: 1rem;
 }
 
-.arrow-container {
-  width: 60px;
-  height: 100px;
-  font-size: 6rem;
-  margin: 0 auto;
-  text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 4rem;
-  cursor: pointer;
-}
-
-.arrow-container .push-arrow {
-  width: 100%;
-  height: 100%;
-  font-family: arial;
-  margin: 0 auto;
-  padding: 0;
-}
-
-.arrow-1 {
-  -webkit-animation-name: push-animation;
-          animation-name: push-animation;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 0.08333s;
-          animation-delay: 0.08333s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-
-.arrow-2 {
-  -webkit-animation-name: push-animation;
-          animation-name: push-animation;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 0.16667s;
-          animation-delay: 0.16667s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-
-.arrow-3 {
-  -webkit-animation-name: push-animation;
-          animation-name: push-animation;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 0.25s;
-          animation-delay: 0.25s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-
-.arrow-1 {
-  color: #e7e7f1;
-}
-
-.arrow-2 {
-  color: #d8d8ee;
-}
-
-.arrow-3 {
-  color: #3d3d5a;
-}
-
-@-webkit-keyframes push-animation {
-  0% {
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    opacity: 0;
+@media screen and (max-width: 576px) {
+  .quote__layout .quote-author-photo {
+    width: 180px;
   }
-  20% {
-    opacity: 1;
+}
+
+.quote__mouse-down {
+  -webkit-animation-name: quote__mouse-down;
+          animation-name: quote__mouse-down;
+  -webkit-animation-duration: 0.25s;
+          animation-duration: 0.25s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.quote__mouse-up {
+  -webkit-animation-name: quote__mouse-up;
+          animation-name: quote__mouse-up;
+  -webkit-animation-duration: 0.25s;
+          animation-duration: 0.25s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+@-webkit-keyframes quote__mouse-up {
+  0% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
   80% {
-    opacity: 1;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
   100% {
-    -webkit-transform: translateX(50%);
-            transform: translateX(50%);
-    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
-@keyframes push-animation {
+@keyframes quote__mouse-up {
   0% {
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
   80% {
-    opacity: 1;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
   100% {
-    -webkit-transform: translateX(50%);
-            transform: translateX(50%);
-    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes quote__mouse-down {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+@keyframes quote__mouse-down {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
 }
 
@@ -1694,17 +1656,9 @@ footer.navbar .nav__icon:hover {
   margin-top: 0;
 }
 
-@media screen and (max-width: 952px) {
-  * body .container {
-    margin-top: 4rem;
-  }
-}
-
 * body section.section__body {
   color: #1b1b20;
-  padding: 5%;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  padding: 4.2rem;
 }
 
 @media screen and (max-width: 952px) {
@@ -1722,22 +1676,6 @@ footer.navbar .nav__icon:hover {
 @media screen and (max-width: 576px) {
   * body section.section__body {
     width: 90%;
-  }
-}
-
-* body section.section__body .section__header {
-  display: inline-block;
-  font-family: 'Fira Sans', arial, sans-serif;
-  font-size: 2.5rem;
-  color: #d1d1d1;
-  margin-bottom: 10px;
-  letter-spacing: 1px;
-  font-weight: 900;
-}
-
-@media screen and (max-width: 952px) {
-  * body section.section__body .section__header {
-    font-size: 2rem;
   }
 }
 
@@ -1764,14 +1702,32 @@ footer.navbar .nav__icon:hover {
   }
 }
 
-* body section.section__body .section__copy {
-  font-size: 1.05rem;
-  padding-bottom: 12px;
-  padding-left: 1rem;
+* body .section__header {
+  display: inline-block;
+  font-family: 'Fira Sans', arial, sans-serif;
+  font-size: 2.5rem;
+  color: #d1d1d1;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  font-weight: 900;
 }
 
 @media screen and (max-width: 952px) {
-  * body section.section__body .section__copy {
+  * body .section__header {
+    font-size: 2rem;
+  }
+}
+
+* body .section__copy {
+  font-size: 1.05rem;
+  padding-bottom: 12px;
+  padding-left: 1rem;
+  color: #1b1b20;
+  font-family: inherit;
+}
+
+@media screen and (max-width: 952px) {
+  * body .section__copy {
     font-size: 1rem;
   }
 }
