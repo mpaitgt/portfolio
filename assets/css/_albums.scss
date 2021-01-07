@@ -72,12 +72,14 @@
   animation-duration: 0.5s;
   animation-iteration-count: 1; 
   animation-fill-mode: forwards;
+  animation-timing-function: linear;
 }
 .album-in {
   animation-name: album-in;
   animation-duration: 0.5s;
   animation-iteration-count: 1; 
   animation-fill-mode: forwards;
+  animation-timing-function: linear;
 }
 
 @keyframes album-out {

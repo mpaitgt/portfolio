@@ -729,6 +729,8 @@ footer.navbar .nav__icon:hover {
           animation-delay: 0.08333s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 .project-enter-2 {
@@ -742,6 +744,8 @@ footer.navbar .nav__icon:hover {
           animation-delay: 0.16667s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 .project-enter-3 {
@@ -755,6 +759,8 @@ footer.navbar .nav__icon:hover {
           animation-delay: 0.25s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 .project-enter-4 {
@@ -768,6 +774,8 @@ footer.navbar .nav__icon:hover {
           animation-delay: 0.33333s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 .project-enter-5 {
@@ -781,6 +789,8 @@ footer.navbar .nav__icon:hover {
           animation-delay: 0.41667s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 .project-enter-6 {
@@ -794,6 +804,8 @@ footer.navbar .nav__icon:hover {
           animation-delay: 0.5s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 .project-enter-7 {
@@ -807,6 +819,8 @@ footer.navbar .nav__icon:hover {
           animation-delay: 0.58333s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 .project-enter-8 {
@@ -820,6 +834,8 @@ footer.navbar .nav__icon:hover {
           animation-delay: 0.66667s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 .project-exit-1 {
@@ -833,6 +849,8 @@ footer.navbar .nav__icon:hover {
           animation-delay: 0.125s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 .project-exit-2 {
@@ -846,6 +864,8 @@ footer.navbar .nav__icon:hover {
           animation-delay: 0.25s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 .project-exit-3 {
@@ -859,6 +879,8 @@ footer.navbar .nav__icon:hover {
           animation-delay: 0.375s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 .project-exit-4 {
@@ -872,6 +894,8 @@ footer.navbar .nav__icon:hover {
           animation-delay: 0.5s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 .project-exit-5 {
@@ -885,6 +909,8 @@ footer.navbar .nav__icon:hover {
           animation-delay: 0.625s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 .project-exit-6 {
@@ -898,6 +924,8 @@ footer.navbar .nav__icon:hover {
           animation-delay: 0.75s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 .project-exit-7 {
@@ -911,6 +939,8 @@ footer.navbar .nav__icon:hover {
           animation-delay: 0.875s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 .project-exit-8 {
@@ -924,6 +954,8 @@ footer.navbar .nav__icon:hover {
           animation-delay: 1s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 @-webkit-keyframes slide-in-from-left {
@@ -1161,6 +1193,8 @@ footer.navbar .nav__icon:hover {
           animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 .album-in {
@@ -1172,6 +1206,8 @@ footer.navbar .nav__icon:hover {
           animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
 
 @-webkit-keyframes album-out {

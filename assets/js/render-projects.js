@@ -38,17 +38,17 @@ let myProjects = [
     "github_link": "https://www.github.com/mpaitgt/recordshare",
     "production_link": "https://www.recordshare.herokuapp.com"
   },
-  {
-    "id": 101,
-    "title": "Alternative Doguh",
-    "image": "./assets/images/project-images/recordshare.JPG",
-    "technologies": [
-      "React.js", "Emotion.css"
-    ],
-    "description": "",
-    "github_link": "https://www.github.com/mpaitgt",
-    "production_link": "https://www.recordshare.herokuapp.com"
-  },
+  // {
+  //   "id": 101,
+  //   "title": "Alternative Doguh",
+  //   "image": "./assets/images/project-images/recordshare.JPG",
+  //   "technologies": [
+  //     "React.js", "Emotion.css"
+  //   ],
+  //   "description": "",
+  //   "github_link": "https://www.github.com/mpaitgt",
+  //   "production_link": "https://www.recordshare.herokuapp.com"
+  // },
   {
     "id": 2,
     "title": "Ecohabit",

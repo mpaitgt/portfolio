@@ -44,7 +44,7 @@ async function renderQuote(testimonial) {
     this.classList.add('quote__mouse-down');
   })
 
-  document.querySelector('.quote').addEventListener('mouseup', function() {
+  document.querySelector('.quote__layout').addEventListener('mouseup', function() {
     selectRandomQuote(myTestimonials);
   })
 }

@@ -118,6 +118,7 @@
     animation-fill-mode: forwards;
     animation-delay: #{$i / 12}s;
     animation-iteration-count: 1;
+    animation-timing-function: linear;
   }
 }
 
@@ -128,6 +129,7 @@
     animation-fill-mode: backwards;
     animation-delay: #{$i / 8}s;
     animation-iteration-count: 1;
+    animation-timing-function: linear;
   }
 }
 
