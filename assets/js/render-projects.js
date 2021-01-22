@@ -1,20 +1,31 @@
 window.onload = async function() {
   await renderSkills(0);
   attachSkillEvent();
-  await renderProjects(myProjects.filter((item, index) => index < 3)); 
+  await renderProjects(myProjects.filter((item, index) => index <= 3)); 
 }
 
 let myProjects = [
   {
     "id": 99,
     "title": "Bearclaw",
-    "image": "./assets/images/project-images/sass-logo.jpg",
+    "image": "./assets/images/project-images/bearclaw.jpg",
     "technologies": [
-      "HTML & CSS", "jQuery", "jQuery UI", "SCSS/SASS", "PHP", "MySQL"
+      "HTML & CSS", "JavaScript", "jQuery", "SCSS/SASS", "PHP", "MySQL"
     ],
-    "description": "Implementing front-end UI in code, bringing an organized design system to recruiting software currently in development.",
+    "description": "Designing and developing software's UI and building out new features like Kanban and custom reports. This software is currently in development.",
     "github_link": "",
     "production_link": ""
+  },
+  {
+    "id": 101,
+    "title": "Alternative Dough",
+    "image": "./assets/images/project-images/alt-dough.JPG",
+    "technologies": [
+      "React.js", "Emotion.css", "Webpack"
+    ],
+    "description": "Gluten-free baking is best when you're using the right mix of flours. That's why I created this flour calculator with React, allowing users to quickly generate custom flour blends.",
+    "github_link": "https://www.github.com/mpaitgt/alt-dough-flour-calculator",
+    "production_link": "https://www.alternativedough.com"
   },
   {
     "id": 98,
@@ -23,9 +34,20 @@ let myProjects = [
     "technologies": [
       "HTML & CSS", "CSS Grid", "SCSS/SASS"
     ],
-    "description": "Re-designing the front-end UI and bringing an organized design system to this used car parts software meant to streamline the online selling process.",
+    "description": "Re-designed the home page of this used parts software which streamlines the online selling process.",
     "github_link": "",
     "production_link": "https://www.salvageboy.com"
+  },
+  {
+    "id": 1011,
+    "title": "Drum Machine",
+    "image": "./assets/images/project-images/drum-machine.JPG",
+    "technologies": [
+      "HTML & CSS", "SCSS/SASS"
+    ],
+    "description": "Writing and producing music was my first passion - so naturally I couldn't help sampling some of the songs I've written to create this drum machine.",
+    "github_link": "https://www.github.com/mpaitgt/drum-machine",
+    "production_link": "https://www.mpaitgt.github.io/drum-machine"
   },
   {
     "id": 1,
@@ -38,17 +60,6 @@ let myProjects = [
     "github_link": "https://www.github.com/mpaitgt/recordshare",
     "production_link": "https://www.recordshare.herokuapp.com"
   },
-  // {
-  //   "id": 101,
-  //   "title": "Alternative Doguh",
-  //   "image": "./assets/images/project-images/recordshare.JPG",
-  //   "technologies": [
-  //     "React.js", "Emotion.css"
-  //   ],
-  //   "description": "",
-  //   "github_link": "https://www.github.com/mpaitgt",
-  //   "production_link": "https://www.recordshare.herokuapp.com"
-  // },
   {
     "id": 2,
     "title": "Ecohabit",
@@ -76,7 +87,7 @@ let myProjects = [
     "title": "The Floor Is Yours",
     "image": "./assets/images/project-images/tfiy.JPG",
     "technologies": [
-      "React.js", "Material UI", "Email.js"
+      "React.js", "Material UI", "Google Maps API","Email.js"
     ],
     "description": "Freelance front-end website developed for a local dance studio using React.js and Material UI, while utilizing the Google Maps API for location display.",
     "github_link": "https://www.github.com/mpaitgt/tfiy",
