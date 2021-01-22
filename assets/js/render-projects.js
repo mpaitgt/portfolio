@@ -47,7 +47,7 @@ let myProjects = [
     ],
     "description": "Writing and producing music was my first passion - so naturally I couldn't help sampling some of the songs I've written to create this drum machine.",
     "github_link": "https://www.github.com/mpaitgt/drum-machine",
-    "production_link": "https://www.mpaitgt.github.io/drum-machine"
+    "production_link": "https://mpaitgt.github.io/drum-machine/"
   },
   {
     "id": 1,
