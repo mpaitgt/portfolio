@@ -8,7 +8,7 @@ let myProjects = [
   {
     "id": 99,
     "title": "Bearclaw",
-    "image": "./assets/images/project-images/bearclaw.jpg",
+    "image": "./assets/images/project-images/bearclaw.JPG",
     "technologies": [
       "HTML & CSS", "JavaScript", "jQuery", "SCSS/SASS", "PHP", "MySQL"
     ],
