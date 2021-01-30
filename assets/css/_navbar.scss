@@ -83,12 +83,13 @@ nav.navbar {
   }
   .nav__icons {
     @include flex(row, center, center);
-    padding: 0;
     list-style: none;
     .nav__icon {
       @include icon_hover(24px, invert(0.5), invert(1));
       align-self: center;
       justify-self: center;
+      margin: 0 10px;
+      transform: translateY(3px);
       @include nav-collapse {
         @include icon_hover(38px, invert(0.5), invert(1));
       }
@@ -140,6 +141,7 @@ footer.navbar {
   .nav__ul {
     @include flex(row, center, center);
     list-style-type: none;
+    transform: translateY(3px);
     @include mobile {
       @include flex(row, space-around, center);
       width: 100%;

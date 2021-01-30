@@ -221,7 +221,6 @@ nav.navbar .nav__icons {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0;
   list-style: none;
 }
 
@@ -241,6 +240,9 @@ nav.navbar .nav__icons .nav__icon {
       align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
+  margin: 0 10px;
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
 }
 
 nav.navbar .nav__icons .nav__icon:hover {
@@ -376,6 +378,8 @@ footer.navbar .nav__ul {
       -ms-flex-align: center;
           align-items: center;
   list-style-type: none;
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
 }
 
 @media screen and (max-width: 576px) {
@@ -719,243 +723,83 @@ footer.navbar .nav__icon:hover {
 }
 
 .project-enter-1 {
-  -webkit-animation-name: slide-in-from-left;
-          animation-name: slide-in-from-left;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.08333s;
-          animation-delay: 0.08333s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation: slide-in-from-left 0.5s linear 0.08333s 1 forwards;
+          animation: slide-in-from-left 0.5s linear 0.08333s 1 forwards;
 }
 
 .project-enter-2 {
-  -webkit-animation-name: slide-in-from-left;
-          animation-name: slide-in-from-left;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.16667s;
-          animation-delay: 0.16667s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation: slide-in-from-left 0.5s linear 0.16667s 1 forwards;
+          animation: slide-in-from-left 0.5s linear 0.16667s 1 forwards;
 }
 
 .project-enter-3 {
-  -webkit-animation-name: slide-in-from-left;
-          animation-name: slide-in-from-left;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.25s;
-          animation-delay: 0.25s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation: slide-in-from-left 0.5s linear 0.25s 1 forwards;
+          animation: slide-in-from-left 0.5s linear 0.25s 1 forwards;
 }
 
 .project-enter-4 {
-  -webkit-animation-name: slide-in-from-left;
-          animation-name: slide-in-from-left;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.33333s;
-          animation-delay: 0.33333s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation: slide-in-from-left 0.5s linear 0.33333s 1 forwards;
+          animation: slide-in-from-left 0.5s linear 0.33333s 1 forwards;
 }
 
 .project-enter-5 {
-  -webkit-animation-name: slide-in-from-left;
-          animation-name: slide-in-from-left;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.41667s;
-          animation-delay: 0.41667s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation: slide-in-from-left 0.5s linear 0.41667s 1 forwards;
+          animation: slide-in-from-left 0.5s linear 0.41667s 1 forwards;
 }
 
 .project-enter-6 {
-  -webkit-animation-name: slide-in-from-left;
-          animation-name: slide-in-from-left;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation: slide-in-from-left 0.5s linear 0.5s 1 forwards;
+          animation: slide-in-from-left 0.5s linear 0.5s 1 forwards;
 }
 
 .project-enter-7 {
-  -webkit-animation-name: slide-in-from-left;
-          animation-name: slide-in-from-left;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.58333s;
-          animation-delay: 0.58333s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation: slide-in-from-left 0.5s linear 0.58333s 1 forwards;
+          animation: slide-in-from-left 0.5s linear 0.58333s 1 forwards;
 }
 
 .project-enter-8 {
-  -webkit-animation-name: slide-in-from-left;
-          animation-name: slide-in-from-left;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.66667s;
-          animation-delay: 0.66667s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation: slide-in-from-left 0.5s linear 0.66667s 1 forwards;
+          animation: slide-in-from-left 0.5s linear 0.66667s 1 forwards;
 }
 
 .project-exit-1 {
-  -webkit-animation-name: slide-out-to-right;
-          animation-name: slide-out-to-right;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
-  -webkit-animation-delay: 0.125s;
-          animation-delay: 0.125s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation: slide-out-to-right 0.5s linear 0.125s 1 backwards;
+          animation: slide-out-to-right 0.5s linear 0.125s 1 backwards;
 }
 
 .project-exit-2 {
-  -webkit-animation-name: slide-out-to-right;
-          animation-name: slide-out-to-right;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
-  -webkit-animation-delay: 0.25s;
-          animation-delay: 0.25s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation: slide-out-to-right 0.5s linear 0.25s 1 backwards;
+          animation: slide-out-to-right 0.5s linear 0.25s 1 backwards;
 }
 
 .project-exit-3 {
-  -webkit-animation-name: slide-out-to-right;
-          animation-name: slide-out-to-right;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
-  -webkit-animation-delay: 0.375s;
-          animation-delay: 0.375s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation: slide-out-to-right 0.5s linear 0.375s 1 backwards;
+          animation: slide-out-to-right 0.5s linear 0.375s 1 backwards;
 }
 
 .project-exit-4 {
-  -webkit-animation-name: slide-out-to-right;
-          animation-name: slide-out-to-right;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation: slide-out-to-right 0.5s linear 0.5s 1 backwards;
+          animation: slide-out-to-right 0.5s linear 0.5s 1 backwards;
 }
 
 .project-exit-5 {
-  -webkit-animation-name: slide-out-to-right;
-          animation-name: slide-out-to-right;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
-  -webkit-animation-delay: 0.625s;
-          animation-delay: 0.625s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation: slide-out-to-right 0.5s linear 0.625s 1 backwards;
+          animation: slide-out-to-right 0.5s linear 0.625s 1 backwards;
 }
 
 .project-exit-6 {
-  -webkit-animation-name: slide-out-to-right;
-          animation-name: slide-out-to-right;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
-  -webkit-animation-delay: 0.75s;
-          animation-delay: 0.75s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation: slide-out-to-right 0.5s linear 0.75s 1 backwards;
+          animation: slide-out-to-right 0.5s linear 0.75s 1 backwards;
 }
 
 .project-exit-7 {
-  -webkit-animation-name: slide-out-to-right;
-          animation-name: slide-out-to-right;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
-  -webkit-animation-delay: 0.875s;
-          animation-delay: 0.875s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation: slide-out-to-right 0.5s linear 0.875s 1 backwards;
+          animation: slide-out-to-right 0.5s linear 0.875s 1 backwards;
 }
 
 .project-exit-8 {
-  -webkit-animation-name: slide-out-to-right;
-          animation-name: slide-out-to-right;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation: slide-out-to-right 0.5s linear 1s 1 backwards;
+          animation: slide-out-to-right 0.5s linear 1s 1 backwards;
 }
 
 @-webkit-keyframes slide-in-from-left {
