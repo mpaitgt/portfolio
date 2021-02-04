@@ -310,6 +310,11 @@ nav.navbar .toggle-nav {
   transition: all 0.25s;
 }
 
+body.dark-mode nav.navbar {
+  background: #f3f3f3;
+  color: #1b1b20;
+}
+
 footer.navbar {
   display: -webkit-box;
   display: -ms-flexbox;

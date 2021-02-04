@@ -1,5 +1,3 @@
-const navItems = document.querySelectorAll('.nav__link');
-
 navItems.forEach((item, index, array) => {
   let lastItemIndex = array.length - 1;
 

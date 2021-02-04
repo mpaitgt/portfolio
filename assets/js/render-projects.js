@@ -232,7 +232,8 @@ setTimeout(function() {
       </li>
     `
   }).join('');
-}, 1000)
+}, 1000);
+
   document.querySelector('.projects-listed').innerHTML = `
     ${
       arr.length === 1

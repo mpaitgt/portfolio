@@ -118,6 +118,13 @@ nav.navbar {
   }
 }
 
+body.dark-mode {
+  nav.navbar {
+    background: $white;
+    color: $blue__dark;
+  }
+}
+
 footer.navbar {
   @include flex(row, space-around, center);
   background: $blue__dark;
