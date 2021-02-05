@@ -3,7 +3,7 @@
 
 nav.navbar {
   @include flex(row, space-around, center);
-  z-index: 999;
+  z-index: 1;
   background: $blue__dark;
   color: $white;
   padding: 1rem;
@@ -47,6 +47,7 @@ nav.navbar {
       transform: translateY(-200%);
       width: 100%;
       transition: all 0.25s;
+      z-index: -99;
     }
   }
   .nav__ul {
@@ -130,6 +131,7 @@ nav.navbar {
   .toggle-nav {
     transform: translateY(0%);
     transition: all 0.25s;
+    // animation: fade-in 0.25s linear 0s 1 forwards;
   }
 }
 
@@ -175,3 +177,9 @@ footer.navbar {
     @include icon_hover(32px, invert(0.5), invert(1));
   }
 }
+
+// @keyframes fade-in {
+//   0% { opacity: 0; };
+//   50% {  opacity: 0 };
+//   100% { opacity: 1; };
+// }
