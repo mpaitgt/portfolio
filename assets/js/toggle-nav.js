@@ -1,6 +1,6 @@
 const 
   burger = document.getElementById('burger'),
-  navContents = document.querySelector('.nav__ul'),
+  navContents = document.querySelector('.mobile-nav__container'),
   navItems = document.querySelectorAll('.nav__link');
 
 burger.addEventListener('click', function(e) {

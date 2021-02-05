@@ -44,7 +44,7 @@ nav.navbar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 1;
+  z-index: 999;
   background: #1b1b20;
   color: #f3f3f3;
   padding: 1rem;
@@ -83,6 +83,7 @@ nav.navbar .nav__header {
   font-family: 'Fira Sans', arial, sans-serif;
   font-size: 1.8rem;
   letter-spacing: 1px;
+  z-index: 99;
   cursor: pointer;
 }
 
@@ -96,6 +97,38 @@ nav.navbar .foot__copyright {
   font-size: 0.9em;
   letter-spacing: -0.5px;
   font-weight: 700;
+}
+
+nav.navbar .mobile-nav__container {
+  background: #1b1b20;
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 952px) {
+  nav.navbar .mobile-nav__container {
+    margin-top: 50px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+    width: 100%;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+  }
 }
 
 nav.navbar .nav__ul {
@@ -127,20 +160,28 @@ nav.navbar .nav__ul {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    position: fixed;
-    right: 0;
-    top: 0;
-    background: #1b1b20;
-    height: 100vh;
-    padding: 3rem;
-    -webkit-transform: translateX(200%);
-            transform: translateX(200%);
-    -webkit-transition: all 0.25s;
-    transition: all 0.25s;
-    z-index: -1;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 2rem 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  nav.navbar .nav__ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
@@ -153,7 +194,8 @@ nav.navbar .nav__ul .nav__link {
 
 @media screen and (max-width: 952px) {
   nav.navbar .nav__ul .nav__link {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
+    padding-left: 2rem;
   }
 }
 
@@ -222,6 +264,26 @@ nav.navbar .nav__icons {
       -ms-flex-align: center;
           align-items: center;
   list-style: none;
+  padding-right: 2rem;
+}
+
+@media screen and (max-width: 952px) {
+  nav.navbar .nav__icons {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 nav.navbar .nav__icons .nav__icon {
@@ -235,11 +297,6 @@ nav.navbar .nav__icons .nav__icon {
           transform-origin: center;
   -webkit-filter: invert(0.5);
           filter: invert(0.5);
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
   margin: 0 10px;
   -webkit-transform: translateY(3px);
           transform: translateY(3px);
@@ -259,7 +316,7 @@ nav.navbar .nav__icons .nav__icon:hover {
 @media screen and (max-width: 952px) {
   nav.navbar .nav__icons .nav__icon {
     margin: 0px 20px;
-    width: 38px;
+    width: 30px;
     -webkit-transition: -webkit-transform 0.25s ease-in-out;
     transition: -webkit-transform 0.25s ease-in-out;
     transition: transform 0.25s ease-in-out;
@@ -268,6 +325,7 @@ nav.navbar .nav__icons .nav__icon:hover {
             transform-origin: center;
     -webkit-filter: invert(0.5);
             filter: invert(0.5);
+    margin: 5px 0;
   }
   nav.navbar .nav__icons .nav__icon:hover {
     -webkit-transform: scale(1.25);
@@ -304,8 +362,8 @@ nav.navbar #burger .line {
 }
 
 nav.navbar .toggle-nav {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }

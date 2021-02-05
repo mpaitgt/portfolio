@@ -3,7 +3,7 @@
 
 nav.navbar {
   @include flex(row, space-around, center);
-  z-index: 1;
+  z-index: 999;
   background: $blue__dark;
   color: $white;
   padding: 1rem;
@@ -24,6 +24,7 @@ nav.navbar {
     font-family: 'Fira Sans', arial, sans-serif;
     font-size: 1.8rem;
     letter-spacing: 1px;
+    z-index: 99;
     cursor: pointer;
     @include mobile {
       font-size: 1.5rem;
@@ -34,27 +35,37 @@ nav.navbar {
     letter-spacing: -0.5px;
     font-weight: 700;
   }
+  .mobile-nav__container {
+    background: $blue__dark;
+    z-index: -1;
+    @include flex(row, space-between, center);
+    @include nav-collapse {
+      margin-top: 50px;
+      position: fixed;
+      right: 0;
+      top: 0;
+      transform: translateY(-200%);
+      width: 100%;
+      transition: all 0.25s;
+    }
+  }
   .nav__ul {
     @include flex(row, center, center);
     list-style: none;
     @include nav-collapse {
-      @include flex(column, space-evenly, flex-end);
-      position: fixed;
-      right: 0;
-      top: 0;
-      background: $blue__dark;
-      height: 100vh;
-      padding: 3rem;
-      transform: translateX(200%);
-      transition: all 0.25s;
-      z-index: -1;
+      @include flex(column, space-evenly, flex-start);
+      padding: 2rem 0;
+    }
+    @include mobile {
+      @include flex(column, space-evenly, flex-start);
     }
     .nav__link {
       padding: 8px 12px;
       cursor: pointer;
       transition: all 0.25s;
       @include nav-collapse {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
+        padding-left: 2rem;
       }
       &:hover {
         transform: scale(1.1);
@@ -84,14 +95,18 @@ nav.navbar {
   .nav__icons {
     @include flex(row, center, center);
     list-style: none;
+    padding-right: 2rem;
+    @include nav-collapse {
+      height: 100%;
+      @include flex(column, center, center);
+    }
     .nav__icon {
       @include icon_hover(24px, invert(0.5), invert(1));
-      align-self: center;
-      justify-self: center;
       margin: 0 10px;
       transform: translateY(3px);
       @include nav-collapse {
-        @include icon_hover(38px, invert(0.5), invert(1));
+        @include icon_hover(30px, invert(0.5), invert(1));
+        margin: 5px 0;
       }
     }
   }
@@ -113,7 +128,7 @@ nav.navbar {
     }
   }
   .toggle-nav {
-    transform: translateX(0%);
+    transform: translateY(0%);
     transition: all 0.25s;
   }
 }
