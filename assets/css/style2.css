@@ -265,7 +265,6 @@ nav.navbar .nav__icons {
       -ms-flex-align: center;
           align-items: center;
   list-style: none;
-  padding-right: 2rem;
 }
 
 @media screen and (max-width: 952px) {
@@ -378,10 +377,10 @@ footer.navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
@@ -394,6 +393,7 @@ footer.navbar {
           box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.1);
   margin-bottom: 10px;
   position: relative;
+  min-height: 400px;
 }
 
 @media screen and (max-width: 952px) {
@@ -488,6 +488,22 @@ footer.navbar .nav__icon:hover {
   transition: all 0.25s;
   -webkit-transform-origin: center;
           transform-origin: center;
+}
+
+footer.navbar .footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
 }
 
 .about__content {
@@ -1582,6 +1598,8 @@ footer.navbar .nav__icon:hover {
 * {
   padding: 0;
   margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 * body {
@@ -1691,5 +1709,106 @@ footer.navbar .nav__icon:hover {
 * body img.img {
   -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  margin-bottom: 2rem;
+}
+
+form button[type=submit] {
+  width: 400px;
+  border: none;
+  padding: 0.4rem;
+  font-family: inherit;
+  background: #3d3d5a;
+  color: #f3f3f3;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form button[type=submit]:hover {
+  background: #666697;
+}
+
+@media screen and (max-width: 576px) {
+  form {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 1rem 0;
+  width: 400px;
+  background: #e7e7f1;
+  position: relative;
+  margin-top: 2.4rem;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.input-container label.form-label {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  color: #1b1b20;
+  font-weight: 100;
+  font-size: 16px;
+  padding: 0.4rem 0.8rem;
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  cursor: text;
+}
+
+.input-container label.form-label__focus {
+  -webkit-transform: translate(-5px, -32px);
+          transform: translate(-5px, -32px);
+  color: #f3f3f3;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.input-container input.form-field,
+.input-container textarea.form-field {
+  padding: 0.4rem 0.8rem;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: none;
+  font-size: 18px;
+  font-family: inherit;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 576px) {
+  .input-container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.input-container__hover {
+  background: #f3f3f3;
+  margin-top: 40px;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 /*# sourceMappingURL=style2.css.map */

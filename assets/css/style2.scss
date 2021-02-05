@@ -10,9 +10,11 @@
 @import '_loader';
 @import '_media-queries';
 
+
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   body {
     font-family: 'Tajawal', arial, sans-serif;
     width: 950px;
@@ -90,8 +92,4 @@
   }
 }
 
-
-
-
-
-
+@import './input';

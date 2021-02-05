@@ -96,7 +96,6 @@ nav.navbar {
   .nav__icons {
     @include flex(row, center, center);
     list-style: none;
-    padding-right: 2rem;
     @include nav-collapse {
       height: 100%;
       @include flex(column, center, center);
@@ -143,13 +142,14 @@ body.dark-mode {
 }
 
 footer.navbar {
-  @include flex(row, space-around, center);
+  @include flex(column, space-around, center);
   background: $blue__dark;
   color: $white;
   padding: 1rem;
   box-shadow: 2px 2px 12px 2px rgba(0,0,0,0.1);
   margin-bottom: 10px;
   position: relative;
+  min-height: 400px;
   @include nav-collapse {
     margin-bottom: 0;
   }
@@ -175,6 +175,10 @@ footer.navbar {
   }
   .nav__icon {
     @include icon_hover(32px, invert(0.5), invert(1));
+  }
+  .footer__social {
+    @include flex(row, space-around, center);
+    width: 100%;
   }
 }
 
