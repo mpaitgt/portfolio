@@ -1,9 +1,15 @@
 @import '_variables';
 @import '_media-queries';
 
-.section__bandcamp {
-  width: 800px;
-  margin: 4rem auto 0 auto;
+.bandcamp {
+  margin: 4rem;
+  padding: 15% 5%;
+  border-radius: 40% 60%;
+  background: $blue__light;
+  box-shadow: 34px 4px 0px 20px rgba($blue__light-x, 1); 
+  animation: bandcamp 3s ease-in-out 0s infinite forwards;
+  // box-shadow: inset 0px 0px 19px 14px rgba(255,255,255,0.6);
+  // margin: 4rem auto 4rem auto;
   z-index: -1;
   @include nav-collapse {
     width: 100%;
@@ -18,21 +24,30 @@
 
 .album-carousel {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   margin: auto;
   .album-slide {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
+    overflow: visible;
     @include mobile {
       grid-template-columns: 50% 50%;
     }
     .album-cover {
-      transform: translateY(200%);
+      // transform: translateY(200%);
       width: 100%;
+      padding: 5px;
       transition: filter 1s ease-out;
       filter: grayscale(20%);
-      transition: filter 0.25s;
+      box-shadow: none;
+      // box-shadow: 2px 2px 12px -4px rgba(255,255,255,0.2);
       cursor: pointer;
+      transition: all 0.25s;
+      &:hover {
+        transform: scale(1.2);
+        filter: grayscale(10%);
+        transition: all 0.25s;
+      }
       @include mobile {
         transform: translateY(0%);
       }
@@ -48,45 +63,66 @@
   transition: all 0.25s;
 }
 
-// sequential animation
-@for $i from 1 through 4 {
-  .album-#{$i} {
-    animation-name: slide-up;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(0.05, 0.1, 0.25, 1);
-    animation-delay: #{$i / 12}s;
-    animation-iteration-count: 1;
-  }
+@keyframes bandcamp {
+  0% { 
+    transform: translate(0px, 0px) rotate(2deg);
+    box-shadow: 10px 10px 0px 20px rgba($blue__light-x, 1); 
+   };
+  //  25% {
+  //   transform: translate(20px, 0px);
+  //  };
+   50% {
+    transform: translate(-40px, 20px) rotate(-2deg);
+    box-shadow: -10px -10px 0px 20px rgba($blue__light-x, 1); 
+   };
+  //  70% {
+  //   transform: translate(0px, 0px);
+  //  };
+  100% { 
+    transform: translate(0px, 0px) rotate(2deg);
+    box-shadow: 10px 10px 0px 20px rgba($blue__light-x, 1); 
+   };
 }
 
-@keyframes slide-up {
-0% { transform: scale(0.8) translateY(200px) };
-30% { transform: scale(0.8) translateY(-20px) };
-48% { transform: translateY(0px) };
-100% { transform: scale(1) translateY(0px) };
-}
+// // sequential animation
+// @for $i from 1 through 4 {
+//   .album-#{$i} {
+//     animation-name: slide-up;
+//     animation-duration: 2s;
+//     animation-fill-mode: forwards;
+//     animation-timing-function: cubic-bezier(0.05, 0.1, 0.25, 1);
+//     animation-delay: #{$i / 12}s;
+//     animation-iteration-count: 1;
+//   }
+// }
 
-.album-out {
-  animation-name: album-out;
-  animation-duration: 0.5s;
-  animation-iteration-count: 1; 
-  animation-fill-mode: forwards;
-  animation-timing-function: linear;
-}
-.album-in {
-  animation-name: album-in;
-  animation-duration: 0.5s;
-  animation-iteration-count: 1; 
-  animation-fill-mode: forwards;
-  animation-timing-function: linear;
-}
+// @keyframes slide-up {
+// 0% { transform: scale(0.8) translateY(200px) };
+// 30% { transform: scale(0.8) translateY(-20px) };
+// 48% { transform: translateY(0px) };
+// 100% { transform: scale(1) translateY(0px) };
+// }
 
-@keyframes album-out {
-  0% { opacity: 1; transform: scale(1); };
-  100% { opacity: 0; transform: scale(0) };
-}
-@keyframes album-in {
-  0% { opacity: 0; transform: scale(0); };
-  100% { opacity: 1; transform: scale(1) };
-}
+// .album-out {
+//   animation-name: album-out;
+//   animation-duration: 0.5s;
+//   animation-iteration-count: 1; 
+//   animation-fill-mode: forwards;
+//   animation-timing-function: linear;
+// }
+// .album-in {
+//   animation-name: album-in;
+//   animation-duration: 0.5s;
+//   animation-iteration-count: 1; 
+//   animation-fill-mode: forwards;
+//   animation-timing-function: linear;
+// }
+
+// @keyframes album-out {
+//   0% { opacity: 1; transform: scale(1); };
+//   100% { opacity: 0; transform: scale(0) };
+// }
+// @keyframes album-in {
+//   0% { opacity: 0; transform: scale(0); };
+//   100% { opacity: 1; transform: scale(1) };
+// }

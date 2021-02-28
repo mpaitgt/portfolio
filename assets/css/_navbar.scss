@@ -78,37 +78,6 @@ nav.navbar {
         }
       }
     }
-    .push-left {
-      transform: translateX(-6px);
-      transition: transform 0.25s ease-in-out;
-      @include nav-collapse {
-        transform: translateX(0px);
-      }
-    }
-    .push-right {
-      transform: translateX(6px);
-      transition: transform 0.25s ease-in-out;
-      @include nav-collapse {
-        transform: translateX(0px);
-      }
-    }
-  }
-  .nav__icons {
-    @include flex(row, center, center);
-    list-style: none;
-    @include nav-collapse {
-      height: 100%;
-      @include flex(column, center, center);
-    }
-    .nav__icon {
-      @include icon_hover(24px, invert(0.5), invert(1));
-      margin: 0 10px;
-      transform: translateY(3px);
-      @include nav-collapse {
-        @include icon_hover(30px, invert(0.5), invert(1));
-        margin: 5px 0;
-      }
-    }
   }
   #burger {
     display: none;
@@ -149,7 +118,6 @@ footer.navbar {
   box-shadow: 2px 2px 12px 2px rgba(0,0,0,0.1);
   margin-bottom: 10px;
   position: relative;
-  min-height: 400px;
   @include nav-collapse {
     margin-bottom: 0;
   }

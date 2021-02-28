@@ -1,0 +1,41 @@
+.work {
+  padding: 0% 5%;
+  border-bottom: 2px solid $blue__light-x;
+}
+
+.job-wrapper {
+  margin: 1rem auto;
+  padding: 1rem;
+  // box-shadow: $project_shadow;
+  // @include flex(row, space-between, flex-start);
+  .job-header {
+    // flex-grow: 2;
+    // @include flex(row, space-between, flex-end);
+    .job-headline-wrapper {
+      @include flex(row, flex-start, center);
+      img {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        opacity: 0.2;
+      }
+    }
+    width: 100%;
+    .job-title {
+      margin: 10px;
+      letter-spacing: 1px;
+      font-weight: 300;
+      font-size: 1.8rem;
+    }
+    .job-details {
+      margin: 0 10px 20px 10px;
+      font-weight: 300;
+      font-size: 1.2rem;
+    }
+  }
+  .job-description {
+    // flex-grow: 1;
+    display: none;
+    // opacity: ;
+    // transform: translate();
+  }
+}

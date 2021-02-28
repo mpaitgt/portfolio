@@ -1,12 +1,13 @@
 .recommendations {
   display: flex;
   flex-direction: column;
-  border-bottom: 2px solid $blue__light;
   justify-content: center;
   align-items: center;
   font-family: arial;
   transition: height 0.5s;
   padding: 60px 0;
+  border-top: 2px solid $blue__light-x;
+  // border-bottom: 2px solid $blue__light-x;
   @include tablet {
     padding: 40px 5%;
   }

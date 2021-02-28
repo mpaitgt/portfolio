@@ -1,21 +1,21 @@
 window.onload = async function() {
   await renderSkills(0);
   attachSkillEvent();
-  await renderProjects(myProjects.filter((item, index) => index <= 3)); 
+  await renderProjects(myProjects.filter((item, index) => index < 3)); 
 }
 
 let myProjects = [
-  {
-    "id": 99,
-    "title": "Bearclaw",
-    "image": "./assets/images/project-images/bearclaw.JPG",
-    "technologies": [
-      "HTML & CSS", "JavaScript", "jQuery", "SCSS/SASS", "PHP", "MySQL"
-    ],
-    "description": "Designing and developing software's UI and building out new features like Kanban and custom reports. This software is currently in development.",
-    "github_link": "",
-    "production_link": ""
-  },
+  // {
+  //   "id": 99,
+  //   "title": "Bearclaw",
+  //   "image": "./assets/images/project-images/bearclaw.JPG",
+  //   "technologies": [
+  //     "HTML & CSS", "JavaScript", "jQuery", "SCSS/SASS", "PHP", "MySQL"
+  //   ],
+  //   "description": "Designing and developing software's UI and building out new features like Kanban and custom reports. This software is currently in development.",
+  //   "github_link": "",
+  //   "production_link": ""
+  // },
   {
     "id": 101,
     "title": "Alternative Dough",
@@ -27,17 +27,17 @@ let myProjects = [
     "github_link": "https://www.github.com/mpaitgt/alt-dough-flour-calculator",
     "production_link": "https://www.alternativedough.com"
   },
-  {
-    "id": 98,
-    "title": "Salvage Boy",
-    "image": "./assets/images/project-images/salvage-boy.JPG",
-    "technologies": [
-      "HTML & CSS", "CSS Grid", "SCSS/SASS"
-    ],
-    "description": "Re-designed the home page of this used parts software which streamlines the online selling process.",
-    "github_link": "",
-    "production_link": "https://www.salvageboy.com"
-  },
+  // {
+  //   "id": 98,
+  //   "title": "Salvage Boy",
+  //   "image": "./assets/images/project-images/salvage-boy.JPG",
+  //   "technologies": [
+  //     "HTML & CSS", "CSS Grid", "SCSS/SASS"
+  //   ],
+  //   "description": "Re-designed the home page of this used parts software which streamlines the online selling process.",
+  //   "github_link": "",
+  //   "production_link": "https://www.salvageboy.com"
+  // },
   {
     "id": 1011,
     "title": "Drum Machine",
@@ -71,28 +71,28 @@ let myProjects = [
     "github_link": "https://www.github.com/jayjscotto/ecohabit",
     "production_link": "https://www.ecohabit.herokuapp.com"
   },
-  {
-    "id": 3,
-    "title": "Eton Controls",
-    "image": "./assets/images/project-images/eton-controls-image.JPG",
-    "technologies": [
-      "HTML & CSS", "SCSS/SASS", "JavaScript", "Email.js"
-    ],
-    "description": "Freelance front-end website developed for a local machine parts cleaning company. Developed using HTML, CSS, and Javascript.",
-    "github_link": "https://www.github.com/mpaitgt/eton-ctrls",
-    "production_link": "https://www.etoncontrols.com"
-  },
-  {
-    "id": 4,
-    "title": "The Floor Is Yours",
-    "image": "./assets/images/project-images/tfiy.JPG",
-    "technologies": [
-      "React.js", "Material UI", "Google Maps API","Email.js"
-    ],
-    "description": "Freelance front-end website developed for a local dance studio using React.js and Material UI, while utilizing the Google Maps API for location display.",
-    "github_link": "https://www.github.com/mpaitgt/tfiy",
-    "production_link": "https://www.thefloorisyoursdancecenter.com"
-  },
+  // {
+  //   "id": 3,
+  //   "title": "Eton Controls",
+  //   "image": "./assets/images/project-images/eton-controls-image.JPG",
+  //   "technologies": [
+  //     "HTML & CSS", "SCSS/SASS", "JavaScript", "Email.js"
+  //   ],
+  //   "description": "Freelance front-end website developed for a local machine parts cleaning company. Developed using HTML, CSS, and Javascript.",
+  //   "github_link": "https://www.github.com/mpaitgt/eton-ctrls",
+  //   "production_link": "https://www.etoncontrols.com"
+  // },
+  // {
+  //   "id": 4,
+  //   "title": "The Floor Is Yours",
+  //   "image": "./assets/images/project-images/tfiy.JPG",
+  //   "technologies": [
+  //     "React.js", "Material UI", "Google Maps API","Email.js"
+  //   ],
+  //   "description": "Freelance front-end website developed for a local dance studio using React.js and Material UI, while utilizing the Google Maps API for location display.",
+  //   "github_link": "https://www.github.com/mpaitgt/tfiy",
+  //   "production_link": "https://www.thefloorisyoursdancecenter.com"
+  // },
   {
     "id": 5,
     "title": "Deetz",

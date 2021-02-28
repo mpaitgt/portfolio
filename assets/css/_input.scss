@@ -2,20 +2,31 @@
 @import './variables';
 @import './media-queries';
 
+.form-wrapper {
+  // border-top: 2px solid $blue__light-x;
+  padding: 5%;
+  // width: 80%;
+  // margin: 0 auto;
+  // margin-bottom: 2rem;
+}
+
 form {
-  margin-bottom: 2rem;
+  width: 80%;
+  margin: 0 auto;
   button[type=submit] {
-    width: 400px;
+    margin: 10px 10px 10px auto;
     border: none;
-    padding: 0.4rem;
+    padding: 0.4rem 1rem;
     font-family: inherit;
     background: $blue__med;
     color: $white;
     font-size: 16px;
-    cursor: pointer;
-    &:hover {
-      background: lighten($blue__med, 20%);
-    }
+    z-index: 1;
+    opacity: 0.4;
+    cursor: default;
+    // &:hover {
+    //   background: lighten($blue__med, 20%);
+    // }
   }
   @include mobile {
     width: 90%;
@@ -26,12 +37,14 @@ form {
 
 .input-container {
   @include flex(column, flex-start, flex-start);
-  margin: 1rem 0;
-  width: 400px;
+  width: 100%;
   background: $blue__light-x;
   position: relative;
   margin-top: 2.4rem;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  &:first-child {
+    border-right: 2px solid $blue__light;
+  }
   label.form-label {
     position: absolute;
     top: 0;
@@ -42,13 +55,13 @@ form {
     font-size: 16px;
     padding: 0.4rem 0.8rem;
     transform: translateY(1px);
-    transition: all 0.25s ease-in-out;
+    transition: all 0.15s ease-in-out;
     cursor: text;
   }
   label.form-label__focus {
     transform: translate(-5px, -32px);
-    color: $white;
-    transition: all 0.25s ease-in-out;
+    color: $blue__med;
+    transition: all 0.15s ease-in-out;
   }
   input.form-field,
   textarea.form-field {
@@ -60,6 +73,8 @@ form {
     font-size: 18px;
     font-family: inherit;
     letter-spacing: 1px;
+    outline: none;
+    resize: none;
   }
   @include mobile {
     width: 90%;
@@ -70,5 +85,5 @@ form {
 .input-container__hover {
   background: $white;
   margin-top: 40px;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }

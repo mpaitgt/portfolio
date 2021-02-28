@@ -1,5 +1,4 @@
 const inputFields = document.querySelectorAll('.form-field');
-// const inputContainers = document.que
 
 inputFields.forEach(function(field, index, array) {
 
@@ -7,7 +6,6 @@ inputFields.forEach(function(field, index, array) {
     const label = e.target.previousElementSibling;
     const parentElement = e.target.parentElement;
     label.classList.add('form-label__focus');
-    // parentElement.classList.add('input-container__hover');
   })
 
   field.addEventListener('focusout', function(e) {
@@ -15,11 +13,18 @@ inputFields.forEach(function(field, index, array) {
     const parentElement = e.target.parentElement;
     if (e.target.value === '') {
       label.classList.remove('form-label__focus');
-      // parentElement.classList.remove('input-container__hover');
     }
   })
-})
 
-inputFields.forEach(function(field, index, array) {
+  field.addEventListener('keyup', function(e) {
+    console.log(array[0].value, array[1].value, array[2].value)
+    if (array[0].value !== '' && array[1].value !== '' && array[2].value !== '') {
+      document.getElementById('submit-btn').style.opacity = '1';
+      document.getElementById('submit-btn').style.cursor = 'pointer';
+    } else {
+      document.getElementById('submit-btn').style.opacity = '0.4';
+      document.getElementById('submit-btn').style.cursor = 'default';
+    }
+  })
 
-})
+});

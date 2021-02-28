@@ -1,13 +1,6 @@
 @import '_typography';
 @import '_mixins';
 @import '_variables';
-@import '_navbar';
-@import '_about';
-@import '_projects';
-@import '_albums';
-@import '_recommendations';
-@import '_modal';
-@import '_loader';
 @import '_media-queries';
 
 
@@ -35,9 +28,8 @@
     }
     section.section__body {
       color: $text;
-      padding: 5%;
-      // margin-bottom: 2rem;
-      // margin-top: 2rem;
+      // padding: 5%;
+      // border-bottom: 2px solid $blue__light-x;
       @include nav-collapse {
         margin: 0 auto;
       }
@@ -92,4 +84,57 @@
   }
 }
 
+ul.work-bullets {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  list-style: circle;
+  li {
+    margin: 10px 0;
+    span.bold {
+      font-weight: 900;
+      color: $blue__med;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.push-left {
+  transform: translateX(-6px);
+  transition: transform 0.25s ease-in-out;
+  @include nav-collapse {
+    transform: translateX(0px);
+  }
+}
+.push-right {
+  transform: translateX(6px);
+  transition: transform 0.25s ease-in-out;
+  @include nav-collapse {
+    transform: translateX(0px);
+  }
+}
+
+.push-left_hard {
+  transform: translateX(-30px);
+  transition: transform 0.25s ease-in-out;
+  @include nav-collapse {
+    transform: translateX(0px);
+  }
+}
+.push-right_hard {
+  transform: translateX(30px);
+  transition: transform 0.25s ease-in-out;
+  @include nav-collapse {
+    transform: translateX(0px);
+  }
+}
+
+@import '_navbar';
+@import '_about';
+@import '_work';
+@import '_projects';
+@import '_albums';
+@import '_recommendations';
+@import '_modal';
+@import '_loader';
 @import './input';
