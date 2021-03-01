@@ -1125,8 +1125,8 @@ footer.navbar .footer__social {
   background: #d8d8ee;
   -webkit-box-shadow: 34px 4px 0px 20px #e7e7f1;
           box-shadow: 34px 4px 0px 20px #e7e7f1;
-  -webkit-animation: bandcamp 3s ease-in-out 0s infinite forwards;
-          animation: bandcamp 3s ease-in-out 0s infinite forwards;
+  -webkit-animation: bandcamp2 3s ease-in-out 0s infinite forwards;
+          animation: bandcamp2 3s ease-in-out 0s infinite forwards;
   z-index: -1;
 }
 
@@ -1242,6 +1242,42 @@ footer.navbar .footer__social {
   100% {
     -webkit-transform: translate(0px, 0px) rotate(2deg);
             transform: translate(0px, 0px) rotate(2deg);
+    -webkit-box-shadow: 10px 10px 0px 20px #e7e7f1;
+            box-shadow: 10px 10px 0px 20px #e7e7f1;
+  }
+}
+
+@-webkit-keyframes bandcamp2 {
+  0% {
+    border-radius: 40% 60%;
+    -webkit-box-shadow: 10px 10px 0px 20px #e7e7f1;
+            box-shadow: 10px 10px 0px 20px #e7e7f1;
+  }
+  50% {
+    border-radius: 60% 40%;
+    -webkit-box-shadow: -20px -20px 0px 20px #e7e7f1;
+            box-shadow: -20px -20px 0px 20px #e7e7f1;
+  }
+  100% {
+    border-radius: 40% 60%;
+    -webkit-box-shadow: 10px 10px 0px 20px #e7e7f1;
+            box-shadow: 10px 10px 0px 20px #e7e7f1;
+  }
+}
+
+@keyframes bandcamp2 {
+  0% {
+    border-radius: 40% 60%;
+    -webkit-box-shadow: 10px 10px 0px 20px #e7e7f1;
+            box-shadow: 10px 10px 0px 20px #e7e7f1;
+  }
+  50% {
+    border-radius: 60% 40%;
+    -webkit-box-shadow: -20px -20px 0px 20px #e7e7f1;
+            box-shadow: -20px -20px 0px 20px #e7e7f1;
+  }
+  100% {
+    border-radius: 40% 60%;
     -webkit-box-shadow: 10px 10px 0px 20px #e7e7f1;
             box-shadow: 10px 10px 0px 20px #e7e7f1;
   }

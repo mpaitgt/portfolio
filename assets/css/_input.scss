@@ -24,9 +24,6 @@ form {
     z-index: 1;
     opacity: 0.4;
     cursor: default;
-    // &:hover {
-    //   background: lighten($blue__med, 20%);
-    // }
   }
   @include mobile {
     width: 90%;

@@ -7,7 +7,7 @@
   border-radius: 40% 60%;
   background: $blue__light;
   box-shadow: 34px 4px 0px 20px rgba($blue__light-x, 1); 
-  animation: bandcamp 3s ease-in-out 0s infinite forwards;
+  animation: bandcamp2 3s ease-in-out 0s infinite forwards;
   // box-shadow: inset 0px 0px 19px 14px rgba(255,255,255,0.6);
   // margin: 4rem auto 4rem auto;
   z-index: -1;
@@ -80,6 +80,21 @@
   //  };
   100% { 
     transform: translate(0px, 0px) rotate(2deg);
+    box-shadow: 10px 10px 0px 20px rgba($blue__light-x, 1); 
+   };
+}
+
+@keyframes bandcamp2 {
+  0% { 
+    border-radius: 40% 60%;
+    box-shadow: 10px 10px 0px 20px rgba($blue__light-x, 1); 
+   };
+   50% {
+    border-radius: 60% 40%;
+    box-shadow: -20px -20px 0px 20px rgba($blue__light-x, 1); 
+   };
+  100% { 
+    border-radius: 40% 60%;
     box-shadow: 10px 10px 0px 20px rgba($blue__light-x, 1); 
    };
 }
