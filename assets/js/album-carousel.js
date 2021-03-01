@@ -2,12 +2,13 @@ document.querySelector('input#submit-btn').addEventListener('click', function(e)
   e.preventDefault();
 
   const data = {
-    name: document.querySelector('input#your-name').value,
-    email: document.querySelector('input#your-email').value,
-    message: document.querySelector('textarea#your-message-to-me').value
+    name: document.querySelector('input#name').value,
+    email: document.querySelector('input#email').value,
+    message: document.querySelector('textarea#message').value
   }
-  
-  postData('/submit', data)
+
+  if (data.name && data.email && data.message) {
+    postData('/submit', data)
     .then(() => {
       document.querySelector('form').classList.add('mail-sent');
       setTimeout(() => {
@@ -20,6 +21,13 @@ document.querySelector('input#submit-btn').addEventListener('click', function(e)
       document.querySelector('form').style.display = '';
         document.querySelector('.thank-you').classList.add('thank-you_visible');
     }); 
+  } else {
+    for (item in data) {
+      if (!data[item]) {
+        document.getElementById(item).closest('.input-container').classList.add('error');
+      }
+    }
+  }
 })
 
 postData = async (url = '', data = {}) => {

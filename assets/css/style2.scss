@@ -28,13 +28,11 @@
     }
     section.section__body {
       color: $text;
-      // padding: 5%;
-      // border-bottom: 2px solid $blue__light-x;
       @include nav-collapse {
         margin: 0 auto;
       }
       @include tablet {
-        width: 500px;
+        // width: 500px;
       }
       @include mobile {
         width: 90%;
@@ -138,3 +136,4 @@ ul.work-bullets {
 @import '_modal';
 @import '_loader';
 @import './input';
+@import './svg';

@@ -3,6 +3,8 @@ navItems.forEach((item, index, array) => {
 
   // Add hover effect
   item.addEventListener('mouseenter', function(e) {
+    if (screen.width > 952) {
+
     // if it's the first item
     if (index === 0) {
       for (let i = index + 1; i < array.length; i++) {
@@ -23,10 +25,14 @@ navItems.forEach((item, index, array) => {
         }
       }
     }
+          
+    }
   })
 
   // Remove hover effect
   item.addEventListener('mouseleave', function(e) {
+    if (screen.width > 952) {
+
     // if it's the first item
     if (index === 0) {
       for (let i = index + 1; i < array.length; i++) {
@@ -46,8 +52,10 @@ navItems.forEach((item, index, array) => {
         }
       }
     }
+    }
   })
 })
+
 
 const albumCovers = document.querySelectorAll('.album-cover');
 

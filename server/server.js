@@ -65,7 +65,7 @@ app.post('/submit', (req, res) => {
     }
   });
 
-  // res.redirect('/');
+  res.redirect('/');
 });
 
 app.get('*', (req, res) => {

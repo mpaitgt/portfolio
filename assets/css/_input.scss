@@ -7,11 +7,7 @@
 }
 
 .form-wrapper {
-  // border-top: 2px solid $blue__light-x;
   padding: 5%;
-  // width: 80%;
-  // margin: 0 auto;
-  // margin-bottom: 2rem;
 }
 
 form {
@@ -19,6 +15,12 @@ form {
   margin: 0 auto;
   transform: translateY(0%);
   transition: transform 300ms;
+  .name-email {
+    @include flex(row, space-between, center);
+    @include mobile {
+      @include flex(column, center, center);
+    }
+  }
   input[type=submit] {
     margin: 10px 10px 10px auto;
     border: none;
@@ -97,6 +99,9 @@ form.mail-sent {
     margin-left: auto;
     margin-right: auto;
   }
+}
+.input-container.error {
+  background: #f9dcdc;
 }
 .input-container__hover {
   background: $white;

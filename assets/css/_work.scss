@@ -1,19 +1,39 @@
 .work {
   padding: 5% 5%;
   border-bottom: 2px solid $blue__light-x;
+  .section__intro {
+    @include tablet {
+      @include flex(column, flex-start, flex-start);
+      flex-direction: column-reverse;
+    }
+    .about__content {
+      align-self: center;
+      float: none;
+    }
+  }
 }
 
 .job-wrapper {
-  margin: 1rem auto;
+  margin: 2rem auto;
   padding: 1rem;
   cursor: pointer;
-  // box-shadow: $project_shadow;
-  // @include flex(row, space-between, flex-start);
+  border-left: 2px solid $blue__light;
+  @include mobile {
+    padding: 1rem 0;
+    border-left: none;
+    border-bottom: 1px solid $blue__light-x;
+  }
+  .about-__content {
+    @include tablet {
+      @include flex(column, center, center);
+    }
+  }
   .job-header {
-    // flex-grow: 2;
-    // @include flex(row, space-between, center);
     .job-headline-wrapper {
       @include flex(row, flex-start, center);
+      @include mobile {
+        @include flex(column, flex-start, flex-start);
+      }
       img {
         margin-left: 1rem;
         margin-right: 1rem;

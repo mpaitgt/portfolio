@@ -147,6 +147,9 @@ footer.navbar {
   .footer__social {
     @include flex(row, space-around, center);
     width: 100%;
+    @include mobile {
+      @include flex(column, center, center);
+    }
   }
 }
 

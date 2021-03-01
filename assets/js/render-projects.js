@@ -155,7 +155,7 @@ setTimeout(function() {
                 ? `            
                 <a href="${project.production_link}" target="_blank">
                   <img src="./assets/images/social-icons/production_icon.png" width="32"
-                  class="project__github-link">
+                  class="project__link">
                 </a>` 
                 : 
                 ''
@@ -165,7 +165,7 @@ setTimeout(function() {
                 ? `            
                 <a href="${project.github_link}" target="_blank">
                   <img src="./assets/images/social-icons/github.png" width="32"
-                  class="project__github-link" alt="${project.title} Github Repo">
+                  class="project__link" alt="${project.title} Github Repo">
                 </a>` 
                 : 
                 ''

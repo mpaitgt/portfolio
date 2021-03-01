@@ -76,12 +76,6 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-  * body section.section__body {
-    width: 500px;
-  }
-}
-
 @media screen and (max-width: 576px) {
   * body section.section__body {
     width: 90%;
@@ -580,6 +574,24 @@ footer.navbar .footer__social {
   width: 100%;
 }
 
+@media screen and (max-width: 576px) {
+  footer.navbar .footer__social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .about {
   padding: 10% 5%;
 }
@@ -685,9 +697,61 @@ footer.navbar .footer__social {
   list-style: none;
 }
 
-@media screen and (max-width: 952px) {
-  .nav__icons {
-    height: 100%;
+.nav__icons .nav__icon {
+  width: 24px;
+  opacity: 0.2;
+  margin: 0 10px;
+}
+
+.work {
+  padding: 5% 5%;
+  border-bottom: 2px solid #e7e7f1;
+}
+
+@media screen and (max-width: 768px) {
+  .work .section__intro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+  }
+}
+
+.work .section__intro .about__content {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  float: none;
+}
+
+.job-wrapper {
+  margin: 2rem auto;
+  padding: 1rem;
+  cursor: pointer;
+  border-left: 2px solid #d8d8ee;
+}
+
+@media screen and (max-width: 576px) {
+  .job-wrapper {
+    padding: 1rem 0;
+    border-left: none;
+    border-bottom: 1px solid #e7e7f1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .job-wrapper .about-__content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -702,31 +766,6 @@ footer.navbar .footer__social {
         -ms-flex-align: center;
             align-items: center;
   }
-}
-
-.nav__icons .nav__icon {
-  width: 24px;
-  opacity: 0.2;
-  margin: 0 10px;
-  -webkit-transform: translateY(3px);
-          transform: translateY(3px);
-}
-
-@media screen and (max-width: 952px) {
-  .nav__icons .nav__icon {
-    margin: 5px 0;
-  }
-}
-
-.work {
-  padding: 5% 5%;
-  border-bottom: 2px solid #e7e7f1;
-}
-
-.job-wrapper {
-  margin: 1rem auto;
-  padding: 1rem;
-  cursor: pointer;
 }
 
 .job-wrapper .job-header {
@@ -747,6 +786,24 @@ footer.navbar .footer__social {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 576px) {
+  .job-wrapper .job-header .job-headline-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 .job-wrapper .job-header .job-headline-wrapper img {
@@ -853,11 +910,12 @@ footer.navbar .footer__social {
       -ms-flex-align: center;
           align-items: center;
   margin: 2rem 0;
-  -webkit-box-shadow: 2px 2px 12px -4px rgba(0, 0, 0, 0.2);
-          box-shadow: 2px 2px 12px -4px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 2px 2px 14px -2px rgba(61, 61, 90, 0.2);
+          box-shadow: 2px 2px 14px -2px rgba(61, 61, 90, 0.2);
   padding: 20px;
   -webkit-transform: translateX(-300%);
           transform: translateX(-300%);
+  border-radius: 4px;
 }
 
 @media screen and (max-width: 768px) {
@@ -979,32 +1037,14 @@ footer.navbar .footer__social {
   }
 }
 
-.projects .project .project__github-link {
-  margin: 0px 20px;
-  width: 32px;
-  -webkit-transition: -webkit-transform 0.25s ease-in-out;
-  transition: -webkit-transform 0.25s ease-in-out;
-  transition: transform 0.25s ease-in-out;
-  transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-filter: invert(0.75);
-          filter: invert(0.75);
-}
-
-.projects .project .project__github-link:hover {
-  -webkit-transform: scale(1.25);
-          transform: scale(1.25);
-  -webkit-filter: invert(0);
-          filter: invert(0);
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-}
-
 .projects #loader {
   display: none;
+}
+
+.project__link {
+  width: 28px;
+  opacity: 0.2;
+  margin: 0 10px;
 }
 
 .project-enter-1 {
@@ -1171,6 +1211,12 @@ footer.navbar .footer__social {
           animation: bandcamp2 3s ease-in-out 0s infinite forwards;
 }
 
+@media screen and (max-width: 576px) {
+  .bandcamp-wrapper {
+    margin: 4rem 0;
+  }
+}
+
 .album-carousel {
   position: relative;
   overflow: visible;
@@ -1185,7 +1231,7 @@ footer.navbar .footer__social {
   overflow: visible;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .album-carousel .album-slide {
     -ms-grid-columns: 50% 50%;
         grid-template-columns: 50% 50%;
@@ -1280,8 +1326,8 @@ footer.navbar .footer__social {
   }
   50% {
     border-radius: 60% 40%;
-    -webkit-box-shadow: -20px -20px 0px 20px #e7e7f1;
-            box-shadow: -20px -20px 0px 20px #e7e7f1;
+    -webkit-box-shadow: -12px -12px 0px 20px #e7e7f1;
+            box-shadow: -12px -12px 0px 20px #e7e7f1;
   }
   100% {
     border-radius: 40% 60%;
@@ -1298,8 +1344,8 @@ footer.navbar .footer__social {
   }
   50% {
     border-radius: 60% 40%;
-    -webkit-box-shadow: -20px -20px 0px 20px #e7e7f1;
-            box-shadow: -20px -20px 0px 20px #e7e7f1;
+    -webkit-box-shadow: -12px -12px 0px 20px #e7e7f1;
+            box-shadow: -12px -12px 0px 20px #e7e7f1;
   }
   100% {
     border-radius: 40% 60%;
@@ -1737,6 +1783,40 @@ form {
   transition: transform 300ms, -webkit-transform 300ms;
 }
 
+form .name-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 576px) {
+  form .name-email {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 form input[type=submit] {
   margin: 10px 10px 10px auto;
   border: none;
@@ -1849,6 +1929,10 @@ form.mail-sent {
   }
 }
 
+.input-container.error {
+  background: #f9dcdc;
+}
+
 .input-container__hover {
   background: #f3f3f3;
   margin-top: 40px;
@@ -1883,6 +1967,40 @@ form.mail-sent {
   100% {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
+  }
+}
+
+svg {
+  width: 240px;
+  position: absolute;
+  overflow: auto;
+}
+
+@media screen and (max-width: 768px) {
+  svg {
+    width: 180px;
+  }
+}
+
+svg.click-through {
+  bottom: -100px;
+  left: 0%;
+}
+
+@media screen and (max-width: 768px) {
+  svg.click-through {
+    bottom: -150px;
+  }
+}
+
+svg.listen-in {
+  top: -200px;
+  right: 0%;
+}
+
+@media screen and (max-width: 768px) {
+  svg.listen-in {
+    top: -200px;
   }
 }
 /*# sourceMappingURL=style2.css.map */

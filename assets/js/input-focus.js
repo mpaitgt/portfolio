@@ -4,13 +4,11 @@ inputFields.forEach(function(field, index, array) {
 
   field.addEventListener('focusin', function(e) {
     const label = e.target.previousElementSibling;
-    const parentElement = e.target.parentElement;
     label.classList.add('form-label__focus');
   })
 
   field.addEventListener('focusout', function(e) {
     const label = e.target.previousElementSibling;
-    const parentElement = e.target.parentElement;
     if (e.target.value === '') {
       label.classList.remove('form-label__focus');
     }

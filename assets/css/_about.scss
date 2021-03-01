@@ -46,20 +46,10 @@
 .nav__icons {
   @include flex(row, center, center);
   list-style: none;
-  @include nav-collapse {
-    height: 100%;
-    @include flex(column, center, center);
-  }
   .nav__icon {
-    // @include icon_hover(24px, invert(0.5), invert(1));
     width: 24px;
     opacity: 0.2;
     margin: 0 10px;
-    transform: translateY(3px);
-    @include nav-collapse {
-      // @include icon_hover(30px, invert(0.5), invert(1));
-
-      margin: 5px 0;
-    }
+    // transform: translateY(3px);
   }
 }

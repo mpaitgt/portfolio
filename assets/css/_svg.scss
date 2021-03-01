@@ -1,0 +1,24 @@
+svg {
+  width: 240px;
+  position: absolute; 
+  overflow: auto; 
+  @include tablet {
+    width: 180px;
+  }
+}
+
+svg.click-through {
+  bottom: -100px;
+  left: 0%;
+  @include tablet {
+    bottom: -150px;
+  }
+}
+
+svg.listen-in {
+  top: -200px;
+  right: 0%;
+  @include tablet {
+    top: -200px;
+  }
+}

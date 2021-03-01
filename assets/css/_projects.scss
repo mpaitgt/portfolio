@@ -41,6 +41,7 @@
     box-shadow: $project_shadow;
     padding: 20px;
     transform: translateX(-300%);
+    border-radius: 4px;
     @include tablet {
       @include flex(column, center, center);
       flex-direction: column-reverse;
@@ -101,13 +102,16 @@
         justify-self: center;
       }
     }
-    .project__github-link {
-      @include icon_hover(32px, invert(0.75), invert(0));
-    }
   }
   #loader {
     display: none;
   }
+}
+
+.project__link {
+  width: 28px;
+  opacity: 0.2;
+  margin: 0 10px;
 }
 
 @for $i from 1 through 8 {
