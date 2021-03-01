@@ -54,8 +54,11 @@
     }
     .job-details {
       margin: 0 10px 20px 10px;
-      font-weight: 300;
-      font-size: 1.2rem;
+      @include flex(row, flex-start, center);
+      h4 {
+        font-weight: 300;
+        font-size: 1.2rem;
+      }
       // &:hover {
       //   &:after {
       //     background: $blue__light;
@@ -74,6 +77,17 @@
       //   font-size: 2.4rem;
       //   transform: rotate(-90deg);
       // }
+      .job__tech-container {
+        margin-left: 20px;
+        .job__tech {
+          justify-self: start;
+          background: #ececec;
+          font-size: 0.9em;
+          padding: 2px 8px;
+          margin: 6px;
+          border-radius: 5px;
+        }
+      }
     }
   }
   .job-description {

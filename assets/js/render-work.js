@@ -1,2 +1,132 @@
-const work = document.querySelector('.work-container');
+const myJobs = [
+  {
+    title: 'Software UI Developer',
+    company: 'Bearclaw',
+    duration: 'August 2020 - Present',
+    technologies: ['SCSS', 'jQuery', 'PHP', 'MySQL'],
+    type: 'Freelance',
+    github_link: '',
+    production_link: '',
+    description: 'I was brought onto this project to bring a UI design to life. Recruiting software in its development phase, Bearclaw needed a frontend-focused developer to improve the application\'s design and the user experience.',
+    bullets: [
+      'I abandoned Bootstrap and developed a complex dashboard with CSS Grid',
+      'I revisited jQuery for the first since Bootcamp (December 2019)',
+      'I learned PHP for the first time and dusted off the MySQL documentation.',
+      'I built new, full-stack features - including a kanban board and an appointment calendar - using third-party APIs.',
+      'Most recently, I developed a light/dark mode toggle which extends the software itself to a custom Chrome extension.',
+      'I continued to expand and refactor the codebase along the way.'
+    ]
+  },
+  {
+    title: 'Frontend Web Developer',
+    company: 'The Floor Is Yours Dance Center',
+    duration: 'February 2020 - Present',
+    technologies: ['React', 'Material UI', 'Node.js/Express'],
+    type: 'Freelance',
+    github_link: 'https://github.com/mpaitgt/tfiy',
+    production_link: 'https://tfiy.herokuapp.com',
+    description: 'Through Bootcamp, I was connected with the owner of a dance studio who asked me to develop a beautiful website for her new business. I was on a roll with learning React at the time, and didn\'t want this opportunity to stop me in my tracks.',
+    bullets: [
+      'I built this project with React, using the Material UI component library.',
+      'I familiarized myself with the advantages of using a component library, and used it to do everything from make the site mobile-friendly to creating page transition animations and a class accordion.',
+      'I used the Google Maps API to display the studio\'s location on the contact page, and set up a simple Node.js/Express server to handle contact form submissions with the Nodemailer npm.'
+    ]
+  },
+  {
+    title: 'Frontend Web Developer',
+    company: 'Salvage Boy',
+    duration: 'July 2020',
+    technologies: ['HTML', 'SCSS'],
+    type: 'Freelance',
+    github_link: '',
+    production_link: 'https://salvageboy.com',
+    description: 'A small software for used motor part sellers, I was hired to re-design the home page of the website.',
+    bullets: []
+  },
+];
 
+function renderJobs(arr) {
+  const work = document.querySelector('.work-container');
+
+  work.innerHTML = arr.map((job, index) => {
+    return `
+      <div class="job-wrapper">
+        <div class="job-header">
+          <div class="job-headline-wrapper">
+            <h3 class="section__headline">${job.company}</h3>
+          </div>
+          <h3 class="job-title">${job.title}</h3>
+          <div class="job-details">
+            <h4>${job.duration} | ${job.type}</h4>
+            <div class="job__tech-container">
+              ${job.technologies.map((tech) => {
+                return `<span class="job__tech">${tech}</span>`;
+              }).join('')}
+            </div>
+            </h4>
+          </div>
+          <div class="job-description ${index === 0 ? "is-visible" : ""}">
+            <p class="section__copy">
+              ${job.description}
+            </p>
+            <ul class="work-bullets">
+              ${job.bullets.map((bullet) => {
+                return `<li>${bullet}</li>`;
+              }).join('')}
+            </ul>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function attachShowEvent() {
+  document.querySelectorAll('.job-wrapper').forEach(function(item, index, array) {
+    item.addEventListener('click', function(e) {
+  
+      const allJobs = document.querySelectorAll('.job-description');
+      const thisJob = item.querySelector('.job-description');
+  
+      if (thisJob.classList.contains('is-visible')) {
+        hideElement(thisJob);
+      } else {
+        for (let i = 0; i < allJobs.length; i++) {
+          if (allJobs[i].classList.contains('is-visible')) {
+            hideElement(allJobs[i]);
+          }
+        }
+        showElement(thisJob);
+      }
+    });
+  
+  });
+}
+
+// work job description height animation
+const showElement = (el) => {
+
+  const getHeight = () => {
+    el.style.display = 'block';
+    let height = el.scrollHeight + 'px';
+    el.style.display = '';
+    return height;
+  }
+
+  let height = getHeight();
+  el.classList.add('is-visible');
+
+  el.style.height = height;
+};
+
+const hideElement = (el) => {
+  el.style.height = el.scrollHeight + 'px';
+
+  window.setTimeout(function () {
+		el.style.height = '0';
+	}, 1);
+
+	window.setTimeout(function () {
+		el.classList.remove('is-visible');
+	}, 200);
+};
