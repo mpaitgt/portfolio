@@ -6,11 +6,12 @@
 .job-wrapper {
   margin: 1rem auto;
   padding: 1rem;
+  cursor: pointer;
   // box-shadow: $project_shadow;
   // @include flex(row, space-between, flex-start);
   .job-header {
     // flex-grow: 2;
-    // @include flex(row, space-between, flex-end);
+    // @include flex(row, space-between, center);
     .job-headline-wrapper {
       @include flex(row, flex-start, center);
       img {
@@ -25,17 +26,44 @@
       letter-spacing: 1px;
       font-weight: 300;
       font-size: 1.8rem;
+      transition: transform 200ms;
+    }
+    .job-title.hover {
+      transform: translateY(-5px);
+      transition: transform 200ms;
     }
     .job-details {
       margin: 0 10px 20px 10px;
       font-weight: 300;
       font-size: 1.2rem;
+      &:hover {
+        &:after {
+          background: $blue__light;
+        }
+      }
+      &:before {
+        content: '\2039';
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background: $blue__light-x;
+        color: white;
+        border-radius: 50%;
+        margin-right: 20px;
+        text-align: center;
+        transform: rotate(-90deg);
+      }
     }
   }
   .job-description {
-    // flex-grow: 1;
     display: none;
-    // opacity: ;
-    // transform: translate();
+    height: 0;
+    overflow: hidden;
+    transition: all 200ms ease-in-out;
+  }
+  .job-description.is-visible {
+    display: block;
+    transition: all 200ms ease-in-out;
+    height: auto;
   }
 }

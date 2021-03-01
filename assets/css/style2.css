@@ -726,6 +726,7 @@ footer.navbar .footer__social {
 .job-wrapper {
   margin: 1rem auto;
   padding: 1rem;
+  cursor: pointer;
 }
 
 .job-wrapper .job-header {
@@ -759,6 +760,19 @@ footer.navbar .footer__social {
   letter-spacing: 1px;
   font-weight: 300;
   font-size: 1.8rem;
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
+}
+
+.job-wrapper .job-header .job-title.hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
 }
 
 .job-wrapper .job-header .job-details {
@@ -767,8 +781,37 @@ footer.navbar .footer__social {
   font-size: 1.2rem;
 }
 
+.job-wrapper .job-header .job-details:hover:after {
+  background: #d8d8ee;
+}
+
+.job-wrapper .job-header .job-details:before {
+  content: '\2039';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: #e7e7f1;
+  color: white;
+  border-radius: 50%;
+  margin-right: 20px;
+  text-align: center;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
 .job-wrapper .job-description {
   display: none;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+.job-wrapper .job-description.is-visible {
+  display: block;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  height: auto;
 }
 
 .list__projects {
@@ -1701,7 +1744,7 @@ form {
   margin: 0 auto;
 }
 
-form button[type=submit] {
+form input[type=submit] {
   margin: 10px 10px 10px auto;
   border: none;
   padding: 0.4rem 1rem;
