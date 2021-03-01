@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.static(publicPath));
 
 app.post('/submit', (req, res) => {
-  const {name, email, message} = req.body;
+  // const {name, email, message} = req.body;
 
   let { GMAIL_USER, GMAIL_PASS } = process.env;
 
@@ -54,6 +54,8 @@ app.post('/submit', (req, res) => {
     </html>`
   };
 
+  console.log(req.body.name, req.body.email, req.body.message);
+
   transport.sendMail(contactForm, function(error, info){
     if (error) {
       console.log(error);
@@ -63,7 +65,7 @@ app.post('/submit', (req, res) => {
     }
   });
 
-  res.redirect('/');
+  // res.redirect('/');
 });
 
 app.get('*', (req, res) => {

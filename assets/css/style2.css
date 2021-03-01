@@ -719,7 +719,7 @@ footer.navbar .footer__social {
 }
 
 .work {
-  padding: 0% 5%;
+  padding: 5% 5%;
   border-bottom: 2px solid #e7e7f1;
 }
 
@@ -779,24 +779,6 @@ footer.navbar .footer__social {
   margin: 0 10px 20px 10px;
   font-weight: 300;
   font-size: 1.2rem;
-}
-
-.job-wrapper .job-header .job-details:hover:after {
-  background: #d8d8ee;
-}
-
-.job-wrapper .job-header .job-details:before {
-  content: '\2039';
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  background: #e7e7f1;
-  color: white;
-  border-radius: 50%;
-  margin-right: 20px;
-  text-align: center;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
 }
 
 .job-wrapper .job-description {
@@ -1162,15 +1144,7 @@ footer.navbar .footer__social {
 }
 
 .bandcamp {
-  margin: 4rem;
-  padding: 15% 5%;
-  border-radius: 40% 60%;
-  background: #d8d8ee;
-  -webkit-box-shadow: 34px 4px 0px 20px #e7e7f1;
-          box-shadow: 34px 4px 0px 20px #e7e7f1;
-  -webkit-animation: bandcamp2 3s ease-in-out 0s infinite forwards;
-          animation: bandcamp2 3s ease-in-out 0s infinite forwards;
-  z-index: -1;
+  position: relative;
 }
 
 @media screen and (max-width: 952px) {
@@ -1184,6 +1158,17 @@ footer.navbar .footer__social {
   .bandcamp .section__header {
     padding-left: 5%;
   }
+}
+
+.bandcamp-wrapper {
+  margin: 4rem;
+  padding: 15% 5%;
+  border-radius: 40% 60%;
+  background: #d8d8ee;
+  -webkit-box-shadow: 34px 4px 0px 20px #e7e7f1;
+          box-shadow: 34px 4px 0px 20px #e7e7f1;
+  -webkit-animation: bandcamp2 3s ease-in-out 0s infinite forwards;
+          animation: bandcamp2 3s ease-in-out 0s infinite forwards;
 }
 
 .album-carousel {
@@ -1239,13 +1224,10 @@ footer.navbar .footer__social {
   }
 }
 
-.album-arrow {
-  font-size: 3rem;
-  color: #d8d8ee;
-  z-index: 0;
-  cursor: pointer;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
+.album-marker {
+  font-size: 2.4rem;
+  position: absolute;
+  bottom: 0;
 }
 
 @-webkit-keyframes bandcamp {
@@ -1345,6 +1327,7 @@ footer.navbar .footer__social {
   transition: height 0.5s;
   padding: 60px 0;
   border-top: 2px solid #e7e7f1;
+  position: relative;
 }
 
 @media screen and (max-width: 768px) {
@@ -1428,9 +1411,9 @@ footer.navbar .footer__social {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (max-width: 576px) {
@@ -1735,6 +1718,10 @@ footer.navbar .footer__social {
   }
 }
 
+.contact {
+  overflow: hidden;
+}
+
 .form-wrapper {
   padding: 5%;
 }
@@ -1742,6 +1729,12 @@ footer.navbar .footer__social {
 form {
   width: 80%;
   margin: 0 auto;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
 }
 
 form input[type=submit] {
@@ -1763,6 +1756,25 @@ form input[type=submit] {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+form.mail-sent {
+  -webkit-transform: translateY(200%);
+          transform: translateY(200%);
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+}
+
+.thank-you {
+  -webkit-transform: translateY(200%);
+          transform: translateY(200%);
+}
+
+.thank-you_visible {
+  -webkit-animation: thank-you 500ms ease-in-out 0s 1 forwards;
+          animation: thank-you 500ms ease-in-out 0s 1 forwards;
 }
 
 .input-container {
@@ -1842,5 +1854,35 @@ form input[type=submit] {
   margin-top: 40px;
   -webkit-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
+}
+
+@-webkit-keyframes thank-you {
+  0% {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
+  }
+  70% {
+    -webkit-transform: translateX(4%);
+            transform: translateX(4%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes thank-you {
+  0% {
+    -webkit-transform: translateX(-200%);
+            transform: translateX(-200%);
+  }
+  70% {
+    -webkit-transform: translateX(4%);
+            transform: translateX(4%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
 }
 /*# sourceMappingURL=style2.css.map */

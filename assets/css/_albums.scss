@@ -2,15 +2,8 @@
 @import '_media-queries';
 
 .bandcamp {
-  margin: 4rem;
-  padding: 15% 5%;
-  border-radius: 40% 60%;
-  background: $blue__light;
-  box-shadow: 34px 4px 0px 20px rgba($blue__light-x, 1); 
-  animation: bandcamp2 3s ease-in-out 0s infinite forwards;
-  // box-shadow: inset 0px 0px 19px 14px rgba(255,255,255,0.6);
-  // margin: 4rem auto 4rem auto;
-  z-index: -1;
+  position: relative;
+  // z-index: -1;
   @include nav-collapse {
     width: 100%;
     height: auto;
@@ -20,6 +13,17 @@
       padding-left: 5%;
     }
   }
+}
+
+.bandcamp-wrapper {
+  // width: 100%;
+  // height: 100%;
+  margin: 4rem;
+  padding: 15% 5%;
+  border-radius: 40% 60%;
+  background: $blue__light;
+  box-shadow: 34px 4px 0px 20px rgba($blue__light-x, 1); 
+  animation: bandcamp2 3s ease-in-out 0s infinite forwards;
 }
 
 .album-carousel {
@@ -55,13 +59,13 @@
   }
 }
 
-.album-arrow {
-  font-size: 3rem;
-  color: $blue__light;
-  z-index: 0;
-  cursor: pointer;
-  transition: all 0.25s;
+.album-marker {
+  font-size: 2.4rem;
+  position: absolute;
+  bottom: 0;
+  // left: 25%;
 }
+
 
 @keyframes bandcamp {
   0% { 

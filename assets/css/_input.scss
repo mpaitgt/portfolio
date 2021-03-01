@@ -2,6 +2,10 @@
 @import './variables';
 @import './media-queries';
 
+.contact {
+  overflow: hidden;
+}
+
 .form-wrapper {
   // border-top: 2px solid $blue__light-x;
   padding: 5%;
@@ -13,6 +17,8 @@
 form {
   width: 80%;
   margin: 0 auto;
+  transform: translateY(0%);
+  transition: transform 300ms;
   input[type=submit] {
     margin: 10px 10px 10px auto;
     border: none;
@@ -30,6 +36,19 @@ form {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+form.mail-sent {
+  transform: translateY(200%);
+  transition: transform 300ms;
+}
+
+.thank-you {
+  transform: translateY(200%);
+}
+
+.thank-you_visible {
+  animation: thank-you 500ms ease-in-out 0s 1 forwards;
 }
 
 .input-container {
@@ -83,4 +102,10 @@ form {
   background: $white;
   margin-top: 40px;
   transition: all 0.15s ease-in-out;
+}
+
+@keyframes thank-you {
+  0% { transform: translateX(-200%); };
+  70% { transform: translateX(4%); }
+  100% { transform: translateX(0%); };
 }

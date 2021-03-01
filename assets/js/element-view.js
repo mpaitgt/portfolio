@@ -7,9 +7,13 @@ document.querySelectorAll('.job-wrapper').forEach(function(item, index, array) {
     if (thisJob.classList.contains('is-visible')) {
       hideElement(thisJob);
     } else {
+      for (let i = 0; i < allJobs.length; i++) {
+        if (allJobs[i].classList.contains('is-visible')) {
+          hideElement(allJobs[i]);
+        }
+      }
       showElement(thisJob);
     }
-
   });
 
 });
@@ -29,7 +33,6 @@ const showElement = (el) => {
   el.classList.add('is-visible');
 
   el.style.height = height;
-
 };
 
 const hideElement = (el) => {

@@ -1,5 +1,5 @@
 .work {
-  padding: 0% 5%;
+  padding: 5% 5%;
   border-bottom: 2px solid $blue__light-x;
 }
 
@@ -36,23 +36,24 @@
       margin: 0 10px 20px 10px;
       font-weight: 300;
       font-size: 1.2rem;
-      &:hover {
-        &:after {
-          background: $blue__light;
-        }
-      }
-      &:before {
-        content: '\2039';
-        display: inline-block;
-        width: 32px;
-        height: 32px;
-        background: $blue__light-x;
-        color: white;
-        border-radius: 50%;
-        margin-right: 20px;
-        text-align: center;
-        transform: rotate(-90deg);
-      }
+      // &:hover {
+      //   &:after {
+      //     background: $blue__light;
+      //   }
+      // }
+      // &:before {
+      //   content: '\2039';
+      //   display: inline-block;
+      //   width: 40px;
+      //   height: 40px;
+      //   background: $blue__light-x;
+      //   color: white;
+      //   border-radius: 50%;
+      //   margin-right: 20px;
+      //   text-align: center;
+      //   font-size: 2.4rem;
+      //   transform: rotate(-90deg);
+      // }
     }
   }
   .job-description {
@@ -65,5 +66,6 @@
     display: block;
     transition: all 200ms ease-in-out;
     height: auto;
+    
   }
 }

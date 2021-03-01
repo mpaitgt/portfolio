@@ -1,59 +1,34 @@
-// // Grabbing DOM classes
-// const carouselSlide = document.querySelector('.album-slide');
-// const carouselImages = document.querySelectorAll('.album-cover');
+document.querySelector('input#submit-btn').addEventListener('click', function(e) {
+  e.preventDefault();
 
-// // Buttons
-// const prevBtn = document.getElementById('left-arrow');
-// const nextBtn = document.getElementById('right-arrow');
-
-// console.log(carouselImages);
-
-// let counter = 1;
-// const imageWidth = carouselImages[0].clientWidth;
-
-// console.log(imageWidth);
-
-// carouselSlide.style.transform = `translateX(${-imageWidth * counter}px)`;
-
-// // Button listeners
-// nextBtn.addEventListener('mouseup', function(e) {
-//   if (counter >= carouselImages.length - 1) return;
-//   carouselSlide.style.transition = `transform 0.25s ease-in`;
-//   // carouselImages[counter].classList.add('album-out');
-//   counter++;
-//   // carouselImages[counter].classList.add('album-in');
-//   carouselSlide.style.transform = `translateX(${-imageWidth * counter}px)`;
-//   setTimeout(function() {
-//     carouselImages[counter - 1].classList.remove('album-out');
-//   }, 500)
-// })
-
-// prevBtn.addEventListener('mouseup', function(e) {
-//   if (counter <= 0) return;
-//   carouselSlide.style.transition = `transform 0.25s ease-in`;
-//   counter--;
-//   carouselSlide.style.transform = `translateX(${-imageWidth * counter}px)`;
+  const data = {
+    name: document.querySelector('input#your-name').value,
+    email: document.querySelector('input#your-email').value,
+    message: document.querySelector('textarea#your-message-to-me').value
+  }
   
-// })
+  postData('/submit', data)
+    .then(() => {
+      document.querySelector('form').classList.add('mail-sent');
+      setTimeout(() => {
+        document.querySelector('form').style.display = '';
+        document.querySelector('.thank-you').classList.add('thank-you_visible');
+      }, 500);
+    })
+    .catch(() => {
+      document.querySelector('form').classList.add('mail-sent');
+      document.querySelector('form').style.display = '';
+        document.querySelector('.thank-you').classList.add('thank-you_visible');
+    }); 
+})
 
-// carouselSlide.addEventListener('transitionend', function() {
-//   if (carouselImages[counter].id === 'lastClone') {
-//     carouselSlide.style.transition = 'none';
-//     counter = carouselImages.length - 2;
-//     carouselSlide.style.transform = `translateX(${-imageWidth * counter}px)`;
-//   }
-//   if (carouselImages[counter].id === 'firstClone') {
-//     carouselSlide.style.transition = 'none';
-//     counter = carouselImages.length - counter;
-//     carouselSlide.style.transform = `translateX(${-imageWidth * counter}px)`;
-//   }
-// })
-
-let bandcamp = document.querySelector('.bandcamp');
-
-document.querySelector('.bandcamp').addEventListener('mousemove', function(e) {
-  let x = e.offsetX;
-  let y = e.offsetY;
-  console.log(x,y);
-  document.querySelector('.bandcamp').boxShadow = `${50}px ${80}px 0px 20px rgba(0,0,0,1);`;
-});
+postData = async (url = '', data = {}) => {
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data)
+  })
+  return response.json();
+}
