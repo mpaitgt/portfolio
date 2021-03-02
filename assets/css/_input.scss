@@ -60,8 +60,12 @@ form.mail-sent {
   position: relative;
   margin-top: 2.4rem;
   transition: all 0.15s ease-in-out;
+  box-sizing: border-box;
   &:first-child {
     border-right: 2px solid $blue__light;
+    @include mobile {
+      border-right: none;
+    }
   }
   label.form-label {
     position: absolute;
@@ -102,6 +106,7 @@ form.mail-sent {
 }
 .input-container.error {
   background: #f9dcdc;
+  border: 1px solid #e78d8d;
 }
 .input-container__hover {
   background: $white;

@@ -53,7 +53,7 @@ function renderJobs(arr) {
       <div class="job-wrapper">
         <div class="job-header">
           <div class="job-headline-wrapper">
-            <h3 class="section__headline">${job.company}</h3>
+            <h3 class="section__headline inverted">${job.company}</h3>
           </div>
           <h3 class="job-title">${job.title}</h3>
           <div class="job-details">

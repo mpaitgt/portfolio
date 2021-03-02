@@ -54,6 +54,11 @@
           font-size: 1rem;
         }
       }
+      .section__headline.inverted {
+        // border: 1px solid $blue__med;
+        background: $blue__light-x;
+        font-size: 1.6rem;
+      }
     }
     .section__header {
       display: inline-block;
@@ -107,14 +112,14 @@ ul.work-bullets {
 }
 
 .push-left {
-  transform: translateX(-6px);
+  transform: translateX(-12px);
   transition: transform 0.25s ease-in-out;
   @include nav-collapse {
     transform: translateX(0px);
   }
 }
 .push-right {
-  transform: translateX(6px);
+  transform: translateX(12px);
   transition: transform 0.25s ease-in-out;
   @include nav-collapse {
     transform: translateX(0px);

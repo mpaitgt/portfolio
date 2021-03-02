@@ -14,6 +14,7 @@ const myTestimonials = [
     "image": "./assets/images/recs/bearclaw-logo.png"
   }, 
 ];
+
 let selectedTestimonial = myTestimonials[0];
 
 async function renderQuote(testimonial) {
@@ -58,5 +59,3 @@ function selectRandomQuote(arr) {
     renderQuote(selectedTestimonial);
   }
 }
-
-renderQuote(selectedTestimonial);

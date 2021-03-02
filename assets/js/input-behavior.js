@@ -15,6 +15,12 @@ inputFields.forEach(function(field, index, array) {
   })
 
   field.addEventListener('keyup', function(e) {
+    
+    const parent = field.closest('.input-container');
+    if (parent.classList.contains('error')) {
+      parent.classList.remove('error');
+    }
+
     if (array[0].value !== '' && array[1].value !== '' && array[2].value !== '') {
       document.getElementById('submit-btn').style.opacity = '1';
       document.getElementById('submit-btn').style.cursor = 'pointer';

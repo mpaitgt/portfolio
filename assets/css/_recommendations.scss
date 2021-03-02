@@ -92,27 +92,27 @@
 
 .quote__mouse-down {
   animation-name: quote__mouse-down;
-  animation-duration: 0.25s;
+  animation-duration: 0.1s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
-  transition: all 0.1s ease-in-out;
+  // transition: all 0.1s ease-in-out;
 }
 
 .quote__mouse-up {
   animation-name: quote__mouse-up;
-  animation-duration: 0.25s;
+  animation-duration: 0.1s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
-  transition: all 0.1s ease-in-out;
+  // transition: all 0.1s ease-in-out;
 }
 
 @keyframes quote__mouse-up {
-  0% { transform: scale(0.8); };
+  0% { transform: scale(0.9); };
   80% { transform: scale(1.1); };
   100% { transform: scale(1); };
 }
 
 @keyframes quote__mouse-down {
   0% { transform: scale(1); };
-  100% { transform: scale(0.8); };
+  100% { transform: scale(0.9); };
 }

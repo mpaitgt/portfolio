@@ -20,7 +20,7 @@
   border-radius: 40% 60%;
   background: $blue__light;
   box-shadow: 34px 4px 0px 20px rgba($blue__light-x, 1); 
-  animation: bandcamp2 3s ease-in-out 0s infinite forwards;
+  // animation: bandcamp2 3s ease-in-out 0s infinite forwards;
   position: relative;
   @include mobile {
     margin: 4rem 0;
@@ -39,13 +39,11 @@
       grid-template-columns: 50% 50%;
     }
     .album-cover {
-      // transform: translateY(200%);
       width: 100%;
       padding: 5px;
       transition: filter 1s ease-out;
       filter: grayscale(20%);
       box-shadow: none;
-      // box-shadow: 2px 2px 12px -4px rgba(255,255,255,0.2);
       cursor: pointer;
       transition: all 0.25s;
       &:hover {
@@ -55,6 +53,9 @@
       }
       @include mobile {
         transform: translateY(0%);
+        &:hover {
+          transform: scale(1);
+        }
       }
     }
   }

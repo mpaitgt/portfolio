@@ -23,7 +23,7 @@
     border-left: none;
     border-bottom: 1px solid $blue__light-x;
   }
-  .about-__content {
+  .about__content {
     @include tablet {
       @include flex(column, center, center);
     }

@@ -1,11 +1,3 @@
-window.onload = async function() {
-  await renderSkills(0);
-  attachSkillEvent();
-  await renderJobs(myJobs);
-  attachShowEvent();
-  await renderProjects(myProjects.filter((item, index) => index < 3)); 
-}
-
 let myProjects = [
   // {
   //   "id": 1,

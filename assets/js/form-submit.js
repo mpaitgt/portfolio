@@ -19,7 +19,7 @@ document.querySelector('input#submit-btn').addEventListener('click', function(e)
     .catch(() => {
       document.querySelector('form').classList.add('mail-sent');
       document.querySelector('form').style.display = '';
-        document.querySelector('.thank-you').classList.add('thank-you_visible');
+      document.querySelector('.thank-you').classList.add('thank-you_visible');
     }); 
   } else {
     for (item in data) {
