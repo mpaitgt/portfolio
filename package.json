@@ -13,7 +13,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "nodemon server/server.js"
+    "serve": "nodemon server/server.js",
+    "prod": "node server/server.js"
   },
   "repository": {
     "type": "git",
