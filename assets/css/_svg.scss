@@ -8,17 +8,20 @@ svg {
 }
 
 svg.click-through {
-  bottom: -100px;
+  bottom: -80px;
   left: 0%;
+  @include nav-collapse {
+    bottom: -120px;
+  }
   @include tablet {
-    bottom: -150px;
+    // bottom: -150px;
   }
 }
 
 svg.listen-in {
-  top: -200px;
+  top: -240px;
   right: 0%;
   @include tablet {
-    top: -200px;
+    top: -180px;
   }
 }

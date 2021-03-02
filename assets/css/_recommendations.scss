@@ -8,10 +8,8 @@
   padding: 60px 0;
   border-top: 2px solid $blue__light-x;
   position: relative;
-  // border-bottom: 2px solid $blue__light-x;
   @include tablet {
     padding: 40px 5%;
-    // margin-bottom: 8rem;
   }
 }
 

@@ -55,9 +55,15 @@
     .job-details {
       margin: 0 10px 20px 10px;
       @include flex(row, flex-start, center);
+      @include nav-collapse {
+        @include flex(column, flex-start, flex-start);  
+      }
       h4 {
         font-weight: 300;
         font-size: 1.2rem;
+        @include nav-collapse {
+          margin-bottom: 20px;
+        }
       }
       // &:hover {
       //   &:after {
@@ -86,6 +92,12 @@
           padding: 2px 8px;
           margin: 6px;
           border-radius: 5px;
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+        @include nav-collapse {
+          margin-left: 0px;  
         }
       }
     }
