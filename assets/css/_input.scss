@@ -1,0 +1,121 @@
+@import './mixins';
+@import './variables';
+@import './media-queries';
+
+.contact {
+  overflow: hidden;
+}
+
+.form-wrapper {
+  padding: 5%;
+}
+
+form {
+  width: 80%;
+  margin: 0 auto;
+  transform: translateY(0%);
+  transition: transform 300ms;
+  .name-email {
+    @include flex(row, space-between, center);
+    @include mobile {
+      @include flex(column, center, center);
+    }
+  }
+  input[type=submit] {
+    margin: 10px 10px 10px auto;
+    border: none;
+    padding: 0.4rem 1rem;
+    font-family: inherit;
+    background: $blue__med;
+    color: $white;
+    font-size: 16px;
+    z-index: 1;
+    opacity: 0.4;
+    cursor: default;
+  }
+  @include mobile {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+form.mail-sent {
+  transform: translateY(200%);
+  transition: transform 300ms;
+}
+
+.thank-you {
+  transform: translateY(200%);
+}
+
+.thank-you_visible {
+  animation: thank-you 500ms ease-in-out 0s 1 forwards;
+}
+
+.input-container {
+  @include flex(column, flex-start, flex-start);
+  width: 100%;
+  background: $blue__light-x;
+  position: relative;
+  margin-top: 2.4rem;
+  transition: all 0.15s ease-in-out;
+  box-sizing: border-box;
+  &:first-child {
+    border-right: 2px solid $blue__light;
+    @include mobile {
+      border-right: none;
+    }
+  }
+  label.form-label {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    color: $blue__dark;
+    font-weight: 100;
+    font-size: 16px;
+    padding: 0.4rem 0.8rem;
+    transform: translateY(1px);
+    transition: all 0.15s ease-in-out;
+    cursor: text;
+  }
+  label.form-label__focus {
+    transform: translate(-5px, -32px);
+    color: $blue__med;
+    transition: all 0.15s ease-in-out;
+  }
+  input.form-field,
+  textarea.form-field {
+    padding: 0.4rem 0.8rem;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+    font-size: 18px;
+    font-family: inherit;
+    letter-spacing: 1px;
+    outline: none;
+    resize: none;
+  }
+  @include mobile {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.input-container.error {
+  background: #f9dcdc;
+  border: 1px solid #e78d8d;
+}
+.input-container__hover {
+  background: $white;
+  margin-top: 40px;
+  transition: all 0.15s ease-in-out;
+}
+
+@keyframes thank-you {
+  0% { transform: translateX(-200%); };
+  70% { transform: translateX(4%); }
+  100% { transform: translateX(0%); };
+}

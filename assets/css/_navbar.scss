@@ -24,7 +24,6 @@ nav.navbar {
     font-family: 'Fira Sans', arial, sans-serif;
     font-size: 1.8rem;
     letter-spacing: 1px;
-    z-index: 99;
     cursor: pointer;
     @include mobile {
       font-size: 1.5rem;
@@ -65,8 +64,13 @@ nav.navbar {
       cursor: pointer;
       transition: all 0.25s;
       @include nav-collapse {
-        font-size: 1.2rem;
+        transform: translateX(-500%);
+        font-size: 1.4rem;
         padding-left: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin: 5px;
+        text-align:center;
       }
       &:hover {
         transform: scale(1.1);
@@ -78,36 +82,9 @@ nav.navbar {
         }
       }
     }
-    .push-left {
-      transform: translateX(-6px);
-      transition: transform 0.25s ease-in-out;
-      @include nav-collapse {
-        transform: translateX(0px);
-      }
-    }
-    .push-right {
-      transform: translateX(6px);
-      transition: transform 0.25s ease-in-out;
-      @include nav-collapse {
-        transform: translateX(0px);
-      }
-    }
-  }
-  .nav__icons {
-    @include flex(row, center, center);
-    list-style: none;
-    padding-right: 2rem;
-    @include nav-collapse {
-      height: 100%;
-      @include flex(column, center, center);
-    }
-    .nav__icon {
-      @include icon_hover(24px, invert(0.5), invert(1));
-      margin: 0 10px;
-      transform: translateY(3px);
-      @include nav-collapse {
-        @include icon_hover(30px, invert(0.5), invert(1));
-        margin: 5px 0;
+    @for $i from 1 through 6 {
+      .nav__link.appear-#{$i} {
+        animation: mobile-navigation 800ms ease-in-out #{$i / 12}s 1 forwards;
       }
     }
   }
@@ -131,19 +108,11 @@ nav.navbar {
   .toggle-nav {
     transform: translateY(0%);
     transition: all 0.25s;
-    // animation: fade-in 0.25s linear 0s 1 forwards;
-  }
-}
-
-body.dark-mode {
-  nav.navbar {
-    background: $white;
-    color: $blue__dark;
   }
 }
 
 footer.navbar {
-  @include flex(row, space-around, center);
+  @include flex(column, space-around, center);
   background: $blue__dark;
   color: $white;
   padding: 1rem;
@@ -176,10 +145,24 @@ footer.navbar {
   .nav__icon {
     @include icon_hover(32px, invert(0.5), invert(1));
   }
+  .footer__social {
+    @include flex(row, space-around, center);
+    width: 100%;
+    @include mobile {
+      @include flex(column, center, center);
+    }
+  }
 }
 
-// @keyframes fade-in {
-//   0% { opacity: 0; };
-//   50% {  opacity: 0 };
-//   100% { opacity: 1; };
-// }
+@keyframes mobile-navigation {
+  0% { transform: translateX(-500%); opacity: 0;};
+  30% { transform: translateX(50%); };
+  60% { transform: translateX(0%); opacity: 1; };
+  80% { transform: translateX(8%); };
+  100% { transform: translateX(0%); opacity: 1;};
+}
+
+@keyframes close-mobile-navigation {
+  0% { transform: translateY(0%); opacity: 1;};
+  100% { transform: translateY(100%); opacity: 0;};
+}

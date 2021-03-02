@@ -3,33 +3,33 @@ const
   navContents = document.querySelector('.mobile-nav__container'),
   navItems = document.querySelectorAll('.nav__link');
 
+  // window.addEventListener('resize', function() {
+  //   let done = false;
+  //   if (window.innerWidth <= 952) {
+  //     let original = document.querySelector('.mobile-nav__container');
+  //     let clone = original.cloneNode(true);
+  //     body.appendChild(clone);
+  //   }
+  // });
+
 burger.addEventListener('click', function(e) {
   navContents.classList.toggle('toggle-nav');
 });
+
+navContents.addEventListener('transitionend', function(e) {
+  if (navContents.classList.contains('toggle-nav')) {
+    navItems.forEach((item, index) => {
+      item.classList.add(`appear-${index + 1}`);
+    })
+  } else {
+    navItems.forEach((item, index) => {
+      item.classList.remove(`appear-${index + 1}`);
+    })
+  }
+})
 
 navItems.forEach(item => {
   item.addEventListener('click', function(e) {
     navContents.classList.toggle('toggle-nav');
   })
 })
-// document.addEventListener('click', function(e) {
-//   const navItem = document.querySelectorAll('.nav__link');
-//   if (e.target === burger) {
-//     navContents.classList.toggle('toggle-nav');
-//   }
-// })
-
-function isDescendant(el, selector) {
-  let isChild = false;
-  if (el.id === selector) {
-    isChild = true;
-    return isChild;
-  }
-  while (el = el.parentNode) {
-    if (el.id === selector || $(el).parents('.select2-container').length == 1) {
-      isChild = true;
-      return isChild;
-    }
-  }
-  return isChild;
-}

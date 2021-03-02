@@ -1,5 +1,12 @@
 const myTestimonials = [
   {
+    "id": "3",
+    "quote": "Testimonials coming soon...click through for some fake testimonials, though!",
+    "author": "Matt",
+    "company": "Me, it's just me",
+    "image": ""
+  }, 
+  {
     "id": "1",
     "quote": "Matt is great to work with, delivers exactly what he promises and is very responsive!",
     "author": "Rebekah Leo",
@@ -14,6 +21,7 @@ const myTestimonials = [
     "image": "./assets/images/recs/bearclaw-logo.png"
   }, 
 ];
+
 let selectedTestimonial = myTestimonials[0];
 
 async function renderQuote(testimonial) {
@@ -58,5 +66,3 @@ function selectRandomQuote(arr) {
     renderQuote(selectedTestimonial);
   }
 }
-
-renderQuote(selectedTestimonial);

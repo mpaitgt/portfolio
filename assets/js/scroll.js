@@ -1,24 +1,33 @@
 const 
     aboutDestination = document.querySelector('.about'),
+    workDestination = document.querySelector('.work'),
     projectsDestination = document.querySelector('.projects'),
     recommendationsDestination = document.querySelector('.recommendations'),
     bandcampDestination = document.querySelector('.bandcamp'),
+    contactDestination = document.querySelector('.contact'),
     navLink = document.querySelectorAll('.nav__link');
 
 navLink.forEach(target => {
     target.addEventListener('click', () => {
-        switch(target.textContent) {
-            case 'About':
+        console.log(target.dataset);
+        switch(target.dataset.name) {
+            case 'about':
                 scroll(aboutDestination);
                 break;
-            case 'Work & Projects':
+            case 'work':
+                scroll(workDestination);
+                break;
+            case 'projects':
                 scroll(projectsDestination);
                 break;
-            case 'Recommendations':
+            case 'recommendations':
                 scroll(recommendationsDestination);
                 break;
-            case 'Bandcamp':
+            case 'bandcamp':
                 scroll(bandcampDestination);
+                break;
+            case 'contact':
+                scroll(contactDestination);
                 break;
             default:
                 break;
@@ -27,7 +36,8 @@ navLink.forEach(target => {
 })
 
 function scroll(target) {
+    console.log(target)
     target.scrollIntoView({ 
         behavior: 'smooth' 
-      }, 3000);
+    }, 5000);
 }
