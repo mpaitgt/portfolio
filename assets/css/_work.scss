@@ -47,6 +47,9 @@
       font-weight: 300;
       font-size: 1.8rem;
       transition: transform 200ms;
+      @include mobile {
+        font-size: 1.6rem;
+      }
     }
     .job-title.hover {
       transform: translateY(-5px);
@@ -113,5 +116,20 @@
     transition: all 200ms ease-in-out;
     height: auto;
     
+  }
+}
+
+ul.work-bullets {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  list-style: circle;
+  li {
+    margin: 10px 0;
+    span.bold {
+      font-weight: 900;
+      color: $blue__med;
+      font-size: 1.1rem;
+    }
   }
 }

@@ -4,7 +4,7 @@ function attachHoverAnimationOnItems(listOfItems, hard = false) {
   
     // Add hover effect
     item.addEventListener('mouseenter', function(e) {
-      if (screen.width > 952) {
+      if (window.innerWidth > 952) {
         // if it's the first item
         if (index === 0) {
           for (let i = index + 1; i < array.length; i++) {
@@ -30,7 +30,7 @@ function attachHoverAnimationOnItems(listOfItems, hard = false) {
   
     // Remove hover effect
     item.addEventListener('mouseleave', function(e) {
-      if (screen.width > 952) {
+      if (window.innerWidth > 952) {
         // if it's the first item
         if (index === 0) {
           for (let i = index + 1; i < array.length; i++) {

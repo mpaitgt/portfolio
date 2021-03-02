@@ -24,7 +24,6 @@ nav.navbar {
     font-family: 'Fira Sans', arial, sans-serif;
     font-size: 1.8rem;
     letter-spacing: 1px;
-    // z-index: 99;
     cursor: pointer;
     @include mobile {
       font-size: 1.5rem;
@@ -37,7 +36,7 @@ nav.navbar {
   }
   .mobile-nav__container {
     background: $blue__dark;
-    z-index: 0;
+    z-index: -1;
     @include flex(row, space-between, center);
     @include nav-collapse {
       margin-top: 50px;
@@ -65,11 +64,13 @@ nav.navbar {
       cursor: pointer;
       transition: all 0.25s;
       @include nav-collapse {
-        transform: translateX(-200%);
-        font-size: 1.2rem;
+        transform: translateX(-500%);
+        font-size: 1.4rem;
         padding-left: 2rem;
-        margin-top: 0.8rem;
-        margin-bottom: 0.8rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin: 5px;
+        text-align:center;
       }
       &:hover {
         transform: scale(1.1);
@@ -81,9 +82,10 @@ nav.navbar {
         }
       }
     }
-    .nav__link.appear {
-      animation: mobile-navigation 1200ms ease-in-out 0s 1 forwards;
-      
+    @for $i from 1 through 6 {
+      .nav__link.appear-#{$i} {
+        animation: mobile-navigation 800ms ease-in-out #{$i / 12}s 1 forwards;
+      }
     }
   }
   #burger {
@@ -106,14 +108,6 @@ nav.navbar {
   .toggle-nav {
     transform: translateY(0%);
     transition: all 0.25s;
-    // animation: fade-in 0.25s linear 0s 1 forwards;
-  }
-}
-
-body.dark-mode {
-  nav.navbar {
-    background: $white;
-    color: $blue__dark;
   }
 }
 
@@ -161,9 +155,14 @@ footer.navbar {
 }
 
 @keyframes mobile-navigation {
-  0% { transform: translateX(-200%); opacity: 0;};
+  0% { transform: translateX(-500%); opacity: 0;};
   30% { transform: translateX(50%); };
   60% { transform: translateX(0%); opacity: 1; };
   80% { transform: translateX(8%); };
   100% { transform: translateX(0%); opacity: 1;};
+}
+
+@keyframes close-mobile-navigation {
+  0% { transform: translateY(0%); opacity: 1;};
+  100% { transform: translateY(100%); opacity: 0;};
 }

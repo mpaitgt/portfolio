@@ -40,7 +40,7 @@ const myJobs = [
     type: 'Freelance',
     github_link: '',
     production_link: 'https://salvageboy.com',
-    description: 'A small software for used motor part sellers, I was hired to re-design the home page of the website.',
+    description: 'A small software company that helps used motor part sellers better manage eBay accounts, I was hired to re-design the home page of the website.',
     bullets: []
   },
 ];
@@ -53,7 +53,7 @@ function renderJobs(arr) {
       <div class="job-wrapper">
         <div class="job-header">
           <div class="job-headline-wrapper">
-            <h3 class="section__headline inverted">${job.company}</h3>
+            <h3 class="section__headline large">${job.company}</h3>
           </div>
           <h3 class="job-title">${job.title}</h3>
           <div class="job-details">

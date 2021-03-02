@@ -7,7 +7,7 @@
   @include tablet {
     @include flex(column, center, center);
   }
-  position: relative;
+  
   > div {
     display: flex;
     flex-direction: column;
@@ -15,31 +15,6 @@
       display: inline;
       align-self: flex-start;
     }
-  }
-  .img__bio {
-    max-width: 260px;
-    min-width: 260px;
-    align-self: center;
-    border-radius: 80% 50%;
-    margin: 1rem;
-  }
-  .mobile-shape {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    border-radius: 80% 50%;
-  }
-  .ms-left {
-    background: $blue__light;
-    left: 0;
-    transform: translateY(20px);
-    z-index: -1;
-  }
-  .ms-right {
-    background: $blue__light-x;
-    right: 0;
-    transform: translateY(80px);
-    z-index: -1;
   }
 }
 
