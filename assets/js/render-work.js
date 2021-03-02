@@ -9,12 +9,11 @@ const myJobs = [
     production_link: '',
     description: 'I was brought onto this project to bring a UI design to life. Recruiting software in its development phase, Bearclaw needed a frontend-focused developer to improve the application\'s design and the user experience.',
     bullets: [
-      'I abandoned Bootstrap and developed a complex dashboard with CSS Grid',
-      'I revisited jQuery for the first since Bootcamp (December 2019)',
-      'I learned PHP for the first time and dusted off the MySQL documentation.',
-      'I built new, full-stack features - including a kanban board and an appointment calendar - using third-party APIs.',
-      'Most recently, I developed a light/dark mode toggle which extends the software itself to a custom Chrome extension.',
-      'I continued to expand and refactor the codebase along the way.'
+      'I abandoned Bootstrap and developed a complex dashboard with CSS Grid, and built the foundation of the software\'s codebase with the SCSS preprocessor making use of variables, mixins, functions, and more.',
+      'I revisited jQuery and built new functionality like pop up forms, stylish dropdown menus, and setting responsive table heights.',
+      'I learned PHP and used MySQL queries to add new full-stack features, including a kanban board and an appointment calendar, using third-party APIs.',
+      'Most recently, I developed a user setting to toggle light/dark mode. I also extended this feature to our custom Chrome extension.',
+      'I continue today, improving on older features and building new ones.'
     ]
   },
   {

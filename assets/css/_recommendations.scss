@@ -72,6 +72,7 @@
     font-family: 'Fira Sans';
     color: $blue__med;
     text-align: right;
+    margin-top: 10px;
     @include mobile {
       text-align: center;
     }
@@ -83,6 +84,7 @@
   }
   .quote-author-photo {
     width: 240px;
+    // height: 80px;
     margin-left: 1rem;
     @include mobile {
       width: 180px;

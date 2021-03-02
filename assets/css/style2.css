@@ -118,6 +118,40 @@
   }
 }
 
+* body section.section__body .header-with-tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 952px) {
+  * body section.section__body .header-with-tag {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 * body section.section__body .section__copy {
   font-size: 1.05rem;
   padding-bottom: 12px;
@@ -184,7 +218,7 @@
   height: 100px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 952px) {
   * body .break {
     height: 0px;
   }
@@ -787,6 +821,13 @@ footer.navbar .footer__social {
       align-self: flex-start;
 }
 
+.about__content .about__intro {
+  font-size: 1.2rem;
+  font-family: 'Fira Sans', arial, sans-serif;
+  margin-bottom: 10px;
+  color: #929292;
+}
+
 .nav__icons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1377,6 +1418,10 @@ ul.work-bullets li span.bold {
   }
 }
 
+.bandcamp {
+  position: relative;
+}
+
 @media screen and (max-width: 952px) {
   .bandcamp {
     width: 100%;
@@ -1397,7 +1442,8 @@ ul.work-bullets li span.bold {
   background: #d8d8ee;
   -webkit-box-shadow: 34px 4px 0px 20px #e7e7f1;
           box-shadow: 34px 4px 0px 20px #e7e7f1;
-  position: relative;
+  -webkit-animation: bandcamp2 3s ease-in-out 0s infinite forwards;
+          animation: bandcamp2 3s ease-in-out 0s infinite forwards;
 }
 
 @media screen and (max-width: 576px) {
@@ -1519,8 +1565,8 @@ ul.work-bullets li span.bold {
   }
   50% {
     border-radius: 60% 40%;
-    -webkit-box-shadow: -12px -12px 0px 20px #e7e7f1;
-            box-shadow: -12px -12px 0px 20px #e7e7f1;
+    -webkit-box-shadow: -10px -10px 0px 20px #e7e7f1;
+            box-shadow: -10px -10px 0px 20px #e7e7f1;
   }
   100% {
     border-radius: 40% 60%;
@@ -1537,8 +1583,8 @@ ul.work-bullets li span.bold {
   }
   50% {
     border-radius: 60% 40%;
-    -webkit-box-shadow: -12px -12px 0px 20px #e7e7f1;
-            box-shadow: -12px -12px 0px 20px #e7e7f1;
+    -webkit-box-shadow: -10px -10px 0px 20px #e7e7f1;
+            box-shadow: -10px -10px 0px 20px #e7e7f1;
   }
   100% {
     border-radius: 40% 60%;
@@ -1670,6 +1716,7 @@ ul.work-bullets li span.bold {
   font-family: 'Fira Sans';
   color: #3d3d5a;
   text-align: right;
+  margin-top: 10px;
 }
 
 @media screen and (max-width: 576px) {
@@ -2168,19 +2215,36 @@ form.mail-sent {
   }
 }
 
-svg {
-  width: 240px;
-  position: absolute;
-  overflow: auto;
+svg.headline-tag {
+  height: 36px;
 }
 
-@media screen and (max-width: 768px) {
-  svg {
-    width: 180px;
+svg.headline-tag path {
+  fill: #d8d8ee;
+  stroke: none;
+}
+
+@media screen and (max-width: 576px) {
+  svg.headline-tag {
+    height: auto;
+    width: 100%;
+  }
+}
+
+svg.same-line {
+  margin-left: 16px;
+}
+
+@media screen and (max-width: 952px) {
+  svg.same-line {
+    margin-left: 0;
   }
 }
 
 svg.click-through {
+  width: 240px;
+  position: absolute;
+  overflow: auto;
   bottom: -80px;
   left: 0%;
 }
@@ -2191,14 +2255,42 @@ svg.click-through {
   }
 }
 
+@media screen and (max-width: 768px) {
+  svg.click-through {
+    bottom: -120px;
+    width: 180px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  svg.click-through {
+    bottom: -100px;
+  }
+}
+
 svg.listen-in {
-  top: -240px;
+  width: 240px;
+  position: absolute;
+  overflow: auto;
+  top: -200px;
   right: 0%;
+}
+
+@media screen and (max-width: 952px) {
+  svg.listen-in {
+    top: 50px;
+  }
 }
 
 @media screen and (max-width: 768px) {
   svg.listen-in {
-    top: -180px;
+    width: 180px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  svg.listen-in {
+    top: -20px;
   }
 }
 /*# sourceMappingURL=style2.css.map */

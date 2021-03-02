@@ -2,7 +2,7 @@
 @import '_media-queries';
 
 .bandcamp {
-  
+  position: relative;
   @include nav-collapse {
     width: 100%;
     height: auto;
@@ -20,8 +20,7 @@
   border-radius: 40% 60%;
   background: $blue__light;
   box-shadow: 34px 4px 0px 20px rgba($blue__light-x, 1); 
-  // animation: bandcamp2 3s ease-in-out 0s infinite forwards;
-  position: relative;
+  animation: bandcamp2 3s ease-in-out 0s infinite forwards;
   @include mobile {
     margin: 4rem 0;
   }
@@ -90,7 +89,7 @@
    };
    50% {
     border-radius: 60% 40%;
-    box-shadow: -12px -12px 0px 20px rgba($blue__light-x, 1); 
+    box-shadow: -10px -10px 0px 20px rgba($blue__light-x, 1); 
    };
   100% { 
     border-radius: 40% 60%;
