@@ -34,7 +34,7 @@ svg.click-through {
     width: 180px;
   }
   @include mobile {
-    bottom: -100px;
+    bottom: -140px;
   }
 }
 
@@ -51,6 +51,6 @@ svg.listen-in {
     width: 180px;
   }
   @include mobile {
-    top: -80px;
+    top: -40px;
   }
 }

@@ -2264,7 +2264,7 @@ svg.click-through {
 
 @media screen and (max-width: 576px) {
   svg.click-through {
-    bottom: -100px;
+    bottom: -140px;
   }
 }
 
@@ -2290,7 +2290,7 @@ svg.listen-in {
 
 @media screen and (max-width: 576px) {
   svg.listen-in {
-    top: -80px;
+    top: -40px;
   }
 }
 /*# sourceMappingURL=style2.css.map */
