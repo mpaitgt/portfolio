@@ -52,7 +52,7 @@ let myProjects = [
     ],
     "description": "Inspired by my day job, I developed this database mangement software allowing you to gain consistency and accuracy in your data.",
     "github_link": "https://www.github.com/mpaitgt/deetz",
-    "production_link": "https://www.deetz.herokuapp.com"
+    "production_link": "https://www.deetz-app.herokuapp.com"
   },
   {
     "id": 8,
@@ -78,7 +78,6 @@ let skills = [
   'Emotion.css',
   'MySQL',
   'MongoDB',
-  'MongoDB Atlas',
   'Firebase',
   'Node.js & Express'
 ];
