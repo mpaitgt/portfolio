@@ -42,6 +42,22 @@ const myJobs = [
     description: 'A small software company that helps used motor part sellers better manage eBay accounts, I was hired to re-design the home page of the website.',
     bullets: []
   },
+  {
+    title: 'Digital Marketing Specialist',
+    company: 'HearingLife',
+    duration: 'April 2018 - Present',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Email Analytics'],
+    type: 'Full-Time',
+    github_link: '',
+    production_link: 'https://salvageboy.com',
+    description: 'I started with HearingLife as coordinator in 2018, and got promoted to email/web around the time I enrolled at bootcamp. While not a "developer" by job title, in 2020 I spearheaded the marketing team\'s effort to integrate the Podium Reviews API on our over 400 location web pages. This included:',
+    bullets: [
+      'Writing the script to fetch review data from the Podium API with location IDs and parsing it.',
+      'Structuring HTML and designing for style and mobile-friendly functionality.',
+      'A team-wide QA testing process in which all data was matched with its source to ensure accuracy.',
+      'I\'ve also done a lot of fun work in email, designing creative layouts in XD and implementing strong and consistent analytics reporting.'
+    ]
+  },
 ];
 
 function renderJobs(arr) {
