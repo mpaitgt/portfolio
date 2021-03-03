@@ -1,24 +1,24 @@
 const myTestimonials = [
   {
     "id": "3",
-    "quote": "Testimonials coming soon...click through for some fake testimonials, though!",
-    "author": "Matt",
-    "company": "Me, it's just me",
+    "quote": "Testimonials coming soon...click for some random quotes.",
+    "author": "",
+    "company": "",
     "image": ""
   }, 
   {
     "id": "1",
-    "quote": "Matt is great to work with, delivers exactly what he promises and is very responsive!",
-    "author": "Rebekah Leo",
-    "company": "Owner",
-    "image": "./assets/images/recs/tfiy-logo.png"
+    "quote": "\"You miss 100% of the shots you don't take\" - Wayne Gretzy",
+    "author": "Michael Scott",
+    "company": "Duner Mifflin",
+    "image": "https://i.pinimg.com/474x/c4/10/5a/c4105ad7ef5aac4ff95fafe3e1920f13.jpg"
   }, 
   {
     "id": "2",
-    "quote": "Easy to work with designer, well spoken, and knows his stuff.",
-    "author": "Alex Chisolm",
-    "company": "Software Engineer",
-    "image": "./assets/images/recs/bearclaw-logo.png"
+    "quote": "You were the Chosen One! It was said that you would destroy the Sith, not join them!",
+    "author": "Obi Wan Kenobi",
+    "company": "Jedi Council",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/29/Embl%C3%A8me_de_l%27Ordre_Jedi.svg"
   }, 
 ];
 
@@ -42,7 +42,7 @@ async function renderQuote(testimonial) {
             ${testimonial.author}
             <br><span>${testimonial.company}</span>
           </p>
-          <img class="quote-author-photo" src="${testimonial.image}" alt="">
+          <img class="quote-author-photo" style="width: 120px !important;" src="${testimonial.image}" alt="">
       </div>
     </div>
   `;
