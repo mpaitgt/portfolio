@@ -8,7 +8,7 @@ const myTestimonials = [
   }, 
   {
     "id": "1",
-    "quote": "\"You miss 100% of the shots you don't take\" - Wayne Gretzy",
+    "quote": "\"You miss 100% of the shots you don't take\" - Wayne Gretzky",
     "author": "Michael Scott",
     "company": "Dunder Mifflin",
     "image": "https://i.pinimg.com/474x/c4/10/5a/c4105ad7ef5aac4ff95fafe3e1920f13.jpg"
