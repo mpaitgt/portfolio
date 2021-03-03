@@ -52,7 +52,7 @@ const myJobs = [
     production_link: 'https://salvageboy.com',
     description: 'I started with HearingLife as coordinator in 2018, and got promoted to email/web around the time I enrolled at bootcamp. While not a "developer" by job title, in 2020 I spearheaded the marketing team\'s effort to integrate the Podium Reviews API on our over 400 location web pages. This included:',
     bullets: [
-      'Writing the script to fetch review data from the Podium API with location IDs and parsing it.',
+      'Writing the script to fetch review data from the Podium API with location IDs and parsing the JSON response.',
       'Structuring HTML and designing for style and mobile-friendly functionality.',
       'A team-wide QA testing process in which all data was matched with its source to ensure accuracy.',
       'I\'ve also done a lot of fun work in email, designing creative layouts in XD and implementing strong and consistent analytics reporting.'
