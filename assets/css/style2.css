@@ -1074,7 +1074,7 @@ footer.navbar .footer__social {
 
 @media screen and (max-width: 576px) {
   .job-wrapper .job-header .job-title {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -1130,6 +1130,12 @@ footer.navbar .footer__social {
 @media screen and (max-width: 952px) {
   .job-wrapper .job-header .job-details h4 {
     margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .job-wrapper .job-header .job-details h4 {
+    font-size: 1.1rem;
   }
 }
 
