@@ -18,7 +18,7 @@ const myJobs = [
   },
   {
     title: 'Frontend Web Developer',
-    company: 'The Floor Is Yours Dance Center',
+    company: 'The Floor Is Yours',
     duration: 'February 2020 - Present',
     technologies: ['React', 'Material UI', 'Node.js/Express'],
     type: 'Freelance',
@@ -68,9 +68,16 @@ function renderJobs(arr) {
       <div class="job-wrapper">
         <div class="job-header">
           <div class="job-headline-wrapper">
-            <h3 class="section__headline large">${job.company}</h3>
+            <div>
+              <h3 class="section__headline large">
+                ${job.company}
+              </h3>
+            </div>
           </div>
-          <h3 class="job-title">${job.title}</h3>
+          <h3 class="job-title">
+            ${job.title}
+            <span class="fading-arrow fading-arrow-${index + 1}"></span>
+          </h3>
           <div class="job-details">
             <h4>${job.duration} | ${job.type}</h4>
             <div class="job__tech-container">
@@ -80,7 +87,7 @@ function renderJobs(arr) {
             </div>
             </h4>
           </div>
-          <div class="job-description ${index === 0 ? "is-visible" : ""}">
+          <div class="job-description${index === 0 ? " is-visible" : ""}">
             <p class="section__copy">
               ${job.description}
             </p>
@@ -130,8 +137,8 @@ const showElement = (el) => {
 
   let height = getHeight();
   el.classList.add('is-visible');
-
   el.style.height = height;
+  // el.querySelector('.fading-arrow').classList.add('close');
 };
 
 const hideElement = (el) => {
@@ -143,5 +150,6 @@ const hideElement = (el) => {
 
 	window.setTimeout(function () {
 		el.classList.remove('is-visible');
+    // el.querySelector('.fading-arrow').classList.remove('close');
 	}, 200);
 };

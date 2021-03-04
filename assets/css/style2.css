@@ -288,6 +288,107 @@
   }
 }
 
+.fading-arrow {
+  display: inline-block;
+  -webkit-clip-path: polygon(50% 70%, 0 30%, 100% 30%);
+          clip-path: polygon(50% 70%, 0 30%, 100% 30%);
+  height: 28px;
+  width: 28px;
+  margin-left: 16px;
+  background: #3d3d5a;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  opacity: 0.1;
+}
+
+.fading-arrow-1 {
+  -webkit-animation: fading-arrow 1600ms ease-in-out 0.5s infinite forwards;
+          animation: fading-arrow 1600ms ease-in-out 0.5s infinite forwards;
+}
+
+.fading-arrow-2 {
+  -webkit-animation: fading-arrow 1600ms ease-in-out 1s infinite forwards;
+          animation: fading-arrow 1600ms ease-in-out 1s infinite forwards;
+}
+
+.fading-arrow-3 {
+  -webkit-animation: fading-arrow 1600ms ease-in-out 1.5s infinite forwards;
+          animation: fading-arrow 1600ms ease-in-out 1.5s infinite forwards;
+}
+
+.fading-arrow-4 {
+  -webkit-animation: fading-arrow 1600ms ease-in-out 2s infinite forwards;
+          animation: fading-arrow 1600ms ease-in-out 2s infinite forwards;
+}
+
+.fading-arrow-5 {
+  -webkit-animation: fading-arrow 1600ms ease-in-out 2.5s infinite forwards;
+          animation: fading-arrow 1600ms ease-in-out 2.5s infinite forwards;
+}
+
+.fading-arrow-6 {
+  -webkit-animation: fading-arrow 1600ms ease-in-out 3s infinite forwards;
+          animation: fading-arrow 1600ms ease-in-out 3s infinite forwards;
+}
+
+.fading-arrow-7 {
+  -webkit-animation: fading-arrow 1600ms ease-in-out 3.5s infinite forwards;
+          animation: fading-arrow 1600ms ease-in-out 3.5s infinite forwards;
+}
+
+.fading-arrow-8 {
+  -webkit-animation: fading-arrow 1600ms ease-in-out 4s infinite forwards;
+          animation: fading-arrow 1600ms ease-in-out 4s infinite forwards;
+}
+
+@-webkit-keyframes fading-arrow {
+  0% {
+    opacity: 0.05;
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+    -webkit-clip-path: polygon(50% 70%, 12% 30%, 88% 30%);
+            clip-path: polygon(50% 70%, 12% 30%, 88% 30%);
+  }
+  50% {
+    opacity: 0.2;
+    -webkit-transform: translateY(8px);
+            transform: translateY(8px);
+    -webkit-clip-path: polygon(50% 80%, 12% 30%, 88% 30%);
+            clip-path: polygon(50% 80%, 12% 30%, 88% 30%);
+  }
+  100% {
+    opacity: 0.05;
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+    -webkit-clip-path: polygon(50% 70%, 12% 30%, 88% 30%);
+            clip-path: polygon(50% 70%, 12% 30%, 88% 30%);
+  }
+}
+
+@keyframes fading-arrow {
+  0% {
+    opacity: 0.05;
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+    -webkit-clip-path: polygon(50% 70%, 12% 30%, 88% 30%);
+            clip-path: polygon(50% 70%, 12% 30%, 88% 30%);
+  }
+  50% {
+    opacity: 0.2;
+    -webkit-transform: translateY(8px);
+            transform: translateY(8px);
+    -webkit-clip-path: polygon(50% 80%, 12% 30%, 88% 30%);
+            clip-path: polygon(50% 80%, 12% 30%, 88% 30%);
+  }
+  100% {
+    opacity: 0.05;
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+    -webkit-clip-path: polygon(50% 70%, 12% 30%, 88% 30%);
+            clip-path: polygon(50% 70%, 12% 30%, 88% 30%);
+  }
+}
+
 nav.navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1362,6 +1463,11 @@ ul.work-bullets li span.bold {
           animation: slide-out-to-right 0.5s linear 1s 1 backwards;
 }
 
+.project.onload {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
 @-webkit-keyframes slide-in-from-left {
   0% {
     -webkit-transform: translateX(-300%);
@@ -1449,6 +1555,17 @@ ul.work-bullets li span.bold {
 @media screen and (max-width: 576px) {
   .bandcamp-wrapper {
     margin: 4rem 0;
+  }
+}
+
+.bandcamp-wrapper .bandcamp-logo-wrapper {
+  margin-top: 28px;
+  text-align: right;
+}
+
+@media screen and (max-width: 576px) {
+  .bandcamp-wrapper .bandcamp-logo-wrapper {
+    text-align: center;
   }
 }
 
@@ -2264,7 +2381,7 @@ svg.click-through {
 
 @media screen and (max-width: 576px) {
   svg.click-through {
-    bottom: -140px;
+    bottom: -125px;
   }
 }
 
@@ -2290,7 +2407,7 @@ svg.listen-in {
 
 @media screen and (max-width: 576px) {
   svg.listen-in {
-    top: -40px;
+    top: -55px;
   }
 }
 /*# sourceMappingURL=style2.css.map */

@@ -6,7 +6,7 @@ window.onload = async function() {
   await renderJobs(myJobs);
   attachShowEvent();
   // render projects
-  await renderProjects(myProjects.filter((item, index) => index < 3)); 
+  await renderProjects(myProjects.filter((item, index) => index < 3), true); 
   // render first testimonial
   renderQuote(selectedTestimonial);
   // hover animations

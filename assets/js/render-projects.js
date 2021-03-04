@@ -113,7 +113,7 @@ function attachSkillEvent() {
   skillSelectors.forEach((skill, index, array) => {
     skill.addEventListener('mousedown', function(e) {
       renderSkills(e.target.dataset.id);
-      renderProjects(filterProjects(selectedSkill))
+      renderProjects(filterProjects(selectedSkill));
       // using the scroll.js function to jump
       // down the page and view the projects
       if (window.scrollY <= 5) {
@@ -123,7 +123,7 @@ function attachSkillEvent() {
   })
 }
 
-let renderProjects = function(arr) {
+let renderProjects = function(arr, onload = false) {
   const 
     projectList = document.querySelector('.list__projects'),
     allProjects = document.querySelectorAll('.project'),
@@ -131,14 +131,16 @@ let renderProjects = function(arr) {
   // adding the exit animation
   allProjects.forEach((project, index) => {
     // project.classList.remove(`project-enter-${index + 1}`);
-    project.classList.add(`project-exit-${index + 1}`);
+    if (!onload) {
+      project.classList.add(`project-exit-${index + 1}`);
+    }
   })
   // render the HTML necessary for each 
   // project in the given array
 setTimeout(function() {
   projectList.innerHTML = arr.map((project, index) => {
     return `
-      <li class="project project-enter-${index + 1}">
+      <li class="project${onload ? ' onload' : ` project-enter-${index + 1}`}">
         <div>
           <div class="project__header-row">
             <p class="section__headline project__name">${project.title}</p>

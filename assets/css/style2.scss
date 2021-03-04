@@ -160,6 +160,31 @@
   }
 }
 
+.fading-arrow {
+  display: inline-block;
+  clip-path: polygon(50% 70%, 0 30%, 100% 30%);
+  height: 28px;
+  width: 28px;
+  margin-left: 16px;
+  background: $blue__med;
+  transform: translateY(5px);
+  opacity: 0.1;
+  // position: absolute;
+}   
+
+@for $i from 1 through 8 {
+  .fading-arrow-#{$i} {
+    animation: fading-arrow 1600ms ease-in-out #{$i/2}s infinite forwards;
+  }
+}
+
+
+@keyframes fading-arrow {
+  0% { opacity: 0.05; transform: translateY(5px); clip-path: polygon(50% 70%, 12% 30%, 88% 30%); };
+  50% { opacity: 0.2; transform: translateY(8px); clip-path: polygon(50% 80%, 12% 30%, 88% 30%); };
+  100% { opacity: 0.05; transform: translateY(5px); clip-path: polygon(50% 70%, 12% 30%, 88% 30%); };
+}
+
 @import '_navbar';
 @import '_about';
 @import '_work';
