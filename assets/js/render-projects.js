@@ -1,4 +1,15 @@
 let myProjects = [
+    // {
+  //   "id": 1,
+  //   "title": "Places / Just Weather",
+  //   "image": "",
+  //   "technologies": [
+  //    "Gatsby", "React.js", 
+  // ],
+  //   "description": "",
+  //   "github_link": "",
+  //   "production_link": ""
+  // },
   // {
   //   "id": 1,
   //   "title": "Recordshare",
@@ -26,7 +37,7 @@ let myProjects = [
     "title": "Drum Machine",
     "image": "./assets/images/project-images/drum-machine.JPG",
     "technologies": [
-      "HTML & CSS", "SCSS/SASS"
+      "HTML & CSS", "SCSS/SASS", "JavaScript"
     ],
     "description": "Writing and producing music was my first passion - so naturally I couldn't help sampling some of the songs I've written to create this drum machine.",
     "github_link": "https://www.github.com/mpaitgt/drum-machine",
@@ -42,6 +53,39 @@ let myProjects = [
     "description": "A React app that helps its users develop more eco-friendly daily habits and encourage more green living. ",
     "github_link": "https://www.github.com/jayjscotto/ecohabit",
     "production_link": "https://www.ecohabit.herokuapp.com"
+  },
+  {
+    "id": 2,
+    "title": "Quote Generator",
+    "image": "./assets/images/project-images/quote-generator.JPG",
+    "technologies": [
+      "React.js"
+    ],
+    "description": "A quote machine to go along with one of my favorite records, Dogrel by Fontaines D.C.",
+    "github_link": "https://github.com/mpaitgt/Fontaines-Quote-Machinations",
+    "production_link": "https://mpaitgt.github.io/Fontaines-Quote-Machinations/"
+  },
+  {
+    "id": 200,
+    "title": "Record Store Shopping",
+    "image": "./assets/images/project-images/record-store-shopping.JPG",
+    "technologies": [
+      "React.js"
+    ],
+    "description": "My first React app! This is a simple game where the goal is to select all of the records...but don\'t select any more than once!",
+    "github_link": "https://github.com/mpaitgt/clicky",
+    "production_link": "https://mpaitgt.github.io/clicky/"
+  },
+  {
+    "id": 235,
+    "title": "Give a GIF",
+    "image": "./assets/images/project-images/give-a-gif.JPG",
+    "technologies": [
+      "HTML/CSS", "JavaScript", "jQuery"
+    ],
+    "description": "A web application which uses the Giphy API to generate GIFs on request, where the user can store their favorite GIFs in the local storage.",
+    "github_link": "https://github.com/mpaitgt/Give-a-Gift",
+    "production_link": "https://mpaitgt.github.io/Give-a-Gift/"
   },
   {
     "id": 5,
@@ -75,7 +119,6 @@ let skills = [
   'React.js',
   'Material UI',
   'jQuery',
-  'Emotion.css',
   'MySQL',
   'MongoDB',
   'Firebase',
@@ -189,9 +232,9 @@ setTimeout(function() {
     ${
       arr.length === 1
       ?
-      `${arr.length} project listed`
+      `${arr.length} of ${myProjects.length} project listed`
       :
-      `${arr.length} projects listed`
+      `${arr.length} of ${myProjects.length} projects listed`
     }
   `;
 }
