@@ -74,18 +74,20 @@ function renderJobs(arr) {
               </h3>
             </div>
           </div>
-          <h3 class="job-title">
-            ${job.title}
-            <span class="fading-arrow fading-arrow-${index + 1}"></span>
-          </h3>
-          <div class="job-details">
-            <h4>${job.duration} | ${job.type}</h4>
-            <div class="job__tech-container">
-              ${job.technologies.map((tech) => {
-                return `<span class="job__tech">${tech}</span>`;
-              }).join('')}
+          <div style="display: flex; justify-content: flex-start; align-items: flex-start;">
+            <div>
+              <h3 class="job-title">${job.title}</h3>
+              <div class="job-details">
+                <h4>${job.duration}<br>
+                ${job.type}</h4>
+                <div class="job__tech-container">
+                  ${job.technologies.map((tech) => {
+                    return `<span class="job__tech">${tech}</span>`;
+                  }).join('')}
+                </div>
+                </h4>
+              </div>
             </div>
-            </h4>
           </div>
           <div class="job-description${index === 0 ? " is-visible" : ""}">
             <p class="section__copy">

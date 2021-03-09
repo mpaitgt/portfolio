@@ -8,7 +8,7 @@
     }
     .about__content {
       align-self: center;
-      float: none;
+      margin-top: -20%;
     }
   }
 }
@@ -71,24 +71,6 @@
           font-size: 1.1rem;
         }
       }
-      // &:hover {
-      //   &:after {
-      //     background: $blue__light;
-      //   }
-      // }
-      // &:before {
-      //   content: '\2039';
-      //   display: inline-block;
-      //   width: 40px;
-      //   height: 40px;
-      //   background: $blue__light-x;
-      //   color: white;
-      //   border-radius: 50%;
-      //   margin-right: 20px;
-      //   text-align: center;
-      //   font-size: 2.4rem;
-      //   transform: rotate(-90deg);
-      // }
       .job__tech-container {
         margin-left: 20px;
         .job__tech {
@@ -98,6 +80,7 @@
           padding: 2px 8px;
           margin: 6px;
           border-radius: 5px;
+          white-space: no-wrap;
           &:first-child {
             margin-left: 0;
           }

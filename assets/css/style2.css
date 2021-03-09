@@ -294,7 +294,6 @@
           clip-path: polygon(50% 70%, 0 30%, 100% 30%);
   height: 28px;
   width: 28px;
-  margin-left: 16px;
   background: #3d3d5a;
   -webkit-transform: translateY(5px);
           transform: translateY(5px);
@@ -981,7 +980,7 @@ footer.navbar .footer__social {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  float: none;
+  margin-top: -20%;
 }
 
 .job-wrapper {
@@ -1151,6 +1150,7 @@ footer.navbar .footer__social {
   padding: 2px 8px;
   margin: 6px;
   border-radius: 5px;
+  white-space: no-wrap;
 }
 
 .job-wrapper .job-header .job-details .job__tech-container .job__tech:first-child {

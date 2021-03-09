@@ -140,7 +140,7 @@ let renderProjects = function(arr, onload = false) {
 setTimeout(function() {
   projectList.innerHTML = arr.map((project, index) => {
     return `
-      <li class="project${onload ? ' onload' : ` project-enter-${index + 1}`}">
+      <li class="project project-enter-${index + 1}">
         <div>
           <div class="project__header-row">
             <p class="section__headline project__name">${project.title}</p>
