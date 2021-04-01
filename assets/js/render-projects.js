@@ -1,26 +1,4 @@
 let myProjects = [
-    // {
-  //   "id": 1,
-  //   "title": "Places / Just Weather",
-  //   "image": "",
-  //   "technologies": [
-  //    "Gatsby", "React.js", 
-  // ],
-  //   "description": "",
-  //   "github_link": "",
-  //   "production_link": ""
-  // },
-  // {
-  //   "id": 1,
-  //   "title": "Recordshare",
-  //   "image": "./assets/images/project-images/recordshare.JPG",
-  //   "technologies": [
-  //     "React.js", "MongoDB Atlas", "Emotion.css", "Cloudinary", "Passport", "Node.js & Express"
-  //   ],
-  //   "description": "Personal MERN-stack project developed to allow people to share the music they love with others, and agregrate audience ratings.",
-  //   "github_link": "https://www.github.com/mpaitgt/recordshare",
-  //   "production_link": "https://www.recordshare.herokuapp.com"
-  // },
   {
     "id": 101,
     "title": "Alternative Dough",
@@ -59,7 +37,7 @@ let myProjects = [
     "title": "Placespace",
     "image": "./assets/images/project-images/placespace.JPG",
     "technologies": [
-      "Gatsby", "React.js", "Contentful CMS"
+      "Gatsby", "React.js", "Tailwind CSS", "Contentful CMS"
     ],
     "description": "A simple Gatsby app which makes use of the Contenful headless CMS, providing weather for users.",
     "github_link": "https://www.github.com/mpaitgt/justweather",
