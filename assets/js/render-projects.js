@@ -204,9 +204,9 @@ setTimeout(function() {
               ${
                 project.production_link !== '' 
                 ? `            
-                <a href="${project.production_link}" target="_blank">
+                <a href="${project.production_link}" target="_blank" rel="noreferrer">
                   <img src="./assets/images/social-icons/production_icon.png" width="32"
-                  class="project__link">
+                  class="project__link" alt="Live site icon for ${project.title}">
                 </a>` 
                 : 
                 ''
@@ -214,9 +214,9 @@ setTimeout(function() {
               ${
                 project.github_link !== '' 
                 ? `            
-                <a href="${project.github_link}" target="_blank">
+                <a href="${project.github_link}" target="_blank" rel="noreferrer">
                   <img src="./assets/images/social-icons/github.png" width="32"
-                  class="project__link" alt="${project.title} Github Repo">
+                  class="project__link" alt="Github Logo for ${project.title}">
                 </a>` 
                 : 
                 ''
@@ -233,8 +233,8 @@ setTimeout(function() {
           </ul>
         </div>
         <div>
-          <img src="${project.image}" alt="${project.title} UI"
-            data-project-name="${project.title.toLowerCase()}" class="img project__img">
+          <img src="${project.image}" alt="Screenshot of ${project.title}"
+            data-project-name="${project.title.toLowerCase()}" class="img project__img"">
         </div>
       </li>
     `

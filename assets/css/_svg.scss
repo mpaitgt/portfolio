@@ -1,20 +1,24 @@
 svg.headline-tag {
   height: 36px;
   path {
-    fill: $blue__light;
+    fill: $blue__svg;
     stroke: none;
-  }
-  @include nav-collapse {
-    // height: 30px;
   }
   @include mobile {
     height: auto;
     width: 100%;
   }
+}  
+
+path,
+path.cls-1,
+path.cls-2 {
+  fill: $blue__svg;
 }
 
 svg.same-line {
   margin-left: 16px;
+
   @include nav-collapse {
     margin-left: 0;
   }

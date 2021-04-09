@@ -106,7 +106,7 @@
   display: inline-block;
   font-family: 'Fira Sans', arial, sans-serif;
   font-size: 2.5rem;
-  color: #d1d1d1;
+  color: #9e9e9e;
   margin-bottom: 10px;
   letter-spacing: 1px;
   font-weight: 900;
@@ -925,7 +925,7 @@ footer.navbar .footer__social {
   font-size: 1.2rem;
   font-family: 'Fira Sans', arial, sans-serif;
   margin-bottom: 10px;
-  color: #929292;
+  color: #9e9e9e;
 }
 
 .nav__icons {
@@ -1252,8 +1252,8 @@ ul.work-bullets li span.bold {
       -ms-flex-align: center;
           align-items: center;
   margin: 2rem 0;
-  -webkit-box-shadow: 0px 0px 6px 3px rgba(61, 61, 90, 0.2), 0px 0px 12px 6px rgba(61, 61, 90, 0.1);
-          box-shadow: 0px 0px 6px 3px rgba(61, 61, 90, 0.2), 0px 0px 12px 6px rgba(61, 61, 90, 0.1);
+  -webkit-box-shadow: 0px 0px 8px 2px rgba(61, 61, 90, 0.15);
+          box-shadow: 0px 0px 8px 2px rgba(61, 61, 90, 0.15);
   padding: 20px;
   -webkit-transform: translateX(-300%);
           transform: translateX(-300%);
@@ -1300,7 +1300,7 @@ ul.work-bullets li span.bold {
 }
 
 .projects .project .project__description {
-  color: #929292;
+  color: #6b6b6b;
   font-size: 1.2rem;
   max-width: 90%;
   padding-bottom: 20px;
@@ -1758,7 +1758,7 @@ ul.work-bullets li span.bold {
   max-width: 600px;
   margin: 0 auto;
   position: relative;
-  color: #d1d1d1;
+  color: #929292;
   font-family: 'Fira Sans';
   cursor: pointer;
   -webkit-transition: all 2s;
@@ -2343,7 +2343,7 @@ svg.headline-tag {
 }
 
 svg.headline-tag path {
-  fill: #d8d8ee;
+  fill: #b0b0cf;
   stroke: none;
 }
 
@@ -2352,6 +2352,12 @@ svg.headline-tag path {
     height: auto;
     width: 100%;
   }
+}
+
+path,
+path.cls-1,
+path.cls-2 {
+  fill: #b0b0cf;
 }
 
 svg.same-line {

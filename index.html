@@ -5,8 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Full-stack web developer with experience in UI/UX design.">
   <title>Matt Pignatore</title>
-  <link rel="stylesheet" href="./assets/css/style2.css" type="text/css">
+  <link rel="preload">
+  <link rel="stylesheet" href="./assets/css/style2.css" type="text/css" media="all">
   <link href="https://fonts.googleapis.com/css?family=Gothic+A1|Tajawal&display=swap" rel="stylesheet">
 </head>
 
@@ -30,12 +32,12 @@
     </div>
     <div class="mobile-nav__container">
       <ul class="nav__ul">
-        <li class="nav__link" data-name="about">About</li>
-        <li class="nav__link" data-name="work">Work</li>
-        <li class="nav__link" data-name="projects">Projects</li>
-        <li class="nav__link" data-name="recommendations">Testimonials</li>
-        <li class="nav__link" data-name="bandcamp">Bandcamp</li>
-        <li class="nav__link" data-name="contact">Contact</li>
+        <li id="about" class="nav__link" data-name="about">About</li>
+        <li id="work" class="nav__link" data-name="work">Work</li>
+        <li id="projects" class="nav__link" data-name="projects">Projects</li>
+        <li id="recommendations" class="nav__link" data-name="recommendations">Testimonials</li>
+        <li id="bandcamp" class="nav__link" data-name="bandcamp">Bandcamp</li>
+        <li id="contact" class="nav__link" data-name="contact">Contact</li>
       </ul>
     </div>
     <div id="burger">
@@ -53,7 +55,7 @@
       <div class="about__content">
         <div class="image-wrapper">
           <div class="mobile-shape ms-left"></div>
-          <img class="img" src="./assets/images/about-matt-p.jpg" alt="" width="600">
+          <img class="img" src="./assets/images/about-matt-p.jpg" alt="Headshot profile photo" width="600">
           <div class="mobile-shape ms-right"></div>
         </div>
         <div>
@@ -66,7 +68,7 @@
                 </a>
               </li>
               <li>
-                <a id="email-link" href="mailto:mattpignatore@gmail.com">
+                <a href="mailto:mattpignatore@gmail.com">
                   <img id="email-icon" class="nav__icon" src="./assets/images/social-icons/email-2.png"
                     alt="Email icon">
                 </a>
@@ -118,7 +120,7 @@
         </h2>
         <div class="image-wrapper" style="float: right; margin-top: -15%;">
           <div class="mobile-shape ms-left"></div>
-          <img class="img" src="/assets/images/work.jpg" alt="" width="600">
+          <img class="img" src="/assets/images/work.jpg" alt="Laptop on desk" width="600">
           <div class="mobile-shape ms-right"></div>
         </div>
       </div>
@@ -151,7 +153,7 @@
       <svg class="click-through" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
         <defs>
           <style>
-            .cls-1 {
+            <!-- .cls-1 {
               fill: none;
               stroke: #e7e7f1;
               stroke-miterlimit: 10;
@@ -160,12 +162,12 @@
 
             .cls-2 {
               fill: #d9d8ef;
-            }
+            } -->
           </style>
         </defs>
         <g id="ct">
-          <path class="cls-1"
-            d="M278.34,101.86l55.36-31.3c-7,7.19-53.66,56.45-48,131.65,6,79.39,65.28,122,72.86,127.23" />
+          <!-- <path class="cls-1"
+            d="M278.34,101.86l55.36-31.3c-7,7.19-53.66,56.45-48,131.65,6,79.39,65.28,122,72.86,127.23" /> -->
           <path class="cls-2"
             d="M135.52,160.91c3-3.85,8.08-8.65,13.25-8.65,3.57,0,10.06,2.35,10.06,5.55,0,.47-.28,1.6-.85,1.6-1.88,0-3.29-1.79-6-1.79-4.14,0-7.24,3-10,6.3-4.6,5.55-9.87,13-11.09,20.4-1.13,6.3,1,8.37,4.14,8.37,8.64,0,14.47-7.9,17.86-7.9a3.86,3.86,0,0,1-.47,3.67c-4.33,6.11-10.53,8.46-17.11,9-2.73,0-4.61-.75-5.08-1.41-3.29-1.13-6.49-3.57-6.49-11.18C123.76,177.74,130.25,167.59,135.52,160.91Z" />
           <path class="cls-2"
@@ -201,7 +203,7 @@
       <svg class="listen-in" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
         <defs>
           <style>
-            .cls-1 {
+            <!-- .cls-1 {
               fill: none;
               stroke: #e7e7f1;
               stroke-miterlimit: 10;
@@ -210,12 +212,12 @@
 
             .cls-2 {
               fill: #d9d8ef;
-            }
+            } -->
           </style>
         </defs>
         <g id="li">
-          <path class="cls-1"
-            d="M114.1,304.17l-58,25.27c7.71-6.39,59-50.36,61.11-125.39,2.27-79.23-52-127.5-59-133.49" />
+          <!-- <path class="cls-1"
+            d="M114.1,304.17l-58,25.27c7.71-6.39,59-50.36,61.11-125.39,2.27-79.23-52-127.5-59-133.49" /> -->
           <path class="cls-2"
             d="M155.27,150.9c2.15-2.15,6.55.19,6.55,3.84a4.46,4.46,0,0,1-.94,2.24c-4.12,6.55-12.16,25.36-12.44,31.44-.1,1.13.65,2.44,2.9,2,4.68-.94,12.16-3.09,15.81-3.65,2-.19,3.37.56,3.84,2,1.12,3.27.75,2.15-1.31,2.71-8.52,2.43-20.5,6.92-22.65,6.92-3.65,0-4.86-.28-5.8-3C138.42,186.93,150.68,157.73,155.27,150.9Z" />
           <path class="cls-2"
@@ -239,19 +241,16 @@
           style="display: flex; flex-direction: row; align-items: center; justify-content: center; margin: 0 auto; width: 100%;">
           <div class="album-carousel">
             <div class="album-slide">
-              <img class="album-cover img" data-name="at-any-moment"
-                src="./assets/images/album-covers/at-any-moment.jpg" alt="">
-              <img class="album-cover img" data-name="go-get-hurt" src="./assets/images/album-covers/go-get-hurt.jpg"
-                alt="">
-              <img class="album-cover img" data-name="suck-up" src="./assets/images/album-covers/suck-up.jpg" alt="">
-              <img class="album-cover img" data-name="demos-2016" src="./assets/images/album-covers/demos-2016.jpg"
-                alt="">
+              <img class="album-cover img" src="./assets/images/album-covers/at-any-moment.jpg" alt="At Any Moment album" data-name="at-any-moment" width="182" height="182">
+              <img class="album-cover img" src="./assets/images/album-covers/go-get-hurt.jpg" alt="Go Get Hurt album" data-name="go-get-hurt" width="182" height="182">
+              <img class="album-cover img" src="./assets/images/album-covers/suck-up.jpg" alt="Suck Up All Your Guts album" data-name="suck-up" width="182" height="182">
+              <img class="album-cover img" src="./assets/images/album-covers/demos-2016.jpg" alt="Demos (2016) album" data-name="demos-2016" width="182" height="182">
             </div>
           </div>
         </div>
         <div class="bandcamp-logo-wrapper">
-          <a href="https://mattpignatore.bandcamp.com" target="_blank">
-            <img src="./assets/images/social-icons/bc-bandcamp_logo.png" height="24" alt="">
+          <a href="https://mattpignatore.bandcamp.com" target="_blank" rel="noreferrer">
+            <img src="./assets/images/social-icons/bc-bandcamp_logo.png" height="24" alt="Bandcamp logo">
           </a>
         </div>
         
@@ -299,22 +298,22 @@
     <div class="footer__social">
       <ul class="nav__ul">
         <li>
-          <a href="https://github.com/mpaitgt" target="_blank">
+          <a href="https://github.com/mpaitgt" target="_blank" rel="noreferrer">
             <img class="nav__icon" src="./assets/images/social-icons/github.png" alt="Github icon">
           </a>
         </li>
         <li>
-          <a id="email-link" href="mailto:mattpignatore@gmail.com">
-            <img id="email-icon" class="nav__icon" src="./assets/images/social-icons/email-2.png" alt="Email icon">
+          <a href="mailto:mattpignatore@gmail.com" rel="noreferrer">
+            <img class="nav__icon" src="./assets/images/social-icons/email-2.png" alt="Email icon">
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/matt-pignatore/" target="_blank">
+          <a href="https://www.linkedin.com/in/matt-pignatore/" target="_blank" rel="noreferrer">
             <img class="nav__icon" src="./assets/images/social-icons/linked-in.png" alt="LinkedIn icon">
           </a>
         </li>
         <li>
-          <a href="https://www.twitter.com/matt_pignatore" target="_blank">
+          <a href="https://www.twitter.com/matt_pignatore" target="_blank" rel="noreferrer">
             <img id="twitter-icon" class="nav__icon" src="./assets/images/social-icons/twitter.png" alt="Twitter icon">
           </a>
         </li>
