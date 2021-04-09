@@ -234,7 +234,8 @@ setTimeout(function() {
         </div>
         <div>
           <img src="${project.image}" alt="Screenshot of ${project.title}"
-            data-project-name="${project.title.toLowerCase()}" class="img project__img"">
+            data-project-name="${project.title.toLowerCase()}" class="img project__img" 
+            width="340" height="191">
         </div>
       </li>
     `
