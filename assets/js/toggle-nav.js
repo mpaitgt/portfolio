@@ -3,21 +3,13 @@ const
   navContents = document.querySelector('.mobile-nav__container'),
   navItems = document.querySelectorAll('.nav__link');
 
-  // window.addEventListener('resize', function() {
-  //   let done = false;
-  //   if (window.innerWidth <= 952) {
-  //     let original = document.querySelector('.mobile-nav__container');
-  //     let clone = original.cloneNode(true);
-  //     body.appendChild(clone);
-  //   }
-  // });
-
 burger.addEventListener('click', function(e) {
   navContents.classList.toggle('toggle-nav');
 });
 
-navContents.addEventListener('transitionend', function(e) {
-  if (navContents.classList.contains('toggle-nav')) {
+navContents.addEventListener('transitionstart', function(e) {
+
+  if (navContents.classList.contains('toggle-nav') && window.innerWidth <= 952) {
     navItems.forEach((item, index) => {
       item.classList.add(`appear-${index + 1}`);
     })

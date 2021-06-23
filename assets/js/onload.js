@@ -13,4 +13,6 @@ window.onload = async function() {
   const albumCovers = document.querySelectorAll('.album-cover');
   attachHoverAnimationOnItems(navItems);
   attachHoverAnimationOnItems(albumCovers, true);
+  
+  document.querySelector('body').style.opacity = 1
 };
