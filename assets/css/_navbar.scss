@@ -4,7 +4,7 @@
 nav.navbar {
   @include flex(row, space-around, center);
   z-index: 1;
-  background: $new_blue;
+  background: $blue__dark;
   color: $white;
   padding: 1rem;
   box-shadow: 2px 2px 12px 2px rgba(0,0,0,0.1);
@@ -39,7 +39,7 @@ nav.navbar {
     z-index: -1;
     @include flex(row, space-between, center);
     @include nav-collapse {
-      background: $new_blue;
+      background: $blue__dark;
       margin-top: 50px;
       position: fixed;
       right: 0;
@@ -114,7 +114,7 @@ nav.navbar {
 
 footer.navbar {
   @include flex(column, space-around, center);
-  background: $new_blue;
+  background: $blue__dark;
   color: $white;
   padding: 1rem;
   box-shadow: 2px 2px 12px 2px rgba(0,0,0,0.1);

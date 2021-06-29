@@ -1,7 +1,7 @@
 svg.headline-tag {
   height: 36px;
   path {
-    fill: $blue__svg;
+    fill: $gray__dark;
     stroke: none;
   }
   @include mobile {
@@ -13,7 +13,7 @@ svg.headline-tag {
 path,
 path.cls-1,
 path.cls-2 {
-  fill: $blue__svg;
+  fill: $gray__dark;
 }
 
 svg.same-line {

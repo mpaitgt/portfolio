@@ -46,7 +46,7 @@
         font-size: 1.2rem;
         font-weight: 500;
         border-radius: 18px 30px;
-        color: $blue__med;
+        color: $blue__dark;
         background: $blue__light-x;
         margin-bottom: 10px;
         @include nav-collapse {
@@ -66,11 +66,11 @@
       .section__header {
         display: inline-block;
         font-family: 'Fira Sans', arial, sans-serif;
-        font-size: 2.5rem;
-        color: $new_blue_2;
+        font-size: 4.2rem;
+        color: $gray__dark;
         margin-bottom: 10px;
         letter-spacing: 1px;
-        font-weight: 900;
+        font-weight: 100;
         @include nav-collapse {
           font-size: 2rem;
         }
@@ -87,6 +87,9 @@
         padding-left: 1rem;
         color: $text;
         font-family: inherit;
+        a {
+          text-decoration: underline;
+        }
         @include nav-collapse {
           font-size: 1rem;
         }

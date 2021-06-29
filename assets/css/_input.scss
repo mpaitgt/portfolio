@@ -26,7 +26,7 @@ form {
     border: none;
     padding: 0.4rem 1rem;
     font-family: inherit;
-    background: $blue__med;
+    background: $main_blue;
     color: $white;
     font-size: 16px;
     z-index: 1;
@@ -56,13 +56,13 @@ form.mail-sent {
 .input-container {
   @include flex(column, flex-start, flex-start);
   width: 100%;
-  background: $blue__light-x;
+  background: #eaeaea;
   position: relative;
   margin-top: 2.4rem;
   transition: all 0.15s ease-in-out;
   box-sizing: border-box;
   &:first-child {
-    border-right: 2px solid $blue__light;
+    border-right: 2px solid $white;
     @include mobile {
       border-right: none;
     }
