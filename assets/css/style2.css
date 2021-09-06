@@ -1570,8 +1570,14 @@ ul.work-bullets li span.bold {
 
 .bandcamp-wrapper {
   padding: 2rem;
-  padding-top: 0;
+  padding-top: 4rem;
   border-radius: 4px;
+}
+
+@media screen and (max-width: 952px) {
+  .bandcamp-wrapper {
+    padding-top: 0.6rem;
+  }
 }
 
 .bandcamp-wrapper .bandcamp-logo-wrapper {
