@@ -1,6 +1,6 @@
 .work {
   padding: 5% 5%;
-  border-bottom: 2px solid $blue__light-x;
+  // border-bottom: 2px solid $blue__light-x;
   .section__intro {
     @include tablet {
       @include flex(column, flex-start, flex-start);

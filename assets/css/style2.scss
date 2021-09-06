@@ -33,10 +33,10 @@
       color: $text;
       @include nav-collapse {
         margin: 0 auto;
-        padding-top: 20%;
-        &:first-child {
-          padding-top: 10%;
-        }
+        padding-top: 4.2rem;
+        // &:first-child {
+        //   padding-top: 10%;
+        // }
       }
       @include mobile {
         width: 100%;

@@ -59,10 +59,7 @@
 @media screen and (max-width: 952px) {
   * body section.section__body {
     margin: 0 auto;
-    padding-top: 20%;
-  }
-  * body section.section__body:first-child {
-    padding-top: 10%;
+    padding-top: 4.2rem;
   }
 }
 
@@ -984,7 +981,6 @@ footer.navbar .footer__social {
 
 .work {
   padding: 5% 5%;
-  border-bottom: 2px solid #e7e7f1;
 }
 
 @media screen and (max-width: 768px) {
@@ -1554,7 +1550,9 @@ ul.work-bullets li span.bold {
 }
 
 .bandcamp {
+  padding: 0;
   position: relative;
+  background: #e7e7f1;
 }
 
 @media screen and (max-width: 952px) {
@@ -1571,16 +1569,9 @@ ul.work-bullets li span.bold {
 }
 
 .bandcamp-wrapper {
-  margin: 2rem 4rem;
-  padding: 10% 5%;
+  padding: 2rem;
+  padding-top: 0;
   border-radius: 4px;
-  background: #e7e7f1;
-}
-
-@media screen and (max-width: 576px) {
-  .bandcamp-wrapper {
-    margin: 4rem 0;
-  }
 }
 
 .bandcamp-wrapper .bandcamp-logo-wrapper {

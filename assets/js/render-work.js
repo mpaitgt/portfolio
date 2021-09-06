@@ -7,47 +7,56 @@ const myJobs = [
     type: 'Full-Time',
     github_link: '',
     production_link: '',
-    description: 'I was brought onto this project to bring a UI design to life. Recruiting software in its development phase, Bearclaw needed a frontend-focused developer to improve the application\'s design and the user experience.',
+    // description: '',
     bullets: [
-      'I abandoned Bootstrap and developed a complex dashboard with CSS Grid, and built the foundation of the software\'s codebase with the SCSS preprocessor making use of variables, mixins, functions, and more.',
-      'I revisited jQuery and built new functionality like pop up forms, stylish navigation, and setting responsive table heights.',
-      'I learned PHP and used MySQL queries to add new full-stack features, including a kanban board and an appointment calendar, using third-party APIs.',
-      'Most recently, I developed a user setting to toggle light/dark mode. I also extended this feature to our custom Chrome extension.',
-      'I continue today, improving on older features and building new ones.'
+      'Leads UI development for a large-scale application using React and Styled-Components, and Redux Toolkit for state management.',
+      'Working with Principal Software Architect to communicate with back-end APIs and securely fetch data using Axios.',
+      'Managing the project in Jira and with Git version control for an organized development workflow.',
     ]
   },
   {
-    title: 'Software UI Developer',
+    title: 'Software Developer',
     company: 'Bearclaw',
     duration: 'August 2020 - Present',
     technologies: ['SCSS', 'jQuery', 'PHP', 'MySQL'],
     type: 'Freelance',
     github_link: '',
     production_link: '',
-    description: 'I was brought onto this project to bring a UI design to life. Recruiting software in its development phase, Bearclaw needed a frontend-focused developer to improve the application\'s design and the user experience.',
+    // description: 'I was brought onto this project to bring a UI design to life. Recruiting software in its development phase, Bearclaw needed a frontend-focused developer to improve the application\'s design and the user experience.',
     bullets: [
-      'I abandoned Bootstrap and developed a complex dashboard with CSS Grid, and built the foundation of the software\'s codebase with the SCSS preprocessor making use of variables, mixins, functions, and more.',
-      'I revisited jQuery and built new functionality like pop up forms, stylish navigation, and setting responsive table heights.',
-      'I learned PHP and used MySQL queries to add new full-stack features, including a kanban board and an appointment calendar, using third-party APIs.',
-      'Most recently, I developed a user setting to toggle light/dark mode. I also extended this feature to our custom Chrome extension.',
-      'I continue today, improving on older features and building new ones.'
+      'Leads the recruiting software’s UI development, from design to code, and in a year has built a consistent and organized SCSS codebase.',
+      'Develops full-stack features using jQuery, PHP, and MySQL.',
+      'Continually looks to for improvements in the user experience',
     ]
   },
   {
-    title: 'Frontend Web Developer',
-    company: 'The Floor Is Yours',
+    title: 'Front-End Web Developer',
+    company: 'Lambertville Porchfest',
     duration: 'February 2020 - Present',
-    technologies: ['React', 'Material UI', 'Node.js/Express'],
-    type: 'Freelance',
-    github_link: 'https://github.com/mpaitgt/tfiy',
-    production_link: 'https://tfiy.herokuapp.com',
-    description: 'Through Bootcamp, I was connected with the owner of a dance studio who asked me to develop a beautiful website for her new business. I was on a roll with learning React at the time, and didn\'t want this opportunity to stop me in my tracks.',
+    technologies: ['Vue.js', 'Gridsome', 'Netlify CMS'],
+    type: 'Collaborative',
+    github_link: 'https://github.com/sdellis/lambertvilleporchfest',
+    production_link: 'https://www.lambertvilleporchfest.com/',
+    // description: 'I was brought onto this project to bring a UI design to life. Recruiting software in its development phase, Bearclaw needed a frontend-focused developer to improve the application\'s design and the user experience.',
     bullets: [
-      'I built this project with React, using the Material UI component library.',
-      'I familiarized myself with the advantages of using a component library, and used it to do everything from make the site mobile-friendly to creating page transition animations and a class accordion.',
-      'I used the Google Maps API to display the studio\'s location on the contact page, and set up a simple Node.js/Express server to handle contact form submissions with the Nodemailer npm.'
+      ''
     ]
-  },
+  }
+  // {
+  //   title: 'Frontend Web Developer',
+  //   company: 'The Floor Is Yours',
+  //   duration: 'February 2020 - Present',
+  //   technologies: ['React', 'Material UI', 'Node.js/Express'],
+  //   type: 'Freelance',
+  //   github_link: 'https://github.com/mpaitgt/tfiy',
+  //   production_link: 'https://tfiy.herokuapp.com',
+  //   // description: 'Through Bootcamp, I was connected with the owner of a dance studio who asked me to develop a beautiful website for her new business. I was on a roll with learning React at the time, and didn\'t want this opportunity to stop me in my tracks.',
+  //   bullets: [
+  //     'My very first uilt this local dance studio\'s website with React and the Material UI component library.',
+  //     'Familiarized myself with the advantages of using a component library, and used it to do everything from make the site mobile-friendly to creating page transition animations and a class schedule accordion.',
+  //     'Used the Google Maps API to display the studio\'s location on the contact page, and set up a simple Node.js/Express server to handle contact form submissions with the Nodemailer npm.'
+  //   ],
+  // },
   // {
   //   title: 'Frontend Web Developer',
   //   company: 'Salvage Boy',
@@ -106,9 +115,6 @@ function renderJobs(arr) {
             </div>
           </div>
           <div class="job-description${index === 0 ? " is-visible" : ""}">
-            <p class="section__copy">
-              ${job.description}
-            </p>
             <ul class="work-bullets">
               ${job.bullets.map((bullet) => {
                 return `<li>${bullet}</li>`;
