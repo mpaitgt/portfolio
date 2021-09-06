@@ -1,6 +1,23 @@
 const myJobs = [
   {
     title: 'Software UI Developer',
+    company: 'PCI',
+    duration: 'April 2021 - Present',
+    technologies: ['React', 'Redux Toolkit', 'Styled-Components', 'Axios'],
+    type: 'Full-Time',
+    github_link: '',
+    production_link: '',
+    description: 'I was brought onto this project to bring a UI design to life. Recruiting software in its development phase, Bearclaw needed a frontend-focused developer to improve the application\'s design and the user experience.',
+    bullets: [
+      'I abandoned Bootstrap and developed a complex dashboard with CSS Grid, and built the foundation of the software\'s codebase with the SCSS preprocessor making use of variables, mixins, functions, and more.',
+      'I revisited jQuery and built new functionality like pop up forms, stylish navigation, and setting responsive table heights.',
+      'I learned PHP and used MySQL queries to add new full-stack features, including a kanban board and an appointment calendar, using third-party APIs.',
+      'Most recently, I developed a user setting to toggle light/dark mode. I also extended this feature to our custom Chrome extension.',
+      'I continue today, improving on older features and building new ones.'
+    ]
+  },
+  {
+    title: 'Software UI Developer',
     company: 'Bearclaw',
     duration: 'August 2020 - Present',
     technologies: ['SCSS', 'jQuery', 'PHP', 'MySQL'],
@@ -31,33 +48,33 @@ const myJobs = [
       'I used the Google Maps API to display the studio\'s location on the contact page, and set up a simple Node.js/Express server to handle contact form submissions with the Nodemailer npm.'
     ]
   },
-  {
-    title: 'Frontend Web Developer',
-    company: 'Salvage Boy',
-    duration: 'July 2020',
-    technologies: ['HTML', 'SCSS'],
-    type: 'Freelance',
-    github_link: '',
-    production_link: 'https://salvageboy.com',
-    description: 'A small software company that helps used motor part sellers better manage eBay accounts, I was hired to re-design the home page of the website.',
-    bullets: []
-  },
-  {
-    title: 'Digital Marketing Specialist',
-    company: 'HearingLife',
-    duration: 'April 2018 - Present',
-    technologies: ['HTML', 'CSS', 'JavaScript', 'APIs', 'Email Analytics'],
-    type: 'Full-Time',
-    github_link: '',
-    production_link: 'https://salvageboy.com',
-    description: 'I started with HearingLife as coordinator in 2018, and got promoted to email/web around the time I enrolled at bootcamp. While not a "developer" by job title, in 2020 I spearheaded the marketing team\'s effort to integrate the Podium Reviews API on our over 400 location web pages. This included:',
-    bullets: [
-      'Writing the script to fetch review data from the Podium API with location IDs and parsing the JSON response.',
-      'Structuring HTML and designing for style and mobile-friendly functionality.',
-      'A team-wide QA testing process in which all data was matched with its source to ensure accuracy.',
-      'I\'ve also done a lot of fun work in email, designing creative layouts in XD and implementing strong and consistent analytics reporting.'
-    ]
-  },
+  // {
+  //   title: 'Frontend Web Developer',
+  //   company: 'Salvage Boy',
+  //   duration: 'July 2020',
+  //   technologies: ['HTML', 'SCSS'],
+  //   type: 'Freelance',
+  //   github_link: '',
+  //   production_link: 'https://salvageboy.com',
+  //   description: 'A small software company that helps used motor part sellers better manage eBay accounts, I was hired to re-design the home page of the website.',
+  //   bullets: []
+  // },
+  // {
+  //   title: 'Digital Marketing Specialist',
+  //   company: 'HearingLife',
+  //   duration: 'April 2018 - Present',
+  //   technologies: ['HTML', 'CSS', 'JavaScript', 'APIs', 'Email Analytics'],
+  //   type: 'Full-Time',
+  //   github_link: '',
+  //   production_link: 'https://salvageboy.com',
+  //   description: 'I started with HearingLife as coordinator in 2018, and got promoted to email/web around the time I enrolled at bootcamp. While not a "developer" by job title, in 2020 I spearheaded the marketing team\'s effort to integrate the Podium Reviews API on our over 400 location web pages. This included:',
+  //   bullets: [
+  //     'Writing the script to fetch review data from the Podium API with location IDs and parsing the JSON response.',
+  //     'Structuring HTML and designing for style and mobile-friendly functionality.',
+  //     'A team-wide QA testing process in which all data was matched with its source to ensure accuracy.',
+  //     'I\'ve also done a lot of fun work in email, designing creative layouts in XD and implementing strong and consistent analytics reporting.'
+  //   ]
+  // },
 ];
 
 function renderJobs(arr) {
@@ -78,8 +95,7 @@ function renderJobs(arr) {
             <div>
               <h3 class="job-title">${job.title}</h3>
               <div class="job-details">
-                <h4>${job.duration}<br>
-                ${job.type}</h4>
+                <h4>${job.duration} <span>|</span> ${job.type}</h4>
                 <div class="job__tech-container">
                   ${job.technologies.map((tech) => {
                     return `<span class="job__tech">${tech}</span>`;

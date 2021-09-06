@@ -57,23 +57,27 @@
     }
     .job-details {
       margin: 0 10px 20px 10px;
-      @include flex(row, flex-start, center);
+      @include flex(column, flex-start, flex-start);
       @include nav-collapse {
         @include flex(column, flex-start, flex-start);  
       }
       h4 {
         font-weight: 300;
         font-size: 1.2rem;
-        @include nav-collapse {
-          margin-bottom: 20px;
+        margin-bottom: 20px;
+        span {
+          // color: #d5e1e3;
+          color: $blue__light;
+          font-weight: 900;
         }
         @include mobile {
           font-size: 1.1rem;
         }
       }
       .job__tech-container {
-        margin-left: 20px;
         .job__tech {
+          display: inline-block;
+          // white-space: nowrap;
           justify-self: start;
           background: #ececec;
           font-size: 0.9em;
@@ -81,12 +85,10 @@
           margin: 6px;
           border-radius: 5px;
           white-space: no-wrap;
-          &:first-child {
+          margin-left: 0;
+          &:last-child {
             margin-left: 0;
           }
-        }
-        @include nav-collapse {
-          margin-left: 0px;  
         }
       }
     }
