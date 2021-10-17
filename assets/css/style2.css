@@ -23,12 +23,12 @@
 
 * body {
   font-family: 'Tajawal', arial, sans-serif;
-  width: 950px;
-  margin: 0 auto;
   position: relative;
   opacity: 0;
+  font-size: 1.6rem;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  font-size: 1.6rem;
 }
 
 @media screen and (max-width: 952px) {
@@ -44,11 +44,14 @@
 
 * body .container {
   margin-top: 0;
+  width: 950px;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 952px) {
   * body .container {
     margin-top: 4rem;
+    width: 100%;
   }
 }
 
@@ -106,7 +109,7 @@
 * body section.section__body .section__header {
   display: inline-block;
   font-family: 'Fira Sans', arial, sans-serif;
-  font-size: 4.2rem;
+  font-size: 2.4rem;
   color: #bdbdbd;
   margin-bottom: 10px;
   letter-spacing: 1px;
@@ -184,8 +187,8 @@
 }
 
 * body .image-wrapper img.img {
-  -webkit-box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.2);
   max-width: 260px;
   min-width: 260px;
   -ms-flex-item-align: center;
@@ -401,17 +404,18 @@ nav.navbar {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   z-index: 1;
-  background: #1b1b20;
-  color: #f3f3f3;
+  background: #fff;
+  color: #3d3d5a;
   padding: 1rem;
-  -webkit-box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.1);
-          box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.1);
+  width: 950px;
+  margin: 0 auto;
   margin-top: 10px;
   position: relative;
 }
@@ -443,7 +447,7 @@ nav.navbar {
 
 nav.navbar .nav__header {
   font-family: 'Fira Sans', arial, sans-serif;
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   letter-spacing: 1px;
   cursor: pointer;
   font-weight: 100;
@@ -553,6 +557,10 @@ nav.navbar .nav__ul .nav__link {
   cursor: pointer;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
+  font-size: 1.4rem;
+  color: #bdbdbd;
+  font-family: 'Fira Sans', arial, sans-serif;
+  border-radius: 6px;
 }
 
 @media screen and (max-width: 952px) {
@@ -658,12 +666,10 @@ footer.navbar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #1b1b20;
-  color: #f3f3f3;
+  background: #fff;
+  color: #3d3d5a;
   padding: 1rem;
-  -webkit-box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.1);
-          box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.1);
-  margin-bottom: 10px;
+  margin-bottom: 24px;
   position: relative;
 }
 
@@ -746,8 +752,9 @@ footer.navbar .nav__icon {
   transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
   -webkit-transform-origin: center;
           transform-origin: center;
-  -webkit-filter: invert(1);
-          filter: invert(1);
+  -webkit-filter: invert(0);
+          filter: invert(0);
+  opacity: 0.2;
 }
 
 footer.navbar .nav__icon:hover {
@@ -953,7 +960,7 @@ footer.navbar .footer__social {
   font-size: 1.2rem;
   font-family: 'Fira Sans', arial, sans-serif;
   margin-bottom: 10px;
-  color: #3d3d5a;
+  color: #7f7f97;
 }
 
 .nav__icons {
@@ -981,6 +988,15 @@ footer.navbar .footer__social {
 
 .work {
   padding: 5% 5%;
+  -webkit-box-shadow: -5px -5px 8px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: -5px -5px 8px 0px rgba(0, 0, 0, 0.2);
+  background: #d8d8ee;
+  -webkit-clip-path: polygon(0 4%, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 4%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.work .section__intro .section__header {
+  color: #9f9fbf;
 }
 
 @media screen and (max-width: 768px) {
@@ -1007,14 +1023,18 @@ footer.navbar .footer__social {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  margin-top: -20%;
 }
 
 .job-wrapper {
   margin: 2rem auto;
-  padding: 1rem;
+  -webkit-box-shadow: 0px 0px 8px 2px rgba(61, 61, 90, 0.15);
+          box-shadow: 0px 0px 8px 2px rgba(61, 61, 90, 0.15);
+  background: white;
+  padding: 1.6rem 2rem;
   cursor: pointer;
-  border-left: 2px solid #d5e1e3;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-left: 4px solid #9f9fbf;
 }
 
 @media screen and (max-width: 576px) {
@@ -1170,7 +1190,7 @@ footer.navbar .footer__social {
   -ms-grid-column-align: start;
       justify-self: start;
   background: #ececec;
-  font-size: 0.9em;
+  font-size: 1rem;
   padding: 2px 8px;
   margin: 6px;
   border-radius: 5px;
@@ -1648,6 +1668,7 @@ ul.work-bullets li span.bold {
   cursor: pointer;
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
+  border-radius: 12px;
 }
 
 .album-carousel .album-slide .album-cover:hover {

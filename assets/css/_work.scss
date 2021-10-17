@@ -1,23 +1,32 @@
 .work {
   padding: 5% 5%;
+  box-shadow: -5px -5px 8px 0px rgba(0,0,0,0.2);
   // border-bottom: 2px solid $blue__light-x;
+  background: $blue__light;
+  clip-path: polygon(0 4%, 100% 0, 100% 100%, 0% 100%);
   .section__intro {
+    .section__header {
+      color: $blue__med-light;
+    }
     @include tablet {
       @include flex(column, flex-start, flex-start);
       flex-direction: column-reverse;
     }
     .about__content {
       align-self: center;
-      margin-top: -20%;
     }
   }
 }
 
 .job-wrapper {
   margin: 2rem auto;
-  padding: 1rem;
+  box-shadow: $project_shadow;
+  background: white;
+  padding: 1.6rem 2rem;
   cursor: pointer;
-  border-left: 2px solid #d5e1e3;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-left: 4px solid $blue__med-light;
   @include mobile {
     padding: 1rem 0;
     border-left: none;
@@ -80,7 +89,7 @@
           // white-space: nowrap;
           justify-self: start;
           background: #ececec;
-          font-size: 0.9em;
+          font-size: 1rem;
           padding: 2px 8px;
           margin: 6px;
           border-radius: 5px;

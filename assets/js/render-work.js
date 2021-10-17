@@ -3,7 +3,7 @@ const myJobs = [
     title: 'Software UI Developer',
     company: 'PCI',
     duration: 'April 2021 - Present',
-    technologies: ['React', 'Redux Toolkit', 'Styled-Components', 'Axios'],
+    technologies: ['React', 'Typescript', 'Redux Toolkit', 'Styled-Components', 'Axios', 'Adobe XD', 'Storybook'],
     type: 'Full-Time',
     github_link: '',
     production_link: '',
@@ -18,7 +18,7 @@ const myJobs = [
     title: 'Software Developer',
     company: 'Bearclaw',
     duration: 'August 2020 - Present',
-    technologies: ['SCSS', 'jQuery', 'PHP', 'MySQL'],
+    technologies: ['SCSS', 'jQuery', 'PHP', 'MySQL', 'Adobe XD'],
     type: 'Freelance',
     github_link: '',
     production_link: '',
@@ -29,45 +29,6 @@ const myJobs = [
       'Continually looks to for improvements in the user experience',
     ]
   },
-  {
-    title: 'Front-End Web Developer',
-    company: 'Lambertville Porchfest',
-    duration: 'February 2020 - Present',
-    technologies: ['Vue.js', 'Gridsome', 'Netlify CMS'],
-    type: 'Collaborative',
-    github_link: 'https://github.com/sdellis/lambertvilleporchfest',
-    production_link: 'https://www.lambertvilleporchfest.com/',
-    // description: 'I was brought onto this project to bring a UI design to life. Recruiting software in its development phase, Bearclaw needed a frontend-focused developer to improve the application\'s design and the user experience.',
-    bullets: [
-      ''
-    ]
-  }
-  // {
-  //   title: 'Frontend Web Developer',
-  //   company: 'The Floor Is Yours',
-  //   duration: 'February 2020 - Present',
-  //   technologies: ['React', 'Material UI', 'Node.js/Express'],
-  //   type: 'Freelance',
-  //   github_link: 'https://github.com/mpaitgt/tfiy',
-  //   production_link: 'https://tfiy.herokuapp.com',
-  //   // description: 'Through Bootcamp, I was connected with the owner of a dance studio who asked me to develop a beautiful website for her new business. I was on a roll with learning React at the time, and didn\'t want this opportunity to stop me in my tracks.',
-  //   bullets: [
-  //     'My very first uilt this local dance studio\'s website with React and the Material UI component library.',
-  //     'Familiarized myself with the advantages of using a component library, and used it to do everything from make the site mobile-friendly to creating page transition animations and a class schedule accordion.',
-  //     'Used the Google Maps API to display the studio\'s location on the contact page, and set up a simple Node.js/Express server to handle contact form submissions with the Nodemailer npm.'
-  //   ],
-  // },
-  // {
-  //   title: 'Frontend Web Developer',
-  //   company: 'Salvage Boy',
-  //   duration: 'July 2020',
-  //   technologies: ['HTML', 'SCSS'],
-  //   type: 'Freelance',
-  //   github_link: '',
-  //   production_link: 'https://salvageboy.com',
-  //   description: 'A small software company that helps used motor part sellers better manage eBay accounts, I was hired to re-design the home page of the website.',
-  //   bullets: []
-  // },
   // {
   //   title: 'Digital Marketing Specialist',
   //   company: 'HearingLife',
@@ -91,16 +52,14 @@ function renderJobs(arr) {
 
   work.innerHTML = arr.map((job, index) => {
     return `
-      <div class="job-wrapper">
+      <article class="job-wrapper">
         <div class="job-header">
           <div class="job-headline-wrapper">
-            <div>
-              <h3 class="section__headline large">
-                ${job.company}
-              </h3>
-            </div>
+            <h3 class="section__headline large">
+              ${job.company}
+            </h3>
           </div>
-          <div style="display: flex; justify-content: flex-start; align-items: flex-start;">
+          <div style="display: flex; justify-content: flex-start; align-items: center;">
             <div>
               <h3 class="job-title">${job.title}</h3>
               <div class="job-details">
@@ -122,7 +81,7 @@ function renderJobs(arr) {
             </ul>
           </div>
         </div>
-      </div>
+      </article>
     `;
   }).join('');
 }

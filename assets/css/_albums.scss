@@ -78,6 +78,7 @@
       box-shadow: none;
       cursor: pointer;
       transition: all 0.25s;
+      border-radius: 12px;
       &:hover {
         transform: scale(1.2);
         filter: grayscale(10%);
