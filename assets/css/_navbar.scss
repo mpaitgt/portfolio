@@ -9,7 +9,6 @@ nav.navbar {
   padding: 1rem;
   width: 950px;
   margin: 0 auto;
-  // box-shadow: 2px 2px 12px 2px rgba(0,0,0,0.1);
   margin-top: 10px;
   position: relative;
   @include nav-collapse {
@@ -67,7 +66,6 @@ nav.navbar {
       cursor: pointer;
       transition: all 0.25s;
       font-size: 1.4rem;
-      // font-weight: 600;
       color: $gray__dark;
       font-family: 'Fira Sans', arial, sans-serif;
       border-radius: 6px;

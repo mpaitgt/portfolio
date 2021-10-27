@@ -13,7 +13,7 @@ html {
   box-sizing: border-box;
   line-height: normal;
   body {
-    font-family: 'Tajawal', arial, sans-serif;
+    font-family: arial, sans-serif;
     position: relative;
     opacity: 0;
     font-size: 1.6rem;
@@ -91,6 +91,7 @@ html {
         padding-left: 1rem;
         color: $text;
         font-family: inherit;
+        line-height: 1.6rem;
         a {
           text-decoration: underline;
         }
@@ -140,6 +141,7 @@ html {
     }
     .push-left {
       transform: translateX(-12px);
+      transform: translateX(-15%);
       transition: transform 0.25s ease-in-out;
       @include nav-collapse {
         transform: translateX(0px);
@@ -147,6 +149,7 @@ html {
     }
     .push-right {
       transform: translateX(12px);
+      transform: translateX(15%);
       transition: transform 0.25s ease-in-out;
       @include nav-collapse {
         transform: translateX(0px);
@@ -154,6 +157,7 @@ html {
     }
     .push-left_hard {
       transform: translateX(-30px);
+      transform: translateX(-20%);
       transition: transform 0.25s ease-in-out;
       @include nav-collapse {
         transform: translateX(0px);
@@ -161,6 +165,7 @@ html {
     }
     .push-right_hard {
       transform: translateX(30px);
+      transform: translateX(20%);
       transition: transform 0.25s ease-in-out;
       @include nav-collapse {
         transform: translateX(0px);

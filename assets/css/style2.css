@@ -22,7 +22,7 @@
 }
 
 * body {
-  font-family: 'Tajawal', arial, sans-serif;
+  font-family: arial, sans-serif;
   position: relative;
   opacity: 0;
   font-size: 1.6rem;
@@ -162,6 +162,7 @@
   padding-left: 1rem;
   color: #1b1b20;
   font-family: inherit;
+  line-height: 1.6rem;
 }
 
 * body section.section__body .section__copy a {
@@ -235,6 +236,8 @@
 * body .push-left {
   -webkit-transform: translateX(-12px);
           transform: translateX(-12px);
+  -webkit-transform: translateX(-15%);
+          transform: translateX(-15%);
   -webkit-transition: -webkit-transform 0.25s ease-in-out;
   transition: -webkit-transform 0.25s ease-in-out;
   transition: transform 0.25s ease-in-out;
@@ -251,6 +254,8 @@
 * body .push-right {
   -webkit-transform: translateX(12px);
           transform: translateX(12px);
+  -webkit-transform: translateX(15%);
+          transform: translateX(15%);
   -webkit-transition: -webkit-transform 0.25s ease-in-out;
   transition: -webkit-transform 0.25s ease-in-out;
   transition: transform 0.25s ease-in-out;
@@ -267,6 +272,8 @@
 * body .push-left_hard {
   -webkit-transform: translateX(-30px);
           transform: translateX(-30px);
+  -webkit-transform: translateX(-20%);
+          transform: translateX(-20%);
   -webkit-transition: -webkit-transform 0.25s ease-in-out;
   transition: -webkit-transform 0.25s ease-in-out;
   transition: transform 0.25s ease-in-out;
@@ -283,6 +290,8 @@
 * body .push-right_hard {
   -webkit-transform: translateX(30px);
           transform: translateX(30px);
+  -webkit-transform: translateX(20%);
+          transform: translateX(20%);
   -webkit-transition: -webkit-transform 0.25s ease-in-out;
   transition: -webkit-transform 0.25s ease-in-out;
   transition: transform 0.25s ease-in-out;
@@ -2481,3 +2490,4 @@ svg.listen-in {
     top: -55px;
   }
 }
+/*# sourceMappingURL=style2.css.map */

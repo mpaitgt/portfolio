@@ -76,7 +76,7 @@ function renderJobs(arr) {
           <div class="job-description${index === 0 ? " is-visible" : ""}">
             <ul class="work-bullets">
               ${job.bullets.map((bullet) => {
-                return `<li>${bullet}</li>`;
+                return `<li><p class='section__copy'>${bullet}</p></li>`;
               }).join('')}
             </ul>
           </div>
