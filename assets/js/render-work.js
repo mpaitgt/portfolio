@@ -1,10 +1,11 @@
 const myJobs = [
   {
-    title: 'Software UI Developer',
+    title: 'UI Developer',
     company: 'PCI',
     duration: 'April 2021 - Present',
     technologies: ['React', 'Typescript', 'Redux Toolkit', 'Styled-Components', 'Axios', 'Adobe XD', 'Storybook'],
     type: 'Full-Time',
+    img_path: '/assets/images/astrata-logo.png',
     github_link: '',
     production_link: '',
     // description: '',
@@ -20,6 +21,7 @@ const myJobs = [
     duration: 'August 2020 - Present',
     technologies: ['SCSS', 'jQuery', 'PHP', 'MySQL', 'Adobe XD'],
     type: 'Freelance',
+    img_path: '/assets/images/bearclaw-logo.png',
     github_link: '',
     production_link: '',
     // description: 'I was brought onto this project to bring a UI design to life. Recruiting software in its development phase, Bearclaw needed a frontend-focused developer to improve the application\'s design and the user experience.',
@@ -53,23 +55,13 @@ function renderJobs(arr) {
   work.innerHTML = arr.map((job, index) => {
     return `
       <article class="job-wrapper">
-        <div class="job-header">
-          <div class="job-headline-wrapper">
-            <h3 class="section__headline large">
-              ${job.company}
-            </h3>
-          </div>
-          <div style="display: flex; justify-content: flex-start; align-items: center;">
+        <div class="">
+          <div class="job-header">
+            <img src="${job.img_path}" width="140" />
             <div>
               <h3 class="job-title">${job.title}</h3>
               <div class="job-details">
                 <h4>${job.duration} <span>|</span> ${job.type}</h4>
-                <div class="job__tech-container">
-                  ${job.technologies.map((tech) => {
-                    return `<span class="job__tech">${tech}</span>`;
-                  }).join('')}
-                </div>
-                </h4>
               </div>
             </div>
           </div>
@@ -85,6 +77,12 @@ function renderJobs(arr) {
     `;
   }).join('');
 }
+
+{/* <div class="job__tech-container">
+${job.technologies.map((tech) => {
+  return `<span class="job__tech">${tech}</span>`;
+}).join('')}
+</div> */}
 
 function attachShowEvent() {
   document.querySelectorAll('.job-wrapper').forEach(function(item, index, array) {

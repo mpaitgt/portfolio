@@ -1,9 +1,9 @@
 .work {
   padding: 5% 5%;
-  box-shadow: -5px -5px 8px 0px rgba(0,0,0,0.2);
+  // box-shadow: -5px -5px 8px 0px rgba(0,0,0,0.2);
   // border-bottom: 2px solid $blue__light-x;
   background: $blue__light;
-  clip-path: polygon(0 4%, 100% 0, 100% 100%, 0% 100%);
+  // clip-path: polygon(0 4%, 100% 0, 100% 100%, 0% 100%);
   .section__intro {
     .section__header {
       color: $blue__med-light;
@@ -20,13 +20,11 @@
 
 .job-wrapper {
   margin: 2rem auto;
-  box-shadow: $project_shadow;
-  background: white;
-  padding: 1.6rem 2rem;
+  // box-shadow: $project_shadow;
+  background: $blue__light-x;
+  padding: 1.6rem;
   cursor: pointer;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
-  border-left: 4px solid $blue__med-light;
+  border-radius: 8px;
   @include mobile {
     padding: 1rem 0;
     border-left: none;
@@ -38,20 +36,24 @@
     }
   }
   .job-header {
+    @include flex(row, flex-start, center);
+    img {
+      margin-right: 16px;
+    }
     .job-headline-wrapper {
-      @include flex(row, flex-start, center);
-      @include mobile {
-        @include flex(column, flex-start, flex-start);
-      }
-      img {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        opacity: 0.2;
-      }
+      // @include flex(row, flex-start, center);
+      // @include mobile {
+      //   @include flex(column, flex-start, flex-start);
+      // }
+      // img {
+      //   margin-left: 1rem;
+      //   margin-right: 1rem;
+      //   opacity: 0.2;
+      // }
     }
     width: 100%;
     .job-title {
-      margin: 10px;
+      margin-bottom: 10px;
       letter-spacing: 1px;
       font-weight: 300;
       font-size: 1.8rem;
@@ -65,7 +67,7 @@
       transition: transform 200ms;
     }
     .job-details {
-      margin: 0 10px 20px 10px;
+      // margin: 0 10px 20px 10px;
       @include flex(column, flex-start, flex-start);
       @include nav-collapse {
         @include flex(column, flex-start, flex-start);  
@@ -73,7 +75,6 @@
       h4 {
         font-weight: 300;
         font-size: 1.2rem;
-        margin-bottom: 20px;
         span {
           // color: #d5e1e3;
           color: $blue__light;
@@ -88,9 +89,12 @@
           display: inline-block;
           // white-space: nowrap;
           justify-self: start;
-          background: #ececec;
-          font-size: 1rem;
-          padding: 2px 8px;
+          background: $blue__dark; 
+          color: $blue__light-x;
+          font-weight: 200;
+          // background: #ececec;
+          font-size: 14px;
+          padding: 4px 12px;
           margin: 6px;
           border-radius: 5px;
           white-space: no-wrap;

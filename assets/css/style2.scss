@@ -13,8 +13,9 @@ html {
   box-sizing: border-box;
   line-height: normal;
   body {
-    font-family: arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     position: relative;
+    // line-height: 0;
     opacity: 0;
     font-size: 1.6rem;
     transition: all 0.5s ease;
