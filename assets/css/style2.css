@@ -1728,19 +1728,17 @@ ul.work-bullets li span.bold {
 .album-carousel .album-slide .album-cover {
   width: 100%;
   height: 100%;
-  padding: 5px;
-  -webkit-transition: -webkit-filter 1s ease-out;
-  transition: -webkit-filter 1s ease-out;
-  transition: filter 1s ease-out;
-  transition: filter 1s ease-out, -webkit-filter 1s ease-out;
-  -webkit-filter: grayscale(20%);
-          filter: grayscale(20%);
+  max-width: 182px;
+  max-height: 182px;
+  padding: 14px;
   -webkit-box-shadow: none;
           box-shadow: none;
+  border-radius: 8px;
   cursor: pointer;
+  -webkit-filter: grayscale(20%);
+          filter: grayscale(20%);
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
-  border-radius: 12px;
 }
 
 .album-carousel .album-slide .album-cover:hover {

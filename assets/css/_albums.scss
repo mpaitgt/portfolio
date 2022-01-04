@@ -79,13 +79,14 @@
     .album-cover {
       width: 100%;
       height: 100%;
-      padding: 5px;
-      transition: filter 1s ease-out;
-      filter: grayscale(20%);
+      max-width: 182px;
+      max-height: 182px;
+      padding: 14px;
       box-shadow: none;
+      border-radius: 8px;
       cursor: pointer;
+      filter: grayscale(20%);
       transition: all 0.25s;
-      border-radius: 12px;
       &:hover {
         transform: scale(1.15);
         filter: grayscale(10%);
