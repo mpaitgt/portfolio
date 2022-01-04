@@ -6,10 +6,12 @@
   position: relative;
   background: $blue__light-x;
   border-radius: 4px;
-  // box-shadow: -2px 2px 2px 0px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 800px;
+  margin: 4rem auto;
   @include nav-collapse {
-    width: 90%;
     height: auto;
+    border-radius: 0px;
   }
   .section__header {
     @include nav-collapse {
@@ -27,6 +29,11 @@
     top: 10px;
     z-index: -1;
     background-color: #d8d8ee;
+  }
+  @include nav-collapse {
+    &:before {
+      opacity: 0;
+    }
   }
 }
 
@@ -80,11 +87,11 @@
       transition: all 0.25s;
       border-radius: 12px;
       &:hover {
-        transform: scale(1.2);
+        transform: scale(1.15);
         filter: grayscale(10%);
         transition: all 0.25s;
       }
-      @include mobile {
+      @include nav-collapse {
         transform: translateY(0%);
         &:hover {
           transform: scale(1);

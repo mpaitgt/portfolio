@@ -38,10 +38,6 @@ html {
     }
     section.section__body {
       color: $text;
-      @include nav-collapse {
-        margin: 0 auto;
-        padding-top: 4.2rem;
-      }
       @include mobile {
         width: 100%;
       }
@@ -93,6 +89,7 @@ html {
         color: $text;
         font-family: inherit;
         line-height: 1.6rem;
+        font-weight: 200;
         a {
           text-decoration: underline;
         }
@@ -158,7 +155,7 @@ html {
     }
     .push-left_hard {
       transform: translateX(-30px);
-      transform: translateX(-20%);
+      transform: translateX(-15%);
       transition: transform 0.25s ease-in-out;
       @include nav-collapse {
         transform: translateX(0px);
@@ -166,7 +163,7 @@ html {
     }
     .push-right_hard {
       transform: translateX(30px);
-      transform: translateX(20%);
+      transform: translateX(15%);
       transition: transform 0.25s ease-in-out;
       @include nav-collapse {
         transform: translateX(0px);

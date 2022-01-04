@@ -21,6 +21,8 @@ nav.navbar {
     top: 0;
     left: 0;
     right: 0;
+    background: $blue__med;
+    color: $white;
   }
   .nav__header {
     font-family: 'Fira Sans', arial, sans-serif;
@@ -32,13 +34,9 @@ nav.navbar {
       font-size: 1.5rem;
     }
   }
-  .foot__copyright {
-    font-size: 0.9em;
-    letter-spacing: -0.5px;
-    font-weight: 700;
-  }
   .mobile-nav__container {
     z-index: -1;
+    // background: $blue__med;
     @include flex(row, space-between, center);
     @include nav-collapse {
       background: linear-gradient(0deg, $blue__light-x, white);
@@ -58,12 +56,10 @@ nav.navbar {
     @include flex(row, center, center);
     list-style: none;
     @include nav-collapse {
-      @include flex(row, space-evenly, center);
+      @include flex(column, space-evenly, flex-start);
       width: 100%;
       padding: 2rem 0;
-    }
-    @include mobile {
-      @include flex(column, space-evenly, flex-start);
+      background: $blue__med;
     }
     .nav__link {
       padding: 8px 12px;
@@ -74,13 +70,14 @@ nav.navbar {
       font-family: 'Fira Sans', arial, sans-serif;
       border-radius: 6px;
       @include nav-collapse {
-        transform: translateX(-100%);
+        transform: translateX(-200%);
         font-size: 1.4rem;
-        padding-left: 2rem;
         margin-top: 1rem;
         margin-bottom: 1rem;
         margin: 5px;
-        text-align:center;
+        margin-left: 2rem;
+        text-align: center;
+        color: $white;
       }
       &:hover {
         transform: scale(1.1);
@@ -113,6 +110,11 @@ nav.navbar {
       margin-top: 7px;
       margin-bottom: 7px;
       border-radius: 5px;
+    }
+    @include nav-collapse {
+      .line {
+        background: $white;
+      }
     }
   }
   .toggle-nav {
@@ -162,11 +164,17 @@ footer.navbar {
     @include mobile {
       @include flex(column, center, center);
     }
+    .foot__copyright {
+      font-size: 0.7em;
+      letter-spacing: -0.5px;
+      font-weight: 700;
+      color: $gray__dark;
+    }
   }
 }
 
 @keyframes mobile-navigation-enter {
-  0% { transform: translateX(-100%); opacity: 0;};
+  0% { transform: translateX(-200%); opacity: 0;};
   30% { transform: translateX(50%); };
   60% { transform: translateX(0%); opacity: 1; };
   80% { transform: translateX(8%); };

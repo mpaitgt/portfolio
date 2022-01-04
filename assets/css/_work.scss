@@ -1,9 +1,19 @@
 .work {
   padding: 5% 5%;
-  // box-shadow: -5px -5px 8px 0px rgba(0,0,0,0.2);
-  // border-bottom: 2px solid $blue__light-x;
+  padding-top: 2.5%;
   background: $blue__light;
-  // clip-path: polygon(0 4%, 100% 0, 100% 100%, 0% 100%);
+  position: relative;
+  &::before {
+    content: "";
+    // clip-path: polygon(0 4%, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 100%, 100% 0, 100% 100%, 0% 100%);
+    width: 100%;
+    height: 50px;
+    background: $blue__light;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+  }
   .section__intro {
     .section__header {
       color: $blue__med-light;
@@ -20,13 +30,18 @@
 
 .job-wrapper {
   margin: 2rem auto;
-  // box-shadow: $project_shadow;
   background: $blue__light-x;
   padding: 1.6rem;
   cursor: pointer;
   border-radius: 8px;
+  transition: all 100ms ease-in-out;
+  &.active {
+    background: white;
+    box-shadow: 0px 4px 12px -4px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+  }
   @include mobile {
-    padding: 1rem 0;
+    padding: 1rem;
     border-left: none;
     border-bottom: 1px solid $blue__light-x;
   }
@@ -36,26 +51,57 @@
     }
   }
   .job-header {
-    @include flex(row, flex-start, center);
-    img {
-      margin-right: 16px;
+    @include flex(col, space-between, center);
+    @include nav-collapse {
+      @include flex(column, flex-start, flex-start);
     }
-    .job-headline-wrapper {
-      // @include flex(row, flex-start, center);
-      // @include mobile {
-      //   @include flex(column, flex-start, flex-start);
-      // }
-      // img {
-      //   margin-left: 1rem;
-      //   margin-right: 1rem;
-      //   opacity: 0.2;
-      // }
+    color: $blue__med;
+    .job-title-lockup {
+      @include flex(column, flex-start, flex-start);
+      @include nav-collapse {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+      }
+      img {
+        margin-bottom: 16px;
+        width: 160px;
+        @include mobile {
+          width: 120px;
+        }
+      }
+    }
+    .job__tech-container {
+      text-align: right;
+      max-width: 340px;
+      @include nav-collapse {
+        text-align: left;
+        align-self: flex-start;
+        margin-top: 1rem;
+        max-width: 100%;
+      }
+      .job__tech {
+        display: inline-block;
+        justify-self: start;
+        background: $blue__light-x; 
+        border: 1px solid $blue__med-light;
+        color: $blue__med;
+        font-weight: 200;
+        font-size: 14px;
+        padding: 4px 12px;
+        margin: 6px;
+        border-radius: 5px;
+        white-space: no-wrap;
+        margin-left: 0;
+        &:last-child {
+          margin-left: 0;
+        }
+      }
     }
     width: 100%;
     .job-title {
-      margin-bottom: 10px;
+      margin-bottom: 26px;
       letter-spacing: 1px;
-      font-weight: 300;
       font-size: 1.8rem;
       transition: transform 200ms;
       @include mobile {
@@ -67,41 +113,15 @@
       transition: transform 200ms;
     }
     .job-details {
-      // margin: 0 10px 20px 10px;
       @include flex(column, flex-start, flex-start);
       @include nav-collapse {
         @include flex(column, flex-start, flex-start);  
       }
-      h4 {
-        font-weight: 300;
+      p {
+        font-weight: 200;
         font-size: 1.2rem;
-        span {
-          // color: #d5e1e3;
-          color: $blue__light;
-          font-weight: 900;
-        }
         @include mobile {
           font-size: 1.1rem;
-        }
-      }
-      .job__tech-container {
-        .job__tech {
-          display: inline-block;
-          // white-space: nowrap;
-          justify-self: start;
-          background: $blue__dark; 
-          color: $blue__light-x;
-          font-weight: 200;
-          // background: #ececec;
-          font-size: 14px;
-          padding: 4px 12px;
-          margin: 6px;
-          border-radius: 5px;
-          white-space: no-wrap;
-          margin-left: 0;
-          &:last-child {
-            margin-left: 0;
-          }
         }
       }
     }
@@ -110,13 +130,13 @@
     display: none;
     height: 0;
     overflow: hidden;
+    margin-top: 10px;
     transition: all 200ms ease-in-out;
   }
   .job-description.is-visible {
     display: block;
     transition: all 200ms ease-in-out;
     height: auto;
-    
   }
 }
 
@@ -126,7 +146,10 @@ ul.work-bullets {
   font-size: 1.05rem;
   list-style: circle;
   li {
-    margin: 10px 0;
+    margin: 14px 0;
+    line-height: 1.5;
+    font-weight: 200;
+    color: $blue__med;
     span.bold {
       font-weight: 900;
       color: $blue__med;
