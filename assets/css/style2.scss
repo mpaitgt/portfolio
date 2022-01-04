@@ -3,6 +3,9 @@
 @import '_variables';
 @import '_media-queries';
 
+html {
+  // font-size: 62.5%;
+}
 
 * {
   padding: 0;
@@ -10,12 +13,13 @@
   box-sizing: border-box;
   line-height: normal;
   body {
-    font-family: 'Tajawal', arial, sans-serif;
-    width: 950px;
-    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
     position: relative;
+    // line-height: 0;
     opacity: 0;
+    font-size: 1.6rem;
     transition: all 0.5s ease;
+    font-size: 1.6rem;
     @include nav-collapse {
       width: 100%;
     }
@@ -25,19 +29,15 @@
     }
     .container {
       margin-top: 0;
+      width: 950px;
+      margin: 0 auto;
       @include nav-collapse {
         margin-top: 4rem;
+        width: 100%;
       }
     }
     section.section__body {
       color: $text;
-      @include nav-collapse {
-        margin: 0 auto;
-        padding-top: 4.2rem;
-        // &:first-child {
-        //   padding-top: 10%;
-        // }
-      }
       @include mobile {
         width: 100%;
       }
@@ -67,7 +67,7 @@
       .section__header {
         display: inline-block;
         font-family: 'Fira Sans', arial, sans-serif;
-        font-size: 4.2rem;
+        font-size: 2.4rem;
         color: $gray__dark;
         margin-bottom: 10px;
         letter-spacing: 1px;
@@ -88,6 +88,8 @@
         padding-left: 1rem;
         color: $text;
         font-family: inherit;
+        line-height: 1.6rem;
+        font-weight: 200;
         a {
           text-decoration: underline;
         }
@@ -102,7 +104,7 @@
       flex-direction: column;
       margin: 0 auto;
       img.img {
-        box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.1);
+        box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.2);
         max-width: 260px;
         min-width: 260px;
         align-self: center;
@@ -137,6 +139,7 @@
     }
     .push-left {
       transform: translateX(-12px);
+      transform: translateX(-15%);
       transition: transform 0.25s ease-in-out;
       @include nav-collapse {
         transform: translateX(0px);
@@ -144,6 +147,7 @@
     }
     .push-right {
       transform: translateX(12px);
+      transform: translateX(15%);
       transition: transform 0.25s ease-in-out;
       @include nav-collapse {
         transform: translateX(0px);
@@ -151,6 +155,7 @@
     }
     .push-left_hard {
       transform: translateX(-30px);
+      transform: translateX(-15%);
       transition: transform 0.25s ease-in-out;
       @include nav-collapse {
         transform: translateX(0px);
@@ -158,6 +163,7 @@
     }
     .push-right_hard {
       transform: translateX(30px);
+      transform: translateX(15%);
       transition: transform 0.25s ease-in-out;
       @include nav-collapse {
         transform: translateX(0px);

@@ -1,73 +1,38 @@
 const myJobs = [
   {
-    title: 'Software UI Developer',
+    title: 'UI Developer',
     company: 'PCI',
     duration: 'April 2021 - Present',
-    technologies: ['React', 'Redux Toolkit', 'Styled-Components', 'Axios'],
-    type: 'Full-Time',
+    technologies: ['React', 'Typescript', 'Redux Toolkit', 'Styled-Components', 'Storybook'],
+    type: '',
+    img_path: '/assets/images/astrata.svg',
     github_link: '',
     production_link: '',
     // description: '',
     bullets: [
-      'Leads UI development for a large-scale application using React and Styled-Components, and Redux Toolkit for state management.',
-      'Working with Principal Software Architect to communicate with back-end APIs and securely fetch data using Axios.',
-      'Managing the project in Jira and with Git version control for an organized development workflow.',
+      'Leads UI development on a team of three working on a large&#8209;scale ERP software project.',
+      'Created design system and style guide for rapid prototyping and development of new modules, visual consistency through the application.',
+      'Architected custom UI component library, integrated Storybook as part of new developer onboarding documentation.',
+      'Learned TypeScript and converted 90% of the front-end. This reduced easy&#8209;to&#8209;miss bugs and improved development experience as the team grew from two to three.'
     ]
   },
   {
     title: 'Software Developer',
     company: 'Bearclaw',
     duration: 'August 2020 - Present',
-    technologies: ['SCSS', 'jQuery', 'PHP', 'MySQL'],
+    technologies: ['SCSS', 'jQuery', 'PHP', 'React', 'MySQL', 'Adobe XD'],
     type: 'Freelance',
+    img_path: '/assets/images/bearclaw.svg',
     github_link: '',
     production_link: '',
     // description: 'I was brought onto this project to bring a UI design to life. Recruiting software in its development phase, Bearclaw needed a frontend-focused developer to improve the application\'s design and the user experience.',
     bullets: [
-      'Leads the recruiting software’s UI development, from design to code, and in a year has built a consistent and organized SCSS codebase.',
-      'Develops full-stack features using jQuery, PHP, and MySQL.',
-      'Continually looks to for improvements in the user experience',
+      'Leads front&#8209;end development of recruiting software on a team of two.',
+      'Recently upgraded the app\'s navigation and dashboard from a legacy jQuery/PHP architecture to React/TypeScript with custom designed SVG icons. This decoupling of the client from the server modernizes the codebase while bringing organization to the app\'s infrastructure.',
+      'Led the UI re-design process, working with the client to meet the software user\'s needs and improving the user experience throughout.',
+      'Learned PHP in order to develop and deliver full-stack features like color themes, Kanban boards, and global search.'
     ]
   },
-  {
-    title: 'Front-End Web Developer',
-    company: 'Lambertville Porchfest',
-    duration: 'February 2020 - Present',
-    technologies: ['Vue.js', 'Gridsome', 'Netlify CMS'],
-    type: 'Collaborative',
-    github_link: 'https://github.com/sdellis/lambertvilleporchfest',
-    production_link: 'https://www.lambertvilleporchfest.com/',
-    // description: 'I was brought onto this project to bring a UI design to life. Recruiting software in its development phase, Bearclaw needed a frontend-focused developer to improve the application\'s design and the user experience.',
-    bullets: [
-      ''
-    ]
-  }
-  // {
-  //   title: 'Frontend Web Developer',
-  //   company: 'The Floor Is Yours',
-  //   duration: 'February 2020 - Present',
-  //   technologies: ['React', 'Material UI', 'Node.js/Express'],
-  //   type: 'Freelance',
-  //   github_link: 'https://github.com/mpaitgt/tfiy',
-  //   production_link: 'https://tfiy.herokuapp.com',
-  //   // description: 'Through Bootcamp, I was connected with the owner of a dance studio who asked me to develop a beautiful website for her new business. I was on a roll with learning React at the time, and didn\'t want this opportunity to stop me in my tracks.',
-  //   bullets: [
-  //     'My very first uilt this local dance studio\'s website with React and the Material UI component library.',
-  //     'Familiarized myself with the advantages of using a component library, and used it to do everything from make the site mobile-friendly to creating page transition animations and a class schedule accordion.',
-  //     'Used the Google Maps API to display the studio\'s location on the contact page, and set up a simple Node.js/Express server to handle contact form submissions with the Nodemailer npm.'
-  //   ],
-  // },
-  // {
-  //   title: 'Frontend Web Developer',
-  //   company: 'Salvage Boy',
-  //   duration: 'July 2020',
-  //   technologies: ['HTML', 'SCSS'],
-  //   type: 'Freelance',
-  //   github_link: '',
-  //   production_link: 'https://salvageboy.com',
-  //   description: 'A small software company that helps used motor part sellers better manage eBay accounts, I was hired to re-design the home page of the website.',
-  //   bullets: []
-  // },
   // {
   //   title: 'Digital Marketing Specialist',
   //   company: 'HearingLife',
@@ -91,61 +56,65 @@ function renderJobs(arr) {
 
   work.innerHTML = arr.map((job, index) => {
     return `
-      <div class="job-wrapper">
-        <div class="job-header">
-          <div class="job-headline-wrapper">
-            <div>
-              <h3 class="section__headline large">
-                ${job.company}
-              </h3>
-            </div>
-          </div>
-          <div style="display: flex; justify-content: flex-start; align-items: flex-start;">
-            <div>
-              <h3 class="job-title">${job.title}</h3>
-              <div class="job-details">
-                <h4>${job.duration} <span>|</span> ${job.type}</h4>
-                <div class="job__tech-container">
-                  ${job.technologies.map((tech) => {
-                    return `<span class="job__tech">${tech}</span>`;
-                  }).join('')}
+      <article class="job-wrapper${index === 0 ? ' active' : ''}">
+        <div class="">
+          <div class="job-header">
+            <div class="job-title-lockup">
+              <img src="${job.img_path}" width="160" />
+              <div style="flex: 2;">
+                <h3 class="job-title">${job.title}</h3>
+                <div class="job-details">
+                  <p>${job.duration}</p>
                 </div>
-                </h4>
               </div>
             </div>
+            <div class="job__tech-container">
+              ${job.technologies.map((tech) => {
+      return `<span class="job__tech">${tech}</span>`;
+    }).join('')}
+            </div>
           </div>
-          <div class="job-description${index === 0 ? " is-visible" : ""}">
+          <div class="job-description${index === 0 ? ' is-visible' : ''}">
             <ul class="work-bullets">
               ${job.bullets.map((bullet) => {
-                return `<li>${bullet}</li>`;
-              }).join('')}
+      return `<li>${bullet}</li>`;
+    }).join('')}
             </ul>
           </div>
         </div>
-      </div>
+      </article>
     `;
   }).join('');
 }
 
+{/* <div class="job__tech-container">
+${job.technologies.map((tech) => {
+  return `<span class="job__tech">${tech}</span>`;
+}).join('')}
+</div> */}
+
 function attachShowEvent() {
-  document.querySelectorAll('.job-wrapper').forEach(function(item, index, array) {
-    item.addEventListener('click', function(e) {
-  
+  document.querySelectorAll('.job-wrapper').forEach(function (item, index, array) {
+    item.addEventListener('click', function (e) {
+
       const allJobs = document.querySelectorAll('.job-description');
       const thisJob = item.querySelector('.job-description');
-  
+
       if (thisJob.classList.contains('is-visible')) {
         hideElement(thisJob);
+        item.classList.remove('active');
       } else {
         for (let i = 0; i < allJobs.length; i++) {
           if (allJobs[i].classList.contains('is-visible')) {
             hideElement(allJobs[i]);
+            array[i].classList.remove('active');
           }
         }
         showElement(thisJob);
+        item.classList.add('active');
       }
     });
-  
+
   });
 }
 
@@ -169,11 +138,11 @@ const hideElement = (el) => {
   el.style.height = el.scrollHeight + 'px';
 
   window.setTimeout(function () {
-		el.style.height = '0';
-	}, 1);
+    el.style.height = '0';
+  }, 1);
 
-	window.setTimeout(function () {
-		el.classList.remove('is-visible');
+  window.setTimeout(function () {
+    el.classList.remove('is-visible');
     // el.querySelector('.fading-arrow').classList.remove('close');
-	}, 200);
+  }, 200);
 };
