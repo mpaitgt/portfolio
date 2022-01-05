@@ -10,7 +10,7 @@ const myJobs = [
     production_link: '',
     // description: '',
     bullets: [
-      'Leads UI development on a team of three working on a large&#8209;scale ERP software project.',
+      'Leads UI design and development on a team of three working on a large&#8209;scale ERP software project.',
       'Created design system and style guide for rapid prototyping and development of new modules, visual consistency through the application.',
       'Architected custom UI component library, integrated Storybook as part of new developer onboarding documentation.',
       'Learned TypeScript and converted 90% of the front-end. This reduced easy&#8209;to&#8209;miss bugs and improved development experience as the team grew from two to three.'
@@ -27,7 +27,7 @@ const myJobs = [
     production_link: '',
     // description: 'I was brought onto this project to bring a UI design to life. Recruiting software in its development phase, Bearclaw needed a frontend-focused developer to improve the application\'s design and the user experience.',
     bullets: [
-      'Leads front&#8209;end development of recruiting software on a team of two.',
+      'Leads UI design and development of recruiting software on a team of two.',
       'Recently upgraded the app\'s navigation and dashboard from a legacy jQuery/PHP architecture to React/TypeScript with custom designed SVG icons. This decoupling of the client from the server modernizes the codebase while bringing organization to the app\'s infrastructure.',
       'Led the UI re-design process, working with the client to meet the software user\'s needs and improving the user experience throughout.',
       'Learned PHP in order to develop and deliver full-stack features like color themes, Kanban boards, and global search.'

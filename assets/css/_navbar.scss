@@ -13,16 +13,19 @@ nav.navbar {
   position: relative;
   max-width: 100%;
   @include nav-collapse {
-    margin-top: 0px;
-    @include flex(row, space-between, center);
     padding-left: 2rem;
     padding-right: 2rem;
+    margin-top: 0px;
+    @include flex(row, space-between, center);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     background: $blue__med;
     color: $white;
+  }
+  @include mobile {
+    padding: 0.78rem 2rem;
   }
   .nav__header {
     font-family: 'Fira Sans', arial, sans-serif;
@@ -98,7 +101,7 @@ nav.navbar {
   #burger {
     display: none;
     width: 32px;
-    height: 32px;
+    height: 25px;
     cursor: pointer;
     @include nav-collapse {
       display: inline-block;
@@ -107,8 +110,7 @@ nav.navbar {
       width: 100%;
       height: 2px;
       background: $blue__med;
-      margin-top: 7px;
-      margin-bottom: 7px;
+      margin-top: 5px;
       border-radius: 5px;
     }
     @include nav-collapse {
