@@ -1,13 +1,14 @@
-const 
+const
   burger = document.getElementById('burger'),
   navContents = document.querySelector('.mobile-nav__container'),
   navItems = document.querySelectorAll('.nav__link');
 
-burger.addEventListener('click', function(e) {
+burger.addEventListener('click', function (e) {
   navContents.classList.toggle('toggle-nav');
+  burger.classList.toggle('active');
 });
 
-navContents.addEventListener('transitionstart', function(e) {
+navContents.addEventListener('transitionstart', function (e) {
 
   if (navContents.classList.contains('toggle-nav') && window.innerWidth <= 952) {
     navItems.forEach((item, index) => {
@@ -21,7 +22,7 @@ navContents.addEventListener('transitionstart', function(e) {
 })
 
 navItems.forEach(item => {
-  item.addEventListener('click', function(e) {
+  item.addEventListener('click', function (e) {
     navContents.classList.toggle('toggle-nav');
   })
 })

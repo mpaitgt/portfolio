@@ -154,7 +154,7 @@ html {
     }
     .push-left_hard {
       transform: translateX(-30px);
-      transform: translateX(-15%);
+      transform: translateX(-5%);
       transition: transform 0.25s ease-in-out;
       @include nav-collapse {
         transform: translateX(0px);
@@ -162,7 +162,7 @@ html {
     }
     .push-right_hard {
       transform: translateX(30px);
-      transform: translateX(15%);
+      transform: translateX(5%);
       transition: transform 0.25s ease-in-out;
       @include nav-collapse {
         transform: translateX(0px);

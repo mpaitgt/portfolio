@@ -84,15 +84,16 @@
       box-shadow: none;
       border-radius: 8px;
       cursor: pointer;
-      filter: grayscale(20%);
+      filter: grayscale(30%);
       transition: all 0.25s;
       &:hover {
-        transform: scale(1.15);
+        transform: scale(1.025) translateY(-2px);
         filter: grayscale(10%);
         transition: all 0.25s;
       }
       @include nav-collapse {
         transform: translateY(0%);
+        filter: grayscale(10%);
         &:hover {
           transform: scale(1);
         }
