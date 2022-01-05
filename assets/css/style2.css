@@ -177,7 +177,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
 }
 
 * body .image-wrapper img.img {
@@ -797,6 +797,7 @@ footer.navbar .footer__social .foot__copyright {
   letter-spacing: -0.5px;
   font-weight: 700;
   color: #bdbdbd;
+  margin-top: 12px;
 }
 
 @-webkit-keyframes menu-open {
@@ -1110,6 +1111,12 @@ footer.navbar .footer__social .foot__copyright {
     padding: 1rem;
     border-left: none;
     border-bottom: 1px solid #e7e7f1;
+  }
+}
+
+@media screen and (max-width: 952px) {
+  .job-wrapper {
+    padding-bottom: 2rem;
   }
 }
 

@@ -62,6 +62,9 @@
     border-left: none;
     border-bottom: 1px solid $blue__light-x;
   }
+  @include nav-collapse {
+    padding-bottom: 2rem;
+  }
   .about__content {
     @include tablet {
       @include flex(column, center, center);
