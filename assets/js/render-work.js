@@ -30,7 +30,7 @@ const myJobs = [
       'Leads UI design and development of recruiting software on a team of&nbsp;two.',
       'Recently upgraded the app\'s navigation and dashboard from a legacy jQuery/PHP architecture to React/TypeScript with custom designed SVG icons. This decoupling of the client from the server modernizes the codebase while bringing organization to the app\'s infrastructure.',
       'Led the UI re-design process, working with the client to meet the software user\'s needs and improving the user experience throughout.',
-      'Learned PHP in order to develop and deliver full-stack features like color themes, Kanban boards, and global&nbsp;search.'
+      'Learned PHP in order to develop and deliver full-stack features like color themes, Kanban boards, and global&nbsp;search.',
     ]
   },
   // {
@@ -113,10 +113,7 @@ function attachShowEvent() {
         }
         showElement(thisJob);
         item.classList.add('active');
-        thisJob.scrollIntoView({
-          behavior: 'smooth',
-          block: 'center'
-        }, 5000);
+        item.scrollIntoView();
       }
     });
 

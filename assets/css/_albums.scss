@@ -9,6 +9,7 @@
   width: 100%;
   max-width: 800px;
   margin: 4rem auto;
+  scroll-margin: 60px;
   @include nav-collapse {
     height: auto;
     border-radius: 0px;

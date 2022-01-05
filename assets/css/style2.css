@@ -1078,6 +1078,7 @@ footer.navbar .footer__social .foot__copyright {
   position: relative;
   -webkit-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out;
+  scroll-margin: 60px;
 }
 
 .job-wrapper:hover:not(.active) {
@@ -1751,6 +1752,7 @@ ul.work-bullets li span.bold {
   width: 100%;
   max-width: 800px;
   margin: 4rem auto;
+  scroll-margin: 60px;
 }
 
 @media screen and (max-width: 952px) {

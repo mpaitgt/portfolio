@@ -9,7 +9,6 @@ const
 
 navLink.forEach(target => {
   target.addEventListener('click', () => {
-    console.log(target.dataset);
     switch (target.dataset.name) {
       case 'about':
         scroll(aboutDestination);

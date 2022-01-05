@@ -36,6 +36,7 @@
   border-radius: 8px;
   position: relative;
   transition: all 100ms ease-in-out;
+  scroll-margin: 60px;
   &:hover {
     &:not(.active) {
       background: white;

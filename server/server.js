@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(publicPath));
 
@@ -54,13 +54,11 @@ app.post('/submit', (req, res) => {
     </html>`
   };
 
-  console.log(req.body.name, req.body.email, req.body.message);
-
-  transport.sendMail(contactForm, function(error, info){
+  transport.sendMail(contactForm, function (error, info) {
     if (error) {
-      console.log(error);
+      console.error(error);
     } else {
-      console.log('Email sent: ' + info.response);
+      ('Email sent: ' + info.response);
       res.send(info);
     }
   });
