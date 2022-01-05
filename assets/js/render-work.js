@@ -82,6 +82,7 @@ function renderJobs(arr) {
             </ul>
           </div>
         </div>
+        <span class='cta'>Click to expand</span>
       </article>
     `;
   }).join('');
@@ -112,6 +113,10 @@ function attachShowEvent() {
         }
         showElement(thisJob);
         item.classList.add('active');
+        thisJob.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        }, 5000);
       }
     });
 
