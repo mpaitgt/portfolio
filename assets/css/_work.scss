@@ -3,6 +3,9 @@
   padding-top: 2.5%;
   background: $blue__light;
   position: relative;
+  opacity: 0;
+  transform: translateY(50%);
+  animation: work-section-enter 1500ms ease 0ms 1 forwards;
   &::before {
     content: "";
     // clip-path: polygon(0 4%, 100% 0, 100% 100%, 0% 100%);
@@ -208,5 +211,16 @@ ul.work-bullets {
   100% {
     transform: translateY(0px);
     opacity: 1;
+  }
+}
+
+@keyframes work-section-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
   }
 }

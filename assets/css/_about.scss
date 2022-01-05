@@ -7,7 +7,16 @@
   @include tablet {
     @include flex(column, center, center);
   }
-  
+  .image-wrapper {
+    opacity: 0;
+    transform: translateX(-50%);
+    animation: about-image-enter 1500ms ease 250ms 1 forwards;
+  }
+  .content-wrapper {
+    opacity: 0;
+    transform: translateX(50%);
+    animation: about-content-enter 1500ms ease 0ms 1 forwards;
+  }
   > div {
     display: flex;
     flex-direction: column;
@@ -37,5 +46,29 @@
     width: 24px;
     opacity: 0.2;
     margin: 0 10px;
+  }
+}
+
+@keyframes about-image-enter {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  20% { opacity: 0; }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes about-content-enter {
+  0% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  20% { opacity: 0; }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
   }
 }

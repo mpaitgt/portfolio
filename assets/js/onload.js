@@ -17,5 +17,5 @@ window.onload = async function () {
   attachHoverAnimationOnItems(albumCovers, true);
   // attachHoverAnimationOnItems(socialIcons, true);
 
-  document.querySelector('body').style.opacity = 1
+  // document.querySelector('body').style.opacity = 1
 };
