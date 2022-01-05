@@ -115,7 +115,7 @@ function attachShowEvent() {
         item.classList.add('active');
         thisJob.scrollIntoView({
           behavior: 'smooth',
-          block: 'center'
+          block: 'start'
         }, 5000);
       }
     });

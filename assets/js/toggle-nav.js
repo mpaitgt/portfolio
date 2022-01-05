@@ -24,5 +24,6 @@ navContents.addEventListener('transitionstart', function (e) {
 navItems.forEach(item => {
   item.addEventListener('click', function (e) {
     navContents.classList.toggle('toggle-nav');
+    burger.classList.toggle('active');
   })
 })
