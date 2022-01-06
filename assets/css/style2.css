@@ -459,7 +459,7 @@ nav.navbar {
 
 @media screen and (max-width: 576px) {
   nav.navbar {
-    padding: 0.78rem 2rem;
+    padding: 2rem;
   }
 }
 
@@ -491,7 +491,6 @@ nav.navbar .mobile-nav__container {
     width: 100%;
     max-width: 300px;
     margin-left: -150px;
-    margin-top: -200px;
     z-index: -99;
     -webkit-perspective: 2000px;
             perspective: 2000px;
@@ -1188,7 +1187,7 @@ footer.navbar .footer__social .foot__copyright {
   position: relative;
   -webkit-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out;
-  scroll-margin: 60px;
+  scroll-margin: 120px;
 }
 
 .job-wrapper:hover:not(.active) {
@@ -1253,10 +1252,10 @@ footer.navbar .footer__social .foot__copyright {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: col;
-          flex-direction: col;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1267,7 +1266,7 @@ footer.navbar .footer__social .foot__copyright {
   width: 100%;
 }
 
-@media screen and (max-width: 952px) {
+@media screen and (max-width: 576px) {
   .job-wrapper .job-header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1285,22 +1284,6 @@ footer.navbar .footer__social .foot__copyright {
   }
 }
 
-.job-wrapper .job-header .job-title-lockup {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
 @media screen and (max-width: 952px) {
   .job-wrapper .job-header .job-title-lockup {
     -webkit-box-orient: horizontal;
@@ -1311,6 +1294,24 @@ footer.navbar .footer__social .foot__copyright {
         -ms-flex-pack: justify;
             justify-content: space-between;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .job-wrapper .job-header .job-title-lockup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
@@ -1330,12 +1331,13 @@ footer.navbar .footer__social .foot__copyright {
   max-width: 340px;
 }
 
-@media screen and (max-width: 952px) {
+@media screen and (max-width: 576px) {
   .job-wrapper .job-header .job__tech-container {
     text-align: left;
     -ms-flex-item-align: start;
         align-self: flex-start;
     margin-top: 1rem;
+    margin-bottom: 1rem;
     max-width: 100%;
   }
 }
@@ -1361,7 +1363,6 @@ footer.navbar .footer__social .foot__copyright {
 }
 
 .job-wrapper .job-header .job-title {
-  margin-bottom: 26px;
   letter-spacing: 1px;
   font-size: 2.4rem;
   color: #b0b0cf;
@@ -1374,7 +1375,7 @@ footer.navbar .footer__social .foot__copyright {
 
 @media screen and (max-width: 576px) {
   .job-wrapper .job-header .job-title {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -1385,51 +1386,6 @@ footer.navbar .footer__social .foot__copyright {
   transition: -webkit-transform 200ms;
   transition: transform 200ms;
   transition: transform 200ms, -webkit-transform 200ms;
-}
-
-.job-wrapper .job-header .job-details {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-@media screen and (max-width: 952px) {
-  .job-wrapper .job-header .job-details {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-}
-
-.job-wrapper .job-header .job-details p {
-  font-weight: 200;
-  font-size: 1.2rem;
-}
-
-@media screen and (max-width: 576px) {
-  .job-wrapper .job-header .job-details p {
-    font-size: 1.1rem;
-  }
 }
 
 .job-wrapper .job-description {
@@ -1465,6 +1421,53 @@ footer.navbar .footer__social .foot__copyright {
   font-weight: 300;
   -webkit-animation: cta-enter 300ms ease-in-out 0ms 1 forwards;
           animation: cta-enter 300ms ease-in-out 0ms 1 forwards;
+}
+
+.job-wrapper .job-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media screen and (max-width: 952px) {
+  .job-wrapper .job-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.job-wrapper .job-details p {
+  font-weight: 200;
+  font-size: 1.2rem;
+  margin-top: 1.4rem;
+}
+
+@media screen and (max-width: 576px) {
+  .job-wrapper .job-details p {
+    font-size: 1.1rem;
+    margin-top: 0;
+  }
 }
 
 ul.work-bullets {

@@ -39,7 +39,7 @@
   border-radius: 8px;
   position: relative;
   transition: all 100ms ease-in-out;
-  scroll-margin: 60px;
+  scroll-margin: 120px;
   &:hover {
     &:not(.active) {
       background: white;
@@ -75,17 +75,19 @@
     }
   }
   .job-header {
-    @include flex(col, space-between, center);
-    @include nav-collapse {
+    @include flex(row, space-between, center);
+    @include mobile {
       @include flex(column, flex-start, flex-start);
     }
     color: $blue__med;
     .job-title-lockup {
-      @include flex(column, flex-start, flex-start);
       @include nav-collapse {
         flex-direction: row-reverse;
         justify-content: space-between;
         width: 100%;
+      }
+      @include mobile {
+        @include flex(column, flex-start, flex-start);
       }
       img {
         margin-bottom: 16px;
@@ -98,10 +100,11 @@
     .job__tech-container {
       text-align: right;
       max-width: 340px;
-      @include nav-collapse {
+      @include mobile {
         text-align: left;
         align-self: flex-start;
         margin-top: 1rem;
+        margin-bottom: 1rem;
         max-width: 100%;
       }
       .job__tech {
@@ -124,32 +127,18 @@
     }
     width: 100%;
     .job-title {
-      margin-bottom: 26px;
       letter-spacing: 1px;
       font-size: 2.4rem;
       color: $blue__svg;
       transition: transform 200ms;
       font-family: 'Fira Sans', sans-serif;
       @include mobile {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
       }
     }
     .job-title.hover {
       transform: translateY(-5px);
       transition: transform 200ms;
-    }
-    .job-details {
-      @include flex(column, flex-start, flex-start);
-      @include nav-collapse {
-        @include flex(column, flex-start, flex-start);  
-      }
-      p {
-        font-weight: 200;
-        font-size: 1.2rem;
-        @include mobile {
-          font-size: 1.1rem;
-        }
-      }
     }
   }
   .job-description {
@@ -179,6 +168,21 @@
     opacity: 0;
     font-weight: 300;
     animation: cta-enter 300ms ease-in-out 0ms 1 forwards;
+  }
+  .job-details {
+    @include flex(column, flex-start, flex-start);
+    @include nav-collapse {
+      @include flex(column, flex-start, flex-start);  
+    }
+    p {
+      font-weight: 200;
+      font-size: 1.2rem;
+      margin-top: 1.4rem;
+      @include mobile {
+        font-size: 1.1rem;
+        margin-top: 0;
+      }
+    }
   }
 }
 

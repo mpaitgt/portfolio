@@ -31,7 +31,7 @@ nav.navbar {
     }
   }
   @include mobile {
-    padding: 0.78rem 2rem;
+    padding: 2rem;
   }
   .nav__header {
     font-family: 'Fira Sans', arial, sans-serif;
@@ -54,7 +54,6 @@ nav.navbar {
       width: 100%;
       max-width: 300px;
       margin-left: -150px;
-      margin-top: -200px;
       z-index: -99;
       perspective: 2000px;
     }

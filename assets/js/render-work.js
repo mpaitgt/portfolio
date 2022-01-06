@@ -63,9 +63,6 @@ function renderJobs(arr) {
               <img src="${job.img_path}" width="160" />
               <div style="flex: 2;">
                 <h3 class="job-title">${job.title}</h3>
-                <div class="job-details">
-                  <p>${job.duration}</p>
-                </div>
               </div>
             </div>
             <div class="job__tech-container">
@@ -73,6 +70,9 @@ function renderJobs(arr) {
       return `<span class="job__tech">${tech}</span>`;
     }).join('')}
             </div>
+          </div>
+          <div class="job-details">
+            <p>${job.duration}</p>
           </div>
           <div class="job-description${index === 0 ? ' is-visible' : ''}">
             <ul class="work-bullets">
