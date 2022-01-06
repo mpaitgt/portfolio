@@ -40,7 +40,6 @@
   border-radius: 8px;
   position: relative;
   transition: all 100ms ease-in-out;
-  scroll-margin: 120px;
   opacity: 0;
   transform: translateY(-20%);
   @for $i from 1 through 4 {
@@ -64,6 +63,7 @@
     background: white;
     box-shadow: 0px 4px 12px -4px rgba(0, 0, 0, 0.4);
     transform: translateY(-5px);
+    scroll-margin: initial;
     .job-header {
       .job-title {
         color: $gray__dark;
