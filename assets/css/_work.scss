@@ -47,7 +47,14 @@
       animation: job-enter 500ms ease #{$i * 1.05}s 1 forwards;
     }
   }
-  
+  a.website {
+    font-size: 0.8rem;
+    margin-left: auto;
+    display: inline-block;
+    text-align: right;
+    padding-right: 10px;
+    color: $blue__med-light;
+  }
   &:hover {
     &:not(.active) {
       background: white;
@@ -179,14 +186,14 @@
     animation: cta-enter 300ms ease-in-out 0ms 1 forwards;
   }
   .job-details {
-    @include flex(column, flex-start, flex-start);
-    @include nav-collapse {
+    margin-top: 1.4rem;
+    @include flex(row, space-between, flex-end);
+    @include mobile {
       @include flex(column, flex-start, flex-start);  
     }
     p {
       font-weight: 200;
       font-size: 1.2rem;
-      margin-top: 1.4rem;
       @include mobile {
         font-size: 1.1rem;
         margin-top: 0;
