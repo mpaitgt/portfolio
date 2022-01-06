@@ -1134,6 +1134,7 @@ footer.navbar .footer__social .foot__copyright {
           transform: translateY(50%);
   -webkit-animation: work-section-enter 1500ms ease 0ms 1 forwards;
           animation: work-section-enter 1500ms ease 0ms 1 forwards;
+  scroll-margin: 45px;
 }
 
 .work::before {
@@ -1188,6 +1189,29 @@ footer.navbar .footer__social .foot__copyright {
   -webkit-transition: all 100ms ease-in-out;
   transition: all 100ms ease-in-out;
   scroll-margin: 120px;
+  opacity: 0;
+  -webkit-transform: translateY(-20%);
+          transform: translateY(-20%);
+}
+
+.job-wrapper:nth-child(1) {
+  -webkit-animation: job-enter 500ms ease 1.05s 1 forwards;
+          animation: job-enter 500ms ease 1.05s 1 forwards;
+}
+
+.job-wrapper:nth-child(2) {
+  -webkit-animation: job-enter 500ms ease 2.1s 1 forwards;
+          animation: job-enter 500ms ease 2.1s 1 forwards;
+}
+
+.job-wrapper:nth-child(3) {
+  -webkit-animation: job-enter 500ms ease 3.15s 1 forwards;
+          animation: job-enter 500ms ease 3.15s 1 forwards;
+}
+
+.job-wrapper:nth-child(4) {
+  -webkit-animation: job-enter 500ms ease 4.2s 1 forwards;
+          animation: job-enter 500ms ease 4.2s 1 forwards;
 }
 
 .job-wrapper:hover:not(.active) {
@@ -1548,6 +1572,38 @@ ul.work-bullets li span.bold {
   }
 }
 
+@-webkit-keyframes job-enter {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes job-enter {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
 .list__projects {
   height: auto;
 }
@@ -1891,7 +1947,7 @@ ul.work-bullets li span.bold {
   width: 100%;
   max-width: 800px;
   margin: 4rem auto;
-  scroll-margin: 60px;
+  scroll-margin: 120px;
 }
 
 @media screen and (max-width: 952px) {
@@ -2508,6 +2564,7 @@ ul.work-bullets li span.bold {
 
 .contact {
   overflow: hidden;
+  scroll-margin: 80px;
 }
 
 .form-wrapper {
