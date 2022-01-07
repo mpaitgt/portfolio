@@ -25,10 +25,6 @@
   outline: solid;
 }
 
-* button {
-  outline: solid;
-}
-
 * body {
   font-family: 'Inter', sans-serif;
   position: relative;
@@ -2496,6 +2492,16 @@ ul.work-bullets li span.bold {
           perspective: 1000px;
 }
 
+.screenshot-modal button.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #f1abab;
+  letter-spacing: 0.5px;
+}
+
 .screenshot-modal#astrata-modal.active, .screenshot-modal#bearclaw-modal.active {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2518,8 +2524,8 @@ ul.work-bullets li span.bold {
   opacity: 0;
   -webkit-transform: rotateY(20deg);
           transform: rotateY(20deg);
-  -webkit-animation: screenshots-enter 250ms ease-in-out 0ms 1 forwards;
-          animation: screenshots-enter 250ms ease-in-out 0ms 1 forwards;
+  -webkit-animation: screenshots-enter 500ms ease-in-out 0ms 1 forwards;
+          animation: screenshots-enter 500ms ease-in-out 0ms 1 forwards;
   border-radius: 8px;
 }
 

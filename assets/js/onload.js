@@ -25,41 +25,38 @@ window.onload = async function () {
     })
   })
 
-  // screenshotButton handlers
+  // screenshotButton handlers to open modal
   const screenshotButtons = document.querySelectorAll('.screenshot-button');
 
   screenshotButtons.forEach(btn => {
     btn.addEventListener('click', function (e) {
       e.stopPropagation();
       const modal = document.getElementById(btn.id);
-      const activeModal = document.querySelector('.active');
+      const activeModal = document.querySelector('.screenshot-modal.active');
       if (!activeModal) modal.classList.add('active');
       screenShotWidthAdjustment(e);
     })
   });
 
-  // screenshotModal close
+  // screenshotModal close handler when clicking outside
   document.addEventListener('click', function (e) {
     const modals = document.querySelectorAll('.screenshot-modal');
-
     modals.forEach(m => {
       const content = m.querySelector('.modal-content');
       if (m.classList.contains('active') && !content.contains(e.target)) {
         m.classList.remove('active');
       }
     })
-
-  })
+  });
 
   window.addEventListener('resize', screenShotWidthAdjustment);
-
 };
 
 function screenShotWidthAdjustment(e) {
   const modalToCheck = document.querySelector('.screenshot-modal.active');
+  const rootEl = modalToCheck.querySelector('.swiffy-slider');
   const width = window.screen.width;
 
-  const rootEl = modalToCheck.querySelector('.swiffy-slider');
   if (width < 576) {
     // if we've gone under the threshold
     // and the modal is open

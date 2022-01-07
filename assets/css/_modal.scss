@@ -38,6 +38,15 @@
   background: rgba(61,61,90,0.8);
   box-shadow: inset 0px 0px 100px 32px rgba(0,0,0,0.25);
   perspective: 1000px;
+  button.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #f1abab;
+    letter-spacing: 0.5px;
+  }
   &#astrata-modal, &#bearclaw-modal {
     &.active {
       display: flex;
@@ -55,7 +64,7 @@
     margin: 0 auto;
     opacity: 0;
     transform: rotateY(20deg);
-    animation: screenshots-enter 250ms ease-in-out 0ms 1 forwards;
+    animation: screenshots-enter 500ms ease-in-out 0ms 1 forwards;
     // box-shadow: 0px 0px 100px 32px rgba(255,255,255,0.25);
     border-radius: 8px;
     > iframe {
