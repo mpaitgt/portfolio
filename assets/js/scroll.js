@@ -32,6 +32,33 @@ navLink.forEach(target => {
         break;
     }
   })
+
+  target.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.keyCode === 13) {
+      switch (target.dataset.name) {
+        case 'about':
+          scroll(aboutDestination);
+          break;
+        case 'work':
+          scroll(workDestination);
+          break;
+        case 'projects':
+          scroll(projectsDestination);
+          break;
+        case 'recommendations':
+          scroll(recommendationsDestination);
+          break;
+        case 'bandcamp':
+          scroll(bandcampDestination);
+          break;
+        case 'contact':
+          scroll(contactDestination);
+          break;
+        default:
+          break;
+      }
+    }
+  })
 })
 
 function scroll(target) {

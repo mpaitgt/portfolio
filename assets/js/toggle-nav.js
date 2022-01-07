@@ -8,6 +8,16 @@ burger.addEventListener('click', function (e) {
   burger.classList.toggle('active');
 });
 
+burger.addEventListener('keydown', function (e) {
+  navContents.classList.toggle('toggle-nav');
+  burger.classList.toggle('active');
+
+  if (navContents.classList.contains('toggle-nav')) {
+    const ul = document.querySelector('ul.nav__ul');
+    ul.firstElementChild.focus();
+  }
+});
+
 navContents.addEventListener('transitionstart', function (e) {
 
   if (navContents.classList.contains('toggle-nav') && window.innerWidth <= 952) {
@@ -26,4 +36,12 @@ navItems.forEach(item => {
     navContents.classList.toggle('toggle-nav');
     burger.classList.toggle('active');
   })
-})
+
+  item.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.keyCode === 13) {
+      navContents.classList.toggle('toggle-nav');
+      burger.classList.toggle('active');
+    }
+  })
+
+});

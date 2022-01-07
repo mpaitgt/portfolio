@@ -32,7 +32,8 @@ window.onload = async function () {
     btn.addEventListener('click', function (e) {
       e.stopPropagation();
       const modal = document.getElementById(btn.id);
-      modal.classList.add('active');
+      const activeModal = document.querySelector('.active');
+      if (!activeModal) modal.classList.add('active');
       screenShotWidthAdjustment(e);
     })
   });

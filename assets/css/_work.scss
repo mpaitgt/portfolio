@@ -55,6 +55,7 @@
     padding-right: 10px;
     color: $blue__med-light;
   }
+  &:focus,
   &:hover {
     &:not(.active) {
       background: white;
@@ -228,6 +229,9 @@
     }
     &:hover {
       opacity: 1;
+    }
+    &:focus {
+      border: 1px solid $blue__dark;
     }
   }
 }

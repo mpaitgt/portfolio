@@ -12,6 +12,12 @@ html {
   margin: 0;
   box-sizing: border-box;
   line-height: normal;
+  &:focus {
+    outline: solid;
+  }
+  button {
+    outline: solid;
+  }
   body {
     font-family: 'Inter', sans-serif;
     position: relative;

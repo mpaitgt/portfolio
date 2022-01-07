@@ -57,7 +57,7 @@ function renderJobs(arr) {
 
   work.innerHTML = arr.map((job, index) => {
     return `
-      <article class="job-wrapper${index === 0 ? ' active' : ''}">
+      <article class="job-wrapper${index === 0 ? ' active' : ''}" tabindex="0">
         <div class="">
           <div class="job-header">
             <div class="job-title-lockup">

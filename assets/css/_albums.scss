@@ -87,6 +87,7 @@
       cursor: pointer;
       filter: grayscale(30%);
       transition: all 0.25s;
+      &:focus,
       &:hover {
         transform: scale(1.025) translateY(-2px);
         filter: grayscale(10%);
@@ -95,6 +96,7 @@
       @include nav-collapse {
         transform: translateY(0%);
         filter: grayscale(10%);
+        &:focus,
         &:hover {
           transform: scale(1);
         }
