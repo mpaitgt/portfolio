@@ -25,4 +25,55 @@ window.onload = async function () {
     })
   })
 
+  // screenshotButton handlers
+  const screenshotButtons = document.querySelectorAll('.screenshot-button');
+
+  screenshotButtons.forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      const modal = document.getElementById(btn.id);
+      modal.classList.add('active');
+      screenShotWidthAdjustment(e);
+    })
+  });
+
+  // screenshotModal close
+  document.addEventListener('click', function (e) {
+    const modals = document.querySelectorAll('.screenshot-modal');
+
+    modals.forEach(m => {
+      const content = m.querySelector('.modal-content');
+      if (m.classList.contains('active') && !content.contains(e.target)) {
+        m.classList.remove('active');
+      }
+    })
+
+  })
+
+  window.addEventListener('resize', screenShotWidthAdjustment);
+
 };
+
+function screenShotWidthAdjustment(e) {
+  const modalToCheck = document.querySelector('.screenshot-modal.active');
+  const width = window.screen.width;
+
+  const rootEl = modalToCheck.querySelector('.swiffy-slider');
+  if (width < 576) {
+    // if we've gone under the threshold
+    // and the modal is open
+    if (modalToCheck && modalToCheck.classList.contains('active')) {
+      if (rootEl.classList.contains('slider-nav-outside')) {
+        rootEl.classList.remove('slider-nav-outside');
+      }
+    } else {
+      if (!rootEl.classList.contains('slider-nav-outside')) {
+        rootEl.classList.add('slider-nav-outside');
+      }
+    }
+  } else {
+    if (!rootEl.classList.contains('slider-nav-outside')) {
+      rootEl.classList.add('slider-nav-outside');
+    }
+  }
+}

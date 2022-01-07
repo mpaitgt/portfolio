@@ -1,14 +1,14 @@
 const myJobs = [
   {
     title: 'UI Developer',
-    company: 'PCI',
+    company: 'Astrata',
     duration: 'April 2021 - Present',
     technologies: ['React', 'Typescript', 'Redux Toolkit', 'Styled-Components', 'Storybook'],
     type: '',
     img_path: '/assets/images/astrata.svg',
     github_link: '',
     production_link: '',
-    website: 'https://info.premierconsultingllc.com/astrata-vip-list',
+    website: '',
     bullets: [
       'Leads UI design and development on a team of three working on a large&#8209;scale ERP software&nbsp;project.',
       'Created design system and style guide for rapid prototyping and development of new modules, visual consistency through the&nbsp;application.',
@@ -74,11 +74,16 @@ function renderJobs(arr) {
           </div>
           <div class="job-details">
             <p>${job.duration}</p>
-            ${job.website ? `
-            <a href="${job.website}" class="website" rel="noreferrer" target="_blank">
-              Go to website &#187;
-            </a>
-          ` : ``}
+            <div>
+              ${job.website ? `
+              <a href="${job.website}" class="website-button" rel="noreferrer" target="_blank">
+                Open website &#187;
+              </a>
+              ` : ``}
+              <button id="${job.company.toLowerCase()}-modal" class="screenshot-button">
+                View screenshots
+              </button>
+            </div>
           </div>
           <div class="job-description${index === 0 ? ' is-visible' : ''}">
             <ul class="work-bullets">
