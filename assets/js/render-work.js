@@ -1,38 +1,75 @@
 const myJobs = [
   {
-    title: 'UI Developer',
-    company: 'Astrata',
-    duration: 'April 2021 - Present',
-    technologies: ['React', 'Typescript', 'Redux Toolkit', 'SCSS', , 'Node.js', 'Storybook'],
-    type: '',
-    img_path: '/assets/images/astrata.svg',
-    github_link: '',
-    production_link: '',
-    website: '',
+    title: "Software Developer",
+    company: "TEKSystems",
+    duration: "June 2022 - Present",
+    technologies: [
+      "React",
+      "Typescript",
+      "Jest",
+      "React Testing Library",
+      "Tanstack",
+      "Yarn",
+    ],
+    type: "",
+    img_path: "/assets/images/teksystems.svg",
+    github_link: "",
+    production_link: "",
+    website: "",
     bullets: [
-      'Leads UI design and development on a team of three working on a large&#8209;scale ERP software&nbsp;project.',
-      'Created design system and style guide for rapid prototyping and development of new modules, visual consistency through the&nbsp;application.',
-      'Architected custom UI component library, integrated Storybook as part of new developer onboarding documentation.',
-      'Learned TypeScript and converted 90% of the front-end. This reduced easy&#8209;to&#8209;miss bugs and improved development experience as the team grew from two&nbsp;to&nbsp;three.'
-    ]
+      "Contracted with TEKSystems with one of their large corporate clients developing internal tools as part of the technology team.",
+    ],
   },
   {
-    title: 'Software Developer',
-    company: 'Bearclaw',
-    duration: 'August 2020 - Present',
-    technologies: ['SCSS', 'jQuery', 'PHP', 'React', 'Webpack', 'MySQL', 'Adobe XD'],
-    type: 'Freelance',
-    img_path: '/assets/images/bearclaw.svg',
-    github_link: '',
-    production_link: '',
-    website: 'https://bearclaw.io/',
+    title: "UI Developer",
+    company: "Astrata",
+    duration: "April 2021 - May 2022",
+    technologies: [
+      "React",
+      "Typescript",
+      "Redux Toolkit",
+      "SCSS",
+      "Node.js",
+      "Storybook",
+    ],
+    type: "",
+    img_path: "/assets/images/astrata.svg",
+    github_link: "",
+    production_link: "",
+    website: "",
+    bullets: [
+      "Leads UI design and development on a team of three working on a large&#8209;scale ERP software&nbsp;project.",
+      "Created design system and style guide for rapid prototyping and development of new modules, visual consistency through the&nbsp;application.",
+      "Architected custom UI component library, integrated Storybook as part of new developer onboarding documentation.",
+      "Learned TypeScript and converted 90% of the front-end. This reduced easy&#8209;to&#8209;miss bugs and improved development experience as the team grew from two&nbsp;to&nbsp;three.",
+    ],
+  },
+  {
+    title: "Software Developer",
+    company: "Bearclaw",
+    duration: "August 2020 - Present",
+    technologies: [
+      "React",
+      "Typescript",
+      "Webpack",
+      "SCSS",
+      "jQuery",
+      "PHP",
+      "MySQL",
+      "Adobe XD",
+    ],
+    type: "Freelance",
+    img_path: "/assets/images/bearclaw.svg",
+    github_link: "",
+    production_link: "",
+    website: "https://bearclaw.io/",
     // description: 'I was brought onto this project to bring a UI design to life. Recruiting software in its development phase, Bearclaw needed a frontend-focused developer to improve the application\'s design and the user experience.',
     bullets: [
-      'Leads UI design and development of recruiting software on a team of&nbsp;two.',
-      'Recently upgraded the app\'s navigation and dashboard from a legacy jQuery/PHP architecture to React/TypeScript with custom designed SVG icons. This decoupling of the client from the server modernizes the codebase while bringing organization to the app\'s infrastructure.',
-      'Led the UI re-design process, working with the client to meet the software user\'s needs and improving the user experience throughout.',
-      'Learned PHP in order to develop and deliver full-stack features like color themes, Kanban boards, and global&nbsp;search.',
-    ]
+      "Leads UI design and development of recruiting software on a team of&nbsp;two.",
+      "Recently upgraded the app's navigation and dashboard from a legacy jQuery/PHP architecture to React/TypeScript with custom designed SVG icons. This decoupling of the client from the server modernizes the codebase while bringing organization to the app's infrastructure.",
+      "Led the UI re-design process, working with the client to meet the software user's needs and improving the user experience throughout.",
+      "Learned PHP in order to develop and deliver full-stack features like color themes, Kanban boards, and global&nbsp;search.",
+    ],
   },
   // {
   //   title: 'Digital Marketing Specialist',
@@ -53,11 +90,12 @@ const myJobs = [
 ];
 
 function renderJobs(arr) {
-  const work = document.querySelector('.work-container');
+  const work = document.querySelector(".work-container");
 
-  work.innerHTML = arr.map((job, index) => {
-    return `
-      <article class="job-wrapper${index === 0 ? ' active' : ''}" tabindex="0">
+  work.innerHTML = arr
+    .map((job, index) => {
+      return `
+      <article class="job-wrapper${index === 0 ? " active" : ""}" tabindex="0">
         <div class="">
           <div class="job-header">
             <div class="job-title-lockup">
@@ -67,95 +105,110 @@ function renderJobs(arr) {
               </div>
             </div>
             <div class="job__tech-container">
-              ${job.technologies.map((tech) => {
-      return `<span class="job__tech">${tech}</span>`;
-    }).join('')}
+              ${job.technologies
+                .map((tech) => {
+                  return `<span class="job__tech">${tech}</span>`;
+                })
+                .join("")}
             </div>
           </div>
           <div class="job-details">
             <p>${job.duration}</p>
             <div>
-              ${job.website ? `
+              ${
+                job.website
+                  ? `
               <a href="${job.website}" class="website-button" rel="noreferrer" target="_blank">
                 Open website &#187;
               </a>
-              ` : ``}
+              `
+                  : ``
+              }
+              ${
+                job.company !== "TEKSystems"
+                  ? `
               <button id="${job.company.toLowerCase()}-modal" class="screenshot-button">
                 View screenshots
-              </button>
+              </button>`
+                  : ``
+              }
             </div>
           </div>
-          <div class="job-description${index === 0 ? ' is-visible' : ''}">
+          <div class="job-description${index === 0 ? " is-visible" : ""}">
             <ul class="work-bullets">
-              ${job.bullets.map((bullet) => {
-      return `<li>${bullet}</li>`;
-    }).join('')}
+              ${job.bullets
+                .map((bullet) => {
+                  return `<li>${bullet}</li>`;
+                })
+                .join("")}
             </ul>
           </div>
         </div>
         <span class='cta'>Click to expand</span>
       </article>
     `;
-  }).join('');
+    })
+    .join("");
 }
 
-{/* <div class="job__tech-container">
+{
+  /* <div class="job__tech-container">
 ${job.technologies.map((tech) => {
   return `<span class="job__tech">${tech}</span>`;
 }).join('')}
-</div> */}
+</div> */
+}
 
 function attachShowEvent() {
-  document.querySelectorAll('.job-wrapper').forEach(function (item, index, array) {
-    item.addEventListener('click', function (e) {
+  document
+    .querySelectorAll(".job-wrapper")
+    .forEach(function (item, index, array) {
+      item.addEventListener("click", function (e) {
+        const allJobs = document.querySelectorAll(".job-description");
+        const thisJob = item.querySelector(".job-description");
 
-      const allJobs = document.querySelectorAll('.job-description');
-      const thisJob = item.querySelector('.job-description');
-
-      if (thisJob.classList.contains('is-visible')) {
-        hideElement(thisJob);
-        item.classList.remove('active');
-      } else {
-        for (let i = 0; i < allJobs.length; i++) {
-          if (allJobs[i].classList.contains('is-visible')) {
-            hideElement(allJobs[i]);
-            array[i].classList.remove('active');
+        if (thisJob.classList.contains("is-visible")) {
+          hideElement(thisJob);
+          item.classList.remove("active");
+        } else {
+          for (let i = 0; i < allJobs.length; i++) {
+            if (allJobs[i].classList.contains("is-visible")) {
+              hideElement(allJobs[i]);
+              array[i].classList.remove("active");
+            }
           }
+          showElement(thisJob);
+          item.classList.add("active");
+          item.scrollIntoView();
         }
-        showElement(thisJob);
-        item.classList.add('active');
-        item.scrollIntoView();
-      }
+      });
     });
-
-  });
 }
 
 // work job description height animation
 const showElement = (el) => {
-
   const getHeight = () => {
-    el.style.display = 'block';
-    let height = el.scrollHeight + 'px';
-    el.style.display = '';
+    el.style.display = "block";
+    let height = el.scrollHeight + "px";
+    el.style.display = "";
     return height;
-  }
+  };
 
   let height = getHeight();
-  el.classList.add('is-visible');
+  el.classList.add("is-visible");
   el.style.height = height;
   // el.querySelector('.fading-arrow').classList.add('close');
 };
 
 const hideElement = (el) => {
-  el.style.height = el.scrollHeight + 'px';
+  el.style.height = el.scrollHeight + "px";
 
   window.setTimeout(function () {
-    el.style.height = '0';
+    el.style.height = "0";
   }, 1);
 
   window.setTimeout(function () {
-    el.classList.remove('is-visible');
+    el.classList.remove("is-visible");
     // el.querySelector('.fading-arrow').classList.remove('close');
   }, 200);
 };
