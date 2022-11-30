@@ -2023,7 +2023,7 @@ ul.work-bullets li span.bold {
 }
 
 .bandcamp:before {
-  content: '';
+  content: "";
   height: 100%;
   width: 100%;
   border-radius: 4px;
@@ -2073,8 +2073,8 @@ ul.work-bullets li span.bold {
 .album-carousel .album-slide {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 25% 25% 25% 25%;
-      grid-template-columns: 25% 25% 25% 25%;
+  -ms-grid-columns: 20% 20% 20% 20% 20%;
+      grid-template-columns: 20% 20% 20% 20% 20%;
   overflow: visible;
 }
 
