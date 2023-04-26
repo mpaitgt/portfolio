@@ -94,17 +94,29 @@
       <h1 class="nav__header">Matt Pignatore</h1>
     </div>
     <div class="mobile-nav__container">
-      <ul class="nav__ul">
-        <li id="about" class="nav__link" data-name="about" tabindex="0">About</li>
-        <li id="work" class="nav__link" data-name="work" tabindex="0">Work</li>
-        <li id="blog" class="nav__link" data-name="" tabindex="0">
-          <a href="https://blog.mattpignatore.dev" target="_blank" rel="noreferrer" tabindex="-1">
-            Blog
-          </a>
-        </li>
-        <li id="bandcamp" class="nav__link" data-name="bandcamp" tabindex="0">Bandcamp</li>
-        <li id="contact" class="nav__link" data-name="contact" tabindex="0">Contact</li>
-      </ul>
+      <div class="the-container">
+        <ul class="nav__ul">
+          <li id="about" class="nav__link" data-name="about" tabindex="0">About</li>
+          <li id="work" class="nav__link" data-name="work" tabindex="0">Work</li>
+          <li id="blog" class="nav__link" data-name="" tabindex="0">
+            <a href="https://blog.mattpignatore.dev" target="_blank" rel="noreferrer" tabindex="-1">
+              Blog
+            </a>
+          </li>
+          <li id="bandcamp" class="nav__link" data-name="bandcamp" tabindex="0">Bandcamp</li>
+          <li id="contact" class="nav__link" data-name="contact" tabindex="0">Contact</li>
+        </ul>
+        <div class="theme-toggle">
+          <label>
+            <span class="darkmode-icon">🌙</span>
+            <span class="lightmode-icon">☀️</span>
+            <div class="toggle-container">
+              <input id="darkmode" type="checkbox" checked />
+              <div class="toggle"></div>
+            </div>
+          </label>
+        </div>
+      </div>
     </div>
     <div id="burger" tabindex="0">
       <div class="line line-1"></div>
@@ -326,20 +338,24 @@
             </svg>
 
           </h2>
-          <div class="name-email">
-            <div class="input-container">
-              <label for="name" class="form-label">Your name</label>
-              <input id="name" name="name" class="form-field" type="text">
+          <div class="form-fields">
+            <div class="field-set">
+              <div class="input-container">
+                <label for="name" class="form-label">Your name</label>
+                <input id="name" name="name" class="form-field" type="text">
+              </div>
+              <div class="input-container">
+                <label for="email" class="form-label">Your email</label>
+                <input id="email" name="email" class="form-field" type="text">
+              </div>
             </div>
-            <div class="input-container">
-              <label for="email" class="form-label">Your email</label>
-              <input id="email" name="email" class="form-field" type="text">
+            <div class="field-set">
+              <div class="input-container">
+                <label for="message" class="form-label">Your message to me</label>
+                <textarea id="message" name="message" class="form-field" rows="3"></textarea>
+                <input id="submit-btn" type="submit" value="Submit"></input>
+              </div>
             </div>
-          </div>
-          <div class="input-container">
-            <label for="message" class="form-label">Your message to me</label>
-            <textarea id="message" name="message" class="form-field" rows="3"></textarea>
-            <input id="submit-btn" type="submit" value="Submit"></input>
           </div>
         </form>
         <div class="thank-you">
@@ -447,6 +463,8 @@
     document.querySelector('#year').innerText = year;
   </script>
   <!-- animations -->
+  <script src="./assets/js/dark-mode.js" type="text/javascript"></script>
+  <script src="./assets/js/focus-trap.js" type="text/javascript"></script>
   <script src="./assets/js/scroll.js" type="text/javascript"></script>
   <script src="./assets/js/hover-animation.js" type="text/javascript"></script>
   <script src="./assets/js/toggle-nav.js" type="text/javascript"></script>

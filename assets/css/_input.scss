@@ -1,6 +1,6 @@
-@import './mixins';
-@import './variables';
-@import './media-queries';
+@import "./mixins";
+@import "./variables";
+@import "./media-queries";
 
 .contact {
   overflow: hidden;
@@ -16,20 +16,29 @@ form {
   margin: 0 auto;
   transform: translateY(0%);
   transition: transform 300ms;
-  .name-email {
+  .form-fields {
+    margin-top: 1.25rem;
+  }
+  .field-set {
     @include flex(row, space-between, center);
+    & > * {
+      margin: 1rem;
+    }
     @include mobile {
       @include flex(column, center, center);
     }
   }
-  input[type=submit] {
+  input[type="submit"] {
     margin: 10px 10px 10px auto;
     border: none;
+    border-radius: 4px;
     padding: 0.4rem 1rem;
     font-family: inherit;
-    background: $blue__med;
-    color: $white;
-    font-size: 16px;
+    background: var(--bg); // $blue__med;
+    color: var(--nav-item--hover); // $white;
+    border: 1px solid var(--input-border);
+    font-size: 1rem;
+    font-weight: 600;
     z-index: 1;
     opacity: 0.4;
     cursor: default;
@@ -57,33 +66,31 @@ form.mail-sent {
 .input-container {
   @include flex(column, flex-start, flex-start);
   width: 100%;
-  background: #eaeaea;
+  background: var(--input-bg);
+  border: 2px solid var(--input-border);
   position: relative;
-  margin-top: 2.4rem;
   transition: all 0.15s ease-in-out;
   box-sizing: border-box;
-  &:first-child {
-    border-right: 2px solid $white;
-    @include mobile {
-      border-right: none;
-    }
+  border-radius: 4px;
+  &:focus-within {
+    border-color: var(--nav-item--hover);
   }
   label.form-label {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
-    color: $blue__dark;
-    font-weight: 100;
+    color: var(--input-helper-text);
+    font-weight: 300;
     font-size: 16px;
     padding: 0.4rem 0.8rem;
-    transform: translateY(1px);
+    transform: translateY(6px);
     transition: all 0.15s ease-in-out;
+    font-family: "Tajawal";
     cursor: text;
   }
   label.form-label__focus {
-    transform: translate(-5px, -32px);
-    color: $blue__med;
+    transform: translate(-5px, -28px);
     transition: all 0.15s ease-in-out;
   }
   input.form-field,
@@ -94,10 +101,12 @@ form.mail-sent {
     border: none;
     background: none;
     font-size: 18px;
-    font-family: inherit;
+    font-family: "Tajawal";
     letter-spacing: 1px;
     outline: none;
     resize: none;
+    color: var(--copy);
+    transform: translateY(3px);
   }
   @include mobile {
     width: 90%;
@@ -110,13 +119,18 @@ form.mail-sent {
   border: 1px solid #e78d8d;
 }
 .input-container__hover {
-  background: $white;
   margin-top: 40px;
   transition: all 0.15s ease-in-out;
 }
 
 @keyframes thank-you {
-  0% { transform: translateX(-200%); };
-  70% { transform: translateX(4%); }
-  100% { transform: translateX(0%); };
+  0% {
+    transform: translateX(-200%);
+  }
+  70% {
+    transform: translateX(4%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
