@@ -15,3 +15,12 @@
     @content;
   }
 }
+
+@mixin darkmode() {
+  &.darkmode {
+    @content;
+  }
+  // @media (prefers-color-scheme: dark) {
+  //   @content;
+  // }
+}

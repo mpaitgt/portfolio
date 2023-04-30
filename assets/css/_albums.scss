@@ -4,7 +4,7 @@
 .bandcamp {
   padding: 0;
   position: relative;
-  background: $blue__light-x;
+  background: var(--bg-alt-bandcamp);
   border-radius: 4px;
   width: 100%;
   max-width: 800px;
@@ -29,7 +29,7 @@
     right: 10px;
     top: 10px;
     z-index: -1;
-    background-color: #d8d8ee;
+    background-color: var(--bg-alt);
   }
   @include nav-collapse {
     &:before {

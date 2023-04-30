@@ -6,72 +6,78 @@ window.onload = async function () {
   await renderJobs(myJobs);
   attachShowEvent();
   // render projects
-  await renderProjects(myProjects.filter((item, index) => index < 3), true);
+  await renderProjects(
+    myProjects.filter((item, index) => index < 3),
+    true
+  );
   // render first testimonial
   // renderQuote(selectedTestimonial);
   // hover animations
-  const albumCovers = document.querySelectorAll('.album-cover');
+  const albumCovers = document.querySelectorAll(".album-cover");
   // const socialIcons = document.querySelectorAll('ul img.nav__icon');
 
   attachHoverAnimationOnItems(navItems);
   attachHoverAnimationOnItems(albumCovers, true);
   // attachHoverAnimationOnItems(socialIcons, true);
 
-  const anchors = document.querySelectorAll('a');
+  const anchors = document.querySelectorAll("a");
 
-  anchors.forEach(a => {
-    a.addEventListener('click', function (e) {
+  anchors.forEach((a) => {
+    a.addEventListener("click", function (e) {
       e.stopPropagation();
-    })
-  })
+    });
+  });
 
   // screenshotButton handlers to open modal
-  const screenshotButtons = document.querySelectorAll('.screenshot-button');
+  const screenshotButtons = document.querySelectorAll(".screenshot-button");
 
-  screenshotButtons.forEach(btn => {
-    btn.addEventListener('click', function (e) {
+  screenshotButtons.forEach((btn) => {
+    btn.addEventListener("click", function (e) {
       e.stopPropagation();
       const modal = document.getElementById(btn.id);
-      const activeModal = document.querySelector('.screenshot-modal.active');
-      if (!activeModal) modal.classList.add('active');
+      const activeModal = document.querySelector(".screenshot-modal.active");
+      if (!activeModal) modal.classList.add("active");
       screenShotWidthAdjustment(e);
-    })
+    });
   });
 
   // screenshotModal close handler when clicking outside
-  document.addEventListener('click', function (e) {
-    const modals = document.querySelectorAll('.screenshot-modal');
-    modals.forEach(m => {
-      const content = m.querySelector('.modal-content');
-      if (m.classList.contains('active') && !content.contains(e.target)) {
-        m.classList.remove('active');
+  document.addEventListener("click", function (e) {
+    const modals = document.querySelectorAll(".screenshot-modal");
+    modals.forEach((m) => {
+      const content = m.querySelector(".modal-content");
+      if (m.classList.contains("active") && !content.contains(e.target)) {
+        m.classList.remove("active");
       }
-    })
+    });
   });
 
-  window.addEventListener('resize', screenShotWidthAdjustment);
+  window.addEventListener("resize", screenShotWidthAdjustment);
 };
 
 function screenShotWidthAdjustment(e) {
-  const modalToCheck = document.querySelector('.screenshot-modal.active');
-  const rootEl = modalToCheck.querySelector('.swiffy-slider');
+  const modalToCheck = document.querySelector(".screenshot-modal.active");
+
+  if (!modalToCheck) return;
+
+  const rootEl = modalToCheck.querySelector(".swiffy-slider");
   const width = window.screen.width;
 
   if (width < 576) {
     // if we've gone under the threshold
     // and the modal is open
-    if (modalToCheck && modalToCheck.classList.contains('active')) {
-      if (rootEl.classList.contains('slider-nav-outside')) {
-        rootEl.classList.remove('slider-nav-outside');
+    if (modalToCheck.classList.contains("active")) {
+      if (rootEl.classList.contains("slider-nav-outside")) {
+        rootEl.classList.remove("slider-nav-outside");
       }
     } else {
-      if (!rootEl.classList.contains('slider-nav-outside')) {
-        rootEl.classList.add('slider-nav-outside');
+      if (!rootEl.classList.contains("slider-nav-outside")) {
+        rootEl.classList.add("slider-nav-outside");
       }
     }
   } else {
-    if (!rootEl.classList.contains('slider-nav-outside')) {
-      rootEl.classList.add('slider-nav-outside');
+    if (!rootEl.classList.contains("slider-nav-outside")) {
+      rootEl.classList.add("slider-nav-outside");
     }
   }
 }

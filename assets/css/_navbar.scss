@@ -1,11 +1,9 @@
-@import '_mixins';
-@import '_media-queries';
+@import "_mixins";
+@import "_media-queries";
 
 nav.navbar {
   @include flex(row, space-between, center);
   z-index: 1;
-  background: #fff;
-  color: $blue__med;
   padding: 1rem;
   width: 950px;
   margin: 0 auto;
@@ -14,6 +12,7 @@ nav.navbar {
   max-width: 100%;
   transform: translateY(-100%);
   animation: navigation-enter 500ms ease 0ms 1 forwards;
+  transition: all 0.5s ease;
   @include nav-collapse {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -23,39 +22,61 @@ nav.navbar {
     top: 0;
     left: 0;
     right: 0;
-    background: white;
-    color: $blue__med;
-    .scroll {
-      background: $blue__med;
-      color: white;
-    }
+    background: var(--bg);
+    // color: $blue__med;
+    // .scroll {
+    //   background: $blue__med;
+    //   color: white;
+    // }
   }
   @include mobile {
     padding: 2rem;
   }
   .nav__header {
-    font-family: 'Fira Sans', arial, sans-serif;
+    font-family: "Fira Sans", arial, sans-serif;
     font-size: 2.4rem;
     letter-spacing: 1px;
     cursor: pointer;
     font-weight: 100;
+    color: var(--title);
+    white-space: nowrap;
     @include mobile {
       font-size: 1.5rem;
     }
   }
   .mobile-nav__container {
     z-index: -1;
+    display: flex;
     @include nav-collapse {
       display: none;
-      margin-top: 50px;
+      // margin-top: 50px;
       position: fixed;
       left: 50%;
       top: 50%;
       width: 100%;
       max-width: 300px;
       margin-left: -150px;
-      z-index: -99;
+      z-index: 99;
       perspective: 2000px;
+    }
+  }
+  .the-container {
+    display: flex;
+    & > * {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+    @include nav-collapse {
+      @include flex(column, space-evenly, flex-start);
+      background: var(--nav-item-bg);
+      border-radius: 12px;
+      transform: rotateY(90deg);
+      animation: menu-open 250ms ease-in-out 0ms 1 forwards;
+      box-shadow: var(--nav-shadow--mobile);
+      & > * {
+        margin-left: 0rem;
+        margin-right: 0rem;
+      }
     }
   }
   .nav__ul {
@@ -64,37 +85,36 @@ nav.navbar {
     @include nav-collapse {
       @include flex(column, space-evenly, flex-start);
       padding: 2rem 0;
-      background: $blue__med;
-      border-radius: 12px;
-      transform: rotateY(90deg);
-      animation: menu-open 250ms ease-in-out 0ms 1 forwards;
-      box-shadow: 0px 0px 20px -12px rgba(0,0,0,1);
-      opacity: 0;
     }
     .nav__link {
       padding: 8px 12px;
       cursor: pointer;
       transition: all 0.25s;
       font-size: 1.4rem;
-      color: $gray__dark;
-      font-family: 'Fira Sans', arial, sans-serif;
+      color: var(--nav-item);
+      font-family: "Fira Sans", arial, sans-serif;
       border-radius: 6px;
       @include nav-collapse {
-        // transform: translateX(-200%);
         font-size: 1.4rem;
         margin: 1rem;
         text-align: center;
-        color: $white;
       }
       &:hover {
         transform: scale(1.1);
         transition: transform 0.25s;
-        background: $white;
-        color: $blue__dark;
-        @include mobile {
+        background: var(--nav-item-bg);
+        color: var(--nav-item--hover);
+        @include nav-collapse {
           transform: scale(1) translateX(4px);
         }
       }
+      // @include darkmode() {
+      //   color: $gray;
+      //   &:hover {
+      //     color: $blue__med-light;
+      //     background: $blue__med-dark;
+      //   }
+      // }
     }
     // @for $i from 1 through 6 {
     //   .nav__link.appear-#{$i} {
@@ -153,8 +173,7 @@ nav.navbar {
 
 footer.navbar {
   @include flex(column, space-around, center);
-  background: #fff;
-  color: $blue__med;
+  color: var(--copy-alt);
   padding: 1rem;
   margin-bottom: 24px;
   position: relative;
@@ -165,7 +184,7 @@ footer.navbar {
     @include flex(column, center, center);
   }
   .nav__header {
-    font-family: 'Fira Sans', arial, sans-serif;
+    font-family: "Fira Sans", arial, sans-serif;
     font-size: 1.8rem;
     letter-spacing: 1px;
     cursor: pointer;
@@ -183,7 +202,11 @@ footer.navbar {
   }
   .nav__icon {
     @include icon_hover(32px, invert(0), invert(1));
-    opacity: 0.2;
+    opacity: 0.4;
+    filter: var(--icon);
+    &:hover {
+      opacity: 0.8;
+    }
   }
   .footer__social {
     @include flex(row, space-around, center);
@@ -202,26 +225,55 @@ footer.navbar {
 }
 
 @keyframes menu-open {
-  0% { transform: rotateY(40deg); opacity: 0; }
-  100% { transform: rotateY(0deg); opacity: 1; }
+  0% {
+    transform: rotateY(40deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
 }
 
 @keyframes mobile-navigation-enter {
-  0% { transform: translateX(-200%); opacity: 0;};
-  30% { transform: translateX(50%); };
-  60% { transform: translateX(0%); opacity: 1; };
-  80% { transform: translateX(8%); };
-  100% { transform: translateX(0%); opacity: 1;};
+  0% {
+    transform: translateX(-200%);
+    opacity: 0;
+  }
+  30% {
+    transform: translateX(50%);
+  }
+  60% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(8%);
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
 }
 
 @keyframes mobile-navigation-exit {
-  0% { transform: translateX(0%); };
-  100% { transform: translateX(-100%); };
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 @keyframes close-mobile-navigation {
-  0% { transform: translateY(0%); opacity: 1;};
-  100% { transform: translateY(100%); opacity: 0;};
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
 }
 
 @keyframes navigation-enter {

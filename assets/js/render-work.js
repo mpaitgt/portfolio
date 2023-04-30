@@ -99,7 +99,9 @@ function renderJobs(arr) {
         <div class="">
           <div class="job-header">
             <div class="job-title-lockup">
-              <img src="${job.img_path}" width="160" />
+              <div class="img-wrapper">
+                <img src="${job.img_path}" width="160" />
+              </div>
               <div style="flex: 2;">
                 <h3 class="job-title">${job.title}</h3>
               </div>
@@ -164,6 +166,25 @@ function attachShowEvent() {
     .querySelectorAll(".job-wrapper")
     .forEach(function (item, index, array) {
       item.addEventListener("click", function (e) {
+        const allJobs = document.querySelectorAll(".job-description");
+        const thisJob = item.querySelector(".job-description");
+
+        if (thisJob.classList.contains("is-visible")) {
+          hideElement(thisJob);
+          item.classList.remove("active");
+        } else {
+          for (let i = 0; i < allJobs.length; i++) {
+            if (allJobs[i].classList.contains("is-visible")) {
+              hideElement(allJobs[i]);
+              array[i].classList.remove("active");
+            }
+          }
+          showElement(thisJob);
+          item.classList.add("active");
+          item.scrollIntoView();
+        }
+      });
+      item.addEventListener("keypress", function (e) {
         const allJobs = document.querySelectorAll(".job-description");
         const thisJob = item.querySelector(".job-description");
 
