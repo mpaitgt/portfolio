@@ -8,6 +8,8 @@ burger.addEventListener("click", function (e) {
 });
 
 burger.addEventListener("keydown", function (e) {
+  if (e.key !== "Enter") return;
+
   navContents.classList.toggle("toggle-nav");
   burger.classList.toggle("active");
 
