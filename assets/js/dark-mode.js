@@ -1,3 +1,10 @@
+/*
+  This script handles the behavior of the dark mode toggle 
+  appearing in the header's navigation. It handles the theme via the class toggle
+  as well as the display status of the theme icon. It's designed to adhere to the 
+  user's browser theme settings and adjust accordingly on page load
+*/
+
 const bodyEl = document.querySelector("body");
 const darkmodeIcon = document.querySelector("span.darkmode-icon");
 const lightmodeIcon = document.querySelector("span.lightmode-icon");
@@ -11,8 +18,6 @@ const handleThemeChange = (e) => {
 
     bodyEl.classList.toggle("darkmode");
     darkmodeToggle.checked = isDarkMode;
-
-    console.log({ isDarkMode });
 
     darkmodeIcon.style.display = isDarkMode ? "block" : "none";
     lightmodeIcon.style.display = isDarkMode ? "none" : "block";

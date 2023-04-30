@@ -64,6 +64,7 @@ function screenShotWidthAdjustment(e) {
   const width = window.screen.width;
 
   if (width < 576) {
+    if (!modalToCheck) return;
     // if we've gone under the threshold
     // and the modal is open
     if (modalToCheck.classList.contains("active")) {
