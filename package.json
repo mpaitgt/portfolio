@@ -4,9 +4,9 @@
   "description": "I recently redesigned my portfolio in an effort to give it more functionality and make it a better experience for the user.",
   "main": "index.js",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "nodemailer": "^6.8.0",
     "openssl": "^1.1.0"
   },
